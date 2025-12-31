@@ -1,0 +1,190 @@
+/* debug */
+/* $gray_3: yellow; */
+/* $gray_6: green; */
+/* $gray_8: blue; */
+/* $gray_d: lime; */
+/* $gray_e6: red; */
+/* $gray_fa: blue; */
+.pstoolkit-admin-page #pstoolkit-dashboard-widget-summary .sui-icon-magnifying-glass-search {
+  top: -28px;
+  left: 13px;
+}
+.pstoolkit-admin-page #pstoolkit-dashboard-widget-summary .sui-summary-segment:last-child .sui-summary-details {
+  padding-top: 10px;
+}
+.pstoolkit-admin-page #pstoolkit-dashboard-widget-summary .sui-summary-segment:last-child .sui-control-with-icon {
+  display: inline-table;
+  float: right;
+}
+.pstoolkit-admin-page #pstoolkit-dashboard-widget-upsell .sui-icon-check:before {
+  color: #8D00B1;
+  margin-right: 10px;
+  vertical-align: sub;
+}
+.pstoolkit-admin-page #pstoolkit-dashboard-widget-upsell .sui-box-body li {
+  font-weight: 500;
+  color: #333;
+}
+.pstoolkit-admin-page #pstoolkit-dashboard-widget-upsell .pstoolkit_u_logo {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px auto;
+  width: 36px;
+  height: 34px;
+}
+.pstoolkit-admin-page #pstoolkit-dashboard-widget-admin .dashicons {
+  margin-right: 10px;
+  line-height: 20px;
+}
+.pstoolkit-admin-page #pstoolkit-dashboard-widget-modules .sui-box-head {
+  padding: 20px 30px;
+}
+.pstoolkit-admin-page #pstoolkit-dashboard-widget-modules .sui-box-head h2 {
+  color: #333;
+}
+.pstoolkit-admin-page #pstoolkit-dashboard-widget-modules .sui-box-head h2 i {
+  margin-right: 10px;
+}
+.pstoolkit-admin-page #pstoolkit-dashboard-widget-modules .sui-box-head h2 i:before {
+  font-size: 1em;
+  color: #333;
+}
+.pstoolkit-admin-page #pstoolkit-dashboard-widget-modules .sui-box-head h2 .dashicons {
+  font-size: 26px;
+  line-height: 35px;
+  margin-right: 10px;
+  width: 22px;
+}
+.pstoolkit-admin-page #pstoolkit-dashboard-widget-modules .sui-table--button {
+  width: 80px;
+}
+.pstoolkit-admin-page #pstoolkit-dashboard-widget-modules .sui-table--status {
+  width: 95px;
+}
+.pstoolkit-admin-page #pstoolkit-dashboard-widget-modules .sui-table--configure {
+  width: 73px;
+}
+.pstoolkit-admin-page #pstoolkit-dashboard-widget-modules div.pstoolkit-status-elements {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pstoolkit-admin-page #pstoolkit-dashboard-widget-modules .pstoolkit-module-for-pro {
+  opacity: 0.5;
+}
+.pstoolkit-admin-page #pstoolkit-dashboard-widget-modules span.pstoolkit-module-status {
+  display: inline-block;
+  background-color: #e6e6e6;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+.pstoolkit-admin-page #pstoolkit-dashboard-widget-modules span.pstoolkit-module-status.module-status-active {
+  background-color: #17a8e3;
+}
+.pstoolkit-admin-page #pstoolkit-dashboard-search-no-results .pstoolkit-empty {
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+.pstoolkit-admin-page #pstoolkit-manage-all-modules .sui-box-header,
+.pstoolkit-admin-page .pstoolkit-welcome-step2 #pstoolkit-welcome .sui-box-header {
+  background-image: url(../../assets/images/pstoolkit/circle-confused@2x.png);
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: 130px 130px;
+  display: block;
+  padding-top: 140px;
+  text-align: center;
+  padding-top: 200px;
+  background-position-y: 45px;
+}
+.pstoolkit-admin-page #pstoolkit-manage-all-modules .sui-box-header .sui-header-title,
+.pstoolkit-admin-page .pstoolkit-welcome-step2 #pstoolkit-welcome .sui-box-header .sui-header-title {
+  text-align: center;
+  text-transform: none;
+}
+.pstoolkit-admin-page #pstoolkit-manage-all-modules .sui-box-header .sui-notice,
+.pstoolkit-admin-page .pstoolkit-welcome-step2 #pstoolkit-welcome .sui-box-header .sui-notice {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pstoolkit-admin-page #pstoolkit-manage-all-modules .sui-box-header .sui-header-title,
+.pstoolkit-admin-page .pstoolkit-welcome-step2 #pstoolkit-welcome .sui-box-header .sui-header-title {
+  font-size: 22px;
+}
+.pstoolkit-admin-page #pstoolkit-manage-all-modules .sui-box-footer,
+.pstoolkit-admin-page .pstoolkit-welcome-step2 #pstoolkit-welcome .sui-box-footer {
+  justify-content: center;
+}
+.pstoolkit-admin-page #pstoolkit-manage-all-modules .sui-box-footer .pstoolkit-save-all .sui-loading,
+.pstoolkit-admin-page .pstoolkit-welcome-step2 #pstoolkit-welcome .sui-box-footer .pstoolkit-save-all .sui-loading {
+  position: static;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit.pstoolkit-import-import .sui-header {
+  background-image: url(../../assets/images/pstoolkit/circle-confused@2x.png);
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: 130px 130px;
+  display: block;
+  padding-top: 140px;
+  text-align: center;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit.pstoolkit-import-import .sui-header .sui-header-title {
+  text-align: center;
+  text-transform: none;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit.pstoolkit-import-import .sui-header .sui-notice {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit.pstoolkit-import-import .sui-header.pstoolkit-import-error {
+  background-image: url(../../assets/images/pstoolkit/confused@2x.png);
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit.pstoolkit-import-import .pstoolkit-import-err
+.sui-container {
+  border: 1px solid #e6e6e6;
+  padding: 5px 30px 30px 30px;
+  margin: 60px 75px 30px 75px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit.pstoolkit-import-import .pstoolkit-import-err
+.sui-container .sui-label {
+  margin-bottom: 10px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit.pstoolkit-import-import .pstoolkit-import-err
+.sui-container .sui-row {
+  justify-content: center;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit.pstoolkit-import-import .pstoolkit-import-err
+.sui-container .sui-row .sui-col {
+  max-width: 200px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit.pstoolkit-import-import.pstoolkit-import-error .sui-header {
+  background-image: url(../../assets/images/pstoolkit/confused@2x.png);
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit.sui-color-accessible #pstoolkit-dashboard-widget-modules span.pstoolkit-module-status {
+  background-color: #fff;
+  border: 1px solid #000000;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit.sui-color-accessible #pstoolkit-dashboard-widget-modules span.pstoolkit-module-status.module-status-active {
+  background-color: #000000;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit.no-pstoolkit #pstoolkit-manage-all-modules .sui-box-header,
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit.no-pstoolkit .pstoolkit-welcome-step2 #pstoolkit-welcome .sui-box-header {
+  background-image: none;
+  padding-top: 15px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit.no-pstoolkit.pstoolkit-import-import .sui-header {
+  background-image: none;
+  padding-top: 15px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit.no-pstoolkit.pstoolkit-import-import .sui-header.pstoolkit-import-error {
+  background-image: none;
+  padding-top: 15px;
+}
+.pstoolkit-admin-page #wpbody-content .sui-wrap.sui-wrap-pstoolkit.no-pstoolkit .sui-unbranded .sui-summary-segment {
+  padding-left: 15px;
+}

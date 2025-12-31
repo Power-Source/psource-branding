@@ -1,0 +1,42 @@
+/* debug */
+/* $gray_3: yellow; */
+/* $gray_6: green; */
+/* $gray_8: blue; */
+/* $gray_d: lime; */
+/* $gray_e6: red; */
+/* $gray_fa: blue; */
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-color-schemes .module-admin-color-schemes-php .sui-box-body .pstoolkit-section-available_color_schemes .pstoolkit-customize-ultimate-scheme {
+  margin-left: auto;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-color-schemes .module-admin-color-schemes-php .sui-box-body .pstoolkit-section-available_color_schemes .simple-option-callback {
+  max-width: 450px;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-color-schemes .module-admin-color-schemes-php .sui-box-body .pstoolkit-section-available_color_schemes .simple-option-callback .color-option {
+  width: 140px;
+  padding: 13px 10px 10px 10px;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-color-schemes .module-admin-color-schemes-php .sui-box-body .pstoolkit-section-available_color_schemes .simple-option-callback .color-option td {
+  line-height: 1px;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-color-schemes .module-admin-color-schemes-php .sui-box-body .pstoolkit-section-available_color_schemes .simple-option-callback .color-option .sui-checkbox {
+  margin-bottom: 6px;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-color-schemes .module-admin-color-schemes-php .sui-box-body .pstoolkit-section-available_color_schemes .simple-option-callback .color-option .sui-checkbox .pstoolkit-customize-ultimate-scheme {
+  padding: 0;
+  height: 22px;
+  width: 12px;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-color-schemes .module-admin-color-schemes-php .sui-box-body .pstoolkit-section-available_color_schemes .simple-option-callback .color-option .sui-checkbox .sui-description {
+  color: #666;
+  font-size: 13px;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-color-schemes .module-admin-color-schemes-php .sui-box-body .pstoolkit-section-available_color_schemes .simple-option-callback .color-option:hover {
+  background-color: #fafafa;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-color-schemes #pstoolkit-color-schemes-edit .sui-accordion-item-header {
+  min-height: 56px;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-color-schemes #pstoolkit-color-schemes-edit .sui-accordion-item-body .sui-label {
+  color: #666;
+  font-size: 13px;
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<!-- Wenn Du dieses Meta-Tag löscht, fällt die Erde in die Sonne. -->
+	<meta name="viewport" content="width=device-width"/>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>{EMAIL_SUBJECT}</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<!-- HEADER -->
+<table class="head-wrap" bgcolor="#999999">
+	<tr>
+		<td></td>
+		<td class="header container">
+
+			<div class="content">
+				<table bgcolor="#999999">
+					<tr>
+						<td>
+							<!--Dies ist ein Demobild, das durch ein Firmenlogo ersetzt werden kann. Du musst lediglich eine Bild-URL angeben-->
+							<img src="https://loremflickr.com/200/50/"/>
+						</td>
+						<td align="right">
+							<!-- BLOG_NAME wird beim Senden von E-Mails durch den Seiten-Namen ersetzt,
+							Obwohl Du hier jeden Text platzieren kannst -->
+							<h6 class="collapse">{BLOG_NAME}</h6>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+		</td>
+		<td></td>
+	</tr>
+</table>
+<!-- /HEADER -->
+
+<!-- INHALT -->
+<table class="body-wrap">
+	<tr>
+		<td></td>
+		<td class="container" bgcolor="#FFFFFF">
+
+			<div class="column-wrap">
+
+				<div class="column">
+					<table>
+						<tr>
+							<td>
+								<!--						USER_NAME wird ersetzt, wenn die E-Mail, an die die E-Mail gesendet wird,
+																				einem Benutzerkonto zugeordnet ist, andernfalls wird sie entfernt-->
+								<h4>Hallo, {USER_NAME}</h4>
+								<!--Die Nachricht wird beim Versenden einer E-Mail durch E-Mail-Inhalte ersetzt-->
+								<p>{MESSAGE}</p>
+
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="column">
+					<table>
+						<tr>
+							<td class="sidebar-td">
+								<!-- Zeigt eine Liste der letzten 4 Beiträge in der E-Mail an. Du kannst 4 oder weniger Beiträge anzeigen, indem Du die Vorlage bearbeitest.
+								Es gibt zwei Filter 'htmlemail_sidebar_title' und 'htmlemail_sidebar_posts', um den Titel und die Beitragsliste der Seitenleiste zu ändern, falls Du andere Beiträge anzeigen möchtest.
+								'htmlemail_sidebar_title' verwendet eine Zeichenfolge, während 'htmlemail_sidebar_posts' eine Reihe von Posts verwendet
+								mit ID und post_title. -->
+								<ul class="sidebar">
+									<li>
+										<a>
+											<!--Du kannst SIDEBAR_TITLE durch einen beliebigen Text ersetzen,
+											Wenn es unverändert bleibt, wird es durch einen Standardwert ersetzt -->
+											<h5>{SIDEBAR_TITLE}</h5>
+										</a>
+									</li>
+									<li><a class="" href="{POST_1_LINK}">{POST_1} &raquo;</a></li>
+									<li><a class="" href="{POST_2_LINK}">{POST_2} &raquo;</a></li>
+									<li><a class="" href="{POST_3_LINK}">{POST_3} &raquo;</a></li>
+									<li><a class="last" href="{POST_4_LINK}">{POST_4} &raquo;</a></li>
+								</ul>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div style="clear: left;">
+					<!-- Social & Kontakt -->
+					<table class="social" width="100%">
+						<tr>
+							<td>
+
+								<!--- Spalte 1 -->
+								<table align="left" class="column">
+									<tr>
+										<td>
+
+											<h5 class="">Verbinde dich mit uns:</h5>
+
+											<p class="">
+												<!--Specify URLs to Social links-->
+												<a href="#" class="soc-btn fb">Facebook</a>
+												<a href="#" class="soc-btn tw">Twitter</a>
+												<a href="#" class="soc-btn gp">Google+</a>
+											</p>
+										</td>
+									</tr>
+								</table>
+								<!-- /Spalte 1 -->
+
+								<!--- Spalte 2 -->
+								<table align="left" class="column">
+									<tr>
+										<td>
+
+											<h5 class="">Kontaktinformation:</h5>
+											<!--Ersetze die Kontaktdaten-->
+											<p>Telefon: <strong>408.341.0600</strong><br/>
+												E-Mail: <strong>{FROM_EMAIL}</strong></p>
+
+										</td>
+									</tr>
+								</table>
+								<!-- /Spalte 2 -->
+
+								<span class="clear"></span>
+
+							</td>
+						</tr>
+					</table>
+					<!-- /Social & Kontakt -->
+				</div>
+
+				<div class="clear"></div>
+
+			</div>
+
+		</td>
+		<td></td>
+	</tr>
+</table>
+<!-- /INHALT -->
+
+<!-- FOOTER -->
+<table class="footer-wrap">
+	<tr>
+		<td></td>
+		<td class="container">
+
+			<!-- Footerinhalt -->
+			<div class="content">
+				<table>
+					<tr>
+						<td align="center">
+							<p>
+								<!--Gib statt # einen Seitenlink zu Geschäftsbedingungen und Datenschutzseiten auf der Webseite an-->
+								<a href="#">Geschäftsbedingungen</a> |
+								<a href="#">Datenschutz</a>
+							</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- /Footerinhalt -->
+
+		</td>
+		<td></td>
+	</tr>
+</table>
+<!-- /FOOTER -->
+
+</body>
+</html>

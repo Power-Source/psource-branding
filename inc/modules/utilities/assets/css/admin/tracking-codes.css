@@ -1,0 +1,21 @@
+/* debug */
+/* $gray_3: yellow; */
+/* $gray_6: green; */
+/* $gray_8: blue; */
+/* $gray_d: lime; */
+/* $gray_e6: red; */
+/* $gray_fa: blue; */
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-tracking-codes form > .sui-box-body {
+  padding: 0;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-tracking-codes form > .sui-box-body .column-actions {
+  padding-right: 20px;
+  text-align: right;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-tracking-codes .sui-modal .sui-tabs label.sui-label {
+  color: #aaa;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-bottom: 5px;
+}

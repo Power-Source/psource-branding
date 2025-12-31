@@ -1,0 +1,37 @@
+/* debug */
+/* $gray_3: yellow; */
+/* $gray_6: green; */
+/* $gray_8: blue; */
+/* $gray_d: lime; */
+/* $gray_e6: red; */
+/* $gray_fa: blue; */
+.pstoolkit-admin-page .sui-wrap-pstoolkit .module-emails-template-php .pstoolkit-section-theme .pstoolkit-big-button {
+  width: 160px;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .module-emails-template-php .pstoolkit-section-theme .pstoolkit-big-button.pstoolkit-has-theme span {
+  opacity: 0;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .module-emails-template-php .pstoolkit-section-theme .pstoolkit-big-button.pstoolkit-has-theme:hover span {
+  opacity: 1;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .module-emails-template-php .pstoolkit-section-theme .sui-form-field.simple-option-callback, .pstoolkit-admin-page .sui-wrap-pstoolkit .module-emails-template-php .pstoolkit-section-theme .sui-form-field.pstoolkit-add {
+  margin-bottom: 0;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .module-emails-template-php .pstoolkit-section-content {
+  margin-top: 10px;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .module-emails-template-php .pstoolkit-section-content > .sui-settings-label {
+  color: #333;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .module-emails-template-php .simple-option .ub_html_editor {
+  min-height: 50em;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit #pstoolkit-email-template-preview .sui-modal-content {
+  max-width: 100%;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit #pstoolkit-email-template-preview img {
+  max-width: 100%;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit #pstoolkit-email-template-choose-template .sui-box-footer.sui-actions-right {
+  justify-content: flex-end;
+}

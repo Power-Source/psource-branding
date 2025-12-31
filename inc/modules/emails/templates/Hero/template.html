@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<!-- Wenn Du dieses Tag löscht, fällt der Himmel auf Deinen Kopf -->
+	<meta name="viewport" content="width=device-width"/>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>{EMAIL_SUBJECT}</title>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<!-- HEADER -->
+<table class="head-wrap" bgcolor="#999999">
+	<tr>
+		<td></td>
+		<td class="header container">
+
+			<div class="content">
+				<table bgcolor="#999999">
+					<tr>
+						<td>
+							<!--Dies ist ein Demobild, das durch ein Firmenlogo ersetzt werden kann. Du musst lediglich eine Bild-URL angeben-->
+							<img src="https://loremflickr.com/200/50/"/>
+						</td>
+						<td align="right">
+							<!-- BLOG_NAME wird beim Senden von E-Mails durch den Seiten-Namen ersetzt,
+							Obwohl Du hier jeden Text platzieren kannst -->
+							<h6 class="collapse">{BLOG_NAME}</h6>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+		</td>
+		<td></td>
+	</tr>
+</table>
+<!-- /HEADER -->
+
+
+<!-- INHALT -->
+<table class="body-wrap">
+	<tr>
+		<td></td>
+		<td class="container" bgcolor="#FFFFFF">
+
+			<div class="content">
+				<table>
+					<tr>
+						<td>
+							<!--						{USER_NAME} wird ersetzt, wenn die E-Mail, an die die Benachrichtigung gesendet wird,
+																			einem Benutzerkonto zugeordnet ist, andernfalls wird sie entfernt -->
+							<h3>Hallo, {USER_NAME}</h3>
+							<!--Die Nachricht wird beim Versenden einer E-Mail durch E-Mail-Inhalte ersetzt-->
+							<p class="lead">{MESSAGE}</p>
+
+							<!-- Ein echter Held (und ein echter Mensch) -->
+							<p>
+								<!-- Dies ist ein Demo-Image, das durch ein beliebiges Branding-Image ersetzt oder einfach entfernt werden kann -->
+								<img src="https://loremflickr.com/600/300"/></p><!-- /Held -->
+							<br/>
+
+							<!-- Social & Kontakt -->
+							<table class="social" width="100%">
+								<tr>
+									<td>
+
+										<!--- Spalte 1 -->
+										<table align="left" class="column">
+											<tr>
+												<td>
+
+													<h5 class="">Verbinde dich mit uns:</h5>
+
+													<p class="">
+														<!--Gib statt # URLs zu sozialen Links an-->
+														<a href="#" class="soc-btn fb">Facebook</a>
+														<a href="#" class="soc-btn tw">Twitter</a>
+														<a href="#" class="soc-btn gp">Google+</a>
+													</p>
+
+												</td>
+											</tr>
+										</table>
+										<!-- /Spalte 1 -->
+
+										<!--- Spalte 2 -->
+										<table align="left" class="column">
+											<tr>
+												<td>
+
+													<h5 class="">Kontaktinformation:</h5>
+													<!--Geschäftskontakt ändern-->
+													<p>Telefon: <strong>408.341.0600</strong><br/>
+														E-Mail: <strong>{FROM_EMAIL}</strong></p>
+													<!-- FROM_EMAIL wird durch in den Seiten-Einstellungen angegebene Administrator-E-Mail ersetzt,
+														Du kannst den Parameter direkt durch eine bestimmte E-Mail ersetzen -->
+												</td>
+											</tr>
+										</table>
+										<!-- /Spalte 2 -->
+
+										<span class="clear"></span>
+
+									</td>
+								</tr>
+							</table>
+							<!-- /Social & Kontakt -->
+
+
+						</td>
+					</tr>
+				</table>
+			</div>
+
+		</td>
+		<td></td>
+	</tr>
+</table>
+<!-- /INHALT -->
+
+<!-- FOOTER -->
+<table class="footer-wrap">
+	<tr>
+		<td></td>
+		<td class="container">
+
+			<!-- Footerinhalt -->
+			<div class="content">
+				<table>
+					<tr>
+						<td align="center">
+							<p>
+								<!--Gib statt # Seitenlinks zu Geschäftsbedingungen und Datenschutzseiten auf der Webseite an-->
+								<a href="#">Geschäftsbedingungen</a> |
+								<a href="#">Datenschutz</a>
+							</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- /Footerinhalt -->
+
+		</td>
+		<td></td>
+	</tr>
+</table>
+<!-- /FOOTER -->
+
+</body>
+</html>

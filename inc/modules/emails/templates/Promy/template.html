@@ -1,0 +1,61 @@
+<table class="container" border="0" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+		<td valign="middle" align="center">
+			<div class="width">
+
+			<table class="content content_header" align="center" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td valign="middle" class="branding_html" data-builder="branding_html">
+                                            <!-- Standardmäßig wird es beim Senden von E-Mails durch die Seiten-Beschreibung ersetzt,
+                                            Obwohl Du hier jeden Text platzieren kannst -->
+						{BLOG_DESCRIPTION}
+					</td>
+				</tr>
+				<tr>
+					<td class="title" data-builder="title_color">
+						<div data-builder="blog_name">
+                                                    <!-- BLOG_NAME wird beim Senden von E-Mails durch den Seiten-Namen ersetzt,
+                                                    Obwohl Du hier jeden Text platzieren kannst -->
+							{BLOG_NAME}
+						</div>
+					</td>
+				</tr>
+			</table>
+
+			<table class="content content_main" align="center" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td valign="middle" class="header_image" data-builder="header_image">
+<!--                                        {HEADER_IMAGE} kann durch ein img-Tag mit einer vollständigen URL als Bildquelle ersetzt werden, wenn die Vorlage kein {HEADER_IMAGE} unterstützt, es wird beim Senden von E-Mails entfernt -->
+						{HEADER_IMAGE}
+					</td>
+				</tr>
+				<tr>
+					<td class="email_content" data-builder="body_color">
+						<div data-builder="email_content">
+                                                    <!--Die Nachricht wird beim Versenden einer E-Mail durch E-Mail-Inhalte ersetzt-->
+                            {MESSAGE}
+						</div>
+					</td>
+				</tr>
+			</table>
+
+			<table class="content" align="center" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td class="contact_info">
+						<div data-builder="contact_info">
+							<div style="padding-top:15px; padding-bottom:1px;"><img height="13" width="13" style="vertical-align: middle;" src="{BLOG_URL}wp-admin/images/date-button.gif" alt="Datum"  /> E-Mail gesendet {DATE} @ {TIME}</div>
+                                                        <div style="color:inherit"><img height="12" width="12" style="vertical-align: middle;" src="{BLOG_URL}wp-admin/images/comment-grey-bubble.png" alt="Contact"  /> Bei Fragen wende Dich bitte an <a href="mailto:{ADMIN_EMAIL}">{ADMIN_EMAIL}</a></div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="site-link">
+						Besuche unsere Webseite: <a href="{BLOG_URL}">{BLOG_NAME}.</a>
+					</td>
+				</tr>
+			</table>
+
+			</div>
+		</td>
+	</tr>
+</table>

@@ -1,0 +1,13 @@
+/* debug */
+/* $gray_3: yellow; */
+/* $gray_6: green; */
+/* $gray_8: blue; */
+/* $gray_d: lime; */
+/* $gray_e6: red; */
+/* $gray_fa: blue; */
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-ms-site-check .pstoolkit-ms-site-check-error_message .sui-box-body {
+  padding-top: 0;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-ms-site-check .pstoolkit-ms-site-check-error_message .sui-box-body div[data-tabs] {
+  border-top: 0;
+}

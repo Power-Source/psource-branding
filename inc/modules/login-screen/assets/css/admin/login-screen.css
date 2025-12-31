@@ -1,0 +1,23 @@
+/* debug */
+/* $gray_3: yellow; */
+/* $gray_6: green; */
+/* $gray_8: blue; */
+/* $gray_d: lime; */
+/* $gray_e6: red; */
+/* $gray_fa: blue; */
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-login-screen .pstoolkit-section-content .pstoolkit-login_screen-error-messages textarea {
+  height: 6em;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-login-screen .pstoolkit-section-theme .pstoolkit-big-button.pstoolkit-has-theme span {
+  opacity: 0;
+  transition-duration: .5s;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-login-screen .pstoolkit-section-theme .pstoolkit-big-button.pstoolkit-has-theme:hover span {
+  opacity: 1;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-login-screen .module-login-screen-login-screen-php .pstoolkit-login-screen-choose-template-dialog .sui-modal-content {
+  max-width: 820px;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-login-screen .module-login-screen-login-screen-php .simple-option-textarea textarea {
+  min-height: 3em;
+}

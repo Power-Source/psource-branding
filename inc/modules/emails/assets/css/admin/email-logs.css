@@ -1,0 +1,75 @@
+/* debug */
+/* $gray_3: yellow; */
+/* $gray_6: green; */
+/* $gray_8: blue; */
+/* $gray_d: lime; */
+/* $gray_e6: red; */
+/* $gray_fa: blue; */
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-email-logs .sui-table {
+  font-weight: 500;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-email-logs .sui-table #pstoolkit-email-logs-table td, .pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-email-logs .sui-table .pstoolkit-ellipsised-last-cell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-email-logs .sui-table .pstoolkit-ellipsised-last-cell {
+  display: inline-block;
+  width: calc(100% - 50px);
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-email-logs .sui-table .pstoolkit-details-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-email-logs .sui-table td {
+  color: #888;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-email-logs .sui-table td b {
+  color: #333;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-email-logs #pstoolkit-email-logs-table .sui-accordion-item--open > td > .sui-box {
+  margin-bottom: 0;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-email-logs #pstoolkit-email-logs-settings .pstoolkit-section-export, .pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-email-logs #pstoolkit-email-logs-settings .pstoolkit-section-clear {
+  padding-bottom: 0;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-email-logs #pstoolkit-email-logs-settings .sui-side-tabs {
+  margin-bottom: 0;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-email-logs #pstoolkit-email-logs-settings #simple_options_export_items {
+  margin-top: 10px;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-email-logs #pstoolkit-email-logs-settings #simple_options_clear_items {
+  width: 100px;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-box-actions .pstoolkit-actions-bar .pstoolkit-bulk-actions {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-box-actions .pstoolkit-actions-bar .pstoolkit-bulk-actions .select-container {
+  width: 200px;
+  flex: 0 0 auto;
+  margin-right: 10px;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-box-actions .pstoolkit-actions-bar .pstoolkit-pagination {
+  flex: 1;
+  margin-left: 10px;
+  text-align: right;
+}
+@media (max-width, md) {
+  .pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-box-actions .pstoolkit-actions-bar {
+    display: block;
+  }
+}
+@media (min-width, md) {
+  .pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-box-actions .pstoolkit-actions-bar {
+    display: flex;
+    align-items: center;
+  }
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-box-actions .sui-pagination-filter .select-container {
+  z-index: unset;
+}

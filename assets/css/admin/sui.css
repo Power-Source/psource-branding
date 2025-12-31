@@ -1,0 +1,568 @@
+/* debug */
+/* $gray_3: yellow; */
+/* $gray_6: green; */
+/* $gray_8: blue; */
+/* $gray_d: lime; */
+/* $gray_e6: red; */
+/* $gray_fa: blue; */
+/** * SUI integration */
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit {
+  /* modules */
+  /* modules end */
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-description + .select-list-container, .pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-description + .sui-form-control, .pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-description + .sui-input-md, .pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-description + .sui-input-sm, .pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-description + .sui-side-tabs, .pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-description + .wp-editor-wrap, .pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-description + ul {
+  margin-top: 10px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-description + ul .sui-radio input + span {
+  margin-top: 1px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-form-control + .sui-description,
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-side-tabs + .sui-description,
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .select2 + .sui-description,
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-row + .sui-description {
+  margin-top: 10px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-form-field.simple-option-checkbox {
+  margin-bottom: 10px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-notice.hidden {
+  display: none;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-notice .sui-notice-content p {
+  margin: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option div.ui-slider {
+  margin: 10px 0;
+  max-width: 150px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option .select2-container {
+  min-width: 10em;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option #pstoolkit-data-delete-subsites-container .sui-description {
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option.simple-option-sui-tab .sui-side-tabs .sui-side-tabs {
+  margin-bottom: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option.simple-option-checkbox .sui-description {
+  margin-left: 45px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option .wp-editor-area {
+  color: #333;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option .sui-side-tabs {
+  margin-bottom: 20px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option .pstoolkit-input-time {
+  width: 11em;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option.simple-option-select .select-container {
+  padding: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-settings-col-2 .simple-option label.sui-label {
+  color: #666;
+  font-size: 15px;
+  line-height: 22px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-settings-col-2 span.sui-label.pstoolkit-has-actions {
+  margin-bottom: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-settings-col-2 span.sui-label.pstoolkit-has-actions .list-value {
+  padding: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-settings-col-2 span.sui-label.pstoolkit-has-actions .dropdown-handle i {
+  height: 16px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-settings-col-2 span.sui-label.pstoolkit-has-actions + .sui-border-frame {
+  margin-top: 5px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-settings-col-2 span.sui-label.pstoolkit-has-actions .list-results {
+  min-width: 60px;
+  top: 18px;
+  left: -16px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-settings-col-2 .sui-accordion-item-body .simple-option label.sui-label,
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-settings-col-2 .sui-accordion-item-body .simple-option div.sui-label,
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-settings-col-2 .sui-side-tabs .simple-option label.sui-label,
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-settings-col-2 .sui-side-tabs .simple-option div.sui-label {
+  color: #aaa;
+  font-size: 13px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option-number .ui-slider span.ui-slider-handle {
+  background-color: #0073aa;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option-number label[for="simple_options_design_content_radius"] span.sui-actions-right {
+  padding-top: 14px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option-checkboxes ul {
+  margin: 10px 0 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option-checkboxes ul li {
+  line-height: 15px;
+  margin-bottom: 10px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option-checkboxes ul li .sui-checkbox .sui-description {
+  color: #666;
+  font-size: 13px;
+  line-height: 22px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit div#limit .simple-option-number .ui-slider.small-text {
+  width: 100px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option-checkbox .switch-button-label {
+  text-transform: uppercase;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option-checkbox .switch-button-background.checked {
+  background-color: #085;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option-textarea textarea {
+  min-height: 20em;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sortable .simple-option td:first-of-type {
+  width: 1.5em;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option-css_editor,
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option-html_editor {
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 4px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option-css_editor .ub_css_editor,
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option-css_editor .ub_html_editor,
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option-html_editor .ub_css_editor,
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option-html_editor .ub_html_editor {
+  width: 100%;
+  min-height: 20em;
+  z-index: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option-css_editor .CodeMirror pre,
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option-html_editor .CodeMirror pre {
+  z-index: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-accordion .pstoolkit-section-reset {
+  padding: 15px 30px;
+  margin: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-accordion .sui-accordion-item-body .sui-notice.sui-notice-error p {
+  margin: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-button-magenta {
+  background-color: #8d00b1;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-tabs-content .pstoolkit-tab-design-avatar_show {
+  border: 0;
+  padding: 0;
+  padding-top: 10px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .pstoolkit-section-theme .pstoolkit-big-button {
+  border-color: #ddd;
+  background-color: transparent;
+  color: #888;
+  font: 500 12px/16px Roboto, Arial, sans-serif;
+  letter-spacing: -.25px;
+  align-items: center;
+  display: inline-flex;
+  cursor: pointer;
+  border-style: solid;
+  border-radius: 4px;
+  transition: all .3s ease;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-width: 1px;
+  height: 160px;
+  text-transform: initial;
+  width: 220px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .pstoolkit-section-theme .pstoolkit-big-button:hover {
+  border-color: #888;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .pstoolkit-section-theme .pstoolkit-big-button span {
+  text-align: center;
+  width: 100%;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .pstoolkit-section-theme .pstoolkit-big-button span i {
+  display: block;
+  margin: 10px auto;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .pstoolkit-section-theme .pstoolkit-big-button span i:before {
+  font-size: 1.4em;
+}
+.pstoolkit-admin-page .sui-wrap.sui-color-accessible.sui-wrap-pstoolkit .sui-box-body .pstoolkit-section-theme .pstoolkit-big-button {
+  color: #fff;
+  border-color: #000;
+  background-color: #000;
+}
+.pstoolkit-admin-page .sui-wrap.sui-color-accessible.sui-wrap-pstoolkit .sui-box-body .pstoolkit-section-theme .pstoolkit-big-button i::before {
+  color: #fff !important;
+  /* We need to override an !important rule so using !important is the only option */
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .pstoolkit-section-theme .pstoolkit-big-button.pstoolkit-has-theme:hover {
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.98);
+  background-image: none !important;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .pstoolkit-section-theme .pstoolkit-big-button.pstoolkit-has-theme:hover i::before {
+  color: #333;
+}
+.pstoolkit-admin-page .sui-wrap.sui-color-accessible.sui-wrap-pstoolkit .sui-box-body .pstoolkit-section-theme .pstoolkit-big-button.pstoolkit-has-theme {
+  background-color: transparent;
+}
+.pstoolkit-admin-page .sui-wrap.sui-color-accessible.sui-wrap-pstoolkit .sui-box-body .pstoolkit-section-theme .pstoolkit-big-button.pstoolkit-has-theme:hover {
+  color: #fff;
+  background-color: #000;
+}
+.pstoolkit-admin-page .sui-wrap.sui-color-accessible.sui-wrap-pstoolkit .sui-box-body .pstoolkit-section-theme .pstoolkit-big-button.pstoolkit-has-theme:hover i::before {
+  color: #fff !important;
+  /* We need to override an !important rule so using !important is the only option */
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .pstoolkit-no-sui-columns {
+  display: block;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal.pstoolkit-choose-template-dialog .sui-box-selector {
+  display: initial;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal.pstoolkit-choose-template-dialog .sui-box-body {
+  padding-left: 0;
+  padding-right: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal.pstoolkit-choose-template-dialog .sui-box-body .sui-notice {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal.pstoolkit-choose-template-dialog .pstoolkit-template-container {
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 2px 7px rgba(0, 0, 0, 0.05);
+  display: block;
+  width: 220px;
+  height: 160px;
+  background-size: cover;
+  background-color: #fff;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal.pstoolkit-choose-template-dialog .pstoolkit-template-container span {
+  display: none;
+  text-align: center;
+  width: 100%;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal.pstoolkit-choose-template-dialog .pstoolkit-template-container span.login-screen-icon, .pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal.pstoolkit-choose-template-dialog .pstoolkit-template-container span.email-template-icon {
+  margin: 40px auto 0 auto;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal.pstoolkit-choose-template-dialog .pstoolkit-template-container span.login-screen-icon i, .pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal.pstoolkit-choose-template-dialog .pstoolkit-template-container span.email-template-icon i {
+  margin: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal.pstoolkit-choose-template-dialog .pstoolkit-template-container span.login-screen-icon i:before, .pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal.pstoolkit-choose-template-dialog .pstoolkit-template-container span.email-template-icon i:before {
+  font-size: 1.4em;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal.pstoolkit-choose-template-dialog .pstoolkit-template-container span.login-screen-title, .pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal.pstoolkit-choose-template-dialog .pstoolkit-template-container span.email-template-title {
+  padding-top: 5px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal.pstoolkit-choose-template-dialog .pstoolkit-template-container:hover {
+  background-color: rgba(255, 255, 255, 0.98);
+  background-image: none !important;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal.pstoolkit-choose-template-dialog .pstoolkit-template-container:hover span {
+  display: block;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal.pstoolkit-choose-template-dialog .pstoolkit-login-screen-template-scratch .pstoolkit-template-container span {
+  display: block;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal.pstoolkit-choose-template-dialog.pstoolkit-login-screen-choose-template-dialog .pstoolkit-login-screen-li {
+  flex: 0;
+  min-width: 240px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal.pstoolkit-choose-template-dialog .sui-notice p {
+  text-align: left;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal.pstoolkit-choose-template-dialog.pstoolkit-email-template-choose-template-dialog .sui-modal-content {
+  max-width: 820px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal.pstoolkit-choose-template-dialog.pstoolkit-email-template-choose-template-dialog .pstoolkit-template-container {
+  width: 160px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal.pstoolkit-choose-template-dialog.pstoolkit-email-template-choose-template-dialog .pstoolkit-email-template-scratch {
+  color: #888;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal.pstoolkit-choose-template-dialog.pstoolkit-email-template-choose-template-dialog .pstoolkit-email-template-scratch span {
+  display: block;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal.pstoolkit-choose-template-dialog.pstoolkit-email-template-choose-template-dialog .pstoolkit-email-template-li {
+  flex: 0;
+  min-width: 180px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal .sui-box-selectors ul {
+  align-content: flex-start;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal .sui-box-selectors ul li {
+  flex: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal .sui-box-selectors .pstoolkit-selected .pstoolkit-login-screen-container,
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal .sui-box-selectors .pstoolkit-selected .pstoolkit-template-container {
+  background-color: rgba(225, 246, 255, 0.98);
+  background-image: none !important;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal .sui-box-selectors .pstoolkit-selected .pstoolkit-login-screen-container span,
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-modal .sui-box-selectors .pstoolkit-selected .pstoolkit-template-container span {
+  display: block;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .simple-option-button button.pstoolkit-social-logo-add-dialog-button {
+  line-height: 60px;
+  width: 100%;
+  border-style: dotted;
+  height: auto;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-accordion .sui-accordion-item .sui-accordion-item-body .pstoolkit-social-logos-main-container {
+  margin: 0;
+  border: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-accordion .sui-accordion-item .sui-accordion-item-body .pstoolkit-social-logos-main-container .sui-accordion-item {
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.05);
+  border: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-accordion .sui-accordion-item .sui-accordion-item-body .pstoolkit-social-logos-main-container .sui-accordion-item .sui-icon-trash {
+  margin: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-accordion .sui-accordion-item .sui-accordion-item-body .pstoolkit-social-logos-main-container .sui-accordion-item:last-child {
+  margin-bottom: 30px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-accordion .sui-accordion-item .sui-accordion-item-body .pstoolkit-social-logos-main-container .sui-accordion-item:hover {
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.02), 0 4px 15px 0 rgba(0, 0, 0, 0.05);
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-accordion .sui-accordion-item .sui-accordion-item-body .pstoolkit-social-logos-main-container .sui-accordion-item:hover .sui-accordion-item-header {
+  background-color: transparent;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-accordion .sui-accordion-item .sui-accordion-item-body .pstoolkit-social-logos-main-container .sui-accordion-item .sui-accordion-item-header,
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-box-body .sui-accordion .sui-accordion-item .sui-accordion-item-body .pstoolkit-social-logos-main-container .sui-accordion-item .sui-accordion-item-body {
+  background-color: #fff;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-sidenav .sui-vertical-tabs .sui-icon-check-tick:before {
+  color: #17a8e3;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-table .check-column {
+  width: 2.2em;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .simple-option-sui-tab .sui-tabs-content .sui-label {
+  font-size: 12px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .module-front-end-author-box-php .pstoolkit-author-box-avatar-border .sui-row {
+  margin-bottom: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .module-utilities-export-php .sui-border-frame {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .module-widgets-meta-widget-php .simple-option img {
+  max-width: 100%;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .module-utilities-data-php .simple-option-sui-tab .sui-side-tabs {
+  margin-top: 10px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .module-utilities-data-php .simple-option-sui-tab .sui-side-tabs + .sui-notice {
+  margin-top: -10px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .module-utilities-export-php .simple-option.simple-option-checkbox .sui-description {
+  margin-left: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .module-admin-help-content-php .sui-modal .pstoolkit-admin-help-content-dialog .sui-label {
+  color: #aaa;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .module-admin-help-content-php .pstoolkit-admin-help-content-items .sui-builder-field {
+  transition: none;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-settings-tab-content-dashboard-widgets .module-widgets-dashboard-widgets-php .pstoolkit-section-visibility .sui-checkbox .sui-description {
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+  color: #666;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-settings-tab-content-dashboard-widgets .module-widgets-dashboard-widgets-php .pstoolkit-dashboard-widgets-items .sui-builder-field {
+  transition: none;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-settings-tab-content-dashboard-widgets .sui-box-builder-message.hidden {
+  display: none;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-settings-tab-content-dashboard-widgets .sui-modal .pstoolkit-general-title .sui-label,
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-settings-tab-content-dashboard-widgets .sui-modal .pstoolkit-general-content .sui-label {
+  color: #aaa;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-settings-tab-content-dashboard-feeds .pstoolkit-list-title {
+  color: #666;
+  font-size: 13px;
+  color: #333;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-settings-tab-content-dashboard-feeds .pstoolkit-list-detail {
+  color: #888;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-settings-tab-site-generator .sui-box-body .sui-box-settings-col-2 .sui-label,
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-settings-tab-content-emails-header .sui-box-body .sui-box-settings-col-2 .sui-label,
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-settings-tab-content-registration-emails .sui-box-body .sui-box-settings-col-2 .sui-label {
+  color: #aaa;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-bottom: 5px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-settings-tab-content-registration-emails .sui-box-settings-col-2 .sui-border-frame {
+  margin-left: 45px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-settings-tab-content-import .sui-upload + .sui-notice {
+  margin-bottom: 5px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-settings-tab-content-header .pstoolkit-section-main .pstoolkit-content-settings .simple-option label.sui-label,
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-settings-tab-content-header .pstoolkit-section-subsites_option .pstoolkit-content-settings .simple-option label.sui-label,
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-settings-tab-content-footer .pstoolkit-section-main .pstoolkit-content-settings .simple-option label.sui-label,
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-settings-tab-content-footer .pstoolkit-section-subsites_option .pstoolkit-content-settings .simple-option label.sui-label {
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+  color: #666;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-settings-tab-comments-control .pstoolkit-section-settings .sui-side-tabs .simple-option label.sui-label {
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+  color: #666;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-row-with-sidenav .pstoolkit-settings-tab-title-fixed,
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-row-with-sidenav .pstoolkit-settings-vertical-tab-fixed {
+  position: fixed;
+  z-index: 12;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-row-with-sidenav .sui-box-header .sui-box-status {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-modal .pstoolkit-choose-template-dialog .sui-box .sui-box-selectors {
+  padding: 20px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-modal .pstoolkit-choose-template-dialog .sui-box .sui-box-selectors ul {
+  margin: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-modal .pstoolkit-choose-template-dialog .sui-box .sui-box-footer {
+  padding-bottom: 30px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-modal .pstoolkit-choose-template-dialog .sui-box .sui-box-footer .sui-form-field {
+  margin-bottom: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-modal.sui-modal-sm .sui-modal-content .sui-box .sui-box-header {
+  line-height: 1;
+  padding-top: 60px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-modal .ace_editor {
+  min-height: 300px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-modal .sui-description + .sui-form-control, .pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-modal .sui-description + .sui-side-tabs, .pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-modal .sui-description + .wp-editor-wrap {
+  margin-top: 10px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-modal .pstoolkit-divider {
+  margin: 30px 0 26px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-modal .pstoolkit-dashboard-feeds-dialog .sui-label {
+  color: #aaa;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-bottom: 5px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-settings-tab-content-data > .sui-box-body {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-settings-tab-content-data > .sui-box-body p {
+  margin-bottom: 24px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-settings-tab-content-data > .sui-box-body .pstoolkit-divider {
+  margin: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-settings-tab-content-data .module-utilities-data-php > .sui-box-body {
+  padding-top: 26px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-settings-tab-content-import form > .sui-box-body,
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-settings-tab-content-export form > .sui-box-body {
+  padding-bottom: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-settings-tab-content-import .pstoolkit-section-import .simple-option-file {
+  margin-bottom: 10px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit.pstoolkit-import-error .sui-footer {
+  margin-top: 30px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit.sui-wrap-pstoolkit-module-import.pstoolkit-import-import .sui-header {
+  margin-bottom: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit.sui-wrap-pstoolkit-module-import.pstoolkit-import-import .sui-header > p {
+  margin-bottom: 20px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit.sui-wrap-pstoolkit-module-import.pstoolkit-import-import .sui-header .sui-notice {
+  margin-top: 20px;
+  text-align: left;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit.sui-wrap-pstoolkit-module-import.pstoolkit-import-import #sui-pstoolkit-content {
+  margin-top: 30px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit.sui-wrap-pstoolkit-module-import.pstoolkit-import-import .sui-footer {
+  margin-top: 30px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit.sui-wrap-pstoolkit-module-import.pstoolkit-import-import .sui-footer a {
+  margin-right: 30px;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-row-with-sidenav .sui-sidenav .sui-vertical-tabs .sui-vertical-tab {
+  min-height: 30px;
+  height: auto;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-units {
+  border: 0;
+  background-color: transparent;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-units .list-value {
+  color: #aaa;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .pstoolkit-units .sui-icon-chevron-down:before {
+  color: #aaa;
+  content: "x";
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-pagination-wrap.one-page .sui-pagination {
+  display: none;
+}
+.pstoolkit-admin-page .sui-wrap.sui-wrap-pstoolkit .sui-upgrade-page-header__image {
+  background-position: 50% 10%;
+}
+.pstoolkit-admin-page.pstoolkit-import #wpwrap {
+  background-color: #fff;
+}
+.pstoolkit-admin-page .sui-modal .sui-box-header .sui-box-title span.pstoolkit-edit {
+  display: inline;
+}
+.pstoolkit-admin-page .sui-modal .sui-box-header .sui-box-title span.pstoolkit-new {
+  display: none;
+}
+.pstoolkit-admin-page .sui-modal .sui-box-footer button.pstoolkit-save span.pstoolkit-edit {
+  display: inline;
+}
+.pstoolkit-admin-page .sui-modal .sui-box-footer button.pstoolkit-save span.pstoolkit-new {
+  display: none;
+}
+.pstoolkit-admin-page .sui-modal .pstoolkit-dialog-new .sui-box-header .sui-box-title span.pstoolkit-edit {
+  display: none;
+}
+.pstoolkit-admin-page .sui-modal .pstoolkit-dialog-new .sui-box-header .sui-box-title span.pstoolkit-new {
+  display: inline;
+}
+.pstoolkit-admin-page .sui-modal .pstoolkit-dialog-new .sui-box-footer button.pstoolkit-save span.pstoolkit-edit {
+  display: none;
+}
+.pstoolkit-admin-page .sui-modal .pstoolkit-dialog-new .sui-box-footer button.pstoolkit-save span.pstoolkit-new {
+  display: inline;
+}

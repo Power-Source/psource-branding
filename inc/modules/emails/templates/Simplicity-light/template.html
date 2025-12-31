@@ -1,0 +1,65 @@
+<table class="container" border="0" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+		<td valign="middle" align="center">
+			<div class="width">
+
+			<table class="content content_title" align="center" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td valign="middle" class="branding_html" data-builder="branding_html" colspan="2">
+                                            <!-- Standardmäßig wird es beim Senden von E-Mails durch die Seiten-Beschreibung ersetzt,
+                                            Obwohl Du hier jeden Text platzieren kannst -->
+						{BLOG_DESCRIPTION}
+					</td>
+				</tr>
+				<tr>
+					<td class="title" data-builder="title_color" colspan="2">
+						<div data-builder="blog_name">
+                                                    <!--BLOG_NAME wird beim Senden von E-Mails durch den Seiten-Namen ersetzt,
+                                                    Obwohl Du hier jeden Text platzieren kannst -->
+							{BLOG_NAME}
+						</div>
+					</td>
+				</tr>
+				<tr>
+                                        <!-- {FROM_EMAIL wird durch in den Seiten-Einstellungen angegebene Administrator-E-Mail ersetzt,
+                                            FROM_NAME wird ersetzt, wenn FROM_EMAIL einem Konto zugeordnet ist
+                                            Du kannst beide Parameter direkt durch einen gewünschten Wert ersetzen -->
+					<td class="from" data-builder="from_name">
+						{FROM_NAME}
+					</td>
+					<td class="from text_right" data-builder="from_email">
+						{FROM_EMAIL}
+					</td>
+				</tr>
+			</table>
+			<table class="content content_main" align="center" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td class="email_content" data-builder="body_color">
+						<div data-builder="email_content">
+                                                    <!--Die Nachricht wird beim Versenden einer E-Mail durch E-Mail-Inhalte ersetzt-->
+							{MESSAGE}
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="contact_info" data-builder="body_color">
+						<div data-builder="contact_info">
+							<div style="padding-top:15px; padding-bottom:1px;"><img height="13" width="13" style="vertical-align: middle;" src="{BLOG_URL}wp-admin/images/date-button.gif" alt="Datum"  /> E-Mail gesendet {DATE} @ {TIME}</div>
+                                                        <div style="color:inherit"><img height="12" width="12" style="vertical-align: middle;" src="{BLOG_URL}wp-admin/images/comment-grey-bubble.png" alt="Contact"  /> Bei Fragen wende Dich bitte an <a href="mailto:{ADMIN_EMAIL}">{ADMIN_EMAIL}</a></div>
+						</div>
+					</td>
+				</tr>
+			</table>
+
+			<table class="content content_site-link" align="center" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td class="site-link">
+						Besuche unsere Webseite: <a href="{BLOG_URL}">{BLOG_NAME}.</a>
+					</td>
+				</tr>
+			</table>
+
+			</div>
+		</td>
+	</tr>
+</table>
