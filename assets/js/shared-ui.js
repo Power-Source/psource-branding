@@ -3406,7 +3406,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             }
         }
 
-        leftButton.click(function() {
+        leftButton.on('click', function() {
             rightButton.removeClass('sui-tabs-navigation--hidden');
 
             if (0 >= tabs.scrollLeft() - 150) {
@@ -3418,7 +3418,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             }, 400, function() {});
             return false;
         });
-        rightButton.click(function() {
+        rightButton.on('click', function() {
             leftButton.removeClass('sui-tabs-navigation--hidden');
             reachedEnd(150);
             tabs.animate({
@@ -3426,10 +3426,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             }, 400, function() {});
             return false;
         });
-        $(window).resize(function() {
+        $(window).on('resize', function() {
             overflowing();
         });
-        tabs.scroll(function() {
+        tabs.on('scroll', function() {
             overflowing();
         });
     };
@@ -3608,10 +3608,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
                 tabs.on('click', function(e) {
                     clickEventListener(e); // Trigger events when pressing key.
-                }).keydown(function(e) {
+                }).on('keydown', function(e) {
                     index = $(this).index();
                     keydownEventListener(e, index, tablist); // Trigger events when releasing key.
-                }).keyup(function(e) {
+                }).on('keyup', function(e) {
                     index = $(this).index();
                     keyupEventListener(e, index, tablist);
                 });
