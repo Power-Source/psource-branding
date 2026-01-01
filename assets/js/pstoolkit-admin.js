@@ -121,8 +121,24 @@ jQuery( window.document ).ready(function($){
 
         change: function( event, ui ) {
             var $this = $( this );
-            $this.val( ui.color.toCSS() ).trigger( 'change' );
-        }
+            var newColor = ui.color.toCSS ? ui.color.toCSS() : ui.color.toString();
+            $this.val( newColor ).trigger( 'change' );
+            
+            // Update SUI preview immediately
+            var $suiPicker = $this.closest( '.sui-colorpicker-wrap' );
+            var $suiPickerColor = $suiPicker.find( '.sui-colorpicker-value span[role=button] span' );
+            var $suiPickerInput = $suiPicker.find( '.sui-colorpicker-value input' );
+            
+            if ( $suiPickerColor.length ) {
+                $suiPickerColor.css( 'background-color', newColor );
+            }
+            if ( $suiPickerInput.length ) {
+                $suiPickerInput.val( newColor );
+            }
+        },
+        
+        // Ensure iris is properly triggered when color changes
+        palettes: true
     });
 
     if ( $suiPickerInputs.hasClass( 'wp-color-picker' ) ) {
@@ -148,8 +164,8 @@ jQuery( window.document ).ready(function($){
 
                 $suiPickerType = 'rgba';
 
-                // Listen to color change
-                $suiPickerInput.on( 'change', function() {
+                // Listen to color change (immediate feedback)
+                $suiPickerInput.on( 'change irischange', function() {
 
                     // Change color preview
                     $suiPickerColor.find( 'span' ).css({
@@ -163,16 +179,17 @@ jQuery( window.document ).ready(function($){
 
             } else {
 
-                // Listen to color change
-                $suiPickerInput.on( 'change', function() {
-
+                // Listen to color change (immediate feedback)
+                $suiPickerInput.on( 'change irischange', function() {
+                    var currentColor = $suiPickerInput.val();
+                    
                     // Change color preview
                     $suiPickerColor.find( 'span' ).css({
-                        'background-color': $wpPickerButton.css( 'background-color' )
+                        'background-color': currentColor
                     });
 
                     // Change color value
-                    $suiPickerValue.find( 'input' ).val( $suiPickerInput.val() );
+                    $suiPickerValue.find( 'input' ).val( currentColor );
 
                 } );
             }

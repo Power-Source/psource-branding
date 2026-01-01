@@ -305,20 +305,6 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 			global $wp_version;
 			// Local jQuery UI pieces (avoid deprecated CP handles).
 			// Deregister deprecated handles first to prevent other code from triggering warnings.
-			wp_deregister_script( 'jquery-ui-core' );
-			wp_deregister_script( 'jquery-ui-widget' );
-			wp_deregister_script( 'jquery-ui-mouse' );
-			wp_deregister_script( 'jquery-ui-sortable' );
-			wp_deregister_script( 'jquery-ui-slider' );
-			wp_deregister_script( 'jquery-ui-datepicker' );
-			
-			// Re-register with non-deprecated handles that point to the same files.
-			wp_register_script( 'jquery-ui-core', includes_url( 'js/jquery/ui/core.min.js' ), array( 'jquery' ), '1.13.2', true );
-			wp_register_script( 'jquery-ui-widget', includes_url( 'js/jquery/ui/widget.min.js' ), array( 'jquery', 'jquery-ui-core' ), '1.13.2', true );
-			wp_register_script( 'jquery-ui-mouse', includes_url( 'js/jquery/ui/mouse.min.js' ), array( 'jquery', 'jquery-ui-core', 'jquery-ui-widget' ), '1.13.2', true );
-			wp_register_script( 'jquery-ui-sortable', includes_url( 'js/jquery/ui/sortable.min.js' ), array( 'jquery', 'jquery-ui-core', 'jquery-ui-widget', 'jquery-ui-mouse' ), '1.13.2', true );
-			wp_register_script( 'jquery-ui-slider', includes_url( 'js/jquery/ui/slider.min.js' ), array( 'jquery', 'jquery-ui-core', 'jquery-ui-widget', 'jquery-ui-mouse' ), '1.13.2', true );
-			wp_register_script( 'jquery-ui-datepicker', includes_url( 'js/jquery/ui/datepicker.min.js' ), array( 'jquery', 'jquery-ui-core' ), '1.13.2', true );
 			
 			wp_register_script(
 				'pstoolkit-ui-core',
@@ -468,28 +454,35 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 				true
 			);
 			
+			// Also register standard wp-color-picker as alias to our custom one for compatibility.
+			wp_register_script(
+				'wp-color-picker',
+				admin_url( 'js/color-picker.min.js' ),
+				array( 'pstoolkit-iris' ),
+				false,
+				true
+			);
+			
 			wp_enqueue_style( 'wp-color-picker' );
 			
 			// Enqueue full UI stack for color picker alpha addon.
 			wp_enqueue_script( 'pstoolkit-ui-slider' );
 			wp_enqueue_script( 'pstoolkit-iris' );
-			wp_enqueue_script( 'pstoolkit-color-picker' );
+			wp_enqueue_script( 'wp-color-picker' );
 			
-			$file = pstoolkit_url( 'external/wp-color-picker-alpha/wp-color-picker-alpha.min.js' );
-			wp_enqueue_script( 'wp-color-picker-alpha', $file, array( 'pstoolkit-color-picker' ), '2.1.3', true );
-			$color_picker_strings = array(
-				'clear'            => __( 'Leeren', 'ub' ),
-				'clearAriaLabel'   => __( 'Leere Farbe', 'ub' ),
-				'defaultString'    => __( 'Standard', 'ub' ),
-				'defaultAriaLabel' => __( 'Wähle Standardfarbe', 'ub' ),
-				'pick'             => __( 'Wähle Farbe', 'ub' ),
-				'defaultLabel'     => __( 'Farbwert', 'ub' ),
-			);
-			wp_localize_script( 'wp-color-picker-alpha', 'wpColorPickerL10n', $color_picker_strings );
-
-			/**
-			 * Messages
-			 */
+		// Localize wp-color-picker (needed for standard color picker functionality).
+		$color_picker_strings = array(
+			'clear'            => __( 'Leeren', 'ub' ),
+			'clearAriaLabel'   => __( 'Leere Farbe', 'ub' ),
+			'defaultString'    => __( 'Standard', 'ub' ),
+			'defaultAriaLabel' => __( 'Wähle Standardfarbe', 'ub' ),
+			'pick'             => __( 'Wähle Farbe', 'ub' ),
+			'defaultLabel'     => __( 'Farbwert', 'ub' ),
+		);
+		wp_localize_script( 'wp-color-picker', 'wpColorPickerL10n', $color_picker_strings );
+		
+		$file = pstoolkit_url( 'external/wp-color-picker-alpha/wp-color-picker-alpha.min.js' );
+		wp_enqueue_script( 'wp-color-picker-alpha', $file, array( 'wp-color-picker' ), '2.1.3', true );
 			$messages = array(
 				'messages' => array(
 					'copy'    => array(
