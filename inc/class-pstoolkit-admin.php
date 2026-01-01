@@ -416,11 +416,43 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 				$version_bust,
 				true
 			);
+			
+			// Register iris with our custom UI widget handle (avoid deprecated jquery-ui-widget).
+			wp_register_script(
+				'pstoolkit-iris',
+				admin_url( 'js/iris.min.js' ),
+				array( 'pstoolkit-ui-widget' ),
+				'1.1.1',
+				true
+			);
+			// Iris requires IRIS localization data
+			wp_localize_script(
+				'pstoolkit-iris',
+				'IRIS',
+				array(
+					'blank' => esc_url( site_url( '/wp-includes/images/blank.gif' ) ),
+					'border' => true,
+				)
+			);
+			
+			// Register color picker with our custom iris handle (avoid deprecated CP handle chain).
+			wp_register_script(
+				'pstoolkit-color-picker',
+				admin_url( 'js/color-picker.min.js' ),
+				array( 'pstoolkit-iris' ),
+				false,
+				true
+			);
+			
 			wp_enqueue_style( 'wp-color-picker' );
-			// Ensure slider support for the color picker alpha addon without using deprecated CP handles.
+			
+			// Enqueue full UI stack for color picker alpha addon.
 			wp_enqueue_script( 'pstoolkit-ui-slider' );
+			wp_enqueue_script( 'pstoolkit-iris' );
+			wp_enqueue_script( 'pstoolkit-color-picker' );
+			
 			$file = pstoolkit_url( 'external/wp-color-picker-alpha/wp-color-picker-alpha.min.js' );
-			wp_enqueue_script( 'wp-color-picker-alpha', $file, array( 'wp-color-picker' ), '2.1.3', true );
+			wp_enqueue_script( 'wp-color-picker-alpha', $file, array( 'pstoolkit-color-picker' ), '2.1.3', true );
 			$color_picker_strings = array(
 				'clear'            => __( 'Leeren', 'ub' ),
 				'clearAriaLabel'   => __( 'Leere Farbe', 'ub' ),
