@@ -504,7 +504,8 @@ if ( ! class_exists( 'PSToolkit_Admin_Panel_Tips' ) ) {
 				esc_attr( $alt )
 			);
 			// Styles and scripts for the date picker.
-			wp_enqueue_script( 'jquery-ui-datepicker' );
+				// Use custom datepicker handle to avoid deprecated CP handle.
+				wp_enqueue_script( 'pstoolkit-ui-datepicker' );
 			wp_localize_jquery_ui_datepicker();
 			wp_enqueue_style(
 				$this->get_name( 'ui', 'jquery' ),

@@ -304,6 +304,22 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 
 			global $wp_version;
 			// Local jQuery UI pieces (avoid deprecated CP handles).
+			// Deregister deprecated handles first to prevent other code from triggering warnings.
+			wp_deregister_script( 'jquery-ui-core' );
+			wp_deregister_script( 'jquery-ui-widget' );
+			wp_deregister_script( 'jquery-ui-mouse' );
+			wp_deregister_script( 'jquery-ui-sortable' );
+			wp_deregister_script( 'jquery-ui-slider' );
+			wp_deregister_script( 'jquery-ui-datepicker' );
+			
+			// Re-register with non-deprecated handles that point to the same files.
+			wp_register_script( 'jquery-ui-core', includes_url( 'js/jquery/ui/core.min.js' ), array( 'jquery' ), '1.13.2', true );
+			wp_register_script( 'jquery-ui-widget', includes_url( 'js/jquery/ui/widget.min.js' ), array( 'jquery', 'jquery-ui-core' ), '1.13.2', true );
+			wp_register_script( 'jquery-ui-mouse', includes_url( 'js/jquery/ui/mouse.min.js' ), array( 'jquery', 'jquery-ui-core', 'jquery-ui-widget' ), '1.13.2', true );
+			wp_register_script( 'jquery-ui-sortable', includes_url( 'js/jquery/ui/sortable.min.js' ), array( 'jquery', 'jquery-ui-core', 'jquery-ui-widget', 'jquery-ui-mouse' ), '1.13.2', true );
+			wp_register_script( 'jquery-ui-slider', includes_url( 'js/jquery/ui/slider.min.js' ), array( 'jquery', 'jquery-ui-core', 'jquery-ui-widget', 'jquery-ui-mouse' ), '1.13.2', true );
+			wp_register_script( 'jquery-ui-datepicker', includes_url( 'js/jquery/ui/datepicker.min.js' ), array( 'jquery', 'jquery-ui-core' ), '1.13.2', true );
+			
 			wp_register_script(
 				'pstoolkit-ui-core',
 				includes_url( 'js/jquery/ui/core.min.js' ),
@@ -332,6 +348,14 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 				'1.13.2',
 				true
 			);
+			wp_register_script(
+				'pstoolkit-ui-datepicker',
+				includes_url( 'js/jquery/ui/datepicker.min.js' ),
+				array( 'jquery', 'pstoolkit-ui-core' ),
+				'1.13.2',
+				true
+			);
+			
 			wp_register_script(
 				'pstoolkit-sui-ace',
 				pstoolkit_url( 'external/ace/ace.js' ),

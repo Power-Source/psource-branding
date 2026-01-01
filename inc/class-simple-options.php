@@ -1227,7 +1227,7 @@ if ( ! class_exists( 'Simple_Options' ) ) {
 									$data['classes'][] = 'datepicker';
 									if ( ! isset( $this->loaded['ui-datepicker'] ) ) {
 										$this->loaded['ui-datepicker'] = true;
-										wp_enqueue_script( 'jquery-ui-datepicker' );
+										wp_enqueue_script( 'pstoolkit-ui-datepicker' );
 										wp_localize_jquery_ui_datepicker();
 										$this->enqueue_jquery_style();
 									}
