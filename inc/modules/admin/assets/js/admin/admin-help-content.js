@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
      * Sortable
      */
     $.fn.pstoolkit_admin_help_content_sortable_init = function() {
-        $('.pstoolkit-admin-help-content-items').sortable({
+        $('.pstoolkit-admin-help-content-items').sortableJS({
             items: '.sui-builder-field'
         });
     }

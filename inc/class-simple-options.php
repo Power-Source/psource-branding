@@ -1455,7 +1455,8 @@ if ( ! class_exists( 'Simple_Options' ) ) {
 						$content .= sprintf( '<div class="ui-slider" %s></div>', $ui_slider_data_string );
 						if ( ! isset( $this->loaded['ui-slider'] ) ) {
 							$this->loaded['ui-slider'] = true;
-							wp_enqueue_script( 'jquery-ui-slider' );
+							// Use local jQuery UI slider (avoids deprecated CP handles).
+							wp_enqueue_script( 'pstoolkit-ui-slider' );
 							$this->enqueue_jquery_style();
 						}
 					}

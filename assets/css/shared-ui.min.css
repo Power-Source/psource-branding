@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
-@import url(https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css);
+/* Roboto font loaded locally for privacy - handled by WordPress or theme */
+/* Select2 loaded locally for privacy - see external/select2/select2.min.css */
 .sui-2-9-6 .sui-wrap .sui-box-selector input,
 .sui-2-9-6 .sui-wrap .sui-checkbox input,
 .sui-2-9-6 .sui-wrap .sui-colorpicker-wrap .wp-picker-container .button,

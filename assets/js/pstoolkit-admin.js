@@ -1,7 +1,116 @@
 /*! Psource CP Toolkit - v3.4.1
  * https://n3rds.work/cp_psource/classicpress-toolkit/
  * Copyright (c) 2020; * Licensed GPLv2+ */
-/* global window, jQuery  */
+/* global window, jQuery, Sortable  */
+
+// Debug flag to confirm script execution
+console.log('ub_admin: script loaded');
+window.ub_admin_loaded = true;
+
+/**
+ * jQuery wrapper for SortableJS
+ * Replaces deprecated jQuery UI Sortable with modern SortableJS
+ * Falls back silently if SortableJS is not available
+ */
+(function($) {
+    'use strict';
+    
+    $.fn.sortableJS = function(options) {
+        // Fallback: return this if SortableJS not available (prevents breaking)
+        if (typeof Sortable === 'undefined') {
+            console.warn('SortableJS not loaded - sortable functionality disabled');
+            return this;
+        }
+        
+        return this.each(function() {
+            // Default options
+            options = options || {};
+            
+            // Mapping von jQuery UI zu SortableJS Optionen
+            var sortableOptions = {
+                animation: 150,
+                handle: options.handle || false,
+                draggable: options.items || '>*',
+                disabled: false,
+                ghostClass: 'sortable-ghost',
+                chosenClass: 'sortable-chosen',
+                dragClass: 'sortable-drag'
+            };
+            
+            // Spezielle Optionen für horizontale Sortierung
+            if (options.axis === 'x') {
+                sortableOptions.direction = 'horizontal';
+            }
+            
+            // Distance option
+            if (options.distance) {
+                sortableOptions.delay = options.distance;
+            }
+            
+            // Event Callbacks
+            if (options.start) {
+                sortableOptions.onStart = function(evt) {
+                    options.start(evt, {
+                        item: $(evt.item),
+                        helper: $(evt.item)
+                    });
+                };
+            }
+            
+            if (options.stop || options.update) {
+                sortableOptions.onEnd = function(evt) {
+                    var callback = options.stop || options.update;
+                    callback(evt, {
+                        item: $(evt.item)
+                    });
+                };
+            }
+            
+            // SortableJS Instanz erstellen
+            var sortableInstance = new Sortable(this, sortableOptions);
+            
+            // Instanz am Element speichern für spätere Manipulation
+            $(this).data('sortable-instance', sortableInstance);
+        });
+    };
+    
+    // Enable/Disable Unterstützung
+    $.fn.sortableJSEnable = function() {
+        if (typeof Sortable === 'undefined') return this;
+        return this.each(function() {
+            var instance = $(this).data('sortable-instance');
+            if (instance) {
+                instance.option('disabled', false);
+            }
+        });
+    };
+    
+    $.fn.sortableJSDisable = function() {
+        if (typeof Sortable === 'undefined') return this;
+        return this.each(function() {
+            var instance = $(this).data('sortable-instance');
+            if (instance) {
+                instance.option('disabled', true);
+            }
+        });
+    };
+    
+    $.fn.sortableJSRefresh = function() {
+        // SortableJS braucht kein explizites Refresh
+        return this;
+    };
+    
+    $.fn.sortableJSDestroy = function() {
+        if (typeof Sortable === 'undefined') return this;
+        return this.each(function() {
+            var instance = $(this).data('sortable-instance');
+            if (instance) {
+                instance.destroy();
+                $(this).removeData('sortable-instance');
+            }
+        });
+    };
+})(jQuery);
 
 jQuery( window.document ).ready(function($){
     "use strict";
@@ -602,15 +711,15 @@ jQuery( window.document ).ready(function($){
         });
     }
     /**
-     * sortable
+     * sortable (migrated to SortableJS)
      */
-    $('table.sortable').sortable({
+    $('table.sortable').sortableJS({
         items: 'tbody tr'
     });
-    $('.pstoolkit-social-logos-main-container').sortable({
+    $('.pstoolkit-social-logos-main-container').sortableJS({
         items: '.simple-option'
     });
-    $('.sui-box-builder-fields').sortable({
+    $('.sui-box-builder-fields').sortableJS({
         items: '.sui-can-move'
     });
     /**
@@ -976,7 +1085,7 @@ $module_save_button.on( 'click', function () { SUI.pstoolkitSaveSettings.call(th
         /**
          * re-inicialize sortable
          */
-        $('.pstoolkit-social-logos-main-container').sortable({
+        $('.pstoolkit-social-logos-main-container').sortableJS({
             items: '.simple-option'
         });
     });
@@ -1089,13 +1198,17 @@ jQuery( window.document ).ready(function(){
 /* global window, jQuery */
 jQuery( window.document ).ready(function($){
     "use strict";
-    $('.sui-wrap-pstoolkit .sui-sidenav .sui-vertical-tab a' ).on( 'click', function() {
+    console.log('pstoolkit tabs: bind click (delegated)');
+    // Use delegated handler to cover dynamically injected nav
+    $(document).on( 'click', '.sui-wrap-pstoolkit .sui-sidenav .sui-vertical-tab a', function(event) {
         var container = $(this).closest('.sui-wrap-pstoolkit');
         var tabs = $('.sui-sidenav li', container );
         var tab = $(this).data('tab');
         var content, current;
         var url = window.location.href;
         var re = /module=[^&]+/;
+
+        console.log('pstoolkit tab click', tab);
 
         if ( 'undefined' === typeof tab ) {
             return;
@@ -1106,16 +1219,38 @@ jQuery( window.document ).ready(function($){
         window.pstoolkit_current_tab = tab;
         content = $('.sui-box[data-tab]');
         current = $('.sui-box[data-tab="' + tab + '"]');
-        if ( url.match( re ) ) {
-            url = url.replace( re, 'module=' + tab );
-        } else {
-            url += '&module=' + tab;
+
+        // If we have matching content, switch inline. Otherwise fallback to full reload.
+        if ( current.length ) {
+            if ( url.match( re ) ) {
+                url = url.replace( re, 'module=' + tab );
+            } else {
+                url += '&module=' + tab;
+            }
+            window.history.pushState( { module: tab }, 'PSToolkit', url );
+            tabs.removeClass( 'current' );
+            content.hide();
+            $(this).parent().addClass( 'current' );
+            current.show();
+            event.preventDefault();
+            return false;
         }
-        window.history.pushState( { module: tab }, 'PSToolkit', url );
-        tabs.removeClass( 'current' );
-        content.hide();
-        $(this).parent().addClass( 'current' );
-        current.show();
+
+        // Fallback: hard navigation if for some reason the content is not present/visible
+        var newUrl;
+        try {
+            var u = new URL(window.location.href);
+            u.searchParams.set('module', tab);
+            newUrl = u.toString();
+        } catch (e) {
+            if ( url.match( re ) ) {
+                newUrl = url.replace( re, 'module=' + tab );
+            } else {
+                newUrl = url + '&module=' + tab;
+            }
+        }
+        window.location.href = newUrl;
+        event.preventDefault();
         return false;
     });
 });

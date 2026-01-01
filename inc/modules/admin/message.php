@@ -91,8 +91,12 @@ if ( ! class_exists( 'PSToolkit_Admin_Message' ) ) {
 		 * @since 1.8
 		 */
 		public function output() {
-			$message         = $this->get_message();
-			$trimmed_message = trim( str_replace( array( '<p>', '</p>', '&nbsp;' ), '', $message ) );
+			$message = $this->get_message();
+			// Avoid deprecated notices when no message is stored.
+			if ( null === $message ) {
+				return;
+			}
+			$trimmed_message = trim( str_replace( array( '<p>', '</p>', '&nbsp;' ), '', (string) $message ) );
 			if ( empty( $trimmed_message ) ) {
 				return;
 			}

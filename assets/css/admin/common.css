@@ -177,3 +177,30 @@
   white-space: normal;
   overflow: visible;
 }
+/* SortableJS Styles (Replacement for jQuery UI Sortable) */
+.sortable-ghost {
+  opacity: 0.4;
+  background: #f8f8f8;
+}
+
+.sortable-chosen {
+  cursor: move;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.sortable-drag {
+  opacity: 0.8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+[draggable="true"] {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+[draggable="true"]:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}

@@ -303,9 +303,52 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 			}
 
 			global $wp_version;
+			// Local jQuery UI pieces (avoid deprecated CP handles).
+			wp_register_script(
+				'pstoolkit-ui-core',
+				includes_url( 'js/jquery/ui/core.min.js' ),
+				array( 'jquery' ),
+				'1.13.2',
+				true
+			);
+			wp_register_script(
+				'pstoolkit-ui-widget',
+				includes_url( 'js/jquery/ui/widget.min.js' ),
+				array( 'jquery', 'pstoolkit-ui-core' ),
+				'1.13.2',
+				true
+			);
+			wp_register_script(
+				'pstoolkit-ui-mouse',
+				includes_url( 'js/jquery/ui/mouse.min.js' ),
+				array( 'jquery', 'pstoolkit-ui-core', 'pstoolkit-ui-widget' ),
+				'1.13.2',
+				true
+			);
+			wp_register_script(
+				'pstoolkit-ui-slider',
+				includes_url( 'js/jquery/ui/slider.min.js' ),
+				array( 'jquery', 'pstoolkit-ui-core', 'pstoolkit-ui-widget', 'pstoolkit-ui-mouse' ),
+				'1.13.2',
+				true
+			);
+			wp_register_script(
+				'pstoolkit-sui-ace',
+				pstoolkit_url( 'external/ace/ace.js' ),
+				array(),
+				$this->build,
+				true
+			);
 			wp_register_script(
 				'pstoolkit-sui-a11y-dialog',
 				pstoolkit_url( 'external/a11y-dialog/a11y-dialog.js' ),
+				array(),
+				$this->build,
+				true
+			);
+			wp_register_script(
+				'pstoolkit-sui-clipboard',
+				pstoolkit_url( 'external/clipboard/clipboard.js' ),
 				array(),
 				$this->build,
 				true
@@ -317,6 +360,14 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 				$this->build,
 				true
 			);
+			
+			// Enqueue Select2 CSS locally (privacy-friendly)
+			wp_register_style(
+				'pstoolkit-sui-select2-css',
+				pstoolkit_url( 'external/select2/select2.min.css' ),
+				array(),
+				$this->build
+			);
 
 			/**
 			 * Shared UI
@@ -326,42 +377,48 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 			if ( defined( 'PSTOOLKIT_SUI_VERSION' ) ) {
 				$sanitize_version = str_replace( '.', '-', PSTOOLKIT_SUI_VERSION );
 				$sui_body_class   = "sui-$sanitize_version";
+				$sui_version_bust = $this->build ? $this->build . '-' . time() : time();
 				wp_register_script(
 					'sui-scripts',
 					pstoolkit_url( 'assets/js/shared-ui.js' ),
-					array( 'jquery', 'pstoolkit-sui-ace', 'pstoolkit-sui-a11y-dialog', 'pstoolkit-sui-select2' ),
-					$sui_body_class,
+					array( 'jquery', 'pstoolkit-sui-ace', 'pstoolkit-sui-a11y-dialog', 'pstoolkit-sui-select2', 'pstoolkit-sui-clipboard' ),
+					$sui_version_bust,
 					true
 				);
 				wp_enqueue_style(
 					'sui-styles',
 					pstoolkit_url( 'assets/css/shared-ui.min.css' ),
-					array(),
-					$sui_body_class
+					array( 'pstoolkit-sui-select2-css' ),
+					$sui_version_bust
 				);
 			}
 			// Add in the core CSS file
 			$file = pstoolkit_url( 'assets/css/pstoolkit-admin.min.css' );
 			wp_enqueue_style( 'pstoolkit-admin', $file, array(), $this->build );
-			wp_enqueue_script(
-				array(
-					'jquery-ui-sortable',
-				)
-			);
+			
+			// Enqueue SortableJS (local, privacy-friendly replacement for jQuery UI Sortable)
+			$file = pstoolkit_url( 'external/sortablejs/Sortable.min.js' );
+			wp_enqueue_script( 'sortablejs', $file, array(), '1.15.1', true );
+			
 			$file = sprintf( 'assets/js/pstoolkit-admin%s.js', defined( 'WP_DEBUG' ) && WP_DEBUG ? '' : '.min' );
+			// Force fresh load to bypass browser/proxy cache when assets change.
+			$version_bust = $this->build ? $this->build . '-' . time() : time();
 			wp_enqueue_script(
 				'ub_admin',
 				pstoolkit_url( $file ),
 				array(
 					'jquery',
+					'sortablejs',
 					'sui-scripts',
 					'underscore',
 					'wp-util'
 				),
-				$this->build,
+				$version_bust,
 				true
 			);
 			wp_enqueue_style( 'wp-color-picker' );
+			// Ensure slider support for the color picker alpha addon without using deprecated CP handles.
+			wp_enqueue_script( 'pstoolkit-ui-slider' );
 			$file = pstoolkit_url( 'external/wp-color-picker-alpha/wp-color-picker-alpha.min.js' );
 			wp_enqueue_script( 'wp-color-picker-alpha', $file, array( 'wp-color-picker' ), '2.1.3', true );
 			$color_picker_strings = array(

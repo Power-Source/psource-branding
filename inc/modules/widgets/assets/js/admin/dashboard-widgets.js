@@ -141,7 +141,7 @@ jQuery(window.document).ready(function($) {
      * Sortable
      */
     $.fn.pstoolkit_dashboard_widgets_sortable_init = function() {
-        $('.pstoolkit-dashboard-widgets-items').sortable({
+        $('.pstoolkit-dashboard-widgets-items').sortableJS({
             items: '.sui-builder-field'
         });
     }

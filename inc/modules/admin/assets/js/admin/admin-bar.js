@@ -148,7 +148,7 @@ jQuery(document).ready(function($) {
             make = typeof make === "undefined" ? true : false;
             if (make) {
                 $("#wpadminbar ul#wp-admin-bar-root-default .ab-item").addClass("click_disabled");
-                $("#wpadminbar ul#wp-admin-bar-root-default").sortable({
+                $("#wpadminbar ul#wp-admin-bar-root-default").sortableJS({
                     axis: "x",
                     forceHelperSize: true,
                     forcePlaceholderSize: true,
@@ -156,10 +156,10 @@ jQuery(document).ready(function($) {
                     handle: ".ab-item",
                     tolerance: "intersect",
                     cursor: "move"
-                }).sortable("enable");
+                }).sortableJSEnable();
             } else {
                 $("#wpadminbar ul#wp-admin-bar-root-default .ab-item").removeClass("click_disabled");
-                $("#wpadminbar ul#wp-admin-bar-root-default").sortable("disable");
+                $("#wpadminbar ul#wp-admin-bar-root-default").sortableJSDisable();
             }
         },
         wiggle: function(wiggle) {
@@ -420,7 +420,7 @@ function pstoolkit_admin_bar_submenu_add(args) {
             jQuery('.pstoolkit-admin-bar-no-submenu', parent).show();
         }
     });
-    jQuery('.pstoolkit-sui-accordion-sortable').sortable({
+    jQuery('.pstoolkit-sui-accordion-sortable').sortableJS({
         items: '.ui-sortable-handle'
     });
 }
@@ -444,7 +444,7 @@ function pstoolkit_admin_bar_submenu_bind() {
     jQuery('.pstoolkit-admin-bar-submenu-delete').on('click', function() {
         jQuery(this).closest('.sui-accordion-item').detach();
     });
-    jQuery('.pstoolkit-sui-accordion-sortable').sortable({
+    jQuery('.pstoolkit-sui-accordion-sortable').sortableJS({
         items: '.ui-sortable-handle'
     });
 }

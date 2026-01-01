@@ -193,12 +193,12 @@
 		function init_sortable() {
 			var old_position;
 
-			elements.root.sortable({
+			elements.root.sortableJS({
 				items: '.sui-accordion-item',
 				start: function (event, ui) {
 					// jQuery elements for menu items and containers are created independently
 					// and then inserted into a container so we need to refresh positions
-					elements.root.sortable("refreshPositions");
+					elements.root.sortableJSRefresh();
 					// Save the old position of the item being dragged
 					old_position = ui.item.index();
 				},
