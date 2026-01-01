@@ -6,8 +6,8 @@ title: "PSOURCE Toolkit"
 <h2 align="center" style="color:#38c2bb;">📚 PSOURCE Toolkit</h2>
 
 <div class="menu">
-  <a href="https://github.com/cp-psource/psource-branding/discussions" style="color:#38c2bb;">💬 Forum</a>
-  <a href="https://github.com/cp-psource/psource-branding/releases" style="color:#38c2bb;">⬇️ Download</a>
+  <a href="https://github.com/Power-Source/psource-branding/discussions" style="color:#38c2bb;">💬 Forum</a>
+  <a href="https://github.com/Power-Source/psource-branding/releases" style="color:#38c2bb;">⬇️ Download</a>
 </div>
 
 White Label & Rebranding Deiner Anmeldeseite & ClassicPress-Dashboard. Passe System-E-Mails an und lasse ClassicPress mit CP Toolkit umbenennen.

@@ -5,11 +5,11 @@ Plugin URI: https://cp-psource.github.io/psource-branding/
 Description: Eine komplette White-Label- und Branding-Lösung für Multisite. Adminbar, Loginsreens, Wartungsmodus, Favicons, Entfernen von ClassicPress-Links und Branding und vielem mehr.
 Author: PSOURCE
 Version: 1.0.0
-Author URI: https://github.com/cp-psource
+Author URI: https://github.com/Power-Source
 Text Domain: ub
 Domain Path: /languages
 
-Copyright 2020-2026 PSOURCE (https://github.com/cp-psource)
+Copyright 2020-2026 PSOURCE (https://github.com/Power-Source)
 
 
 This program is free software; you can redistribute it and/or modify

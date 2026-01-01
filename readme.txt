@@ -1,6 +1,6 @@
 === PSOURCE Toolkit ===
 Contributors: DerN3rd (PSOURCE)
-Author URI: https://github.com/cp-psource
+Author URI: https://github.com/Power-Source
 Tags: classicpress-plugin, classicpress, white label classicpress, custom login page, login page customizer, whitelabel, customize system emails, customize default emails, rebrand, rebranding, coming soon page, maintenance mode, under construction page, coming soon template, login screen
 Requires at least: 4.6
 Tested up to: 6.8.1
@@ -38,10 +38,10 @@ On your personal blog, this isn't a big problem, but for a small business, desig
 
 More than 30 modules included in CP Toolkit!
 
-[POWERED BY PSOURCE](https://github.com/cp-psource)
+[POWERED BY PSOURCE](https://github.com/Power-Source)
 
 [Projektseite](https://cp-psource.github.io/psource-branding/)
-[GitHub](https://github.com/cp-psource/psource-branding)
+[GitHub](https://github.com/Power-Source/psource-branding)
 
 == Changelog ==
 

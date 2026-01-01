@@ -11,16 +11,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cp-psource/psource-branding.git"
+    "url": "git+https://github.com/Power-Source/psource-branding.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/cp-psource/psource-branding/issues"
+    "url": "https://github.com/Power-Source/psource-branding/issues"
   },
-  "homepage": "https://github.com/cp-psource/psource-branding#readme",
+  "homepage": "https://github.com/Power-Source/psource-branding#readme",
   "devDependencies": {
     "gulp": "^5.0.0",
     "gulp-concat": "^2.6.1",
