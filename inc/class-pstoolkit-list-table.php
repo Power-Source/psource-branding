@@ -146,7 +146,7 @@ if ( ! class_exists( 'PSToolkit_List_Table' ) ) {
 		 *
 		 * @since 1.0.0
 		 */
-		protected function pstoolkit_bulk_actions( $which = '', $dialog_id ) {
+		protected function pstoolkit_bulk_actions( $which, $dialog_id ) {
 			if ( ! $this->has_items() ) {
 				return;
 			}
