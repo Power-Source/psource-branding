@@ -4,7 +4,7 @@ Plugin Name: PSOURCE Toolkit
 Plugin URI: https://power-source.github.io/psource-branding/
 Description: Eine komplette White-Label- und Branding-Lösung für Multisite. Adminbar, Loginsreens, Wartungsmodus, Favicons, Entfernen von ClassicPress-Links und Branding und vielem mehr.
 Author: PSOURCE
-Version: 1.0.0
+Version: 1.0.1
 Author URI: https://github.com/Power-Source
 Text Domain: ub
 Domain Path: /languages

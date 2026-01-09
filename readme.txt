@@ -4,8 +4,9 @@ Author URI: https://github.com/Power-Source
 Tags: classicpress-plugin, classicpress, white label classicpress, custom login page, login page customizer, whitelabel, customize system emails, customize default emails, rebrand, rebranding, coming soon page, maintenance mode, under construction page, coming soon template, login screen
 Requires at least: 4.6
 Tested up to: 6.8.1
-Stable tag: 1.0.0
-Requires PHP: 5.6.20
+ClassiPress: 2.6.0
+Stable tag: 1.0.1
+Requires PHP: 8.0.0
 License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 White Label & Rebranding Deiner Anmeldeseite & ClassicPress-Dashboard. Passe System-E-Mails an und lasse ClassicPress mit CP Toolkit umbenennen.
@@ -25,6 +26,11 @@ Mehr als 30 Module im CP Toolkit enthalten!
 
 
 == Changelog ==
+
+= 1.0.1 =
+
+* Etliche Bugfixes
+* PhP8 Anpassung
 
 = 1.0.0 =
 

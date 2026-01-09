@@ -872,11 +872,10 @@ if ( ! class_exists( 'PSToolkit_Email_Template' ) ) {
 		 * Returns data for preview
 		 */
 		public function ajax_preview() {
-			if ( ! current_user_can( 'manage_options' ) ) {
-				self::ajax_send_notice( __( "Hoppla, Du hast keine Berechtigung zur Vorschau von HTML.", 'ub' ) );
-			}
-			if ( empty( $_POST ) ) {
-				self::ajax_send_notice( __( 'Hoppla, Du musst etwas HTML eingeben, um eine Vorschau anzuzeigen!', 'ub' ) );
+		// CSRF protection: Verify nonce
+		check_ajax_referer( $this->get_name( 'preview' ) );
+		
+		if ( ! current_user_can( 'manage_options' ) ) {
 			}
 			$content = stripslashes( filter_input( INPUT_POST, 'content', FILTER_UNSAFE_RAW ) );
 
