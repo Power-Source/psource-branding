@@ -18,6 +18,7 @@ if ( ! class_exists( 'PSToolkit_Site_Status_Pages' ) ) {
 			'suspended' => 'blog-suspended.php',
 		);
 		private $db_error_dir;
+		private $db_error_file;
 		protected $file       = __FILE__;
 		private $file_updated = false;
 

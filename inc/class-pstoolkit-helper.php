@@ -1,6 +1,7 @@
 <?php
 if ( ! class_exists( 'PSToolkit_Helper' ) ) {
 
+	#[AllowDynamicProperties]
 	class PSToolkit_Helper {
 		protected $_options;
 		protected $data        = null;

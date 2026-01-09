@@ -470,19 +470,11 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 			wp_enqueue_script( 'pstoolkit-iris' );
 			wp_enqueue_script( 'wp-color-picker' );
 			
-		// Localize wp-color-picker (needed for standard color picker functionality).
-		$color_picker_strings = array(
-			'clear'            => __( 'Leeren', 'ub' ),
-			'clearAriaLabel'   => __( 'Leere Farbe', 'ub' ),
-			'defaultString'    => __( 'Standard', 'ub' ),
-			'defaultAriaLabel' => __( 'Wähle Standardfarbe', 'ub' ),
-			'pick'             => __( 'Wähle Farbe', 'ub' ),
-			'defaultLabel'     => __( 'Farbwert', 'ub' ),
-		);
-		wp_localize_script( 'wp-color-picker', 'wpColorPickerL10n', $color_picker_strings );
+		// Enqueue modernized wp-color-picker-alpha that uses wp.i18n instead of deprecated wpColorPickerL10n
+		$file = pstoolkit_url( 'external/wp-color-picker-alpha/wp-color-picker-alpha-modern.js' );
+		wp_enqueue_script( 'wp-color-picker-alpha', $file, array( 'wp-color-picker', 'wp-i18n' ), '2.1.3-modern', true );
+		wp_set_script_translations( 'wp-color-picker-alpha', 'ub' );
 		
-		$file = pstoolkit_url( 'external/wp-color-picker-alpha/wp-color-picker-alpha.min.js' );
-		wp_enqueue_script( 'wp-color-picker-alpha', $file, array( 'wp-color-picker' ), '2.1.3', true );
 			$messages = array(
 				'messages' => array(
 					'copy'    => array(

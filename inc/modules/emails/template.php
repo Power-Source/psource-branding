@@ -24,6 +24,21 @@ if ( ! class_exists( 'PSToolkit_Email_Template' ) ) {
 		var $template_url = '';
 
 		/**
+		 * @var string Plugin directory path
+		 */
+		var $plugin_dir = '';
+
+		/**
+		 * @var string Plugin base URL
+		 */
+		var $plugin_url = '';
+
+		/**
+		 * @var string Location of the module (plugins|mu-plugins)
+		 */
+		var $location = '';
+
+		/**
 		 * @var path to assets
 		 */
 		var $settings = array();

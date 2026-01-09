@@ -7,6 +7,7 @@ if ( ! class_exists( 'PSToolkit_List_Table' ) ) {
 		protected $url;
 		protected $config;
 		protected $module_class;
+		protected $_pagination = '';
 
 		public function __construct( $args = array() ) {
 			parent::__construct( $args );
