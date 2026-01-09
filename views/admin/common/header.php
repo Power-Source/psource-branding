@@ -3,9 +3,9 @@
 	<div class="sui-actions-right">
 <?php if ( $documentation_chapter && ! empty( $helps ) ) : ?>
 		<a target="_blank" class="sui-button sui-button-ghost"
-		   href="https://n3rds.work/docs/psource-wp-toolkit-dokumentation-erste-schritte/#<?php echo esc_attr( $documentation_chapter ); ?>">
-			<i class="sui-icon-academy"></i>
-			<?php esc_html_e( 'Dokumentation anzeigen', 'ub' ); ?>
+		   href="https://github.com/Power-Source/psource-branding<?php echo esc_attr( $documentation_chapter ); ?>">
+			<i class="sui-icon-github"></i>
+			<?php esc_html_e( 'Beim Plugin mitwirken auf GitHub', 'ub' ); ?>
 		</a>
 <?php endif; ?>
 	</div>

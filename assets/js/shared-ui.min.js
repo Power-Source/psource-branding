@@ -3833,7 +3833,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
                     content.removeAttr('aria-hidden'); // FIX: Open tree if it's closed
 
                     if ('true' !== leaf.attr('aria-expanded')) {
-                        expand.click();
+                        expand.trigger('click');
                     } // Focus content
 
 

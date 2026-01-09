@@ -200,7 +200,7 @@ jQuery( window.document ).ready(function($){
             // Open iris picker
             $suiPicker.find( '.sui-button, span[role=button]' ).on( 'click', function( e ) {
 
-                $wpPickerButton.click();
+                $wpPickerButton.trigger('click');
 
                 e.preventDefault();
                 e.stopPropagation();
@@ -213,7 +213,7 @@ jQuery( window.document ).ready(function($){
 
                 var reset_value = '';
 
-                $wpPickerClear.click();
+                $wpPickerClear.trigger('click');
                 $suiPickerValue.find( 'input' ).val( reset_value );
                 $suiPickerInput.val( reset_value ).trigger( 'change' );
                 $suiPickerColor.find( 'span' ).css({
@@ -362,7 +362,7 @@ jQuery( window.document ).ready(function( $ ){
      * Open upload input
      */
     $( '.simple-option-file .sui-upload-button' ).on( 'click', function() {
-        $('.pstoolkit-upload', $(this).closest( '.sui-upload' ) ).click();
+        $('.pstoolkit-upload', $(this).closest( '.sui-upload' ) ).trigger('click');
     });
     /**
      * reset
