@@ -1896,9 +1896,7 @@ if ( ! class_exists( 'Simple_Options' ) ) {
 			}
 			if ( isset( $options[ $section ]['fields'][ $field ]['const_value'] ) ) {
 				$value = $options[ $section ]['fields'][ $field ]['const_value'];
-			}
-			// Debug logging for SMTP port issue
-			if ( $section === 'server' && $field === 'smtp_port' ) {
+			}			if ( $section === 'server' && $field === 'smtp_port' ) {
 				error_log( 'PSToolkit SMTP Debug - Loading smtp_port: ' . var_export( $value, true ) . ' from input: ' . var_export( isset( $input[ $section ][ $field ] ) ? $input[ $section ][ $field ] : 'NOT SET', true ) );
 			}
 			return $value;

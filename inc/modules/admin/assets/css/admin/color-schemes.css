@@ -8,15 +8,21 @@
 .pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-color-schemes .module-admin-color-schemes-php .sui-box-body .pstoolkit-section-available_color_schemes .pstoolkit-customize-ultimate-scheme {
   margin-left: auto;
 }
-.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-color-schemes .module-admin-color-schemes-php .sui-box-body .pstoolkit-section-available_color_schemes .simple-option-callback {
-  max-width: 450px;
-}
 .pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-color-schemes .module-admin-color-schemes-php .sui-box-body .pstoolkit-section-available_color_schemes .simple-option-callback .color-option {
-  width: 140px;
+  width: 200px;
+  max-width: none;
   padding: 13px 10px 10px 10px;
 }
+.pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-color-schemes .module-admin-color-schemes-php .sui-box-body .pstoolkit-section-available_color_schemes .simple-option-callback .color-option .color-palette {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
 .pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-color-schemes .module-admin-color-schemes-php .sui-box-body .pstoolkit-section-available_color_schemes .simple-option-callback .color-option td {
-  line-height: 1px;
+  height: 20px;
+  line-height: 20px;
+  padding: 0;
+  border: 0;
 }
 .pstoolkit-admin-page .sui-wrap-pstoolkit .pstoolkit-settings-tab-content-color-schemes .module-admin-color-schemes-php .sui-box-body .pstoolkit-section-available_color_schemes .simple-option-callback .color-option .sui-checkbox {
   margin-bottom: 6px;
