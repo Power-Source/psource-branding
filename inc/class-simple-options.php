@@ -1389,7 +1389,7 @@ if ( ! class_exists( 'Simple_Options' ) ) {
 									esc_attr($data['type']),
 									esc_attr($html_id),
 									esc_attr($field_name),
-									esc_attr(is_string($value) ? stripslashes($value) : ''),
+									esc_attr(is_string($value) ? stripslashes($value) : $value),
 									isset($data['classes']) ? esc_attr(implode(' ', $data['classes'])) : '',
 									esc_attr($html_id),
 									implode(' ', $extra)
@@ -1896,6 +1896,10 @@ if ( ! class_exists( 'Simple_Options' ) ) {
 			}
 			if ( isset( $options[ $section ]['fields'][ $field ]['const_value'] ) ) {
 				$value = $options[ $section ]['fields'][ $field ]['const_value'];
+			}
+			// Debug logging for SMTP port issue
+			if ( $section === 'server' && $field === 'smtp_port' ) {
+				error_log( 'PSToolkit SMTP Debug - Loading smtp_port: ' . var_export( $value, true ) . ' from input: ' . var_export( isset( $input[ $section ][ $field ] ) ? $input[ $section ][ $field ] : 'NOT SET', true ) );
 			}
 			return $value;
 		}

@@ -344,6 +344,10 @@ if ( ! class_exists( 'PSToolkit_Helper' ) ) {
 		 */
 		public function update( $status ) {
 			$value = isset( $_POST['simple_options'] ) ? $_POST['simple_options'] : array();
+			// Debug logging for SMTP module
+			if ( $this->option_name === 'ub_smtp' && isset( $value['server']['smtp_port'] ) ) {
+				error_log( 'PSToolkit SMTP Debug - Received POST smtp_port: ' . var_export( $value['server']['smtp_port'], true ) );
+			}
 			if ( '' === $value ) {
 				$value = 'empty';
 			}
@@ -444,7 +448,19 @@ if ( ! class_exists( 'PSToolkit_Helper' ) ) {
 							$value[ $section_key ][ $key . '_meta' ] = $v;
 							break;
 						case 'number':
-							$value[ $section_key ][ $key ] = intval( $value[ $section_key ][ $key ] );
+							// Ensure the value exists before processing
+							if ( isset( $value[ $section_key ][ $key ] ) ) {
+								$value[ $section_key ][ $key ] = intval( $value[ $section_key ][ $key ] );
+							} else {
+								// Use default if provided, otherwise use minimum or 0
+								if ( isset( $data['default'] ) ) {
+									$value[ $section_key ][ $key ] = intval( $data['default'] );
+								} elseif ( isset( $data['min'] ) ) {
+									$value[ $section_key ][ $key ] = intval( $data['min'] );
+								} else {
+									$value[ $section_key ][ $key ] = 0;
+								}
+							}
 							/**
 							 * Check minimum
 							 *
@@ -521,6 +537,10 @@ if ( ! class_exists( 'PSToolkit_Helper' ) ) {
 		 * @since 1.9.5
 		 */
 		protected function update_value( $value ) {
+			// Debug logging for SMTP port issue
+			if ( $this->option_name === 'ub_smtp' && isset( $value['server']['smtp_port'] ) ) {
+				error_log( 'PSToolkit SMTP Debug - Saving smtp_port: ' . var_export( $value['server']['smtp_port'], true ) );
+			}
 			$value['plugin_version'] = $this->build;
 			pstoolkit_update_option( $this->option_name, $value );
 			$this->data = $value;
