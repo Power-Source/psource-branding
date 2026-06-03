@@ -209,6 +209,7 @@ if ( ! class_exists( 'PSToolkit_Helper' ) ) {
 		 */
 		protected function get_value( $section = null, $name = null, $default = null ) {
 			$this->set_data();
+			$name_key = null === $name ? '' : $name;
 			   $data = $value = is_array($this->data) ? $this->data : array();
 			if ( ! empty( $section ) ) {
 				   if ( empty( $name ) && isset( $value[ $section ] ) ) {
@@ -225,21 +226,21 @@ if ( ! class_exists( 'PSToolkit_Helper' ) ) {
 						&& isset( $this->options )
 						&& isset( $this->options[ $section ] )
 						&& isset( $this->options[ $section ]['fields'] )
-						&& isset( $this->options[ $section ]['fields'][ $name ] )
-						&& isset( $this->options[ $section ]['fields'][ $name ]['default'] )
+						&& isset( $this->options[ $section ]['fields'][ $name_key ] )
+						&& isset( $this->options[ $section ]['fields'][ $name_key ]['default'] )
 					) {
-						$data = $this->options[ $section ]['fields'][ $name ]['default'];
+						$data = $this->options[ $section ]['fields'][ $name_key ]['default'];
 					} else {
 						$data = $default;
 					}
 					   if ( isset( $value[ $section ] ) ) {
 						   if ( empty( $name ) ) {
 							   $data = is_array($value[ $section ]) ? $value[ $section ] : array();
-						   } elseif ( isset( $value[ $section ][ $name ] ) ) {
-							   if ( is_string( $value[ $section ][ $name ] ) ) {
-								   $data = stripslashes( $value[ $section ][ $name ] );
+						   } elseif ( isset( $value[ $section ][ $name_key ] ) ) {
+							   if ( is_string( $value[ $section ][ $name_key ] ) ) {
+								   $data = stripslashes( $value[ $section ][ $name_key ] );
 							   } else {
-								   $data = $value[ $section ][ $name ];
+								   $data = $value[ $section ][ $name_key ];
 							   }
 						   }
 					   } elseif ( empty( $name ) ) {
@@ -3585,6 +3586,13 @@ if ( ! class_exists( 'PSToolkit_Helper' ) ) {
 		 * check input data
 		 */
 		protected function check_input_data( $nonce_action, $fields = array(), $nonce_name = '_wpnonce' ) {
+			if (
+				is_admin()
+				&& class_exists( 'PSToolkit_Permissions' )
+				&& ! PSToolkit_Permissions::get_instance()->current_user_has_access()
+			) {
+				$this->json_error( __( 'Du bist nicht berechtigt, diese Aktion auszuführen.', 'ub' ) );
+			}
 			$fields[] = $nonce_name;
 			foreach ( $fields as $field ) {
 				if ( ! isset( $_REQUEST[ $field ] ) ) {

@@ -164,7 +164,9 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 		 * @since 1.8.9
 		 */
 		public function add_svg_to_allowed_mime_types( $mimes ) {
-			$mimes['svg'] = 'image/svg+xml';
+			if ( current_user_can( 'manage_options' ) ) {
+				$mimes['svg'] = 'image/svg+xml';
+			}
 			return $mimes;
 		}
 
@@ -288,6 +290,19 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 		 */
 		private function check_user_access() {
 			return PSToolkit_Permissions::get_instance()->current_user_has_access();
+		}
+
+		/**
+		 * Ensure current user can manage PSToolkit via AJAX.
+		 */
+		private function ensure_ajax_access() {
+			if ( ! $this->check_user_access() ) {
+				wp_send_json_error(
+					array(
+						'message' => __( 'Du bist nicht berechtigt, diese Aktion auszuführen.', 'ub' ),
+					)
+				);
+			}
 		}
 
 		public function add_admin_header_core() {
@@ -536,6 +551,7 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 		 * @since 1.0.0
 		 */
 		public function ajax_bulk_modules() {
+			$this->ensure_ajax_access();
 			$fields = array( 'pstoolkit', 'nonce' );
 			foreach ( $fields as $field ) {
 				if ( ! isset( $_POST[ $field ] ) ) {
@@ -1713,6 +1729,7 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 		 * Dismiss New Feature dialogs.
 		 */
 		public function new_feature_dismiss() {
+			$this->ensure_ajax_access();
 			$dialog_id = filter_input( INPUT_POST, 'id' );
 			$nonce     = filter_input( INPUT_POST, '_ajax_nonce' );
 			if ( ! ( $nonce && $dialog_id ) ) {
@@ -1745,6 +1762,7 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 		 * @since 1.9.6
 		 */
 		public function toggle_module() {
+			$this->ensure_ajax_access();
 			if (
 				isset( $_POST['nonce'] )
 				&& isset( $_POST['state'] )
@@ -2083,6 +2101,7 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 		 * @since 1.0.0
 		 */
 		public function ajax_reset_module() {
+			$this->ensure_ajax_access();
 			if (
 				isset( $_POST['_wpnonce'] )
 				&& isset( $_POST['module'] )
@@ -2465,6 +2484,7 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 		 * @since 1.0.0
 		 */
 		public function ajax_copy_settings() {
+			$this->ensure_ajax_access();
 			$target = filter_input( INPUT_POST, 'target_module', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
 			$source = filter_input( INPUT_POST, 'source_module', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
 			$nonce  = filter_input( INPUT_POST, 'nonce', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
@@ -2615,6 +2635,7 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 		 * @since 1.0.0
 		 */
 		public function ajax_welcome() {
+			$this->ensure_ajax_access();
 			$nonce = filter_input( INPUT_POST, 'nonce', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
 			if ( ! wp_verify_nonce( $nonce, 'pstoolkit-welcome-all-modules' ) ) {
 				$args = array(

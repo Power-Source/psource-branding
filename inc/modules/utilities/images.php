@@ -453,8 +453,10 @@ if ( ! class_exists( 'PSToolkit_Images' ) ) {
 		 * @since 1.8.6
 		 */
 		public function upload_mimes( $mime_types ) {
-			$mime_types['svg'] = 'image/svg+xml';
-			$mime_types['ico'] = 'image/x-icon';
+			if ( current_user_can( 'manage_options' ) ) {
+				$mime_types['svg'] = 'image/svg+xml';
+				$mime_types['ico'] = 'image/x-icon';
+			}
 			return $mime_types;
 		}
 

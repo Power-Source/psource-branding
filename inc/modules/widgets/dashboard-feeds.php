@@ -743,7 +743,17 @@ if ( ! class_exists( 'PSToolkit_Dashboard_Feeds' ) ) {
 			if ( false === $url ) {
 				wp_send_json_error();
 			}
-			$response = wp_remote_get( $url );
+			if ( ! $this->is_safe_remote_feed_url( $url ) ) {
+				wp_send_json_error();
+			}
+			$response = wp_remote_get(
+				$url,
+				array(
+					'timeout'            => 10,
+					'redirection'        => 3,
+					'reject_unsafe_urls' => true,
+				)
+			);
 			if ( ! is_array( $response ) ) {
 				wp_send_json_error();
 			}
@@ -757,6 +767,48 @@ if ( ! class_exists( 'PSToolkit_Dashboard_Feeds' ) ) {
 			}
 			$data = $this->find_feed( $content );
 			wp_send_json_success( $data );
+		}
+
+		/**
+		 * Validate remote URL for feed discovery to reduce SSRF risk.
+		 *
+		 * @since 1.0.2
+		 *
+		 * @param string $url Remote URL.
+		 *
+		 * @return bool
+		 */
+		private function is_safe_remote_feed_url( $url ) {
+			if ( function_exists( 'wp_http_validate_url' ) && ! wp_http_validate_url( $url ) ) {
+				return false;
+			}
+			$parts = wp_parse_url( $url );
+			if ( ! is_array( $parts ) || empty( $parts['host'] ) ) {
+				return false;
+			}
+			if ( empty( $parts['scheme'] ) || ! in_array( strtolower( $parts['scheme'] ), array( 'http', 'https' ), true ) ) {
+				return false;
+			}
+			$host = strtolower( $parts['host'] );
+			if ( in_array( $host, array( 'localhost', '127.0.0.1', '::1' ), true ) ) {
+				return false;
+			}
+
+			$resolved_ip = $host;
+			if ( ! filter_var( $host, FILTER_VALIDATE_IP ) ) {
+				$resolved_ip = gethostbyname( $host );
+			}
+			if ( filter_var( $resolved_ip, FILTER_VALIDATE_IP ) ) {
+				$public_ip = filter_var(
+					$resolved_ip,
+					FILTER_VALIDATE_IP,
+					FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE
+				);
+				if ( false === $public_ip ) {
+					return false;
+				}
+			}
+			return true;
 		}
 
 		/**

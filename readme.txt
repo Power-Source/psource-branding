@@ -27,6 +27,13 @@ Mehr als 30 Module im CP Toolkit enthalten!
 
 == Changelog ==
 
+= 1.0.2 =
+
+* Fix: PHP Deprecated "Using null as an array offset" in class-pstoolkit-helper.php behoben
+* Security: Zusätzliche Berechtigungsprüfungen für kritische Admin-AJAX-Endpunkte ergänzt
+* Security: Feed-URL-Abruf gegen unsichere interne/private Ziele gehärtet (SSRF-Schutz)
+* Security: SVG/ICO-MIME-Freigabe auf berechtigte Admin-Benutzer eingeschränkt
+
 = 1.0.1 =
 
 * Etliche Bugfixes
