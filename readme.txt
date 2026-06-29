@@ -27,6 +27,10 @@ Mehr als 30 Module im CP Toolkit enthalten!
 
 == Changelog ==
 
+= Unreleased =
+
+* Fix: Auth-Konflikte bei Subseiten-Login in Multisite reduziert (konfliktarme Redirect-Behandlung)
+
 = 1.0.2 =
 
 * Fix: PHP Deprecated "Using null as an array offset" in class-pstoolkit-helper.php behoben

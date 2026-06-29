@@ -58,8 +58,8 @@ if ( ! class_exists( 'PSToolkit_Login_Screen' ) ) {
 			add_filter( 'wp_login_errors', array( $this, 'wp_login_errors' ) );
 			add_filter( 'wp_login_errors', array( $this, 'set_remember_me' ) );
 			add_filter( 'gettext', array( $this, 'gettext_login_form_labels' ), 20, 3 );
-			add_filter( 'logout_redirect', array( $this, 'logout_redirect' ), 99 );
-			add_filter( 'login_redirect', array( $this, 'login_redirect' ), 99 );
+			add_filter( 'logout_redirect', array( $this, 'logout_redirect' ), 99, 3 );
+			add_filter( 'login_redirect', array( $this, 'login_redirect' ), 99, 3 );
 			add_filter( 'pstoolkit_reset_section_login-screen', array( $this, 'reset_section' ), 10, 3 );
 			add_action( 'pstoolkit_helper_admin_options_page_before_options', array( $this, 'before_admin_options_page' ) );
 			/**
@@ -1006,18 +1006,22 @@ if ( ! class_exists( 'PSToolkit_Login_Screen' ) ) {
 		 * Set login redirect.
 		 *
 		 * @param string $redirect_to Redirect to url.
+		 * @param string $requested_redirect_to Originally requested redirect URL.
+		 * @param mixed  $user User object or WP_Error.
 		 *
 		 * @since 1.9.4
 		 *
 		 * @return string
 		 */
-		public function login_redirect( $redirect_to ) {
+		public function login_redirect( $redirect_to, $requested_redirect_to = '', $user = null ) {
 			$value = $this->get_value( 'redirect', 'login' );
 			if ( 'on' === $value ) {
 				$value = $this->get_value( 'redirect', 'login_url' );
 				if ( ! empty( $value ) ) {
-					$value       = $this->get_full_internal_link( $value );
-					$redirect_to = $this->add_http_if_is_missing( $value );
+					if ( $this->should_preserve_existing_redirect( $redirect_to, $requested_redirect_to ) ) {
+						return $redirect_to;
+					}
+					$redirect_to = $this->normalize_redirect_url( $value );
 				}
 			}
 			return $redirect_to;
@@ -1027,23 +1031,51 @@ if ( ! class_exists( 'PSToolkit_Login_Screen' ) ) {
 		 * Set logout redirect.
 		 *
 		 * @param string $redirect_to Redirect url.
+		 * @param string $requested_redirect_to Originally requested redirect URL.
+		 * @param mixed  $user User object.
 		 *
 		 * @since 1.9.4
 		 *
 		 * @return string
 		 */
-		public function logout_redirect( $redirect_to ) {
+		public function logout_redirect( $redirect_to, $requested_redirect_to = '', $user = null ) {
 			$value = $this->get_value( 'redirect', 'logout' );
 			if ( 'on' === $value ) {
 				$value = $this->get_value( 'redirect', 'logout_url' );
 				if ( ! empty( $value ) ) {
-					$value       = $this->get_full_internal_link( $value );
-					$redirect_to = $this->add_http_if_is_missing( $value );
-					wp_redirect( $redirect_to );
-					exit();
+					if ( $this->should_preserve_existing_redirect( $redirect_to, $requested_redirect_to ) ) {
+						return $redirect_to;
+					}
+					$redirect_to = $this->normalize_redirect_url( $value );
 				}
 			}
 			return $redirect_to;
+		}
+
+		/**
+		 * Keep redirects set by core request or other plugins to reduce hook conflicts.
+		 *
+		 * @param string $redirect_to Effective redirect from previous filters.
+		 * @param string $requested_redirect_to Redirect requested in the request.
+		 * @return bool
+		 */
+		private function should_preserve_existing_redirect( $redirect_to, $requested_redirect_to = '' ) {
+			if ( ! empty( $requested_redirect_to ) ) {
+				return true;
+			}
+
+			if ( empty( $redirect_to ) ) {
+				return false;
+			}
+
+			$redirect_to = untrailingslashit( set_url_scheme( $redirect_to, 'https' ) );
+			$defaults    = array(
+				untrailingslashit( set_url_scheme( admin_url(), 'https' ) ),
+				untrailingslashit( set_url_scheme( admin_url( 'profile.php' ), 'https' ) ),
+				untrailingslashit( set_url_scheme( home_url( '/' ), 'https' ) ),
+			);
+
+			return ! in_array( $redirect_to, $defaults, true );
 		}
 
 		/**
@@ -2800,9 +2832,32 @@ if ( ! class_exists( 'PSToolkit_Login_Screen' ) ) {
 		 */
 		private function add_http_if_is_missing( $value ) {
 			if ( ! preg_match( '~^(?:f|ht)tps?://~i', $value ) ) {
-				$value = 'http://' . $value;
+				$scheme = is_ssl() ? 'https' : 'http';
+				$value  = sprintf( '%s://%s', $scheme, ltrim( $value, '/' ) );
 			}
 			return $value;
+		}
+
+		/**
+		 * Normalize redirect URL to avoid multisite login issues caused by mixed schemes.
+		 *
+		 * @param string $url Raw URL value from settings.
+		 * @return string
+		 */
+		private function normalize_redirect_url( $url ) {
+			$url = trim( (string) $url );
+			if ( '' === $url ) {
+				return $url;
+			}
+
+			$normalized = $this->get_full_internal_link( $url );
+
+			if ( ! preg_match( '~^(?:f|ht)tps?://~i', $normalized ) ) {
+				$normalized = $this->add_http_if_is_missing( $normalized );
+			}
+
+			$scheme = is_ssl() ? 'https' : 'http';
+			return set_url_scheme( $normalized, $scheme );
 		}
 
 		/**
@@ -2812,6 +2867,14 @@ if ( ! class_exists( 'PSToolkit_Login_Screen' ) ) {
 		 * @return string
 		 */
 		private function get_full_internal_link( $url ) {
+			if ( 0 === strpos( $url, '/' ) ) {
+				return home_url( $url );
+			}
+
+			if ( preg_match( '/^[^\/:?#]+\.[^\/:?#]+(?:[\/?#]|$)/', $url ) ) {
+				return $this->add_http_if_is_missing( $url );
+			}
+
 			$host = wp_parse_url( $url, PHP_URL_HOST );
 			if ( is_null( $host ) ) {
 				$slash = '/' !== $url[0] ? '/' : '';
