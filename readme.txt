@@ -5,7 +5,7 @@ Tags: classicpress-plugin, classicpress, white label classicpress, custom login 
 Requires at least: 4.6
 Tested up to: 6.8.1
 ClassiPress: 2.6.0
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 Requires PHP: 8.0.0
 License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -27,7 +27,7 @@ Mehr als 30 Module im CP Toolkit enthalten!
 
 == Changelog ==
 
-= Unreleased =
+= 1.0.3 =
 
 * Fix: Auth-Konflikte bei Subseiten-Login in Multisite reduziert (konfliktarme Redirect-Behandlung)
 
