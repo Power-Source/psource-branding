@@ -544,7 +544,7 @@ if ( ! class_exists( 'PSToolkit_Email_Template' ) ) {
 			$content = preg_replace( '/{BLOG_URL}/', $blog_url . '/', $content );
 			$style   = isset( $contents_parts['default_style'] ) ? $contents_parts['default_style'] . $contents_parts['style'] . $contents_parts['style_header'] : $contents_parts['style'] . $contents_parts['style_header'];
 			// Do the inline styling
-			$content = $this->do_inline_styles( $content, $style );
+			$content = $this->do_inline_styles( $style, $content );
 			// Check for DOM compatibilty from E-Newsletter
 			$content = $this->dom_compatibility( $content );
 			// Replace CSS Variabls
@@ -735,7 +735,6 @@ if ( ! class_exists( 'PSToolkit_Email_Template' ) ) {
 			if ( empty( $theme_data ) ) {
 				$theme_data = $this->get_theme_data( $theme_name );
 			}
-			$elements         = $this->get_contents_elements( $theme_name );
 			$placeholders     = $this->list_placeholders( $content );
 			$current_blog_id  = get_current_blog_id();
 			$blog_url         = get_option( 'siteurl' );
@@ -872,17 +871,18 @@ if ( ! class_exists( 'PSToolkit_Email_Template' ) ) {
 		 * Returns data for preview
 		 */
 		public function ajax_preview() {
-		// CSRF protection: Verify nonce
-		check_ajax_referer( $this->get_name( 'preview' ) );
-		
-		if ( ! current_user_can( 'manage_options' ) ) {
-			}
-			$content = stripslashes( filter_input( INPUT_POST, 'content', FILTER_UNSAFE_RAW ) );
+			$nonce_action = $this->get_nonce_action( 'preview' );
+			check_ajax_referer( $nonce_action );
 
-			$allow_word_break = array( $this, 'allow_break_word' );
-			add_filter( 'safe_style_css', $allow_word_break );
-			$content = wp_kses_post( $content );
-			remove_filter( 'safe_style_css', $allow_word_break );
+			if ( ! current_user_can( 'manage_options' ) ) {
+				wp_send_json_error(
+					array(
+						'message' => __( 'Du bist nicht berechtigt, diese Aktion auszuführen.', 'ub' ),
+					),
+					403
+				);
+			}
+			$content = wp_unslash( (string) filter_input( INPUT_POST, 'content', FILTER_UNSAFE_RAW ) );
 
 			/**
 			 * Theme ID

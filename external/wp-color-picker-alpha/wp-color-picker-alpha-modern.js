@@ -192,7 +192,7 @@
 							self.toggler.css('backgroundColor', '');
 						}
 						
-						if ($.isFunction(self.options.clear)) {
+						if ('function' === typeof self.options.clear) {
 							self.options.clear.call(this, event);
 						}
 					}
@@ -211,7 +211,7 @@
 							self.toggler.css('backgroundColor', '');
 						}
 						
-						if ($.isFunction(self.options.clear)) {
+						if ('function' === typeof self.options.clear) {
 							self.options.clear.call(this, event);
 						}
 						

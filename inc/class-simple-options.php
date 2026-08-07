@@ -412,6 +412,14 @@ if ( ! class_exists( 'Simple_Options' ) ) {
 						$extra[] = sprintf( 'placeholder="%s"', esc_attr( $data['placeholder'] ) );
 					}
 					/**
+					 * autocomplete
+					 */
+					if ( isset( $data['autocomplete'] ) && is_string( $data['autocomplete'] ) ) {
+						$extra[] = sprintf( 'autocomplete="%s"', esc_attr( $data['autocomplete'] ) );
+					} elseif ( 'password' === $data['type'] ) {
+						$extra[] = 'autocomplete="current-password"';
+					}
+					/**
 					 * style
 					 */
 					if ( isset( $data['style'] ) && is_string( $data['style'] ) ) {

@@ -86,6 +86,7 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 			add_action( 'plugins_loaded', array( $this, 'setup_translation' ) );
 			add_action( 'network_admin_menu', array( $this, 'network_admin_page' ) );
 			add_action( 'admin_menu', array( $this, 'admin_page' ) );
+			add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_branding_assets_fallback' ), 5 );
 			add_filter( 'admin_title', array( $this, 'admin_title' ), 10, 2 );
 			/**
 			 * AJAX
@@ -306,6 +307,9 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 		}
 
 		public function add_admin_header_core() {
+			if ( ! $this->is_branding_admin_screen() ) {
+				return;
+			}
 			/**
 			 * Filter allow to avoid run wp_enqueue* functions.
 			 *
@@ -399,24 +403,22 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 			 *
 			 * @since 1.0.0
 			 */
-			if ( defined( 'PSTOOLKIT_SUI_VERSION' ) ) {
-				$sanitize_version = str_replace( '.', '-', PSTOOLKIT_SUI_VERSION );
-				$sui_body_class   = "sui-$sanitize_version";
-				$sui_version_bust = $this->build ? $this->build . '-' . time() : time();
-				wp_register_script(
-					'sui-scripts',
-					pstoolkit_url( 'assets/js/shared-ui.js' ),
-					array( 'jquery', 'pstoolkit-sui-ace', 'pstoolkit-sui-a11y-dialog', 'pstoolkit-sui-select2', 'pstoolkit-sui-clipboard' ),
-					$sui_version_bust,
-					true
-				);
-				wp_enqueue_style(
-					'sui-styles',
-					pstoolkit_url( 'assets/css/shared-ui.min.css' ),
-					array( 'pstoolkit-sui-select2-css' ),
-					$sui_version_bust
-				);
-			}
+			$sui_version_bust = $this->build ? $this->build . '-' . time() : time();
+			wp_register_script(
+				'pstoolkit-sui-scripts',
+				pstoolkit_url( 'assets/js/shared-ui.js' ),
+				array( 'jquery', 'pstoolkit-sui-ace', 'pstoolkit-sui-a11y-dialog', 'pstoolkit-sui-select2', 'pstoolkit-sui-clipboard' ),
+				$sui_version_bust,
+				true
+			);
+			// Load shared UI when available, but avoid making it a hard blocker for core admin logic.
+			wp_enqueue_script( 'pstoolkit-sui-scripts' );
+			wp_enqueue_style(
+				'pstoolkit-sui-styles',
+				pstoolkit_url( 'assets/css/shared-ui.min.css' ),
+				array( 'pstoolkit-sui-select2-css' ),
+				$sui_version_bust
+			);
 			// Add in the core CSS file
 			$file = pstoolkit_url( 'assets/css/pstoolkit-admin.min.css' );
 			wp_enqueue_style( 'pstoolkit-admin', $file, array(), $this->build );
@@ -428,67 +430,34 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 			$file = sprintf( 'assets/js/pstoolkit-admin%s.js', defined( 'WP_DEBUG' ) && WP_DEBUG ? '' : '.min' );
 			// Force fresh load to bypass browser/proxy cache when assets change.
 			$version_bust = $this->build ? $this->build . '-' . time() : time();
+			$ub_admin_dependencies = array(
+				'jquery',
+				'sortablejs',
+				'pstoolkit-sui-ace',
+			);
+			if ( wp_script_is( 'underscore', 'registered' ) ) {
+				$ub_admin_dependencies[] = 'underscore';
+			}
+			if ( wp_script_is( 'wp-util', 'registered' ) ) {
+				$ub_admin_dependencies[] = 'wp-util';
+			}
+			if ( wp_script_is( 'wp-pointer', 'registered' ) ) {
+				$ub_admin_dependencies[] = 'wp-pointer';
+			}
 			wp_enqueue_script(
 				'ub_admin',
 				pstoolkit_url( $file ),
-				array(
-					'jquery',
-					'sortablejs',
-					'sui-scripts',
-					'underscore',
-					'wp-util'
-				),
+				$ub_admin_dependencies,
 				$version_bust,
 				true
 			);
 			
-			// Register iris with our custom UI widget handle (avoid deprecated jquery-ui-widget).
-			wp_register_script(
-				'pstoolkit-iris',
-				admin_url( 'js/iris.min.js' ),
-				array( 'pstoolkit-ui-widget' ),
-				'1.1.1',
-				true
-			);
-			// Iris requires IRIS localization data
-			wp_localize_script(
-				'pstoolkit-iris',
-				'IRIS',
-				array(
-					'blank' => esc_url( site_url( '/wp-includes/images/blank.gif' ) ),
-					'border' => true,
-				)
-			);
-			
-			// Register color picker with our custom iris handle (avoid deprecated CP handle chain).
-			wp_register_script(
-				'pstoolkit-color-picker',
-				admin_url( 'js/color-picker.min.js' ),
-				array( 'pstoolkit-iris' ),
-				false,
-				true
-			);
-			
-			// Also register standard wp-color-picker as alias to our custom one for compatibility.
-			wp_register_script(
-				'wp-color-picker',
-				admin_url( 'js/color-picker.min.js' ),
-				array( 'pstoolkit-iris' ),
-				false,
-				true
-			);
-			
-			wp_enqueue_style( 'wp-color-picker' );
-			
-			// Enqueue full UI stack for color picker alpha addon.
-			wp_enqueue_script( 'pstoolkit-ui-slider' );
-			wp_enqueue_script( 'pstoolkit-iris' );
-			wp_enqueue_script( 'wp-color-picker' );
-			
-		// Enqueue modernized wp-color-picker-alpha that uses wp.i18n instead of deprecated wpColorPickerL10n
-		$file = pstoolkit_url( 'external/wp-color-picker-alpha/wp-color-picker-alpha-modern.js' );
-		wp_enqueue_script( 'wp-color-picker-alpha', $file, array( 'wp-color-picker', 'wp-i18n' ), '2.1.3-modern', true );
-		wp_set_script_translations( 'wp-color-picker-alpha', 'ub' );
+			if ( wp_style_is( 'wp-pointer', 'registered' ) ) {
+				wp_enqueue_style( 'wp-pointer' );
+			}
+			if ( wp_script_is( 'wp-pointer', 'registered' ) ) {
+				wp_enqueue_script( 'wp-pointer' );
+			}
 		
 			$messages = array(
 				'messages' => array(
@@ -537,12 +506,42 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 		}
 
 		public function add_admin_header_branding() {
+			$page = isset( $_GET['page'] ) ? sanitize_key( wp_unslash( $_GET['page'] ) ) : '';
+			if ( 0 !== strpos( $page, 'branding' ) ) {
+				return;
+			}
+
 			$this->add_admin_header_core();
 			do_action( 'pstoolkit_admin_header_global' );
 			$update = apply_filters( 'pstoolkit_update_branding_page', true );
 			if ( $update ) {
 				$this->update_branding_page();
 			}
+		}
+
+		/**
+		 * Fallback: ensure branding assets are enqueued even if load-* hooks are skipped.
+		 */
+		public function enqueue_branding_assets_fallback() {
+			if ( ! $this->is_branding_admin_screen() ) {
+				return;
+			}
+
+			$this->add_admin_header_core();
+			do_action( 'pstoolkit_admin_header_global' );
+		}
+
+		/**
+		 * Check whether current admin request is a CP Toolkit branding screen.
+		 */
+		private function is_branding_admin_screen() {
+			$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
+			if ( is_a( $screen, 'WP_Screen' ) && ! empty( $screen->id ) ) {
+				return (bool) preg_match( '/(^|_)page_branding|toplevel_page_branding/', $screen->id );
+			}
+
+			$page = isset( $_GET['page'] ) ? sanitize_key( wp_unslash( $_GET['page'] ) ) : '';
+			return 0 === strpos( $page, 'branding' );
 		}
 
 		/**
@@ -1235,6 +1234,13 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 			$select = '';
 			foreach ( $modules as $id => $module ) {
 				$slug  = $module['module'];
+				$link  = add_query_arg(
+					array(
+						'page'   => sprintf( 'branding_group_%s', $module['group'] ),
+						'module' => sanitize_title( $slug ),
+					),
+					is_network_admin() ? network_admin_url( 'admin.php' ) : admin_url( 'admin.php' )
+				);
 				$title = $module['name'];
 				if ( isset( $module['title'] ) ) {
 					$title = $module['title'];
@@ -1258,15 +1264,16 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 					$icon = '';
 				}
 				$tabs   .= sprintf(
-					'<li class="sui-vertical-tab %s"><a href="#" data-tab="%s">%s%s</a></li>',
+					'<li class="sui-vertical-tab %s"><a href="%s" data-tab="%s">%s%s</a></li>',
 					esc_attr( $current === $slug ? 'current' : '' ),
+					esc_url( $link ),
 					sanitize_title( $slug ),
 					esc_html( $title ),
 					$icon
 				);
 				$select .= sprintf(
 					'<option %s value="%s">%s</option>',
-					esc_attr( $current === $slug ? 'selected="selected' : '' ),
+					selected( $current === $slug, true, false ),
 					sanitize_title( $slug ),
 					esc_html( $title )
 				);
@@ -1357,6 +1364,8 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 								'text'  => __( 'Änderungen speichern', 'ub' ),
 								'sui'   => 'blue',
 								'icon'  => 'save',
+								'type'  => 'submit',
+								'form'  => sprintf( 'pstoolkit-form-%s', sanitize_title( $slug ) ),
 								'class' => 'pstoolkit-module-save',
 							);
 							$buttons .= $this->button( $args );
@@ -1868,10 +1877,11 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 					$module
 				);
 				$content .= sprintf(
-					'<form action="%s" method="%s" class="module-%s"%s>',
+					'<form action="%s" method="%s" class="module-%s" id="%s"%s>',
 					remove_query_arg( array( 'module' ) ),
 					apply_filters( 'pstoolkit_settings_form_method', 'post' ),
 					esc_attr( implode( ' ', $classes ) ),
+					esc_attr( sprintf( 'pstoolkit-form-%s', sanitize_title( $module['module'] ) ) ),
 					$enctype
 				);
 				$content .= $this->hidden( 'module', $module['module'] );
@@ -1958,6 +1968,12 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 			 */
 			if ( isset( $args['id'] ) ) {
 				$data .= sprintf( ' id="%s"', esc_attr( $args['id'] ) );
+			}
+			/**
+			 * add form attribute
+			 */
+			if ( isset( $args['form'] ) ) {
+				$data .= sprintf( ' form="%s"', esc_attr( $args['form'] ) );
 			}
 			/**
 			 * add style attribute

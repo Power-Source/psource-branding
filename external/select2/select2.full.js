@@ -3117,7 +3117,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
                 if (this._request != null) {
                     // JSONP requests cannot always be aborted
-                    if ($.isFunction(this._request.abort)) {
+                    if ('function' === typeof this._request.abort) {
                         this._request.abort();
                     }
 
@@ -3258,7 +3258,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             };
 
             Tags.prototype.createTag = function(decorated, params) {
-                var term = $.trim(params.term);
+                var term = (params.term == null ? '' : String(params.term)).trim();
 
                 if (term === '') {
                     return null;
@@ -4202,7 +4202,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
                 function matcher(params, data) {
                     // Always return the object if there is nothing to compare
-                    if ($.trim(params.term) === '') {
+                    if ((params.term == null ? '' : String(params.term)).trim() === '') {
                         return data;
                     } // Do a recursive check for options with children
 
@@ -4957,7 +4957,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
                 var $container = decorated.call(this);
                 var containerCssClass = this.options.get('containerCssClass') || '';
 
-                if ($.isFunction(containerCssClass)) {
+                if ('function' === typeof containerCssClass) {
                     containerCssClass = containerCssClass(this.$element);
                 }
 
@@ -4982,7 +4982,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
                 var containerCss = this.options.get('containerCss') || {};
 
-                if ($.isFunction(containerCss)) {
+                if ('function' === typeof containerCss) {
                     containerCss = containerCss(this.$element);
                 }
 
@@ -5187,7 +5187,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
                 function wrappedMatcher(params, data) {
                     var match = $.extend(true, {}, data);
 
-                    if (params.term == null || $.trim(params.term) === '') {
+                    if (params.term == null || String(params.term).trim() === '') {
                         return match;
                     }
 

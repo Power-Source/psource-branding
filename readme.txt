@@ -4,8 +4,8 @@ Author URI: https://github.com/Power-Source
 Tags: classicpress-plugin, classicpress, white label classicpress, custom login page, login page customizer, whitelabel, customize system emails, customize default emails, rebrand, rebranding, coming soon page, maintenance mode, under construction page, coming soon template, login screen
 Requires at least: 4.6
 Tested up to: 6.8.1
-ClassiPress: 2.6.0
-Stable tag: 1.0.3
+ClassiPress: 2.7.0
+Stable tag: 1.0.4
 Requires PHP: 8.0.0
 License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -26,6 +26,21 @@ Mehr als 30 Module im CP Toolkit enthalten!
 
 
 == Changelog ==
+
+= 1.0.4 =
+
+* Fix: E-Mail-Template-Rendering beschleunigt (falsche Inline-Style-Parameterreihenfolge korrigiert).
+* Fix: Unnoetige, teure Verarbeitung im Vorschau-Pfad entfernt.
+* Fix: E-Mail-Template-Editor greift jetzt deterministisch auf das Feld simple_options[content][email] zu.
+* Fix: ACE-Editor/Hidden-Textarea-Synchronisierung fuer E-Mail-Template beim Laden, Bearbeiten und Speichern gehaertet.
+* Fix: Globaler Speichern-Flow verbessert; Button zielt jetzt robust auf das korrekte Modul-Formular.
+* Fix: Formularbindung fuer oberen "Aenderungen speichern"-Button via form-Attribut ergaenzt (JS-unabhaengiger Submit-Pfad).
+* Fix: Frueher JS-Abbruch im Admin-Ready-Flow behoben, damit globale Save-Handler nicht mehr ausfallen.
+* Fix: Sidebar-Modulnavigation verbessert; Tabs besitzen echte Fallback-Links und funktionieren auch ohne aktives JS.
+* Fix: Asset-Enqueue auf Branding-Seiten gehaertet (Fallback-Hook fuer Admin-Assets ergaenzt).
+* Fix: Hard-Dependency-Kette entschlackt, damit Kern-Adminlogik bei teilweisem Asset-Ausfall weiterlaeuft.
+* Fix: Passwortfelder mit sinnvollen autocomplete-Attributen versehen.
+* Verbesserung: Admin- und Shared-UI-Bundles neu gebaut, damit aktuelle Fixes sicher ausgeliefert werden.
 
 = 1.0.3 =
 

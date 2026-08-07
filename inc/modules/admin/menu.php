@@ -83,6 +83,11 @@ if ( ! class_exists( 'PSToolkit_Admin_Menu' ) ) {
 		 * Adds assets throughout the admin area
 		 */
 		public function enqueue_global_admin_assets() {
+			$configured_menu = $this->get_menu_for_current_user();
+			if ( empty( $configured_menu ) || $this->is_network_admin ) {
+				return;
+			}
+
 			wp_enqueue_style(
 				'pstoolkit-admin-menu-global',
 				pstoolkit_files_url( 'modules/admin/assets/css/admin/admin-menu-global.css' ),

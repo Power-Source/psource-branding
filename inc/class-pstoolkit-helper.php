@@ -3850,8 +3850,9 @@ if ( ! class_exists( 'PSToolkit_Helper' ) ) {
 			// Check if file exists.
 			if ( is_file( $file ) ) {
 				$file = pstoolkit_files_url( $filename );
+				$dependencies = array( 'jquery' );
 				// Register script.
-				wp_register_script( $handler, $file, array( 'jquery' ), $this->build, true );
+				wp_register_script( $handler, $file, $dependencies, $this->build, true );
 				// Localize the script.
 				if ( ! empty( $this->messages ) ) {
 					$localize = array(

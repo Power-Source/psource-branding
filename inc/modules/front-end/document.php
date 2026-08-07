@@ -395,7 +395,7 @@ if ( ! class_exists( 'PSToolkit_Document' ) ) {
 			$content .= $this->get_value( 'protected', 'form_field', __( 'Passwort:', 'ub' ) );
 			$content .= ' ';
 			$content .= sprintf(
-				'<input name="post_password" id="%s" type="password" size="20" />',
+				'<input name="post_password" id="%s" type="password" size="20" autocomplete="current-password" />',
 				esc_attr( $label )
 			);
 			$content .= '</label>';

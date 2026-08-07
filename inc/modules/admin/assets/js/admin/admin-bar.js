@@ -383,7 +383,7 @@ jQuery(window.document).ready(function($) {
         e.stopPropagation();
         var $dialog = $(this).closest('.sui-modal'),
             builders = $('#pstoolkit-popular-builders', $dialog).val(),
-            value = jQuery.trim($('#builders textarea').val());
+            value = ($('#builders textarea').val() || '').toString().trim();
 
         value += (value ? '\n' : '') + builders.join('\n');
         $('#builders textarea').val(value);

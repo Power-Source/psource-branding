@@ -7,7 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sync:shared-ui": "bash scripts/sync-shared-ui-from-github.sh",
+    "build": "npm run sync:shared-ui && gulp"
   },
   "repository": {
     "type": "git",
@@ -26,8 +27,5 @@
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^6.0.1",
     "gulp-uglify": "^3.0.2"
-  },
-  "scripts": {
-    "build": "gulp"
   }
 }

@@ -14,6 +14,69 @@ window.ub_admin_loaded = true;
  */
 (function($) {
     'use strict';
+
+    if ( 'object' !== typeof window.SUI ) {
+        window.SUI = {};
+    }
+
+    window.SUI.editors = window.SUI.editors || {};
+
+    if ( 'function' !== typeof window.SUI.openFloatNotice ) {
+        window.SUI.openFloatNotice = function( text ) {
+            if ( window.console && 'function' === typeof window.console.warn ) {
+                window.console.warn( text );
+            }
+        };
+    }
+
+    if ( 'function' !== typeof window.SUI.openModal ) {
+        window.SUI.__pstoolkitModalFallback = true;
+        window.SUI.openModal = function( dialogId ) {
+            var $content = $( '#' + dialogId );
+            if ( ! $content.length ) {
+                return;
+            }
+            var $modal = $content.closest( '.sui-modal' );
+            $modal.addClass( 'sui-active' ).css( 'display', 'block' );
+            $content.attr( 'aria-hidden', 'false' ).css( 'display', 'block' );
+            $( 'body' ).addClass( 'sui-modal-open' );
+        };
+    }
+
+    if ( 'function' !== typeof window.SUI.closeModal ) {
+        window.SUI.closeModal = function() {
+            var $modal = $( '.sui-modal.sui-active' ).last();
+            if ( ! $modal.length ) {
+                return;
+            }
+            $modal.removeClass( 'sui-active' ).css( 'display', '' );
+            $modal.find( '.sui-modal-content' ).attr( 'aria-hidden', 'true' ).css( 'display', '' );
+            $( 'body' ).removeClass( 'sui-modal-open' );
+        };
+    }
+
+    if ( window.SUI.__pstoolkitModalFallback ) {
+        $( document ).on( 'click', '[data-modal-open]', function( event ) {
+            var modalId = $( this ).attr( 'data-modal-open' );
+            if ( modalId ) {
+                window.SUI.openModal( modalId );
+                event.preventDefault();
+            }
+        } );
+
+        $( document ).on( 'click', '[data-modal-close]', function( event ) {
+            window.SUI.closeModal();
+            event.preventDefault();
+        } );
+    }
+
+    // Compatibility shim: keep legacy jQuery pointer() calls from crashing
+    // when wp-pointer is not available in the current CP/WP environment.
+    if ( 'function' !== typeof $.fn.pointer ) {
+        $.fn.pointer = function() {
+            return this;
+        };
+    }
     
     $.fn.sortableJS = function(options) {
         // Fallback: return this if SortableJS not available (prevents breaking)
@@ -114,119 +177,168 @@ window.ub_admin_loaded = true;
 
 jQuery( window.document ).ready(function($){
     "use strict";
-    var self = this,
-        $suiPickerInputs = $( '.sui-colorpicker-input' );
+    var $suiPickerInputs = $( '.sui-colorpicker-input' );
 
-    $suiPickerInputs.wpColorPicker( {
-
-        change: function( event, ui ) {
-            var $this = $( this );
-            var newColor = ui.color.toCSS ? ui.color.toCSS() : ui.color.toString();
-            $this.val( newColor ).trigger( 'change' );
-            
-            // Update SUI preview immediately
-            var $suiPicker = $this.closest( '.sui-colorpicker-wrap' );
-            var $suiPickerColor = $suiPicker.find( '.sui-colorpicker-value span[role=button] span' );
-            var $suiPickerInput = $suiPicker.find( '.sui-colorpicker-value input' );
-            
-            if ( $suiPickerColor.length ) {
-                $suiPickerColor.css( 'background-color', newColor );
-            }
-            if ( $suiPickerInput.length ) {
-                $suiPickerInput.val( newColor );
-            }
-        },
-        
-        // Ensure iris is properly triggered when color changes
-        palettes: true
-    });
-
-    if ( $suiPickerInputs.hasClass( 'wp-color-picker' ) ) {
-
-        $suiPickerInputs.each( function() {
-
-            var $suiPickerInput = $(this),
-                $suiPicker      = $suiPickerInput.closest( '.sui-colorpicker-wrap' ),
-                $suiPickerColor = $suiPicker.find( '.sui-colorpicker-value span[role=button]' ),
-                $suiPickerValue = $suiPicker.find( '.sui-colorpicker-value' ),
-                $suiPickerClear = $suiPickerValue.find( 'button' ),
-                $suiPickerType  = 'hex'
-            ;
-
-            var $wpPicker       = $suiPickerInput.closest( '.wp-picker-container' ),
-                $wpPickerButton = $wpPicker.find( '.wp-color-result' ),
-                $wpPickerAlpha  = $wpPickerButton.find( '.color-alpha' ),
-                $wpPickerClear  = $wpPicker.find( '.wp-picker-clear' )
-            ;
-
-            // Check if alpha exists
-            if ( $suiPickerInput.data( 'alpha' ) === true ) {
-
-                $suiPickerType = 'rgba';
-
-                // Listen to color change (immediate feedback)
-                $suiPickerInput.on( 'change irischange', function() {
-
-                    // Change color preview
-                    $suiPickerColor.find( 'span' ).css({
-                        'background-color': $wpPickerAlpha.css( 'background' )
-                    });
-
-                    // Change color value
-                    $suiPickerValue.find( 'input' ).val( $suiPickerInput.val() );
-
-                } );
-
-            } else {
-
-                // Listen to color change (immediate feedback)
-                $suiPickerInput.on( 'change irischange', function() {
-                    var currentColor = $suiPickerInput.val();
-                    
-                    // Change color preview
-                    $suiPickerColor.find( 'span' ).css({
-                        'background-color': currentColor
-                    });
-
-                    // Change color value
-                    $suiPickerValue.find( 'input' ).val( currentColor );
-
-                } );
-            }
-
-            // Add picker type class
-            $suiPicker.find( '.sui-colorpicker' ).addClass( 'sui-colorpicker-' + $suiPickerType );
-
-            // Open iris picker
-            $suiPicker.find( '.sui-button, span[role=button]' ).on( 'click', function( e ) {
-
-                $wpPickerButton.trigger('click');
-
-                e.preventDefault();
-                e.stopPropagation();
-
-            } );
-
-            // Clear color value
-            $suiPickerClear.on( 'click', function( e ) {
-                e.preventDefault();
-
-                var reset_value = '';
-
-                $wpPickerClear.trigger('click');
-                $suiPickerValue.find( 'input' ).val( reset_value );
-                $suiPickerInput.val( reset_value ).trigger( 'change' );
-                $suiPickerColor.find( 'span' ).css({
-                    'background-color': reset_value
-                });
-
-                e.preventDefault();
-                e.stopPropagation();
-
-            } );
-
-        } );
+    function clamp( value, min, max ) {
+        return Math.max( min, Math.min( max, value ) );
     }
+
+    function hexToRgb( hex ) {
+        var normalized = ( hex || '' ).replace( '#', '' );
+        if ( 3 === normalized.length ) {
+            normalized = normalized.split( '' ).map( function( c ) { return c + c; } ).join( '' );
+        }
+        if ( ! /^[0-9a-fA-F]{6}$/.test( normalized ) ) {
+            return { r: 0, g: 0, b: 0 };
+        }
+        return {
+            r: parseInt( normalized.substring( 0, 2 ), 16 ),
+            g: parseInt( normalized.substring( 2, 4 ), 16 ),
+            b: parseInt( normalized.substring( 4, 6 ), 16 )
+        };
+    }
+
+    function rgbToHex( r, g, b ) {
+        function toHex( v ) {
+            var hex = clamp( parseInt( v, 10 ) || 0, 0, 255 ).toString( 16 );
+            return 1 === hex.length ? '0' + hex : hex;
+        }
+        return '#' + toHex( r ) + toHex( g ) + toHex( b );
+    }
+
+    function parseColor( value ) {
+        var input = ( value || '' ).trim();
+        var rgbaMatch = input.match( /^rgba?\s*\(([^)]+)\)$/i );
+        if ( rgbaMatch ) {
+            var parts = rgbaMatch[1].split( ',' ).map( function( part ) {
+                return part.trim();
+            } );
+            var r = parseFloat( parts[0] || 0 );
+            var g = parseFloat( parts[1] || 0 );
+            var b = parseFloat( parts[2] || 0 );
+            var a = parts.length > 3 ? parseFloat( parts[3] ) : 1;
+            return {
+                hex: rgbToHex( r, g, b ),
+                alpha: clamp( isNaN( a ) ? 1 : a, 0, 1 )
+            };
+        }
+        if ( /^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test( input ) ) {
+            var rgb = hexToRgb( input );
+            return {
+                hex: rgbToHex( rgb.r, rgb.g, rgb.b ),
+                alpha: 1
+            };
+        }
+        return { hex: '#000000', alpha: 1 };
+    }
+
+    function toCssColor( hex, alpha, supportsAlpha ) {
+        if ( ! supportsAlpha || alpha >= 1 ) {
+            return hex;
+        }
+        var rgb = hexToRgb( hex );
+        return 'rgba(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ',' + alpha.toFixed(2) + ')';
+    }
+
+    function closePanels() {
+        $( '.pstoolkit-vanilla-colorpicker-panel' ).hide();
+    }
+
+    $( document ).on( 'click', function( event ) {
+        if ( 0 === $( event.target ).closest( '.sui-colorpicker-wrap' ).length ) {
+            closePanels();
+        }
+    } );
+
+    $suiPickerInputs.each( function() {
+        var $sourceInput = $( this );
+        var $wrap = $sourceInput.closest( '.sui-colorpicker-wrap' );
+        var $valueInput = $wrap.find( '.sui-colorpicker-value input' );
+        var $preview = $wrap.find( '.sui-colorpicker-value span[role=button] span' );
+        var $clearButton = $wrap.find( '.sui-colorpicker-value button' );
+        var $openTriggers = $wrap.find( '.sui-button, .sui-colorpicker-value span[role=button]' );
+        var supportsAlpha = 'true' === String( $sourceInput.data( 'alpha' ) ).toLowerCase();
+        var parsed = parseColor( $sourceInput.val() );
+
+        var $panel = $( '<div class="pstoolkit-vanilla-colorpicker-panel" />' ).css({
+            position: 'absolute',
+            zIndex: 9999,
+            background: '#fff',
+            border: '1px solid #dcdcde',
+            borderRadius: '4px',
+            padding: '10px',
+            marginTop: '8px',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.12)',
+            display: 'none'
+        });
+
+        var $nativeColor = $( '<input type="color" class="pstoolkit-vanilla-color" />' )
+            .val( parsed.hex )
+            .css({ display: 'block', width: '100%', minHeight: '36px', border: 'none', background: 'transparent', padding: 0 });
+
+        var $alphaWrap = $( '<label class="pstoolkit-vanilla-alpha-wrap" />' ).css({
+            display: supportsAlpha ? 'block' : 'none',
+            marginTop: '8px',
+            fontSize: '12px'
+        });
+        var $alphaText = $( '<span />' ).text( 'Alpha: ' + Math.round( parsed.alpha * 100 ) + '%' );
+        var $alphaRange = $( '<input type="range" min="0" max="100" step="1" class="pstoolkit-vanilla-alpha" />' )
+            .val( Math.round( parsed.alpha * 100 ) )
+            .css({ width: '100%', marginTop: '6px' });
+        $alphaWrap.append( $alphaText ).append( $alphaRange );
+
+        $panel.append( $nativeColor ).append( $alphaWrap );
+        $wrap.css( 'position', 'relative' ).append( $panel );
+
+        function syncPreviewFromValue( cssValue ) {
+            $valueInput.val( cssValue );
+            $preview.css( 'background-color', cssValue || 'transparent' );
+        }
+
+        function applyPickerValue() {
+            var alpha = clamp( ( parseInt( $alphaRange.val(), 10 ) || 0 ) / 100, 0, 1 );
+            var color = toCssColor( $nativeColor.val(), alpha, supportsAlpha );
+            $alphaText.text( 'Alpha: ' + Math.round( alpha * 100 ) + '%' );
+            $sourceInput.val( color ).trigger( 'change' );
+            syncPreviewFromValue( color );
+        }
+
+        $openTriggers.on( 'click', function( event ) {
+            event.preventDefault();
+            event.stopPropagation();
+            var isOpen = $panel.is( ':visible' );
+            closePanels();
+            if ( ! isOpen ) {
+                $panel.show();
+            }
+        } );
+
+        $nativeColor.on( 'input change', function() {
+            applyPickerValue();
+        } );
+
+        $alphaRange.on( 'input change', function() {
+            applyPickerValue();
+        } );
+
+        $clearButton.on( 'click', function( event ) {
+            event.preventDefault();
+            $sourceInput.val( '' ).trigger( 'change' );
+            syncPreviewFromValue( '' );
+            closePanels();
+        } );
+
+        $sourceInput.on( 'change', function() {
+            var current = parseColor( $sourceInput.val() );
+            $nativeColor.val( current.hex );
+            $alphaRange.val( Math.round( current.alpha * 100 ) );
+            $alphaText.text( 'Alpha: ' + Math.round( current.alpha * 100 ) + '%' );
+            syncPreviewFromValue( $sourceInput.val() );
+        } );
+
+        syncPreviewFromValue( toCssColor( parsed.hex, parsed.alpha, supportsAlpha ) );
+        $sourceInput.val( toCssColor( parsed.hex, parsed.alpha, supportsAlpha ) );
+    } );
 
 });
 
@@ -614,13 +726,66 @@ jQuery( window.document ).ready(function($){
 
 
 SUI.pstoolkitSaveSettings = function($, form) {
-        if ( "undefined" === typeof form ) {
-            form = $('[data-tab=' + $(this).closest('.sui-box').data('tab') + '] form');
+        var $form = form && form.jquery ? form : $( form || [] );
+        var tab;
+        var $tabContent;
+
+        if ( !$form.length ) {
+            tab = $( this ).closest( '.sui-box' ).data( 'tab' );
+            if ( tab ) {
+                $tabContent = $( '.pstoolkit-settings-tab-content[data-tab="' + tab + '"]' ).first();
+                $form = $tabContent.find( 'form.pstoolkit-form' ).first();
+                if ( !$form.length ) {
+                    $form = $tabContent.find( 'form' ).first();
+                }
+                if ( !$form.length ) {
+                    $form = $( '[data-tab="' + tab + '"] form.pstoolkit-form' ).first();
+                }
+                if ( !$form.length ) {
+                    $form = $( '[data-tab="' + tab + '"] form' ).first();
+                }
+            }
         }
-        if ( 'undefined' !== typeof form ) {
+
+        if ( !$form.length ) {
+            $form = $( this ).closest( 'form' );
+        }
+
+        if ( $form.length && !$form.hasClass( 'pstoolkit-form' ) ) {
+            tab = tab || $( this ).closest( '.sui-box' ).data( 'tab' );
+            if ( tab ) {
+                $tabContent = $( '.pstoolkit-settings-tab-content[data-tab="' + tab + '"]' ).first();
+                var $settingsForm = $tabContent.find( 'form.pstoolkit-form' ).first();
+                if ( $settingsForm.length ) {
+                    $form = $settingsForm;
+                }
+            }
+        }
+
+        if ( !$form.length ) {
+            $form = $( '.pstoolkit-settings-tab-content:visible form.pstoolkit-form' ).first();
+            if ( !$form.length ) {
+                $form = $( '.pstoolkit-settings-tab-content:visible form' ).first();
+            }
+        }
+
+        if ( $form.length ) {
+            // Ensure ACE-backed values are pushed to their hidden source fields before submit.
+            $( '.sui-ace-editor', $form ).each( function() {
+                var editor_id = this.id;
+                var source_id = $( this ).data( 'id' );
+                if ( window.SUI && SUI.editors && SUI.editors[ editor_id ] ) {
+                    var editor_value = SUI.editors[ editor_id ].getSession().getValue();
+                    if ( source_id ) {
+                        $( '#' + source_id ).val( editor_value );
+                    }
+                    $( this ).val( editor_value );
+                }
+            } );
+
             var error = false;
             var errorParents = [];
-            $( 'input[type=number]', form ).each( function() {
+            $( 'input[type=number]', $form ).each( function() {
                 var val = $(this).val();
                 if ( 'undefined' !== typeof val ) {
                     var min = $(this).prop( 'min' );
@@ -659,7 +824,10 @@ SUI.pstoolkitSaveSettings = function($, form) {
 				});
                 return;
             }
-            form.trigger('submit');
+
+            if ( $form.get(0) ) {
+                $form.get(0).submit();
+            }
         }
 };
 
@@ -807,7 +975,7 @@ jQuery( window.document ).ready(function($){
         if ( "undefined" === typeof section || "undefined" === typeof field || "undefined" === typeof value) {
             return;
         }
-        $( '[name="simple_options[' + section + '][' + field + ']' )
+        $( '[name="simple_options[' + section + '][' + field + ']"]' )
             .on( 'change', function() {
                 if ( $(this).val() === value ) {
                     $this.show();
@@ -869,32 +1037,79 @@ jQuery( window.document ).ready(function($){
     }
     SUI.editors = {};
     SUI.editors_value = {};
-    jQuery( '.sui-ace-editor' ).each( function() {
-        var id = this.id;
-        var editor_id = $(this).data( 'id' );
-        SUI.editors[id] = ace.edit( id );
-        SUI.editors[id].getSession().setUseWorker( false );
-        SUI.editors[id].setShowPrintMargin( false );
-        SUI.editors[id].setTheme( 'ace/theme/sui' );
-        SUI.editors[id].getSession().setMode( 'ace/mode/css' );
-        if ( $(this).hasClass('ub_html_editor') ) {
-            SUI.editors[id].getSession().setMode( 'ace/mode/html' );
+    var pstoolkit_ace_boot_retries = 0;
+    function pstoolkit_boot_ace_editors() {
+        if ( 'undefined' === typeof window.ace || 'function' !== typeof window.ace.edit ) {
+            pstoolkit_ace_boot_retries++;
+            if ( pstoolkit_ace_boot_retries <= 30 ) {
+                window.setTimeout( pstoolkit_boot_ace_editors, 100 );
+                return;
+            }
+            if ( window.console && 'function' === typeof window.console.warn ) {
+                window.console.warn( 'PSToolkit: ACE editor library not available.' );
+            }
+            return;
         }
-        SUI.editors[id].session.setTabSize(4);
-        SUI.editors_value[id] = $( '#' + editor_id );
-        SUI.editors[id].getSession().on('change', function () {
-            SUI.editors_value[id].val(SUI.editors[id].getSession().getValue());
+
+        jQuery( '.sui-ace-editor' ).each( function() {
+            var element = this;
+            var $element = $( element );
+            var id = element.id;
+            var editor_id = $element.data( 'id' );
+            var placeholder = $element.prop( 'placeholder' ) || '';
+            var initialValue = '';
+
+            if ( SUI.editors[id] ) {
+                return;
+            }
+
+            try {
+                SUI.editors[id] = ace.edit( id );
+                SUI.editors[id].getSession().setUseWorker( false );
+                SUI.editors[id].setShowPrintMargin( false );
+                try {
+                    SUI.editors[id].setTheme( 'ace/theme/sui' );
+                } catch ( themeError ) {
+                    if ( window.console && 'function' === typeof window.console.warn ) {
+                        window.console.warn( 'PSToolkit: ACE theme load failed, using default theme.' );
+                    }
+                }
+                SUI.editors[id].getSession().setMode( 'ace/mode/css' );
+                if ( $element.hasClass('ub_html_editor') ) {
+                    SUI.editors[id].getSession().setMode( 'ace/mode/html' );
+                }
+                SUI.editors[id].session.setTabSize(4);
+                SUI.editors_value[id] = $( '#' + editor_id );
+                if ( SUI.editors_value[id] && SUI.editors_value[id].length ) {
+                    initialValue = SUI.editors_value[id].val();
+                    if ( 'string' === typeof initialValue && '' !== initialValue ) {
+                        SUI.editors[id].getSession().setValue( initialValue );
+                        SUI.editors[id].clearSelection();
+                    }
+                }
+                SUI.editors[id].getSession().on('change', function () {
+                    var editorValue = SUI.editors[id].getSession().getValue();
+                    if ( SUI.editors_value[id] && SUI.editors_value[id].length ) {
+                        SUI.editors_value[id].val( editorValue ).trigger( 'change' );
+                    }
+                });
+                if ( '' !== placeholder ) {
+                    SUI.editors[id].on( 'input', function() {
+                        pstoolkit_ace_editor_placeholder( id, placeholder );
+                    });
+                    pstoolkit_ace_editor_placeholder( id, placeholder );
+                }
+                $element.on( 'change', function() {
+                    $.fn.pstoolkit_flag_status( this );
+                });
+            } catch ( aceError ) {
+                if ( window.console && 'function' === typeof window.console.warn ) {
+                    window.console.warn( 'PSToolkit: ACE init failed for editor ' + id + '.' );
+                }
+            }
         });
-        if ( '' !== $(this).prop( 'placeholder' ) ) {
-            SUI.editors[id].on( 'input', function() {
-                pstoolkit_ace_editor_placeholder( id, $(this).prop( 'placeholder' ) );
-            });
-            pstoolkit_ace_editor_placeholder( id, $(this).prop( 'placeholder' ) );
-        }
-        $(this).on( 'change', function() {
-            $.fn.pstoolkit_flag_status( this );
-        });
-    });
+    }
+    pstoolkit_boot_ace_editors();
 
     /**
      * ACE Editor selectors.
@@ -908,6 +1123,9 @@ jQuery( window.document ).ready(function($){
         var $editor_id = $( 'div.sui-ace-editor', $(this).closest( '.simple-option' ) ).prop( 'id' );
         // Editor.
         var $editor = SUI.editors[$editor_id];
+        if ( !$editor || !$editor.session ) {
+            return;
+        }
         // Editor mode.
         var $mode = $editor.session.$modeId;
         // Get the selector data based on mode.
@@ -953,11 +1171,37 @@ jQuery( window.document ).ready(function($){
         });
     };    
     SUI.pstoolkitSideTabs();
+
+    // Fallback for SUI content tabs used inside module panes.
+    // This keeps right-side tabs functional even when shared-ui tab init is skipped.
+    $(document).on('click', '.sui-wrap-pstoolkit .sui-tabs [data-tabs] > div', function( event ) {
+        var $tab = $(this);
+        var $tabsWrap = $tab.parent('[data-tabs]');
+        var $tabs = $tabsWrap.children('div');
+        var tabIndex = $tabs.index($tab);
+        var $tabsContainer = $tab.closest('.sui-tabs');
+        var $panes = $tabsContainer.find('> [data-panes] > div');
+
+        if ( tabIndex < 0 || !$panes.length ) {
+            return;
+        }
+
+        $tabs.removeClass('active');
+        $tab.addClass('active');
+
+        $panes.removeClass('active');
+        $panes.eq(tabIndex).addClass('active');
+
+        event.preventDefault();
+    });
 	/**
      * SUI: save
      */
 	var $module_save_button = $('.pstoolkit-module-save');
-	$module_save_button.on('click', function () {
+    $module_save_button.on('click', function (event) {
+        if ( event && 'function' === typeof event.preventDefault ) {
+            event.preventDefault();
+        }
 		window.pstoolkit_has_changed = 'saving';
 	});
 

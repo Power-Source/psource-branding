@@ -172,12 +172,14 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
                 this._clipboardId = this.generateUniqueId();
                 button = '<button class="sui-button" id="sui-code-snippet-button-' + this._clipboardId + '" data-clipboard-target="#sui-code-snippet-' + this._clipboardId + '">' + this.settings.copyText + '</button>';
                 this.$element.attr('id', 'sui-code-snippet-' + this._clipboardId).after(button);
-                this._clipboardJs = new ClipboardJS('#sui-code-snippet-button-' + this._clipboardId); // attach events
+                if ('function' === typeof ClipboardJS) {
+                    this._clipboardJs = new ClipboardJS('#sui-code-snippet-button-' + this._clipboardId); // attach events
 
-                this._clipboardJs.on('success', function(e) {
-                    e.clearSelection();
-                    self.showTooltip(e.trigger, self.settings.copiedText);
-                });
+                    this._clipboardJs.on('success', function(e) {
+                        e.clearSelection();
+                        self.showTooltip(e.trigger, self.settings.copiedText);
+                    });
+                }
 
                 $('#sui-code-snippet-button-' + this._clipboardId).on('mouseleave.SUICodeSnippet', function() {
                     $(this).removeClass('sui-tooltip');
@@ -220,7 +222,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             }
         });
     };
-})(jQuery, ClipboardJS, window, document);
+})(jQuery, window.ClipboardJS, window, document);
 
 (function($) {
     // Enable strict mode.
@@ -1747,6 +1749,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
     document.addEventListener('DOMContentLoaded', function() {
         var mainEl = $('.sui-wrap');
+
+        if ('function' !== typeof window.A11yDialog) {
+            return;
+        }
 
         if (undefined === SUI.dialogs) {
             SUI.dialogs = {};
