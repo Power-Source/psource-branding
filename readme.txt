@@ -5,7 +5,7 @@ Tags: classicpress-plugin, classicpress, white label classicpress, custom login 
 Requires at least: 4.6
 Tested up to: 6.8.1
 ClassiPress: 2.7.0
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 Requires PHP: 8.0.0
 License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -27,8 +27,7 @@ Mehr als 30 Module im CP Toolkit enthalten!
 
 == Changelog ==
 
-= 1.0.4 =
-
+= 1.0.5 =
 * Fix: E-Mail-Template-Rendering beschleunigt (falsche Inline-Style-Parameterreihenfolge korrigiert).
 * Fix: Unnoetige, teure Verarbeitung im Vorschau-Pfad entfernt.
 * Fix: E-Mail-Template-Editor greift jetzt deterministisch auf das Feld simple_options[content][email] zu.
@@ -39,6 +38,10 @@ Mehr als 30 Module im CP Toolkit enthalten!
 * Fix: Sidebar-Modulnavigation verbessert; Tabs besitzen echte Fallback-Links und funktionieren auch ohne aktives JS.
 * Fix: Asset-Enqueue auf Branding-Seiten gehaertet (Fallback-Hook fuer Admin-Assets ergaenzt).
 * Fix: Hard-Dependency-Kette entschlackt, damit Kern-Adminlogik bei teilweisem Asset-Ausfall weiterlaeuft.
+* Fix: Veraltete ClassicPress-Abhaengigkeit wp-pointer samt jquery-ui-core-Folgeabhaengigkeit aus dem Admin-Asset-Stack entfernt.
+* Fix: Toolkit-TinyMCE ohne Legacy-wplink, Quicktags und automatische Medienbuttons konfiguriert; veraltete jQuery-UI-Autocomplete-Kette entfernt.
+
+= 1.0.4 =
 * Fix: Passwortfelder mit sinnvollen autocomplete-Attributen versehen.
 * Verbesserung: Admin- und Shared-UI-Bundles neu gebaut, damit aktuelle Fixes sicher ausgeliefert werden.
 

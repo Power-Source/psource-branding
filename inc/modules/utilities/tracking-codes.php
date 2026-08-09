@@ -254,6 +254,10 @@ if ( ! class_exists( 'PSToolkit_Tracking_Codes' ) ) {
 		 */
 		private function check_filters( $data ) {
 			$show = true;
+			// Conditional tags are unreliable before the main query has been parsed.
+			if ( ! did_action( 'wp' ) ) {
+				return false;
+			}
 			/**
 			 * Handle only Main Query and leave the admin alone!
 			 */

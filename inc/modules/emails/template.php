@@ -122,6 +122,8 @@ if ( ! class_exists( 'PSToolkit_Email_Template' ) ) {
 			 * @since 1.0.0
 			 */
 			add_action( 'wp_ajax_pstoolkit_email_template_set_template', array( $this, 'ajax_set_template' ) );
+			add_action( 'wp_ajax_pstoolkit_email_template_custom_template', array( $this, 'ajax_custom_template' ) );
+			add_filter( 'pstoolkit_settings_email_template_preserve', array( $this, 'preserve_custom_templates' ) );
 			/**
 			 * AJAX Action: Send test email.
 			 *
@@ -227,6 +229,17 @@ if ( ! class_exists( 'PSToolkit_Email_Template' ) ) {
 						),
 					),
 				),
+				'custom_templates' => array(
+					'no-sui-columns' => true,
+					'title'          => __( 'Eigene Vorlagen', 'ub' ),
+					'description'    => __( 'Speichere den aktuellen Inhalt des HTML-Editors unter einem eigenen Namen und lade ihn später wieder.', 'ub' ),
+					'fields'         => array(
+						'manager' => array(
+							'type'     => 'callback',
+							'callback' => array( $this, 'get_custom_template_manager' ),
+						),
+					),
+				),
 				'content' => array(
 					'no-sui-columns' => true,
 					'title'          => __( 'HTML Editor', 'ub' ),
@@ -250,6 +263,60 @@ if ( ! class_exists( 'PSToolkit_Email_Template' ) ) {
 				),
 			);
 			$this->options = $options;
+		}
+
+		/**
+		 * Keep the AJAX-managed template library when the settings form is saved.
+		 */
+		public function preserve_custom_templates( $preserve ) {
+			$preserve['custom_templates'] = null;
+			return $preserve;
+		}
+
+		/**
+		 * Return valid custom templates from the module option.
+		 */
+		private function get_custom_templates() {
+			$templates = $this->get_value( 'custom_templates', null, array() );
+			if ( ! is_array( $templates ) ) {
+				return array();
+			}
+
+			foreach ( $templates as $id => $template ) {
+				if ( ! is_array( $template ) || empty( $template['name'] ) || ! isset( $template['content'] ) ) {
+					unset( $templates[ $id ] );
+				}
+			}
+
+			uasort(
+				$templates,
+				function ( $first, $second ) {
+					return strnatcasecmp( $first['name'], $second['name'] );
+				}
+			);
+			return $templates;
+		}
+
+		/**
+		 * Render controls for named custom templates.
+		 */
+		public function get_custom_template_manager() {
+			$templates = $this->get_custom_templates();
+			$content   = '<div class="pstoolkit-custom-template-manager" data-nonce="' . esc_attr( $this->get_nonce_value( 'custom-template' ) ) . '">';
+			$content  .= '<div class="pstoolkit-custom-template-fields">';
+			$content  .= '<select class="sui-select pstoolkit-custom-template-select" aria-label="' . esc_attr__( 'Gespeicherte Vorlage auswählen', 'ub' ) . '">';
+			$content  .= '<option value="">' . esc_html__( 'Gespeicherte Vorlage wählen', 'ub' ) . '</option>';
+			foreach ( $templates as $id => $template ) {
+				$content .= sprintf( '<option value="%s">%s</option>', esc_attr( $id ), esc_html( $template['name'] ) );
+			}
+			$content .= '</select>';
+			$content .= '<input type="text" class="sui-form-control pstoolkit-custom-template-name" maxlength="80" placeholder="' . esc_attr__( 'Name der Vorlage', 'ub' ) . '" />';
+			$content .= '</div><div class="pstoolkit-custom-template-actions">';
+			$content .= '<button type="button" class="sui-button sui-button-ghost pstoolkit-custom-template-load" disabled><i class="sui-icon-upload-cloud" aria-hidden="true"></i> ' . esc_html__( 'Laden', 'ub' ) . '</button>';
+			$content .= '<button type="button" class="sui-button sui-button-blue pstoolkit-custom-template-save"><i class="sui-icon-save" aria-hidden="true"></i> ' . esc_html__( 'Vorlage speichern', 'ub' ) . '</button>';
+			$content .= '<button type="button" class="sui-button sui-button-ghost pstoolkit-custom-template-delete" disabled><i class="sui-icon-trash" aria-hidden="true"></i> ' . esc_html__( 'Löschen', 'ub' ) . '</button>';
+			$content .= '</div></div>';
+			return $content;
 		}
 
 		/**
@@ -1169,6 +1236,78 @@ if ( ! class_exists( 'PSToolkit_Email_Template' ) ) {
 				'screenshot' => $this->get_theme_screenshot( $theme_id ),
 			);
 			wp_send_json_success( $data );
+		}
+
+		/**
+		 * Save, load or delete a named custom template.
+		 */
+		public function ajax_custom_template() {
+			$this->check_input_data( $this->get_nonce_action( 'custom-template' ), array( 'operation' ) );
+			if ( ! current_user_can( 'manage_options' ) ) {
+				$this->json_error( __( 'Du bist nicht berechtigt, diese Aktion auszuführen.', 'ub' ) );
+			}
+
+			$operation = sanitize_key( wp_unslash( $_POST['operation'] ) );
+			$id        = isset( $_POST['id'] ) ? sanitize_key( wp_unslash( $_POST['id'] ) ) : '';
+			$templates = $this->get_custom_templates();
+
+			if ( 'load' === $operation ) {
+				if ( empty( $id ) || ! isset( $templates[ $id ] ) ) {
+					$this->json_error( __( 'Die ausgewählte Vorlage wurde nicht gefunden.', 'ub' ) );
+				}
+				wp_send_json_success(
+					array(
+						'id'      => $id,
+						'name'    => $templates[ $id ]['name'],
+						'content' => $templates[ $id ]['content'],
+					)
+				);
+			}
+
+			if ( 'delete' === $operation ) {
+				if ( empty( $id ) || ! isset( $templates[ $id ] ) ) {
+					$this->json_error( __( 'Die ausgewählte Vorlage wurde nicht gefunden.', 'ub' ) );
+				}
+				unset( $templates[ $id ] );
+			} elseif ( 'save' === $operation ) {
+				$name    = isset( $_POST['name'] ) ? sanitize_text_field( wp_unslash( $_POST['name'] ) ) : '';
+				$content = isset( $_POST['content'] ) ? wp_unslash( $_POST['content'] ) : '';
+				if ( '' === $name || '' === trim( $content ) ) {
+					$this->json_error( __( 'Bitte gib einen Namen und HTML-Inhalt für die Vorlage ein.', 'ub' ) );
+				}
+				$name = function_exists( 'mb_substr' ) ? mb_substr( $name, 0, 80 ) : substr( $name, 0, 80 );
+				if ( empty( $id ) || ! isset( $templates[ $id ] ) ) {
+					$id = sanitize_title( $name );
+					if ( empty( $id ) ) {
+						$id = 'template-' . substr( md5( $name ), 0, 10 );
+					}
+				}
+				$templates[ $id ] = array(
+					'name'    => $name,
+					'content' => $content,
+				);
+			} else {
+				$this->json_error( __( 'Unbekannte Vorlagenaktion.', 'ub' ) );
+			}
+
+			$value                     = $this->get_value();
+			$value                     = is_array( $value ) ? $value : array();
+			$value['custom_templates'] = $templates;
+			$this->update_value( $value );
+
+			$items = array();
+			foreach ( $this->get_custom_templates() as $template_id => $template ) {
+				$items[] = array(
+					'id'   => $template_id,
+					'name' => $template['name'],
+				);
+			}
+			wp_send_json_success(
+				array(
+					'id'        => 'save' === $operation ? $id : '',
+					'templates' => $items,
+				)
+			);
 		}
 
 		/**

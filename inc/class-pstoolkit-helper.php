@@ -3459,9 +3459,13 @@ if ( ! class_exists( 'PSToolkit_Helper' ) ) {
 							'textarea_name' => sprintf( 'pstoolkit[%s]', $name ),
 							'textarea_rows' => 9,
 							'teeny'         => true,
+							'quicktags'     => false,
+							'media_buttons' => false,
 						);
 						ob_start();
+						add_filter( 'teeny_mce_plugins', array( $this, 'remove_legacy_tinymce_plugins' ) );
 						wp_editor( stripslashes( $value ), $id, $args );
+						remove_filter( 'teeny_mce_plugins', array( $this, 'remove_legacy_tinymce_plugins' ) );
 						$content .= ob_get_contents();
 						ob_end_clean();
 						break;
@@ -3580,6 +3584,13 @@ if ( ! class_exists( 'PSToolkit_Helper' ) ) {
 				}
 			}
 			return $content;
+		}
+
+		/**
+		 * Remove TinyMCE plugins backed by deprecated ClassicPress assets.
+		 */
+		public function remove_legacy_tinymce_plugins( $plugins ) {
+			return array_values( array_diff( $plugins, array( 'wplink' ) ) );
 		}
 
 		/**

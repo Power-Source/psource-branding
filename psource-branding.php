@@ -1,15 +1,15 @@
 <?php
 /*
 Plugin Name: PSOURCE Toolkit
-Plugin URI: https://power-source.github.io/psource-branding/
+Plugin URI: https://psource.eimen.net/wiki/psource-toolkit-dokumentation/
 Description: Eine komplette White-Label- und Branding-Lösung für Multisite. Adminbar, Loginsreens, Wartungsmodus, Favicons, Entfernen von ClassicPress-Links und Branding und vielem mehr.
 Author: PSOURCE
-Version: 1.0.4
-Author URI: https://github.com/Power-Source
+Version: 1.0.5
+Author URI: https://psource.eimen.net
 Text Domain: ub
 Domain Path: /languages
 
-Copyright 2020-2026 PSOURCE (https://github.com/Power-Source)
+Copyright 2020-2026 PSOURCE (https://psource.eimen.net)
 
 
 This program is free software; you can redistribute it and/or modify
@@ -23,16 +23,24 @@ the Free Software Foundation.
 
 $ub_version = null;
 
-require_once 'build.php';
+$pstoolkit_plugin_dir = dirname( __FILE__ );
+
+$pstoolkit_build_file = $pstoolkit_plugin_dir . '/build.php';
+if ( file_exists( $pstoolkit_build_file ) ) {
+	require_once $pstoolkit_build_file;
+} elseif ( ! defined( 'PSTOOLKIT_BUILD_TYPE' ) ) {
+	// Fallback for incomplete deployments where build.php is missing.
+	define( 'PSTOOLKIT_BUILD_TYPE', 'pro' );
+}
 
 // Include the configuration library.
-require_once dirname( __FILE__ ) . '/etc/config.php';
+require_once $pstoolkit_plugin_dir . '/etc/config.php';
 // Include the functions library.
-if ( file_exists( 'inc/deprecated-functions.php' ) ) {
-	require_once 'inc/deprecated-functions.php';
+if ( file_exists( $pstoolkit_plugin_dir . '/inc/deprecated-functions.php' ) ) {
+	require_once $pstoolkit_plugin_dir . '/inc/deprecated-functions.php';
 }
-require_once 'inc/functions.php';
-require_once 'inc/class-pstoolkit-helper.php';
+require_once $pstoolkit_plugin_dir . '/inc/functions.php';
+require_once $pstoolkit_plugin_dir . '/inc/class-pstoolkit-helper.php';
 
 // Set up my location.
 set_pstoolkit( __FILE__ );

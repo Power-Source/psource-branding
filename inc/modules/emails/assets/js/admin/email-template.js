@@ -199,32 +199,108 @@ jQuery( document ).ready( function($) {
         window.alert( message );
     }
 
-    /**
-     * Show Template on first time
-     */
-    function pstoolkit_email_template_auto_show() {
-        var pstoolkit_email_template_big_button = $( '.pstoolkit-settings-tab-content-email-template .pstoolkit-section-theme button.pstoolkit-big-button' );
-        var dialog_id = pstoolkit_email_template_big_button.data('modal-open');
-        var current_tab = $('.sui-wrap .sui-sidenav .sui-vertical-tabs .sui-vertical-tab.current a').data('tab')
-        if ( 'email-template' !== current_tab ) {
+    function pstoolkit_make_editor_available( $context ) {
+        var editor_id = pstoolkit_resolve_editor_id( $context );
+        var editor = pstoolkit_ensure_ace_editor( editor_id );
+        var source_field_id;
+
+        if ( editor || ! editor_id ) {
             return;
         }
-        if ( 'yes' === pstoolkit_email_template_big_button.data('has-configuration' ) ) {
-            return;
-        }
-        if (
-            'undefined' === typeof SUI ||
-            'undefined' === typeof $( '#' + dialog_id )
-        ) {
-            window.setTimeout( pstoolkit_email_template_auto_show, 100 );
-        } else {
-            SUI.openModal( dialog_id, this, null, true );
-        }
+
+        source_field_id = $( '#' + editor_id ).data( 'id' ) || editor_id.replace( /-editor$/, '' );
+        $( '#' + source_field_id )
+            .removeClass( 'sui-hidden' )
+            .addClass( 'sui-form-control pstoolkit-html-editor-fallback' );
+        $( '#' + editor_id ).hide();
     }
-    pstoolkit_email_template_auto_show();
+
+    pstoolkit_make_editor_available( $( '.pstoolkit-settings-tab-content-email-template' ).first() );
     $('.sui-wrap .sui-sidenav .sui-vertical-tabs .sui-vertical-tab a[data-tab=email-template]').on( 'click', function() {
-        pstoolkit_email_template_auto_show();
+        window.setTimeout( function() {
+            pstoolkit_make_editor_available( $( '.pstoolkit-settings-tab-content-email-template' ).first() );
+        }, 0 );
     });
+
+    function pstoolkit_update_custom_template_select( $manager, templates, selected_id ) {
+        var $select = $manager.find( '.pstoolkit-custom-template-select' );
+
+        $select.find( 'option:not(:first)' ).remove();
+        $.each( templates || [], function( index, template ) {
+            $( '<option>' )
+                .val( template.id )
+                .text( template.name )
+                .appendTo( $select );
+        } );
+        $select.val( selected_id || '' ).trigger( 'change' );
+    }
+
+    function pstoolkit_custom_template_request( $manager, operation, extra_data, callback ) {
+        var data = $.extend( {
+            action: 'pstoolkit_email_template_custom_template',
+            _wpnonce: $manager.data( 'nonce' ),
+            operation: operation
+        }, extra_data || {} );
+
+        $.post( ajaxurl, data, function( response ) {
+            if ( ! response || ! response.success ) {
+                pstoolkit_notice( response && response.data && response.data.message ? response.data.message : 'Vorlagenaktion fehlgeschlagen.' );
+                return;
+            }
+            callback( response.data );
+        } ).fail( function() {
+            pstoolkit_notice( 'Vorlagenaktion fehlgeschlagen.' );
+        } );
+    }
+
+    $( '.pstoolkit-custom-template-select' ).on( 'change', function() {
+        var $manager = $( this ).closest( '.pstoolkit-custom-template-manager' );
+        var has_selection = '' !== $( this ).val();
+
+        $manager.find( '.pstoolkit-custom-template-load, .pstoolkit-custom-template-delete' ).prop( 'disabled', ! has_selection );
+        if ( ! has_selection ) {
+            $manager.find( '.pstoolkit-custom-template-name' ).val( '' );
+        }
+    } );
+
+    $( '.pstoolkit-custom-template-load' ).on( 'click', function() {
+        var $manager = $( this ).closest( '.pstoolkit-custom-template-manager' );
+        var id = $manager.find( '.pstoolkit-custom-template-select' ).val();
+
+        pstoolkit_custom_template_request( $manager, 'load', { id: id }, function( template ) {
+            var $root = pstoolkit_get_email_template_root( $manager );
+            pstoolkit_set_editor_value( pstoolkit_resolve_editor_id( $manager ), template.content );
+            $root.find( '#simple_options_theme_id' ).val( '' );
+            $manager.find( '.pstoolkit-custom-template-name' ).val( template.name );
+        } );
+    } );
+
+    $( '.pstoolkit-custom-template-save' ).on( 'click', function() {
+        var $manager = $( this ).closest( '.pstoolkit-custom-template-manager' );
+        var editor_id = pstoolkit_resolve_editor_id( $manager );
+
+        pstoolkit_custom_template_request( $manager, 'save', {
+            id: $manager.find( '.pstoolkit-custom-template-select' ).val(),
+            name: $manager.find( '.pstoolkit-custom-template-name' ).val(),
+            content: pstoolkit_get_editor_value( editor_id )
+        }, function( data ) {
+            pstoolkit_update_custom_template_select( $manager, data.templates, data.id );
+            pstoolkit_notice( 'Vorlage gespeichert.' );
+        } );
+    } );
+
+    $( '.pstoolkit-custom-template-delete' ).on( 'click', function() {
+        var $manager = $( this ).closest( '.pstoolkit-custom-template-manager' );
+        var id = $manager.find( '.pstoolkit-custom-template-select' ).val();
+
+        if ( ! window.confirm( 'Möchtest Du diese Vorlage wirklich löschen?' ) ) {
+            return;
+        }
+        pstoolkit_custom_template_request( $manager, 'delete', { id: id }, function( data ) {
+            pstoolkit_update_custom_template_select( $manager, data.templates, '' );
+            pstoolkit_notice( 'Vorlage gelöscht.' );
+        } );
+    } );
 
     /**
      * Set template content to editor.

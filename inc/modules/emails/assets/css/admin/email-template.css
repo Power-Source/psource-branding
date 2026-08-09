@@ -26,6 +26,42 @@
 .pstoolkit-admin-page .sui-wrap-pstoolkit .module-emails-template-php .simple-option .ub_html_editor {
   min-height: 50em;
 }
+.pstoolkit-admin-page .sui-wrap-pstoolkit .module-emails-template-php .pstoolkit-custom-template-manager {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .module-emails-template-php .pstoolkit-custom-template-fields {
+  display: grid;
+  flex: 1;
+  grid-template-columns: minmax(220px, 1fr) minmax(220px, 1fr);
+  gap: 10px;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .module-emails-template-php .pstoolkit-custom-template-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.pstoolkit-admin-page .sui-wrap-pstoolkit .module-emails-template-php .pstoolkit-html-editor-fallback {
+  display: block;
+  width: 100%;
+  min-height: 50em;
+  padding: 15px;
+  font-family: monospace;
+  line-height: 1.5;
+  white-space: pre;
+}
+@media (max-width: 960px) {
+  .pstoolkit-admin-page .sui-wrap-pstoolkit .module-emails-template-php .pstoolkit-custom-template-manager {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
+  .pstoolkit-admin-page .sui-wrap-pstoolkit .module-emails-template-php .pstoolkit-custom-template-fields {
+    grid-template-columns: 1fr;
+  }
+}
 .pstoolkit-admin-page .sui-wrap-pstoolkit #pstoolkit-email-template-preview .sui-modal-content {
   max-width: 100%;
 }

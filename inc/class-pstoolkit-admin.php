@@ -441,9 +441,6 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 			if ( wp_script_is( 'wp-util', 'registered' ) ) {
 				$ub_admin_dependencies[] = 'wp-util';
 			}
-			if ( wp_script_is( 'wp-pointer', 'registered' ) ) {
-				$ub_admin_dependencies[] = 'wp-pointer';
-			}
 			wp_enqueue_script(
 				'ub_admin',
 				pstoolkit_url( $file ),
@@ -451,13 +448,6 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 				$version_bust,
 				true
 			);
-			
-			if ( wp_style_is( 'wp-pointer', 'registered' ) ) {
-				wp_enqueue_style( 'wp-pointer' );
-			}
-			if ( wp_script_is( 'wp-pointer', 'registered' ) ) {
-				wp_enqueue_script( 'wp-pointer' );
-			}
 		
 			$messages = array(
 				'messages' => array(

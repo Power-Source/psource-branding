@@ -895,6 +895,8 @@ if ( ! class_exists( 'Simple_Options' ) ) {
 								'textarea_name' => $field_name,
 								'textarea_rows' => 9,
 								'teeny'         => true,
+								'quicktags'     => false,
+								'media_buttons' => false,
 							);
 							if ( isset( $data['editor'] ) ) {
 								$args = wp_parse_args( $data['editor'], $args );
@@ -909,7 +911,9 @@ if ( ! class_exists( 'Simple_Options' ) ) {
 								);
 							}
 							ob_start();
+							add_filter( 'teeny_mce_plugins', array( $this, 'remove_legacy_tinymce_plugins' ) );
 							wp_editor( stripslashes( $value ), $editor_id, $args );
+							remove_filter( 'teeny_mce_plugins', array( $this, 'remove_legacy_tinymce_plugins' ) );
 							$content .= ob_get_contents();
 							ob_end_clean();
 							break;
@@ -2204,6 +2208,13 @@ if ( ! class_exists( 'Simple_Options' ) ) {
 				$mceInit['external_plugins']   = json_encode( $external_plugins );
 			}
 			return $mceInit;
+		}
+
+		/**
+		 * Remove TinyMCE plugins backed by deprecated ClassicPress assets.
+		 */
+		public function remove_legacy_tinymce_plugins( $plugins ) {
+			return array_values( array_diff( $plugins, array( 'wplink' ) ) );
 		}
 	}
 }
