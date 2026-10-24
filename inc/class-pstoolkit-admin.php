@@ -101,15 +101,7 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 			/**
 			 * default messages
 			 */
-			$this->messages = array(
-				'success'               => 'Erfolg! Deine Änderungen wurden erfolgreich gespeichert!',
-				'fail'                  => 'Es ist ein Fehler aufgetreten. Bitte versuche es erneut.',
-				'reset-section-success' => 'Abschnitt wurde auf die Standardeinstellungen zurückgesetzt.',
-				'wrong'                 => 'Etwas ist schief gelaufen!',
-				'security'              => 'Nee! Sicherheitsüberprüfung fehlgeschlagen!',
-				'missing'               => 'Fehlende benötigte Daten!',
-				'wrong_userlogin'       => 'Diese Benutzeranmeldung existiert nicht!',
-			);
+			add_action( 'init', array( $this, 'initialize_translated_messages' ), 1 );
 			/**
 			 * remove default footer
 			 */
@@ -277,11 +269,23 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 
 		public function setup_translation() {
 			add_action( 'init', function() {
-				// Load up the localization file if we're using ClassicPress in a different language
-				// Place it in this plugin's "languages" folder and name it "mp-[value in wp-config].mo"
 				$dir = sprintf( '/%s/languages', basename( pstoolkit_dir( '' ) ) );
 				load_plugin_textdomain( 'ub', false, $dir );
-			});
+				// Module labels may have been cached before the text domain was registered.
+				$this->set_configuration();
+			}, 0 );
+		}
+
+		public function initialize_translated_messages() {
+			$this->messages = array(
+				'success'               => __( 'Erfolg! Deine Änderungen wurden erfolgreich gespeichert!', 'ub' ),
+				'fail'                  => __( 'Es ist ein Fehler aufgetreten. Bitte versuche es erneut.', 'ub' ),
+				'reset-section-success' => __( 'Abschnitt wurde auf die Standardeinstellungen zurückgesetzt.', 'ub' ),
+				'wrong'                 => __( 'Etwas ist schief gelaufen!', 'ub' ),
+				'security'              => __( 'Nee! Sicherheitsüberprüfung fehlgeschlagen!', 'ub' ),
+				'missing'               => __( 'Fehlende benötigte Daten!', 'ub' ),
+				'wrong_userlogin'       => __( 'Diese Benutzeranmeldung existiert nicht!', 'ub' ),
+			);
 		}
 
 		/**
@@ -418,6 +422,16 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 				$sui_version_bust,
 				true
 			);
+			wp_localize_script(
+				'pstoolkit-sui-scripts',
+				'pstoolkitSharedUiL10n',
+				array(
+					'copy'        => __( 'Kopieren', 'ub' ),
+					'copied'      => __( 'Kopiert!', 'ub' ),
+					'delete'      => __( 'Löschen', 'ub' ),
+					'closeNotice' => __( 'Diese Benachrichtigung schließen', 'ub' ),
+				)
+			);
 			// Load shared UI when available, but avoid making it a hard blocker for core admin logic.
 			wp_enqueue_script( 'pstoolkit-sui-scripts' );
 			wp_enqueue_style(
@@ -484,6 +498,8 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 					),
 					'common'  => array(
 						'only_image' => esc_html__( 'Hoppla, nur Bilder sind erlaubt.', 'ub' ),
+						'select_image' => __( 'Wähle ein Bild zum Hochladen aus', 'ub' ),
+						'use_image' => __( 'Dieses Bild verwenden', 'ub' ),
 					),
 				),
 				'buttons'  => array(

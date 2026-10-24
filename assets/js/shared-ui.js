@@ -141,8 +141,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
     var pluginName = 'SUICodeSnippet',
         defaults = {
-            copyText: 'Copy',
-            copiedText: 'Copied!'
+            copyText: window.pstoolkitSharedUiL10n ? window.pstoolkitSharedUiL10n.copy : 'Copy',
+            copiedText: window.pstoolkitSharedUiL10n ? window.pstoolkitSharedUiL10n.copied : 'Copied!'
         }; // The actual plugin constructor
 
     function SUICodeSnippet(element, options) {
@@ -1883,9 +1883,13 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         }
 
         function buildItem(itemName) {
+            var button = $('<button class="sui-button-close"><i class="sui-icon-close" aria-hidden="true"></i></button>');
+            button.append($('<span class="sui-screen-reader-text"></span>').text(
+                window.pstoolkitSharedUiL10n ? window.pstoolkitSharedUiL10n.delete : 'Delete'
+            ));
             return $('<li></li>').attr('title', itemName).text(itemName)
                 .prepend('<i class="sui-icon-page sui-sm" aria-hidden="true"></i>')
-                .append('<button class="sui-button-close"><i class="sui-icon-close" aria-hidden="true"></i><span class="sui-screen-reader-text">Delete</span></button>');
+                .append(button);
         }
 
         function bindRemoveTag($mainWrapper) {
@@ -2338,7 +2342,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
                 icon: 'info',
                 dismiss: {
                     show: false,
-                    label: 'Close this notice',
+                    label: window.pstoolkitSharedUiL10n ? window.pstoolkitSharedUiL10n.closeNotice : 'Close this notice',
                     tooltip: ''
                 },
                 autoclose: {

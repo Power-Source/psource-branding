@@ -3,7 +3,7 @@ Contributors: DerN3rd (PSOURCE)
 Author URI: https://github.com/Power-Source
 Tags: classicpress-plugin, classicpress, white label classicpress, custom login page, login page customizer, whitelabel, customize system emails, customize default emails, rebrand, rebranding, coming soon page, maintenance mode, under construction page, coming soon template, login screen
 Requires at least: 4.6
-Tested up to: 6.8.1
+Tested up to: 7.1
 ClassiPress: 2.7.0
 Stable tag: 1.0.5
 Requires PHP: 8.0.0
@@ -28,6 +28,7 @@ Mehr als 30 Module im CP Toolkit enthalten!
 == Entwicklung ==
 
 Regressionstests: npm install und npm test (Node.js 18+).
+Sprachdateien: Deutsche Ausgangstexte, languages/ub.pot und languages/ub-en_US.po gemeinsam pflegen und die englische MO-Datei nach Aenderungen neu kompilieren. php scripts/extract-translations.php extrahiert PHP-gettext-Aufrufe mit Kontext, Pluralformen und Fundstellen ohne WordPress-Bootstrap. npm test benoetigt dafuer PHP und prueft echte Quelltextabdeckung, fehlerhafte Uebersetzungsaufrufe, Platzhalter und die Uebereinstimmung von PO und MO. Fest eingebaute Texte in JavaScript und HTML muessen zusaetzlich geprueft werden.
 DOMPurify wird lokal aus external/dompurify/purify.min.js vor Shared UI geladen. Bei Updates die Dateien purify.min.js, purify.min.js.map und LICENSE aus node_modules/dompurify aktualisieren.
 Hinweis: npm run sync:shared-ui und npm run build ersetzen assets/js/shared-ui.js aus der Shared-UI-Quelle. Die Select- und Multistrings-Sicherheitsfixes muessen dort ebenfalls vorhanden sein; nach einem Sync Tests ausfuehren und das minifizierte Bundle aktualisieren.
 
@@ -35,6 +36,11 @@ Hinweis: npm run sync:shared-ui und npm run build ersetzen assets/js/shared-ui.j
 == Changelog ==
 
 = Unreleased =
+* Fix: Sprachdateien werden vor dem erneuten Aufbau zwischengespeicherter Modulnamen geladen; Standardmeldungen werden erst danach uebersetzt.
+* Fix: Fehlende gettext-Aufrufe in AJAX-Meldungen sowie feste Texte in Shared UI, Medienauswahl, E-Mail-Vorlagen und Admin-Bar-Untermenues lokalisiert.
+* Fix: Deutsche Oberflaechentexte vervollstaendigt und englische Uebersetzungen inhaltlich sowie bei der Gross-/Kleinschreibung korrigiert.
+* Fix: Fehlende englische Katalogeintraege ergaenzt, E-Mail-Platzhalter erhalten und die MO-Datei neu kompiliert.
+* Tests: Sprachkataloge, Pluralformen und printf-/E-Mail-Platzhalter werden mit Regressionstests geprueft.
 * Security: Notice-HTML wird mit lokal eingebundenem DOMPurify bereinigt; Labels und Tooltips werden als Text bzw. Attribute gesetzt.
 * Security: Select-Ziele werden zusaetzlich mit dem URL-Parser normalisiert und auf HTTP(S)-Protokolle geprueft.
 * Security: Admin-Bar-Untermenue-Titel werden als Text ausgegeben; das Drag-Icon bleibt erhalten.

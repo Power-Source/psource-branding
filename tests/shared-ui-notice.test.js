@@ -51,3 +51,15 @@ test('notices fail explicitly if the sanitizer is missing', t => {
     const { window } = setup(t, false);
     assert.throws(() => window.SUI.openNotice('notice', 'Message'), /require DOMPurify/);
 });
+
+test('notice dismissal defaults use the active locale', t => {
+    const { window, $ } = setup(t);
+    for (const label of ['Diese Benachrichtigung schließen', 'Close this notice']) {
+        window.pstoolkitSharedUiL10n = { closeNotice: label };
+        window.SUI.openNotice('notice', 'Message', {
+            autoclose: { show: false },
+            dismiss: { show: true }
+        });
+        assert.equal($('#notice .sui-screen-reader-text').text(), label);
+    }
+});

@@ -3,7 +3,7 @@
 	<div class="sui-summary-segment">
 		<div class="sui-summary-details">
 			<span class="sui-summary-large"><?php echo esc_html( $stats['active'] ); ?></span>
-			<span class="sui-summary-sub"><?php echo esc_html( _n( 'Aktive Module', 'Aktive Module', $stats['active'], 'ub' ) ); ?></span>
+			<span class="sui-summary-sub">			<?php echo esc_html( _n( 'Aktives Modul', 'Aktive Module', $stats['active'], 'ub' ) ); ?></span>
 		</div>
 	</div>
 	<div class="sui-summary-segment">

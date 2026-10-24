@@ -268,7 +268,14 @@ msgstr ""
 msgid "Academy"
 msgstr ""
 
+#: inc/modules/login-screen/login-screen.php:2342
+#: inc/modules/login-screen/login-screen.php:2523
+#: inc/modules/utilities/tracking-codes-list-table.php:57
 #: inc/modules/front-end/cookie-notice.php:626
+#: inc/modules/front-end/cookie-notice.php:743
+#: inc/class-pstoolkit-helper.php:2596
+#: views/admin/modules/tracking-codes/dialogs/edit.php:25
+#: views/admin/dashboard/modules/one-row.php:9
 msgid "Aktiv"
 msgstr ""
 
@@ -347,15 +354,6 @@ msgstr ""
 msgid ""
 "Administratoren von Unterwebsites können alle in Deinen "
 "Netzwerkeinstellungen festgelegten Standardmoduleinstellungen überschreiben."
-msgstr ""
-
-#: inc/modules/front-end/cookie-notice.php:743
-#: inc/modules/login-screen/login-screen.php:2310
-#: inc/modules/login-screen/login-screen.php:2491
-#: inc/modules/utilities/tracking-codes-list-table.php:57
-#: views/admin/dashboard/modules/one-row.php:9
-#: views/admin/modules/tracking-codes/dialogs/edit.php:25
-msgid "Aktiv"
 msgstr ""
 
 #: views/admin/modules/email-logs/pagination-section.php:193
@@ -523,16 +521,13 @@ msgstr ""
 msgid "Akzeptieren Schaltflächentext"
 msgstr ""
 
-#: views/admin/dashboard/welcome-modules.php:15
-#: views/admin/modules/permissions/susbsites.php:44
-msgid "Alle"
-msgstr ""
-
-#: inc/modules/front-end/author-box.php:1017
-#: inc/modules/utilities/comments-control.php:203
 #: inc/modules/utilities/permissions.php:163
-#: views/admin/common/dialogs/manage-all-modules.php:40
+#: inc/modules/utilities/comments-control.php:203
+#: inc/modules/front-end/author-box.php:1017
+#: views/admin/modules/permissions/susbsites.php:44
 #: views/admin/modules/import/configure-modules.php:31
+#: views/admin/common/dialogs/manage-all-modules.php:40
+#: views/admin/dashboard/welcome-modules.php:15
 msgid "Alle"
 msgstr ""
 
@@ -1095,12 +1090,6 @@ msgstr ""
 
 #: inc/modules/login-screen/login-screen.php:1470
 msgid "Benutzername oder E-mail Adresse"
-msgstr ""
-
-#: inc/modules/admin/bar.php:519 inc/modules/admin/bar.php:882
-#: inc/modules/utilities/permissions.php:113
-#: views/admin/modules/admin-bar/tmpl/panes/visibility.php:3
-msgid "Benutzerregeln"
 msgstr ""
 
 #: etc/config.php:504
@@ -7672,3 +7661,90 @@ msgstr ""
 msgctxt "button"
 msgid "ZURÜCKSETZEN"
 msgstr ""
+
+#: inc/modules/utilities/permissions.php:113 inc/modules/admin/bar.php:519
+#: inc/modules/admin/bar.php:882
+#: views/admin/modules/admin-bar/tmpl/panes/visibility.php:3
+msgid "Benutzerrollen"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2173
+msgctxt "background crop option"
+msgid "Fest"
+msgstr ""
+
+#: inc/class-pstoolkit-admin.php:430
+msgid "Kopiert!"
+msgstr ""
+
+#: inc/class-pstoolkit-admin.php:432
+msgid "Diese Benachrichtigung schließen"
+msgstr ""
+
+#: inc/class-pstoolkit-admin.php:501
+msgid "Wähle ein Bild zum Hochladen aus"
+msgstr ""
+
+#: inc/class-pstoolkit-admin.php:502
+msgid "Dieses Bild verwenden"
+msgstr ""
+
+#: inc/modules/admin/bar.php:325
+msgid "Die Reihenfolge der Admin-Leiste wurde zurückgesetzt."
+msgstr ""
+
+#: inc/modules/admin/help-content.php:500
+#: inc/modules/utilities/text-replacement.php:427
+msgid "Element wurde hinzugefügt."
+msgstr ""
+
+#: inc/modules/emails/registration.php:177
+msgid "Sende eine benutzerdefinierte E-Mail, wenn ein neuer Blog registriert wird."
+msgstr ""
+
+#: inc/modules/emails/registration.php:211
+msgid "Sende eine benutzerdefinierte E-Mail, wenn sich ein Benutzer in Deinem Netzwerk registriert."
+msgstr ""
+
+#: inc/modules/emails/registration.php:215
+msgid "Passe die Registrierungs-E-Mail für neue Benutzer an"
+msgstr ""
+
+#: inc/modules/emails/registration.php:339
+msgid "Der ausgewählte Abschnitt wurde zurückgesetzt."
+msgstr ""
+
+#: inc/modules/emails/template.php:306
+msgid "Vorlagenaktion fehlgeschlagen."
+msgstr ""
+
+#: inc/modules/emails/template.php:307
+msgid "Vorlage gespeichert."
+msgstr ""
+
+#: inc/modules/emails/template.php:308
+msgid "Vorlage gelöscht."
+msgstr ""
+
+#: inc/modules/emails/template.php:309
+msgid "Möchtest Du diese Vorlage wirklich löschen?"
+msgstr ""
+
+#: inc/modules/widgets/dashboard-feeds.php:515
+msgid "Feed wurde gelöscht."
+msgstr ""
+
+#: inc/modules/widgets/dashboard-feeds.php:578
+msgid "Feed wurde aktualisiert."
+msgstr ""
+
+#: inc/modules/widgets/dashboard-feeds.php:581
+msgid "Feed wurde hinzugefügt."
+msgstr ""
+
+#: views/admin/dashboard/subsite/widget-summary.php:6
+#: views/admin/dashboard/widget-summary.php:6
+msgid "Aktives Modul"
+msgid_plural "Aktive Module"
+msgstr[0] ""
+msgstr[1] ""

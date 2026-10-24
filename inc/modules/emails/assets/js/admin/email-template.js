@@ -244,12 +244,12 @@ jQuery( document ).ready( function($) {
 
         $.post( ajaxurl, data, function( response ) {
             if ( ! response || ! response.success ) {
-                pstoolkit_notice( response && response.data && response.data.message ? response.data.message : 'Vorlagenaktion fehlgeschlagen.' );
+                pstoolkit_notice( response && response.data && response.data.message ? response.data.message : $manager.data( 'failed' ) );
                 return;
             }
             callback( response.data );
         } ).fail( function() {
-            pstoolkit_notice( 'Vorlagenaktion fehlgeschlagen.' );
+            pstoolkit_notice( $manager.data( 'failed' ) );
         } );
     }
 
@@ -285,7 +285,7 @@ jQuery( document ).ready( function($) {
             content: pstoolkit_get_editor_value( editor_id )
         }, function( data ) {
             pstoolkit_update_custom_template_select( $manager, data.templates, data.id );
-            pstoolkit_notice( 'Vorlage gespeichert.' );
+            pstoolkit_notice( $manager.data( 'saved' ) );
         } );
     } );
 
@@ -293,12 +293,12 @@ jQuery( document ).ready( function($) {
         var $manager = $( this ).closest( '.pstoolkit-custom-template-manager' );
         var id = $manager.find( '.pstoolkit-custom-template-select' ).val();
 
-        if ( ! window.confirm( 'Möchtest Du diese Vorlage wirklich löschen?' ) ) {
+        if ( ! window.confirm( $manager.data( 'confirm-delete' ) ) ) {
             return;
         }
         pstoolkit_custom_template_request( $manager, 'delete', { id: id }, function( data ) {
             pstoolkit_update_custom_template_select( $manager, data.templates, '' );
-            pstoolkit_notice( 'Vorlage gelöscht.' );
+            pstoolkit_notice( $manager.data( 'deleted' ) );
         } );
     } );
 

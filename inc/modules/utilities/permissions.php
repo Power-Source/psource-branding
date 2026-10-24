@@ -110,7 +110,7 @@ if ( ! class_exists( 'PSToolkit_Permissions' ) ) {
 					'description' => __( 'Konfiguriere welche Benutzer und Benutzerrollen auf die Einstellungen von PSToolkit zugreifen und diese konfigurieren können.', 'ub' ),
 					'fields'      => array(
 						'user_roles' => array(
-							'label'           => __( 'Benutzerregeln', 'ub' ),
+							'label'           => __( 'Benutzerrollen', 'ub' ),
 							'description'     => __( 'Wähle aus welche Benutzerrollen Zugriff haben können, und konfiguriere PSToolkit.', 'ub' ),
 							'type'            => 'checkboxes',
 							'columns'         => 2,

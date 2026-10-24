@@ -3,7 +3,7 @@
 	<div class="sui-summary-segment">
 		<div class="sui-summary-details">
 			<span class="sui-summary-large"><?php echo esc_html( $stats['active'] ); ?></span>
-			<span class="sui-summary-sub"><?php echo esc_html( _n( 'Aktive Module', 'Aktive Modules', $stats['active'], 'ub' ) ); ?></span>
+			<span class="sui-summary-sub"><?php echo esc_html( _n( 'Aktives Modul', 'Aktive Module', $stats['active'], 'ub' ) ); ?></span>
 			<div class="sui-control-with-icon">
 				<input type="text" id="pstoolkit-dashboard-widget-summary-search" class="sui-form-control sui-input-md" placeholder="<?php esc_attr_e( 'Suche Modul...', 'ub' ); ?>" />
 				<i class="sui-icon-magnifying-glass-search" aria-hidden="true"></i>

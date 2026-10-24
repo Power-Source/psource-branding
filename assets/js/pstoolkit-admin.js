@@ -545,9 +545,9 @@ function ub_media_bind( obj, event ) {
 
     // Create the media frame.
     file_frame = wp.media.frames.file_frame = wp.media({
-        title: 'Select a image to upload',
+        title: ub_admin.messages.common.select_image,
         button: {
-            text: 'Use this image',
+            text: ub_admin.messages.common.use_image,
         },
 		library: {type: 'image'},
         multiple: false	// Set to true to allow multiple files to be selected

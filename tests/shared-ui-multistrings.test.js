@@ -10,7 +10,7 @@ const start = source.indexOf('    SUI.multistrings = function()');
 const end = source.indexOf('})(jQuery);', start);
 assert.ok(start !== -1 && end > start);
 
-function setup(t, values, attributes = {}) {
+function setup(t, values, attributes = {}, locale) {
     const dom = new JSDOM('<div class="sui-form-field"><label class="sui-label" for="tags">Tags</label><textarea class="sui-multistrings" id="tags"></textarea></div>', {
         runScripts: 'outside-only'
     });
@@ -19,9 +19,18 @@ function setup(t, values, attributes = {}) {
     const textarea = $('textarea').val(values).attr(attributes);
     dom.window.jQuery = $;
     dom.window.SUI = {};
+    dom.window.pstoolkitSharedUiL10n = locale;
     dom.window.eval('(function($) {\n' + source.slice(start, end) + '\n})(jQuery);');
     return { $, textarea, wrap: $('.sui-multistrings-wrap') };
 }
+
+test('tag removal labels use the active locale and remain literal text', t => {
+    for (const label of ['Löschen', 'Delete', '<b>Löschen</b>']) {
+        const { wrap } = setup(t, 'Tag', {}, { delete: label });
+        assert.equal(wrap.find('.sui-screen-reader-text').text(), label);
+        assert.equal(wrap.find('.sui-screen-reader-text b').length, 0);
+    }
+});
 
 function assertTag(wrap, value) {
     const tag = wrap.find('.sui-multistrings-list > li').not('.sui-multistrings-input').last();

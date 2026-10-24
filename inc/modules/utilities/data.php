@@ -387,7 +387,7 @@ if ( ! class_exists( 'PSToolkit_Data' ) ) {
 			if ( empty( $site ) ) {
 				$html  = sprintf(
 					'<span class="sui-description">%s</span>',
-					esc_html( 'Möchtest Du die Daten aller Unterwebseiten löschen? Verwende diese Option, um Daten von allen Unterwebseiten manuell zu löschen.', 'ub' )
+					esc_html__( 'Möchtest Du die Daten aller Unterwebseiten löschen? Verwende diese Option, um Daten von allen Unterwebseiten manuell zu löschen.', 'ub' )
 				);
 				$html .= PSToolkit_Helper::sui_notice( __( 'Daten von allen Unterwebseiten erfolgreich gelöscht.', 'ub' ), 'success' );
 				$args  = array(

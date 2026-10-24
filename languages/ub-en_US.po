@@ -1123,12 +1123,6 @@ msgstr "Username"
 msgid "Benutzername oder E-mail Adresse"
 msgstr "Username or e-mail address"
 
-#: inc/modules/admin/bar.php:519 inc/modules/admin/bar.php:882
-#: inc/modules/utilities/permissions.php:113
-#: views/admin/modules/admin-bar/tmpl/panes/visibility.php:3
-msgid "Benutzerregeln"
-msgstr "User roles"
-
 #: etc/config.php:504
 msgid "Benutzerregistrierung"
 msgstr "User registration"
@@ -8059,3 +8053,90 @@ msgstr "From email:"
 msgctxt "button"
 msgid "ZURÜCKSETZEN"
 msgstr "RESET"
+
+#: inc/modules/utilities/permissions.php:113 inc/modules/admin/bar.php:519
+#: inc/modules/admin/bar.php:882
+#: views/admin/modules/admin-bar/tmpl/panes/visibility.php:3
+msgid "Benutzerrollen"
+msgstr "User roles"
+
+#: inc/class-pstoolkit-helper.php:2173
+msgctxt "background crop option"
+msgid "Fest"
+msgstr "Fixed"
+
+#: inc/class-pstoolkit-admin.php:430
+msgid "Kopiert!"
+msgstr "Copied!"
+
+#: inc/class-pstoolkit-admin.php:432
+msgid "Diese Benachrichtigung schließen"
+msgstr "Close this notice"
+
+#: inc/class-pstoolkit-admin.php:501
+msgid "Wähle ein Bild zum Hochladen aus"
+msgstr "Select an image to upload"
+
+#: inc/class-pstoolkit-admin.php:502
+msgid "Dieses Bild verwenden"
+msgstr "Use this image"
+
+#: inc/modules/admin/bar.php:325
+msgid "Die Reihenfolge der Admin-Leiste wurde zurückgesetzt."
+msgstr "The admin bar order has been reset."
+
+#: inc/modules/admin/help-content.php:500
+#: inc/modules/utilities/text-replacement.php:427
+msgid "Element wurde hinzugefügt."
+msgstr "Item added."
+
+#: inc/modules/emails/registration.php:177
+msgid "Sende eine benutzerdefinierte E-Mail, wenn ein neuer Blog registriert wird."
+msgstr "Send a custom email when a new blog is registered."
+
+#: inc/modules/emails/registration.php:211
+msgid "Sende eine benutzerdefinierte E-Mail, wenn sich ein Benutzer in Deinem Netzwerk registriert."
+msgstr "Send a custom email when a user registers on your network."
+
+#: inc/modules/emails/registration.php:215
+msgid "Passe die Registrierungs-E-Mail für neue Benutzer an"
+msgstr "Customize the registration email for new users"
+
+#: inc/modules/emails/registration.php:339
+msgid "Der ausgewählte Abschnitt wurde zurückgesetzt."
+msgstr "The selected section has been reset."
+
+#: inc/modules/emails/template.php:306
+msgid "Vorlagenaktion fehlgeschlagen."
+msgstr "Template action failed."
+
+#: inc/modules/emails/template.php:307
+msgid "Vorlage gespeichert."
+msgstr "Template saved."
+
+#: inc/modules/emails/template.php:308
+msgid "Vorlage gelöscht."
+msgstr "Template deleted."
+
+#: inc/modules/emails/template.php:309
+msgid "Möchtest Du diese Vorlage wirklich löschen?"
+msgstr "Are you sure you want to delete this template?"
+
+#: inc/modules/widgets/dashboard-feeds.php:515
+msgid "Feed wurde gelöscht."
+msgstr "Feed deleted."
+
+#: inc/modules/widgets/dashboard-feeds.php:578
+msgid "Feed wurde aktualisiert."
+msgstr "Feed updated."
+
+#: inc/modules/widgets/dashboard-feeds.php:581
+msgid "Feed wurde hinzugefügt."
+msgstr "Feed added."
+
+#: views/admin/dashboard/subsite/widget-summary.php:6
+#: views/admin/dashboard/widget-summary.php:6
+msgid "Aktives Modul"
+msgid_plural "Aktive Module"
+msgstr[0] "Active module"
+msgstr[1] "Active modules"

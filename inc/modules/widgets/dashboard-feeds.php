@@ -512,7 +512,7 @@ if ( ! class_exists( 'PSToolkit_Dashboard_Feeds' ) ) {
 				pstoolkit_update_option( $this->items_name, $items );
 				$message = array(
 					'type'    => 'success',
-					'message' => sprintf( 'Feed wurde gelöscht.', 'ub' ),
+					'message' => __( 'Feed wurde gelöscht.', 'ub' ),
 				);
 				$uba->add_message( $message );
 				wp_send_json_success();
@@ -575,10 +575,10 @@ if ( ! class_exists( 'PSToolkit_Dashboard_Feeds' ) ) {
 			if ( isset( $_POST['id'] ) ) {
 				$id           = intval( preg_replace( '/[^\d]+/', '', $_POST['id'] ) );
 				$nonce_action = $this->get_nonce_action( 'df-' . $id );
-				$message      = sprintf( 'Feed wurde aktualisiert.', 'ub' );
+				$message      = __( 'Feed wurde aktualisiert.', 'ub' );
 			}
 			if ( 0 === $id ) {
-				$message = sprintf( 'Feed wurde hinzugefügt.', 'ub' );
+				$message = __( 'Feed wurde hinzugefügt.', 'ub' );
 			}
 			$this->check_input_data( $nonce_action, array( 'id', 'url' ) );
 			$data   = array();

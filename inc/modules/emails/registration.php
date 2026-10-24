@@ -174,7 +174,7 @@ Wir wünschen Dir viel Spaß mit Deiner neuen Webseite. Vielen Dank!
 			$options             = array(
 				'wpmu_signup_blog_notification' => array(
 					'title'       => __( 'Neuer Blog', 'ub' ),
-					'description' => __( 'Sende eine benutzerdefinierte Kopie, wenn ein neuer Blog veröffentlicht wird.', 'ub' ),
+					'description' => __( 'Sende eine benutzerdefinierte E-Mail, wenn ein neuer Blog registriert wird.', 'ub' ),
 					'fields'      => array(
 						'status'  => array(
 							'type'           => 'checkbox',
@@ -207,12 +207,12 @@ Wir wünschen Dir viel Spaß mit Deiner neuen Webseite. Vielen Dank!
 					),
 				),
 				'wpmu_signup_user_notification' => array(
-					'title'       => __( 'Benutzeranmeldung', 'ub' ),
-					'description' => __( 'Sende eine benutzerdefinierte Kopie, wenn sich ein Benutzer in Deinem Netzwerk anmeldet.', 'ub' ),
+					'title'       => __( 'Benutzerregistrierung', 'ub' ),
+					'description' => __( 'Sende eine benutzerdefinierte E-Mail, wenn sich ein Benutzer in Deinem Netzwerk registriert.', 'ub' ),
 					'fields'      => array(
 						'status'  => array(
 							'type'           => 'checkbox',
-							'checkbox_label' => __( 'Passe die Anmelde-E-Mail für neue Benutzer an', 'ub' ),
+							'checkbox_label' => __( 'Passe die Registrierungs-E-Mail für neue Benutzer an', 'ub' ),
 							'options'        => array(
 								'on'  => __( 'Ja', 'ub' ),
 								'off' => __( 'Nein', 'ub' ),
@@ -336,7 +336,7 @@ Wir wünschen Dir viel Spaß mit Deiner neuen Webseite. Vielen Dank!
 				$uba     = pstoolkit_get_uba_object();
 				$message = array(
 					'type'    => 'success',
-					'message' => sprintf( 'Der ausgewählte Abschnitt wurde zurückgesetzt.', 'ub' ),
+					'message' => __( 'Der ausgewählte Abschnitt wurde zurückgesetzt.', 'ub' ),
 				);
 				$uba->add_message( $message );
 				wp_send_json_success();

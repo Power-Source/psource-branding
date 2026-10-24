@@ -2170,7 +2170,7 @@ if ( ! class_exists( 'PSToolkit_Helper' ) ) {
 							'tooltip' => __( 'Schnitt proportional, Breite ändern.', 'ub' ),
 						),
 						'fixed'  => array(
-							'label'   => __( 'Fest', 'ub' ),
+							'label'   => _x( 'Fest', 'background crop option', 'ub' ),
 							'tooltip' => __( 'Auf feste Größe zuschneiden', 'ub' ),
 						),
 					),
@@ -4881,4 +4881,3 @@ if ( ! class_exists( 'PSToolkit_Helper' ) ) {
 		}
 	}
 }
-

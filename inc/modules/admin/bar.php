@@ -322,7 +322,7 @@ if ( ! class_exists( 'PSToolkit_Admin_Bar' ) ) {
 			$this->set_value( 'settings', 'order', null );
 			$message = array(
 				'type'    => 'success',
-				'message' => sprintf( 'Die Reihenfolge der Admin-Leiste wurde zurückgesetzt.', 'ub' ),
+				'message' => __( 'Die Reihenfolge der Admin-Leiste wurde zurückgesetzt.', 'ub' ),
 			);
 			$this->uba->add_message( $message );
 			wp_send_json_success();
@@ -516,7 +516,7 @@ if ( ! class_exists( 'PSToolkit_Admin_Bar' ) ) {
 						),
 						'wp_menu_roles'  => array(
 							'type'         => 'checkboxes',
-							'label'        => __( 'Benutzerregeln', 'ub' ),
+							'label'        => __( 'Benutzerrollen', 'ub' ),
 							'description'  => __( 'Wähle die Benutzerrollen aus, um die ausgewählten Menüelemente auszublenden.', 'ub' ),
 							'columns'      => 2,
 							'options'      => $this->roles,
@@ -879,7 +879,7 @@ if ( ! class_exists( 'PSToolkit_Admin_Bar' ) ) {
 						'roles' => array(
 							'type'        => 'checkboxes',
 							'columns'     => 3,
-							'label'       => __( 'Benutzerregeln', 'ub' ),
+							'label'       => __( 'Benutzerrollen', 'ub' ),
 							'description' => __( 'Wähle die Benutzerrollen aus, die dieses Menü anzeigen dürfen.', 'ub' ),
 							'options'     => $this->roles,
 							'value'       => isset( $item['roles'] ) ? $item['roles'] : array(),
@@ -1286,7 +1286,7 @@ if ( ! class_exists( 'PSToolkit_Admin_Bar' ) ) {
 				if ( $result ) {
 					$message = array(
 						'type'    => 'success',
-						'message' => sprintf( 'Element wurde gelöscht.', 'ub' ),
+						'message' => __( 'Element wurde gelöscht.', 'ub' ),
 					);
 					$this->uba->add_message( $message );
 					wp_send_json_success(

@@ -497,7 +497,7 @@ if ( ! class_exists( 'PSToolkit_Admin_Help_Content' ) ) {
 			);
 			$item['content_meta'] = do_shortcode( $item['content'] );
 			if ( 'new' === $id ) {
-				$message         = sprintf( 'Element wurde hinzugefügt.', 'ub' );
+				$message         = __( 'Element wurde hinzugefügt.', 'ub' );
 				$item['created'] = time();
 				$id              = $this->generate_id( $item );
 				$item['nonce']   = $this->get_nonce_value( $id );

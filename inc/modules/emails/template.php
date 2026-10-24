@@ -302,7 +302,11 @@ if ( ! class_exists( 'PSToolkit_Email_Template' ) ) {
 		 */
 		public function get_custom_template_manager() {
 			$templates = $this->get_custom_templates();
-			$content   = '<div class="pstoolkit-custom-template-manager" data-nonce="' . esc_attr( $this->get_nonce_value( 'custom-template' ) ) . '">';
+			$content   = '<div class="pstoolkit-custom-template-manager" data-nonce="' . esc_attr( $this->get_nonce_value( 'custom-template' ) ) . '"';
+			$content  .= ' data-failed="' . esc_attr__( 'Vorlagenaktion fehlgeschlagen.', 'ub' ) . '"';
+			$content  .= ' data-saved="' . esc_attr__( 'Vorlage gespeichert.', 'ub' ) . '"';
+			$content  .= ' data-deleted="' . esc_attr__( 'Vorlage gelöscht.', 'ub' ) . '"';
+			$content  .= ' data-confirm-delete="' . esc_attr__( 'Möchtest Du diese Vorlage wirklich löschen?', 'ub' ) . '">';
 			$content  .= '<div class="pstoolkit-custom-template-fields">';
 			$content  .= '<select class="sui-select pstoolkit-custom-template-select" aria-label="' . esc_attr__( 'Gespeicherte Vorlage auswählen', 'ub' ) . '">';
 			$content  .= '<option value="">' . esc_html__( 'Gespeicherte Vorlage wählen', 'ub' ) . '</option>';

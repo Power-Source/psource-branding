@@ -33,9 +33,9 @@
 			<label for="pstoolkit-submenu-url-{{{data.id}}}" class="sui-label"></label>
 			<div class="sui-side-tabs sui-tabs">
 				<div class="sui-tabs-menu">
-					<label class="sui-tab-item <# if ( 'admin' === data.url ) { #>active<# } #>"><input type="radio" name="pstoolkit[submenu][{{{data.id}}}][url]" value="admin" data-name="submenu-url-{{{data.id}}}" data-tab-menu="pstoolkit-admin-bar-submenu-url-{{{data.id}}}-admin" <# if ( 'admin' === data.url ) { #>checked="checked"<# } #>  />Admin Page</label>
-					<label class="sui-tab-item <# if ( 'site' === data.url ) { #>active<# } #>"><input type="radio" name="pstoolkit[submenu][{{{data.id}}}][url]" value="site" data-name="submenu-url-{{{data.id}}}" data-tab-menu="pstoolkit-admin-bar-submenu-url-{{{data.id}}}-site" <# if ( 'site' === data.url ) { #>checked="checked"<# } #> />Site Page</label>
-					<label class="sui-tab-item <# if ( 'custom' === data.url ) { #>active<# } #>"><input type="radio" name="pstoolkit[submenu][{{{data.id}}}][url]" value="custom" data-name="submenu-url-{{{data.id}}}" data-tab-menu="pstoolkit-admin-bar-submenu-url-{{{data.id}}}-custom" <# if ( 'custom' === data.url ) { #>checked="checked"<# } #> />External</label>
+					<label class="sui-tab-item <# if ( 'admin' === data.url ) { #>active<# } #>"><input type="radio" name="pstoolkit[submenu][{{{data.id}}}][url]" value="admin" data-name="submenu-url-{{{data.id}}}" data-tab-menu="pstoolkit-admin-bar-submenu-url-{{{data.id}}}-admin" <# if ( 'admin' === data.url ) { #>checked="checked"<# } #>  /><?php esc_html_e( 'Administrator Seite', 'ub' ); ?></label>
+					<label class="sui-tab-item <# if ( 'site' === data.url ) { #>active<# } #>"><input type="radio" name="pstoolkit[submenu][{{{data.id}}}][url]" value="site" data-name="submenu-url-{{{data.id}}}" data-tab-menu="pstoolkit-admin-bar-submenu-url-{{{data.id}}}-site" <# if ( 'site' === data.url ) { #>checked="checked"<# } #> /><?php esc_html_e( 'Webseite-Seite', 'ub' ); ?></label>
+					<label class="sui-tab-item <# if ( 'custom' === data.url ) { #>active<# } #>"><input type="radio" name="pstoolkit[submenu][{{{data.id}}}][url]" value="custom" data-name="submenu-url-{{{data.id}}}" data-tab-menu="pstoolkit-admin-bar-submenu-url-{{{data.id}}}-custom" <# if ( 'custom' === data.url ) { #>checked="checked"<# } #> /><?php esc_html_e( 'Extern', 'ub' ); ?></label>
 				</div>
 				<div class="sui-tabs-content">
 					<div class="sui-tab-boxed <# if ( 'admin' === data.url ) { #>active<# } #>" data-tab-content="pstoolkit-admin-bar-submenu-url-{{{data.id}}}-admin">

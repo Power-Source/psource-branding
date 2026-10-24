@@ -1,6 +1,6 @@
 <script type="text/html" id="tmpl-<?php echo esc_attr( $dialog_id ); ?>-pane-visibility">
 <div class="sui-form-field pstoolkit-visibility-roles">
-	<label for="pstoolkit-visibility-roles-{{data.id}}" class="sui-label"><?php esc_html_e( 'Benutzerregeln', 'ub' ); ?></label>
+	<label for="pstoolkit-visibility-roles-{{data.id}}" class="sui-label"><?php esc_html_e( 'Benutzerrollen', 'ub' ); ?></label>
 	<span class="sui-description"><?php esc_html_e( 'Wähle die Benutzerrollen aus, die dieses Menü anzeigen dürfen.', 'ub' ); ?></span>
 <#
 var i = 0;

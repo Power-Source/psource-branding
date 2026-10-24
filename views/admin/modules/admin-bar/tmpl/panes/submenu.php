@@ -51,7 +51,7 @@
 		<div class="sui-row">
 			<div class="sui-col">
 				<div class="sui-form-field pstoolkit-submenu-title pstoolkit-admin-bar-submenu-title">
-					<label for="pstoolkit-submenu-title-{{{data.id}}}" class="sui-label">Titel</label>
+					<label for="pstoolkit-submenu-title-{{{data.id}}}" class="sui-label"><?php esc_html_e( 'Titel', 'ub' ); ?></label>
 					<input id="pstoolkit-submenu-title-{{{data.id}}}" type="text" name="pstoolkit[submenu][{{{data.id}}}][title]" value="{{{data.title}}}" data-default="" data-required="required" aria-describedby="input-description" class="sui-form-control" />
 					<span class="hidden"><?php esc_html_e( 'Dieses Feld kann nicht leer sein!', 'ub' ); ?></span>
 				</div>
@@ -84,18 +84,18 @@
 				</div>
 				<div class="sui-tabs-content">
 					<div class="sui-tab-boxed <# if ( 'admin' === data.url ) { #>active<# } #>" data-tab-content="pstoolkit-admin-bar-submenu-url-{{{data.id}}}-admin">
-						<label class="sui-label">URL</label>
-						<input type="text" aria-describedby="input-description" class="sui-form-control" placeholder="E.g. media.php" name="pstoolkit[submenu][{{{data.id}}}][url_admin]" value="{{{data.url_admin}}}" data-default="" />
+						<label class="sui-label"><?php esc_html_e( 'URL', 'ub' ); ?></label>
+						<input type="text" aria-describedby="input-description" class="sui-form-control" placeholder="<?php esc_attr_e( 'z.B. media.php', 'ub' ); ?>" name="pstoolkit[submenu][{{{data.id}}}][url_admin]" value="{{{data.url_admin}}}" data-default="" />
 						<p class="sui-tab-boxed"><?php echo sprintf( esc_html( __( 'URL ist relativ zu %s', 'ub' ) ), sprintf( '<b>%s</b>', esc_url( admin_url() ) ) ); ?>
 </p>
 					</div>
 					<div class="sui-tab-boxed <# if ( 'site' === data.url ) { #>active<# } #>" data-tab-content="pstoolkit-admin-bar-submenu-url-{{{data.id}}}-site">
-						<label class="sui-label">URL</label>
-						<input type="text" aria-describedby="input-description" class="sui-form-control" placeholder="E.g. http://example.com" name="pstoolkit[submenu][{{{data.id}}}][url_site]" value="{{{data.url_site}}}" data-default="" />
+						<label class="sui-label"><?php esc_html_e( 'URL', 'ub' ); ?></label>
+						<input type="text" aria-describedby="input-description" class="sui-form-control" placeholder="<?php esc_attr_e( 'z.B. http://example.com', 'ub' ); ?>" name="pstoolkit[submenu][{{{data.id}}}][url_site]" value="{{{data.url_site}}}" data-default="" />
 					</div>
 					<div class="sui-tab-boxed <# if ( 'custom' === data.url ) { #>active<# } #>" data-tab-content="pstoolkit-admin-bar-submenu-url-{{{data.id}}}-custom">
-						<label class="sui-label">URL</label>
-						<input type="text" aria-describedby="input-description" class="sui-form-control" placeholder="E.g. http://example.com" name="pstoolkit[submenu][{{{data.id}}}][url_custom]" value="{{{data.url_custom}}}" data-default="" />
+						<label class="sui-label"><?php esc_html_e( 'URL', 'ub' ); ?></label>
+						<input type="text" aria-describedby="input-description" class="sui-form-control" placeholder="<?php esc_attr_e( 'z.B. http://example.com', 'ub' ); ?>" name="pstoolkit[submenu][{{{data.id}}}][url_custom]" value="{{{data.url_custom}}}" data-default="" />
 					</div>
 				</div>
 			</div>
