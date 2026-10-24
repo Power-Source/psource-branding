@@ -848,7 +848,7 @@ if ( ! class_exists( 'PSToolkit_Admin_Bar' ) ) {
 						),
 						'target' => array(
 							'type'    => 'sui-tab',
-							'label'   => __( 'Open link in', 'ub' ),
+							'label'   => __( 'Link öffnen in', 'ub' ),
 							'options' => array(
 								'_blank' => __( 'neuer Registerkarte', 'ub' ),
 								'_self'  => __( 'selbe Registerkarte', 'ub' ),

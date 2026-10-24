@@ -9,7 +9,7 @@ $current_user = wp_get_current_user();
 					<i class="sui-icon-close sui-md" aria-hidden="true"></i>
 					<span class="sui-screen-reader-text"><?php esc_html_e( 'Schließe dieses Modal', 'ub' ); ?></span>
 				</button>
-				<h3 class="sui-box-title sui-lg" id="<?php echo esc_attr( $id ) . '-title'; ?>"><?php esc_html_e( 'Test-Email', 'ub' ); ?></h3>
+				<h3 class="sui-box-title sui-lg" id="<?php echo esc_attr( $id ) . '-title'; ?>"><?php esc_html_e( 'Test-E-Mail', 'ub' ); ?></h3>
 			</div>
 			<div class="sui-box-body sui-content-center sui-flatten">
 				<p class="sui-description" id="<?php echo esc_attr( $id ) . '-description'; ?>"><?php echo esc_html( $description ); ?></p>

@@ -390,7 +390,7 @@ if ( ! class_exists( 'PSToolkit_Site_Status_Pages' ) ) {
 			 */
 			$options = array(
 				'show'    => array(
-					'title'       => __( 'Modes', 'ub' ),
+					'title'       => __( 'Modi', 'ub' ),
 					'description' => __( 'Aktiviere die benutzerdefinierten Fehlerseiten für Webseiten in Deinem Netzwerk mit mehreren Webseiten, die angehalten oder gelöscht wurden.', 'ub' ),
 					'fields'      => array(
 						'suspended' => array(

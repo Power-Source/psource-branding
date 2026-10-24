@@ -224,7 +224,7 @@ if ( ! class_exists( 'PSToolkit_Comments_Control' ) ) {
 							'description'  => __( 'Du kannst Kommentare für alle deaktivieren oder Kommentare nur für IPs deaktivieren, die in einer IP-Blacklist aufgeführt sind.', 'ub' ),
 							'options'      => array(
 								'on'  => __( 'Jeder', 'ub' ),
-								'off' => __( 'IP Blacklist', 'ub' ),
+								'off' => __( 'IP-Sperrliste', 'ub' ),
 							),
 							'default'      => 'on',
 							'master'       => 'enabled',
@@ -248,7 +248,7 @@ if ( ! class_exists( 'PSToolkit_Comments_Control' ) ) {
 					'fields'  => array(
 						'whitelist' => array(
 							'type'              => 'textarea',
-							'label'             => __( 'IP Whitelist', 'ub' ),
+							'label'             => __( 'IP-Freigabeliste', 'ub' ),
 							'description'       => __( 'Gib eine IP-Adresse pro Zeile ein. Sowohl IPv4 als auch IPv6 werden unterstützt. IP-Bereiche werden auch im Format xxx.xxx.xxx.xxx-xxx.xxx.xxx.xxx akzeptiert.', 'ub' ),
 							'description-extra' => array(
 								__( 'IPs, für die Kommentare nicht gedrosselt werden. Eine IP pro Zeile oder Komma getrennt.', 'ub' ),

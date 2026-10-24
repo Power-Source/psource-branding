@@ -223,7 +223,7 @@ if ( ! class_exists( 'PSToolkit_Maintenance_Maintenance' ) ) {
 							'label'       => __( 'Status', 'ub' ),
 							'options'     => array(
 								'off'         => __( 'LIVE', 'ub' ),
-								'coming-soon' => __( 'COMING SOON', 'ub' ),
+								'coming-soon' => __( 'DEMNÄCHST', 'ub' ),
 								'maintenance' => __( 'WARTUNG', 'ub' ),
 							),
 							'default'     => 'off',

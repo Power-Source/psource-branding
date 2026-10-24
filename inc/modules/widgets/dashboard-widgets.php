@@ -225,7 +225,7 @@ if ( ! class_exists( 'PSToolkit_Dashboard_Widgets' ) ) {
 							'label'       => __( 'Shortcodes', 'ub' ),
 							'description' => __( 'Wähle aus, ob Du das Parsen von Shortcodes in der Begrüßungsnachricht zulassen möchtest oder nicht. Sei vorsichtig, da dies die Kompatibilität mit Themes mit UI-Buildern beeinträchtigen kann.', 'ub' ),
 							'options'     => array(
-								'on'  => __( 'Parse Shortcodes', 'ub' ),
+								'on'  => __( 'Shortcodes analysieren', 'ub' ),
 								'off' => __( 'Stoppe Parsen', 'ub' ),
 							),
 							'default'     => 'off',

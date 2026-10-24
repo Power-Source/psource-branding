@@ -12,7 +12,7 @@ $input_name  = empty( $input_name ) ? '' : $input_name;
 		</div>
 
 		<button type="button" class="sui-upload-button">
-			<i class="sui-icon-upload-cloud" aria-hidden="true"></i> <?php esc_html_e( 'Upload image', 'ub' ); ?>
+			<i class="sui-icon-upload-cloud" aria-hidden="true"></i> <?php esc_html_e( 'Bild hochladen', 'ub' ); ?>
 		</button>
 
 		<div class="sui-upload-file">

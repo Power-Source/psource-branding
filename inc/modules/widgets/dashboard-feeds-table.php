@@ -43,7 +43,7 @@ if ( ! class_exists( 'PSToolkit_Dashboard_Feeds_Table' ) ) {
 		}
 
 		public function column_title( $item ) {
-			$title = isset( $item['title'] ) && ! empty( $item['title'] ) ? $item['title'] : __( '[no title]', 'ub' );
+			$title = isset( $item['title'] ) && ! empty( $item['title'] ) ? $item['title'] : __( '[kein Titel]', 'ub' );
 			if ( isset( $item['link'] ) && ! empty( $item['link'] ) ) {
 				printf(
 					'<a class="pstoolkit-feed-ellipsis" data-modal-open="%s" data-modal-mask="true">%s</a>',

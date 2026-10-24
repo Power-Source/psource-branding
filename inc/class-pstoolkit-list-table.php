@@ -158,7 +158,7 @@ if ( ! class_exists( 'PSToolkit_List_Table' ) ) {
 			echo '<select name="action" class="sui-select-sm sui-select-inline" id="bulk-action-selector-' . esc_attr( $which ) . "\">\n";
 			echo '<option value="-1">' . __( 'Massenaktion', 'ub' ) . "</option>\n";
 			$actions = array(
-				'delete' => __( 'Delete', 'ub' ),
+				'delete' => __( 'Löschen', 'ub' ),
 			);
 			foreach ( $actions as $name => $title ) {
 				$class = 'edit' === $name ? ' class="hide-if-no-js"' : '';

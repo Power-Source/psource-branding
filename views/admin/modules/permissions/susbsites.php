@@ -1,7 +1,7 @@
 <?php
 if ( empty( $groups ) ) {
 	echo PSToolkit_Helper::sui_notice( // phpcs:ignore ClassicPress.Security.EscapeOutput.OutputNotEscaped
-		esc_html__( 'There is no any module to allow override settings.', 'ub' )
+		esc_html__( 'Es gibt keine Module, deren Einstellungen überschrieben werden dürfen.', 'ub' )
 	);
 	return;
 }

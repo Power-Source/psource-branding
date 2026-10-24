@@ -824,7 +824,7 @@ if ( ! class_exists( 'PSToolkit_Author_Box' ) ) {
 			$data = array(
 				'name_and_bio_link_name'        => array(
 					'type'         => 'sui-tab',
-					'label'        => __( 'Link Name', 'ub' ),
+					'label'        => __( 'Linkname', 'ub' ),
 					'description'  => array(
 						'content'  => __( 'Aktiviere diese Option, um den Namen des Autors mit dem Autorenarchiv zu verknüpfen.', 'ub' ),
 						'position' => 'bottom',

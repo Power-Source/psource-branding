@@ -239,7 +239,7 @@ if ( ! class_exists( 'Simple_Options' ) ) {
 							$content .= '<div class="sui-accordion-item-header">';
 							$content .= sprintf(
 								'<div class="sui-accordion-item-title">%s</div>',
-								isset( $data['accordion']['title'] ) ? $data['accordion']['title'] : __( 'No title', 'ub' )
+								isset( $data['accordion']['title'] ) ? $data['accordion']['title'] : __( 'Kein Titel', 'ub' )
 							);
 							$content .= $this->sui_accordion_indicator();
 							$content .= '</div>';
@@ -359,7 +359,7 @@ if ( ! class_exists( 'Simple_Options' ) ) {
 							$sui_tabs .= sprintf(
 								'<div class="%s">%s</div>',
 								esc_attr( $data['panes']['active'] ),
-								isset( $data['panes']['title'] ) ? $data['panes']['title'] : __( '[no title]', 'ub' )
+								isset( $data['panes']['title'] ) ? $data['panes']['title'] : __( '[kein Titel]', 'ub' )
 							);
 							$content  .= sprintf( '<div class="%s">', esc_attr( $data['panes']['active'] ) );
 						}
@@ -1419,7 +1419,7 @@ if ( ! class_exists( 'Simple_Options' ) ) {
 									$content .= '<i aria-hidden="true" class="sui-icon-eye"></i>';
 									$content .= sprintf(
 										'<span class="sui-password-text sui-screen-reader-text">%s</span>',
-										esc_html__( 'Show Password', 'ub' )
+										esc_html__( 'Passwort anzeigen', 'ub' )
 									);
 									$content .= sprintf(
 										'<span class="sui-password-text sui-screen-reader-text sui-hidden">%s</span>',

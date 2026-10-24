@@ -18,7 +18,7 @@
 		<thead>
 			<tr>
 				<th class="sui-table--name"><?php esc_attr_e( 'Module', 'ub' ); ?></th>
-				<th ><?php esc_attr_e( 'Last Used', 'ub' ); ?></th>
+				<th ><?php esc_attr_e( 'Zuletzt verwendet', 'ub' ); ?></th>
 				<th class="sui-table--configure"></th>
 			</tr>
 		</thead>

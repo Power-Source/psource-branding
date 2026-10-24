@@ -203,11 +203,6 @@ msgstr ""
 msgid "[nicht eingestellt]"
 msgstr ""
 
-#: inc/class-simple-options.php:362
-#: inc/modules/widgets/dashboard-feeds-table.php:46
-msgid "[no title]"
-msgstr ""
-
 #: inc/modules/admin/bar.php:691 inc/modules/admin/bar.php:1692
 #: inc/modules/emails/template.php:1064
 #: inc/modules/front-end/author-box.php:1482
@@ -292,10 +287,6 @@ msgstr ""
 
 #: inc/modules/admin/bar.php:576
 msgid "Admin-Leiste Symbol"
-msgstr ""
-
-#: inc/modules/admin/custom-css.php:52
-msgid "Admin CSS"
 msgstr ""
 
 #: inc/modules/emails/template.php:170
@@ -1309,10 +1300,6 @@ msgstr ""
 msgid "Blog Name"
 msgstr ""
 
-#: inc/modules/emails/template.php:174
-msgid "Blog URL"
-msgstr ""
-
 #: etc/config.php:737
 msgid "Blog-Beschreibung zur Blog-Erstellung"
 msgstr ""
@@ -1398,16 +1385,6 @@ msgctxt "button"
 msgid "RESET"
 msgstr ""
 
-#: views/admin/dashboard/welcome.php:26
-msgctxt "button"
-msgid "Skip"
-msgstr ""
-
-#: views/admin/dashboard/welcome.php:21
-msgctxt "button"
-msgid "Skip for now"
-msgstr ""
-
 #: inc/modules/utilities/tracking-codes.php:584
 msgctxt "button"
 msgid "Tracking-Code hinzufügen"
@@ -1440,18 +1417,6 @@ msgstr ""
 msgid "ClassicPress-Menü"
 msgstr ""
 
-#: etc/dashicons.php:217
-msgid "ClassicPress.org Specific: Jobs, Profiles, WordCamps"
-msgstr ""
-
-#: inc/modules/utilities/maintenance.php:226
-msgid "COMING SOON"
-msgstr ""
-
-#: inc/modules/widgets/meta-widget.php:82
-msgid "Comments <abbr title=\"Really Simple Syndication\">RSS</abbr>"
-msgstr ""
-
 #: views/admin/common/footer.php:16
 msgid "Community"
 msgstr ""
@@ -1460,10 +1425,6 @@ msgstr ""
 #: inc/modules/front-end/author-box.php:1340
 #: inc/modules/login-screen/login-screen.php:2769
 msgid "Container"
-msgstr ""
-
-#: inc/modules/front-end/cookie-notice.php:306
-msgid "Cookie Version"
 msgstr ""
 
 #: inc/modules/front-end/cookie-notice.php:248
@@ -1560,18 +1521,6 @@ msgstr ""
 msgid "Dashboard"
 msgstr ""
 
-#: etc/config.php:703
-msgid "Dashboard Feeds"
-msgstr ""
-
-#: inc/modules/admin/menu.php:511
-msgid "Dashboard Link"
-msgstr ""
-
-#: etc/config.php:677
-msgid "Dashboard Widgets"
-msgstr ""
-
 #: inc/modules/widgets/dashboard-widgets.php:220
 msgid "Dashboard Willkommen"
 msgstr ""
@@ -1594,10 +1543,6 @@ msgstr ""
 
 #: inc/modules/admin/menu.php:674
 msgid "Dashicon"
-msgstr ""
-
-#: etc/config.php:79
-msgid "Data"
 msgstr ""
 
 #: inc/modules/front-end/db-error-page.php:468
@@ -1737,10 +1682,6 @@ msgstr ""
 msgid "Deinstallation"
 msgstr ""
 
-#: inc/class-pstoolkit-list-table.php:160
-msgid "Delete"
-msgstr ""
-
 #: inc/class-pstoolkit-admin.php:410
 msgid "Der eingegebene Wert liegt unter der Feldgrenze!"
 msgstr ""
@@ -1816,13 +1757,6 @@ msgstr ""
 #: inc/modules/login-screen/login-screen.php:1875
 #: inc/modules/login-screen/login-screen.php:1926
 msgid "Dicke"
-msgstr ""
-
-#: inc/modules/front-end/cookie-notice.php:175
-#, php-format
-msgid ""
-"Die aktuell ausgewählte Seite mit den Datenschutzrichtlinien ist nicht "
-"vorhanden. Bitte %1$erstelle oder eine neue Seite auswählen%2$s."
 msgstr ""
 
 #: inc/modules/widgets/dashboard-feeds.php:316
@@ -2058,10 +1992,6 @@ msgstr ""
 msgid "Do"
 msgstr ""
 
-#: views/admin/common/footer.php:15 views/admin/common/footer.php:29
-msgid "Docs"
-msgstr ""
-
 #: etc/config.php:787
 msgid "Dokument"
 msgstr ""
@@ -2271,10 +2201,6 @@ msgstr ""
 msgid "E-Mails"
 msgstr ""
 
-#: views/admin/modules/admin-bar/tmpl/panes/general.php:44
-msgid "E.g. http://example.com"
-msgstr ""
-
 #: inc/modules/login-screen/login-screen.php:1777
 msgid "Ecken mit Kantenradius"
 msgstr ""
@@ -2474,10 +2400,6 @@ msgstr ""
 msgid "Email Inhalt"
 msgstr ""
 
-#: etc/config.php:769 etc/config.php:770
-msgid "Email Logs"
-msgstr ""
-
 #: inc/modules/emails/headers.php:77
 msgid "Email von"
 msgstr ""
@@ -2521,10 +2443,6 @@ msgstr ""
 
 #: inc/modules/login-screen/login-screen.php:1950
 msgid "Enthalten"
-msgstr ""
-
-#: inc/modules/widgets/meta-widget.php:81
-msgid "Entries <abbr title=\"Really Simple Syndication\">RSS</abbr>"
 msgstr ""
 
 #: inc/modules/utilities/maintenance.php:495
@@ -2851,24 +2769,12 @@ msgstr ""
 msgid "FlipClock"
 msgstr ""
 
-#: inc/modules/login-screen/login-screen.php:2516
-msgid "Focus"
-msgstr ""
-
 #: inc/modules/front-end/cookie-notice.php:649
 #: inc/modules/front-end/cookie-notice.php:756
 #: inc/modules/login-screen/login-screen.php:2350
 #: views/admin/modules/color-schemes/dialogs/edit.php:409
 #: views/admin/modules/color-schemes/dialogs/edit.php:622
 msgid "Fokus"
-msgstr ""
-
-#: inc/modules/admin/custom-css.php:67
-msgid "Footer"
-msgstr ""
-
-#: inc/modules/login-screen/login-screen.php:2076
-msgid "Form Canvas"
 msgstr ""
 
 #: inc/modules/front-end/document.php:198
@@ -2927,10 +2833,6 @@ msgstr ""
 
 #: inc/modules/emails/email-logs.php:173
 msgid "Fr"
-msgstr ""
-
-#: views/admin/common/footer.php:26
-msgid "Free Plugins"
 msgstr ""
 
 #: inc/modules/admin/bar.php:490
@@ -3429,10 +3331,6 @@ msgstr ""
 msgid "Heute"
 msgstr ""
 
-#: inc/modules/login-screen/login-screen.php:1525
-msgid "Hide"
-msgstr ""
-
 #: views/admin/dashboard/modules/frequently-used.php:30
 msgid "Hier findest Du Deine Top 5 häufig verwendeten Module."
 msgstr ""
@@ -3611,10 +3509,6 @@ msgstr ""
 msgid "HTML"
 msgstr ""
 
-#: inc/modules/emails/template.php:217
-msgid "HTML Editor"
-msgstr ""
-
 #: inc/modules/utilities/text-replacement.php:343
 msgid ""
 "https://codex.classicpress.org/I18n_for_ClassicPress_Developers#Text_Domains"
@@ -3768,14 +3662,6 @@ msgstr ""
 
 #: inc/modules/utilities/maintenance.php:995
 msgid "Insgesamt"
-msgstr ""
-
-#: inc/modules/utilities/comments-control.php:227
-msgid "IP Blacklist"
-msgstr ""
-
-#: inc/modules/utilities/comments-control.php:251
-msgid "IP Whitelist"
 msgstr ""
 
 #: inc/modules/utilities/comments-control.php:254
@@ -3972,10 +3858,6 @@ msgstr ""
 msgid "Lasse dieses Feld leer, wenn Du keinen Titel anzeigen möchtest."
 msgstr ""
 
-#: views/admin/dashboard/modules/import-export.php:21
-msgid "Last Used"
-msgstr ""
-
 #: inc/modules/admin/tips.php:487
 msgid "Leer lassen für unbegrenzte Anzeigedauer."
 msgstr ""
@@ -4041,12 +3923,6 @@ msgstr ""
 msgid "Letzter Monat"
 msgstr ""
 
-#: views/admin/dashboard/welcome.php:12
-msgid ""
-"Let’s get you started by activating the modules you want to use. You can "
-"always activate/deactivate modules later."
-msgstr ""
-
 #: inc/modules/utilities/site-generator.php:71
 #: views/admin/modules/color-schemes/dialogs/edit.php:414
 #: views/admin/modules/color-schemes/dialogs/edit.php:500
@@ -4080,16 +3956,8 @@ msgstr ""
 msgid "Link Hintergrund"
 msgstr ""
 
-#: inc/modules/admin/menu.php:522
-msgid "Link Manager"
-msgstr ""
-
 #: inc/modules/admin/menu.php:526
 msgid "Link Manager aktivieren"
-msgstr ""
-
-#: inc/modules/front-end/author-box.php:827
-msgid "Link Name"
 msgstr ""
 
 #: inc/modules/admin/menu.php:695
@@ -4181,11 +4049,6 @@ msgstr ""
 msgid "Mai"
 msgstr ""
 
-#: inc/modules/login-screen/login-screen.php:1838
-#: inc/modules/login-screen/login-screen.php:2156
-msgid "Margin"
-msgstr ""
-
 #: inc/class-pstoolkit-list-table.php:158
 msgid "Massenaktion"
 msgstr ""
@@ -4214,10 +4077,6 @@ msgstr ""
 
 #: inc/modules/admin/bar.php:449
 msgid "Meine Webseiten"
-msgstr ""
-
-#: views/admin/common/footer.php:27
-msgid "Membership"
 msgstr ""
 
 #: inc/modules/admin/custom-css.php:68
@@ -4271,10 +4130,6 @@ msgstr ""
 #: inc/modules/widgets/meta-widget.php:58
 #: inc/modules/widgets/meta-widget.php:63
 msgid "Meta"
-msgstr ""
-
-#: etc/config.php:721
-msgid "Meta Widget"
 msgstr ""
 
 #: inc/modules/emails/email-logs.php:171
@@ -4355,10 +4210,6 @@ msgstr ""
 msgid "Mo"
 msgstr ""
 
-#: inc/modules/front-end/site-status-page.php:392
-msgid "Modes"
-msgstr ""
-
 #: views/admin/dashboard/modules/table-header.php:3
 msgid "Modul"
 msgstr ""
@@ -4401,20 +4252,12 @@ msgstr ""
 msgid "Module aktivieren"
 msgstr ""
 
-#: inc/class-pstoolkit-base.php:150 inc/class-pstoolkit-base.php:174
-msgid "Module does not exists."
-msgstr ""
-
 #: views/admin/dashboard/widget-summary.php:16
 msgid "Module insgesamt"
 msgstr ""
 
 #: views/admin/modules/import/header.php:1
 msgid "Module konfigurieren"
-msgstr ""
-
-#: etc/config.php:609
-msgid "MultiSite Registration Emails"
 msgstr ""
 
 #: inc/modules/admin/menu.php:604
@@ -4645,10 +4488,6 @@ msgstr ""
 msgid "Neuladen"
 msgstr ""
 
-#: views/admin/dashboard/modules/import-export-row.php:8
-msgid "Never"
-msgstr ""
-
 #: inc/modules/emails/registration.php:154
 #, php-format
 msgctxt "New site notification email subject"
@@ -4692,10 +4531,6 @@ msgstr ""
 msgid "Nirgends"
 msgstr ""
 
-#: inc/class-simple-options.php:242
-msgid "No title"
-msgstr ""
-
 #: inc/modules/widgets/dashboard-feeds-table.php:339
 msgid "Noch kein Feed hinzugefügt!"
 msgstr ""
@@ -4710,10 +4545,6 @@ msgstr ""
 
 #: inc/modules/utilities/tracking-codes-list-table.php:306
 msgid "Noch kein Tracking-Code eingefügt!"
-msgstr ""
-
-#: inc/class-pstoolkit-admin.php:869
-msgid "none"
 msgstr ""
 
 #: inc/modules/emails/email-logs.php:187
@@ -4750,10 +4581,6 @@ msgstr ""
 msgid "Oktober"
 msgstr ""
 
-#: inc/modules/admin/bar.php:851
-msgid "Open link in"
-msgstr ""
-
 #: inc/modules/admin/help-content.php:181
 msgid "Ordne die Hilfeartikel durch Ziehen und Ablegen neu an."
 msgstr ""
@@ -4768,18 +4595,8 @@ msgstr ""
 msgid "Ort einfügen"
 msgstr ""
 
-#: inc/modules/login-screen/login-screen.php:1793
-#: inc/modules/login-screen/login-screen.php:2112
-#: inc/modules/login-screen/login-screen.php:2956
-msgid "Padding"
-msgstr ""
-
 #: views/admin/modules/color-schemes/dialogs/edit.php:375
 msgid "Paginierung / Schaltfläche / Symbol"
-msgstr ""
-
-#: inc/modules/widgets/dashboard-widgets.php:228
-msgid "Parse Shortcodes"
 msgstr ""
 
 #: inc/modules/admin/menu.php:496
@@ -5016,10 +4833,6 @@ msgstr ""
 msgid "Passwörter stimmen nicht überein."
 msgstr ""
 
-#: views/admin/modules/smtp/plugins-list.php:4
-msgid "Plugin Name"
-msgstr ""
-
 #: views/admin/common/footer.php:12
 #: views/admin/modules/color-schemes/dialogs/edit.php:847
 msgid "Plugins"
@@ -5070,11 +4883,6 @@ msgstr ""
 #: views/admin/modules/color-schemes/dialogs/edit.php:215
 #: views/admin/modules/color-schemes/dialogs/edit.php:277
 msgid "Primäre Schaltfläche Textschatten"
-msgstr ""
-
-#: inc/modules/front-end/cookie-notice.php:89 views/admin/common/footer.php:19
-#: views/admin/common/footer.php:32
-msgid "Privacy Policy"
 msgstr ""
 
 #: etc/dashicons.php:234
@@ -5187,15 +4995,6 @@ msgstr ""
 msgid "Regeln zum Ersetzen von Text löschen"
 msgstr ""
 
-#: etc/config.php:608
-msgid "Registration Email"
-msgstr ""
-
-#: views/admin/modules/permissions/row.php:17
-#: views/admin/modules/permissions/row.php:22
-msgid "Remove access"
-msgstr ""
-
 #: views/admin/common/footer.php:13 views/admin/common/footer.php:28
 msgid "Roadmap"
 msgstr ""
@@ -5290,10 +5089,6 @@ msgstr ""
 msgid "Schließen"
 msgstr ""
 
-#: views/admin/common/dashicon-picker.php:11
-msgid "Search icon"
-msgstr ""
-
 #: views/front-end/modules/maintenance/timer/raw/head.php:19
 msgctxt "second letter of timer"
 msgid "s"
@@ -5371,10 +5166,6 @@ msgstr ""
 msgid "selben Registerkarte"
 msgstr ""
 
-#: views/admin/common/no-module.php:14
-msgid "Selected module does not exists or is not available."
-msgstr ""
-
 #: inc/modules/emails/smtp.php:222
 #, php-format
 msgid "Sende Datum: %s."
@@ -5448,14 +5239,6 @@ msgstr ""
 msgid "Shortcodes analysieren"
 msgstr ""
 
-#: inc/modules/login-screen/login-screen.php:1526
-msgid "Show"
-msgstr ""
-
-#: inc/class-simple-options.php:1407
-msgid "Show Password"
-msgstr ""
-
 #: views/admin/modules/admin-bar/dialogs/edit.php:19
 msgid "Sichbarkeit"
 msgstr ""
@@ -5481,10 +5264,6 @@ msgstr ""
 
 #: etc/config.php:753
 msgid "SMTP"
-msgstr ""
-
-#: inc/modules/emails/smtp.php:410
-msgid "SMTP Server"
 msgstr ""
 
 #: inc/modules/emails/smtp.php:449
@@ -5776,10 +5555,6 @@ msgstr ""
 msgid "Support"
 msgstr ""
 
-#: inc/modules/admin/menu.php:675
-msgid "SVG code"
-msgstr ""
-
 #: inc/modules/admin/menu.php:629
 msgid "SVG-Code"
 msgstr ""
@@ -5809,18 +5584,6 @@ msgstr ""
 msgid "Tage"
 msgstr ""
 
-#: etc/dashicons.php:251
-msgid "Taxonomies"
-msgstr ""
-
-#: inc/modules/emails/template.php:186
-msgid "Template"
-msgstr ""
-
-#: views/admin/common/footer.php:18 views/admin/common/footer.php:31
-msgid "Terms of Service"
-msgstr ""
-
 #: inc/modules/emails/template.php:951
 #, php-format
 msgid "Test-E-Mail an %s gesendet!"
@@ -5841,10 +5604,6 @@ msgstr ""
 
 #: inc/modules/emails/smtp.php:134 inc/modules/emails/template.php:1129
 msgid "Test-E-Mail senden"
-msgstr ""
-
-#: views/admin/common/dialogs/test-email.php:12
-msgid "Test-Email"
 msgstr ""
 
 #: inc/modules/emails/template.php:815
@@ -5934,11 +5693,6 @@ msgstr ""
 
 #: views/admin/modules/color-schemes/dialogs/edit.php:797
 msgid "Themes"
-msgstr ""
-
-#. phpcs:ignore ClassicPress.Security.EscapeOutput.OutputNotEscaped
-#: views/admin/modules/permissions/susbsites.php:4
-msgid "There is no any module to allow override settings."
 msgstr ""
 
 #: inc/modules/front-end/document.php:309
@@ -6061,10 +5815,6 @@ msgstr ""
 msgid "Toolbar Sichtbarkeit"
 msgstr ""
 
-#: views/admin/modules/tracking-codes/dialogs/edit.php:35
-msgid "Tracking Code"
-msgstr ""
-
 #: inc/modules/utilities/tracking-codes-list-table.php:128
 #, php-format
 msgid "Tracking Codes: %s wurde deaktiviert."
@@ -6179,14 +5929,6 @@ msgstr ""
 msgid "Ungültiges Passwort"
 msgstr ""
 
-#: inc/class-pstoolkit-base.php:107
-msgid "Unknown"
-msgstr ""
-
-#: views/admin/common/no-module.php:10
-msgid "Unknown module"
-msgstr ""
-
 #: inc/modules/emails/smtp.php:438
 msgid "Unsichere SSL-Zertifikate"
 msgstr ""
@@ -6249,10 +5991,6 @@ msgstr ""
 msgid "Updates"
 msgstr ""
 
-#: views/admin/modules/admin_menu/dialogs/custom-admin-menu-media-template.php:15
-msgid "Upload image"
-msgstr ""
-
 #: inc/modules/utilities/images.php:300
 msgid "Upload-Limit überschreiben"
 msgstr ""
@@ -6276,10 +6014,6 @@ msgstr ""
 #: views/admin/modules/admin-bar/tmpl/panes/submenu.php:89
 #, php-format
 msgid "URL ist relativ zu %s"
-msgstr ""
-
-#: inc/modules/admin/menu.php:676
-msgid "URL Link"
 msgstr ""
 
 #: inc/modules/emails/template.php:688
@@ -6507,10 +6241,6 @@ msgstr ""
 
 #: inc/modules/utilities/maintenance.php:218
 msgid "Webseitenstatus"
-msgstr ""
-
-#: views/admin/dashboard/welcome.php:9
-msgid "Welcome to PSToolkit"
 msgstr ""
 
 #: inc/modules/utilities/text-replacement.php:361
@@ -7244,4 +6974,708 @@ msgstr ""
 #: inc/class-pstoolkit-admin.php:620 inc/class-pstoolkit-admin.php:621
 #: views/admin/dashboard.php:9
 msgid "Übersicht"
+msgstr ""
+
+#: etc/dashicons.php:217
+msgid "ClassicPress.org-spezifisch: Jobs, Profile, WordCamps"
+msgstr ""
+
+#: etc/dashicons.php:251
+msgid "Taxonomien"
+msgstr ""
+
+#: etc/config.php:608
+msgid "Registrierungs-E-Mail"
+msgstr ""
+
+#: etc/config.php:609
+msgid "Multisite-Registrierungs-E-Mails"
+msgstr ""
+
+#: etc/config.php:677
+msgid "Dashboard-Widgets"
+msgstr ""
+
+#: etc/config.php:703
+msgid "Dashboard-Feeds"
+msgstr ""
+
+#: etc/config.php:721
+msgid "Meta-Widget"
+msgstr ""
+
+#: etc/config.php:769 etc/config.php:770
+msgid "E-Mail-Protokolle"
+msgstr ""
+
+#: inc/modules/login-screen/login-screen.php:1825
+#: inc/modules/login-screen/login-screen.php:2144
+#: inc/modules/login-screen/login-screen.php:3019
+msgid "Innenabstand"
+msgstr ""
+
+#: inc/modules/login-screen/login-screen.php:1870
+#: inc/modules/login-screen/login-screen.php:2188
+#: inc/class-pstoolkit-helper.php:2018
+msgid "Außenabstand"
+msgstr ""
+
+#: inc/modules/login-screen/login-screen.php:2108
+msgid "Formularfläche"
+msgstr ""
+
+#: inc/modules/emails/template.php:191
+msgid "Blog-URL"
+msgstr ""
+
+#: inc/modules/emails/template.php:234
+msgid "Eigene Vorlagen"
+msgstr ""
+
+#: inc/modules/emails/template.php:235
+msgid "Speichere den aktuellen Inhalt des HTML-Editors unter einem eigenen Namen und lade ihn später wieder."
+msgstr ""
+
+#: inc/modules/emails/template.php:245
+msgid "HTML-Editor"
+msgstr ""
+
+#: inc/modules/emails/template.php:307
+msgid "Gespeicherte Vorlage auswählen"
+msgstr ""
+
+#: inc/modules/emails/template.php:308
+msgid "Gespeicherte Vorlage wählen"
+msgstr ""
+
+#: inc/modules/emails/template.php:313
+msgid "Name der Vorlage"
+msgstr ""
+
+#: inc/modules/emails/template.php:315
+msgid "Laden"
+msgstr ""
+
+#: inc/modules/emails/template.php:316
+msgid "Vorlage speichern"
+msgstr ""
+
+#: inc/modules/emails/template.php:947 inc/modules/emails/template.php:1247
+#: inc/class-pstoolkit-admin.php:303 inc/class-pstoolkit-helper.php:3605
+msgid "Du bist nicht berechtigt, diese Aktion auszuführen."
+msgstr ""
+
+#: inc/modules/emails/template.php:1256 inc/modules/emails/template.php:1269
+msgid "Die ausgewählte Vorlage wurde nicht gefunden."
+msgstr ""
+
+#: inc/modules/emails/template.php:1276
+msgid "Bitte gib einen Namen und HTML-Inhalt für die Vorlage ein."
+msgstr ""
+
+#: inc/modules/emails/template.php:1290
+msgid "Unbekannte Vorlagenaktion."
+msgstr ""
+
+#: inc/modules/emails/smtp.php:410
+msgid "SMTP-Server"
+msgstr ""
+
+#: inc/modules/utilities/comments-control.php:227
+msgid "IP-Sperrliste"
+msgstr ""
+
+#: inc/modules/utilities/comments-control.php:251
+msgid "IP-Freigabeliste"
+msgstr ""
+
+#: inc/modules/utilities/maintenance.php:226
+msgid "DEMNÄCHST"
+msgstr ""
+
+#: inc/modules/widgets/meta-widget.php:81
+msgid "Einträge <abbr title=\"Really Simple Syndication\">RSS</abbr>"
+msgstr ""
+
+#: inc/modules/widgets/meta-widget.php:82
+msgid "Kommentare <abbr title=\"Really Simple Syndication\">RSS</abbr>"
+msgstr ""
+
+#: inc/modules/admin/custom-css.php:52
+msgid "Admin-CSS"
+msgstr ""
+
+#: inc/modules/admin/custom-css.php:67
+msgid "Fußzeile"
+msgstr ""
+
+#: inc/modules/admin/menu.php:516
+msgid "Dashboard-Link"
+msgstr ""
+
+#: inc/modules/admin/menu.php:527
+msgid "Link-Manager"
+msgstr ""
+
+#: inc/modules/admin/menu.php:681
+msgid "URL-Link"
+msgstr ""
+
+#: inc/modules/front-end/author-box.php:827
+msgid "Linkname"
+msgstr ""
+
+#: inc/modules/front-end/site-status-page.php:393
+msgid "Modi"
+msgstr ""
+
+#: inc/modules/front-end/cookie-notice.php:175
+#, php-format
+msgid "Die aktuell ausgewählte Datenschutzseite ist nicht vorhanden. Bitte %1$serstelle eine neue Seite oder wähle eine andere aus%2$s."
+msgstr ""
+
+#: inc/modules/front-end/cookie-notice.php:306
+msgid "Cookie-Version"
+msgstr ""
+
+#: inc/class-pstoolkit-base.php:153 inc/class-pstoolkit-base.php:177
+msgid "Modul existiert nicht."
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:744
+msgid "Amazon"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:745
+msgid "Blogger"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:746
+msgid "CodePen"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:747
+msgid "Dribbble"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:748
+msgid "Dropbox"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:749
+msgid "Eventbrite"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:750
+msgid "Facebook"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:751
+msgid "Flickr"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:752
+msgid "Foursquare"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:753
+msgid "Ghost"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:754
+msgid "GitHub"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:755
+msgid "Instagram"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:756
+msgid "LinkedIn"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:757
+msgid "Mail"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:758
+msgid "Pinterest"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:759
+msgid "Pocket"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:760
+msgid "Polldaddy"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:761
+msgid "Reddit"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:762
+msgid "Skype"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:763
+msgid "Spotify"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:764
+msgid "Squarespace"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:765
+msgid "StumbleUpon"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:766
+msgid "Telegram"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:767
+msgid "Tumblr"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:768
+msgid "Twitter"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:769
+msgid "Vimeo"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:770
+msgid "WhatsApp"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:771
+msgid "ClassicPress"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:772
+msgid "Xanga"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:773
+msgid "YouTube"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:816
+msgid "Gepunktet"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:817
+msgid "Gestrichelt"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:818 inc/class-pstoolkit-helper.php:2173
+msgid "Fest"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:819
+msgid "Doppelt"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:820
+msgid "3D gerillt"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:821
+msgid "3D geriffelt"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:822
+msgid "3D-Einschub"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:823
+msgid "3D-Anfang"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:1548 inc/class-pstoolkit-helper.php:3010
+msgid "Hintergrundfarbe"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:1553
+msgid "Hintergrundbilder anzeigen"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:1554
+msgid "Möchtest Hintergrundbilder verwenden?"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:1565 inc/class-pstoolkit-helper.php:2099
+msgid "Modus für mehrere Bilder"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:1567 inc/class-pstoolkit-helper.php:2101
+msgid "Diashow"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:1576
+msgid "Hier kannst Du ein Hintergrundbild hochladen. Das Bild wird an die Seite angepasst und automatisch geändert, wenn sich die Fenstergröße ändert. Du erzielst die besten Ergebnisse, wenn Du Bilder mit einer Mindestbreite von 1024 Pixel verwendest."
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:1581
+msgid "Dauer der Diashow"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:1582
+msgid "Dauer in Minuten, wir empfehlen dringend, nicht weniger als 5 Minuten zu verwenden."
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:1670
+msgid "Die bevorzugte Breite des Logos beträgt 320 Pixel, um die besten Ergebnisse zu erzielen."
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:1679
+msgid "Logo &amp; Hintergrund"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:1686
+msgid "Benutzer werden zu diesem Link weitergeleitet, wenn sie auf das Logo klicken."
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:1696
+msgid "Alternativtext"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:1704
+msgid "Sichtbarkeit des Logos"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:1719
+msgid "Für beste Ergebnisse sollte das Bild eine Mindestbreite von 1024 Pixel haben. Du kannst mehrere Bilder hochladen und im Designbereich eine Diashow erstellen."
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:1756
+msgid "Beschreibung (optional)"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:1985
+msgid "Es sollte kleiner sein als das Formular Canvas (320px)."
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2004
+msgid "Zentriert"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2085
+msgid "Dauer"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2088
+msgid "Wir empfehlen dringend eine Dauer von mindestens 5 Sekunden."
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2114 inc/class-pstoolkit-helper.php:2124
+#: inc/class-pstoolkit-helper.php:2209 inc/class-pstoolkit-helper.php:2225
+msgid "%"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2155
+msgid "Hintergrund Schnitt"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2157
+msgid "Diese Einstellung funktioniert nur mit Bildern, die der ClassicPress-Medienbibliothek hinzugefügt wurden."
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2161
+msgid "Auto"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2162
+msgid "Schnitt nicht ändern."
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2166
+msgid "Schnitt proportional, Höhe ändern."
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2170
+msgid "Schnitt proportional, Breite ändern."
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2174
+msgid "Auf feste Größe zuschneiden"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2182
+msgid "Hintergrundbefestigung"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2184
+msgid "Diese CSS-Eigenschaft legt fest, ob eine Hintergrundbildposition im Ansichtsfenster festgelegt ist oder mit dem enthaltenen Block gescrollt wird."
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2188
+msgid "Nicht eingestellt"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2189
+msgid "Ändert sich nicht."
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2192
+msgid "Fixiert"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2193
+msgid "Der Hintergrund ist relativ zum Ansichtsfenster festgelegt. Selbst wenn ein Element über einen Bildlaufmechanismus verfügt, bewegt sich der Hintergrund nicht mit dem Element."
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2196
+msgid "Scrollen"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2197
+msgid "Der Hintergrund ist relativ zum Element selbst festgelegt und scrollt nicht mit seinem Inhalt."
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2205 inc/class-pstoolkit-helper.php:2221
+msgid "Belasse \"0\" für \"auto\"-Wert."
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2236
+msgid "Hintergrundgröße"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2240
+msgid "Ändere die Größe des Hintergrundbilds, um den gesamten Container zu bedecken, auch wenn das Bild gedehnt oder an einer der Kanten etwas abgeschnitten werden muss."
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2244
+msgid "Ändere die Größe des Hintergrundbilds, um sicherzustellen, dass das Bild vollständig sichtbar ist."
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2248
+msgid "Das Hintergrundbild wird in seiner Originalgröße angezeigt."
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2251
+msgid "Länge"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2252
+msgid "Legt die Breite und Höhe des Hintergrundbilds fest."
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2260
+msgid "Horizontale Hintergrundposition"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2286
+msgid "Vertikale Hintergrundposition"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2355
+msgid "Für beste Ergebnisse sollte es vorzugsweise weniger als 1024 sein."
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2364 inc/class-pstoolkit-helper.php:2656
+msgid "Inhaltsverpackung"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2405 inc/class-pstoolkit-helper.php:2697
+msgid "Zeige"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2419
+msgid "Die folgenden Optionen sind nicht betroffen."
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2425 inc/class-pstoolkit-helper.php:3113
+msgid "Öffne Link"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2427
+msgid "Neuer Tab"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2428
+msgid "Im gleichen"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2434
+msgid "Icon-Stil"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2489
+msgid "Logo & Hintergrund"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2698
+msgid "Möchtest Du Social Media zeigen?"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2710
+msgid "Möchtest Du farbige Symbole anzeigen?"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2721
+msgid "Öffne Links"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2722
+msgid "Möchtest Du einen Link in einem neuen oder demselben Fenster/Tab öffnen?"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2724
+msgid "Neu"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2725
+msgid "Selben"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2900
+msgid "-- Kopie von --"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2912
+msgid "Kopieren"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2970
+msgid "Titel anzeigen"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2971
+msgid "Möchtest Du den Titel zeigen?"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2973 inc/class-pstoolkit-helper.php:2990
+msgid "Aus"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2974 inc/class-pstoolkit-helper.php:2991
+msgid "An"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2987
+msgid "Inhalt zeigen"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:2988
+msgid "Möchtest Du Inhalte anzeigen?"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:3015
+msgid "Hintergrundtransparenz"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:3693
+msgid "Möchtest Du das ausgewählte Element wirklich löschen?"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:4448
+msgid "Verwende für erweiterte Anpassungsoptionen benutzerdefiniertes CSS."
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:4509
+msgid "Vorlagendatei existiert nicht!"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:4513
+#, php-format
+msgid "Vorlagendatei %s existiert nicht!"
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:4648
+#, php-format
+msgid "Die Benutzerregistrierung wurde deaktiviert. Klicke <a href=\"%s\">hier</a>, um die Benutzerregistrierung für Deine Website zu aktivieren."
+msgstr ""
+
+#: inc/class-pstoolkit-helper.php:4680
+msgid "Netzwerkadministrator"
+msgstr ""
+
+#: inc/class-simple-options.php:242
+msgid "Kein Titel"
+msgstr ""
+
+#: inc/class-simple-options.php:1422
+msgid "Passwort anzeigen"
+msgstr ""
+
+#: views/admin/modules/smtp/plugins-list.php:4
+msgid "Plugin-Name"
+msgstr ""
+
+#: views/admin/modules/permissions/row.php:17
+#: views/admin/modules/permissions/row.php:22
+msgid "Zugriff entfernen"
+msgstr ""
+
+#: views/admin/modules/permissions/susbsites.php:4
+msgid "Es gibt keine Module, deren Einstellungen überschrieben werden dürfen."
+msgstr ""
+
+#: views/admin/modules/tracking-codes/dialogs/edit.php:35
+msgid "Tracking-Code"
+msgstr ""
+
+#: views/admin/common/header.php:8
+msgid "Beim Plugin mitwirken auf GitHub"
+msgstr ""
+
+#: views/admin/common/footer.php:15 views/admin/common/footer.php:29
+msgid "Dokumentation"
+msgstr ""
+
+#: views/admin/common/footer.php:18 views/admin/common/footer.php:31
+msgid "Nutzungsbedingungen"
+msgstr ""
+
+#: views/admin/common/footer.php:26
+msgid "Kostenlose Plugins"
+msgstr ""
+
+#: views/admin/common/footer.php:27
+msgid "Mitgliedschaft"
+msgstr ""
+
+#: views/admin/common/dialogs/test-email.php:12
+msgid "Test-E-Mail"
+msgstr ""
+
+#: views/admin/common/no-module.php:10
+msgid "Unbekanntes Modul"
+msgstr ""
+
+#: views/admin/common/no-module.php:14
+msgid "Das ausgewählte Modul existiert nicht oder ist nicht verfügbar."
+msgstr ""
+
+#: views/admin/common/dashicon-picker.php:11
+msgid "Symbol suchen"
+msgstr ""
+
+#: views/admin/dashboard/modules/import-export.php:21
+msgid "Zuletzt verwendet"
+msgstr ""
+
+#: views/admin/dashboard/modules/import-export-row.php:8
+msgid "Nie"
+msgstr ""
+
+#: views/admin/dashboard/welcome.php:9
+msgid "Willkommen bei PSToolkit"
+msgstr ""
+
+#: views/admin/dashboard/welcome.php:12
+msgid "Aktiviere zunächst die Module, die Du verwenden möchtest. Du kannst Module jederzeit später aktivieren oder deaktivieren."
+msgstr ""
+
+#: views/admin/dashboard/welcome.php:21
+msgctxt "button"
+msgid "Vorerst überspringen"
+msgstr ""
+
+#: views/admin/dashboard/welcome.php:26
+msgctxt "button"
+msgid "Überspringen"
 msgstr ""

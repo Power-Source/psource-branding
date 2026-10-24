@@ -407,7 +407,7 @@ if ( ! class_exists( 'PSToolkit_SMTP' ) ) {
 					),
 				),
 				'server'              => array(
-					'title'       => __( 'SMTP Server', 'ub' ),
+					'title'       => __( 'SMTP-Server', 'ub' ),
 					'description' => __( 'Wähle die SMTP-Serveroptionen wie Host, Portdetails, Verschlüsselung usw..', 'ub' ),
 					'fields'      => array(
 						'smtp_host'            => array(

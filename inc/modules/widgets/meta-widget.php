@@ -78,8 +78,8 @@ class PSToolkit_WP_Widget_Rebranded_Meta extends WP_Widget {
 			<ul>
 			<?php wp_register(); ?>
 			<li><?php wp_loginout(); ?></li>
-			<li><a href="<?php bloginfo( 'rss2_url' ); ?>" title="<?php echo esc_attr( __( 'Syndiziere diese Webseite mit RSS 2.0', 'ub' ) ); ?>"><?php _e( 'Entries <abbr title="Really Simple Syndication">RSS</abbr>', 'ub' ); ?></a></li>
-			<li><a href="<?php bloginfo( 'comments_rss2_url' ); ?>" title="<?php echo esc_attr( __( 'Die neuesten Kommentare zu allen Beiträgen in RSS', 'ub' ) ); ?>"><?php _e( 'Comments <abbr title="Really Simple Syndication">RSS</abbr>', 'ub' ); ?></a></li>
+			<li><a href="<?php bloginfo( 'rss2_url' ); ?>" title="<?php echo esc_attr( __( 'Syndiziere diese Webseite mit RSS 2.0', 'ub' ) ); ?>"><?php _e( 'Einträge <abbr title="Really Simple Syndication">RSS</abbr>', 'ub' ); ?></a></li>
+			<li><a href="<?php bloginfo( 'comments_rss2_url' ); ?>" title="<?php echo esc_attr( __( 'Die neuesten Kommentare zu allen Beiträgen in RSS', 'ub' ) ); ?>"><?php _e( 'Kommentare <abbr title="Really Simple Syndication">RSS</abbr>', 'ub' ); ?></a></li>
 			<li><a href="<?php echo $global_site_link; ?>" title="<?php echo esc_attr( sprintf( __( 'Angetrieben von %s', 'ub' ), $global_site_name ) ); ?>"><?php echo esc_attr( $global_site_name ); ?></a></li>
 			<?php wp_meta(); ?>
 			</ul>

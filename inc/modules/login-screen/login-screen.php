@@ -1554,8 +1554,8 @@ if ( ! class_exists( 'PSToolkit_Login_Screen' ) ) {
 					'label'       => __( 'Passwortfeld auf dem Registerbildschirm', 'ub' ),
 					'type'        => 'sui-tab',
 					'options'     => array(
-						'off' => __( 'Hide', 'ub' ),
-						'on'  => __( 'Show', 'ub' ),
+						'off' => __( 'Ausblenden', 'ub' ),
+						'on'  => __( 'Anzeigen', 'ub' ),
 					),
 					'default'     => 'off',
 					'slave-class' => $this->get_name( 'form_signup_password' ),
@@ -1822,7 +1822,7 @@ if ( ! class_exists( 'PSToolkit_Login_Screen' ) ) {
 					'after_field'  => '</div>',
 					'group'        => array(
 						'begin'   => true,
-						'label'   => __( 'Padding', 'ub' ),
+						'label'   => __( 'Innenabstand', 'ub' ),
 						'classes' => 'sui-border-frame',
 					),
 					'units'        => array(
@@ -1867,7 +1867,7 @@ if ( ! class_exists( 'PSToolkit_Login_Screen' ) ) {
 					'after_field'  => '</div>',
 					'group'        => array(
 						'begin'   => true,
-						'label'   => __( 'Margin', 'ub' ),
+						'label'   => __( 'Außenabstand', 'ub' ),
 						'classes' => 'sui-border-frame',
 					),
 					'units'        => array(
@@ -2105,7 +2105,7 @@ if ( ! class_exists( 'PSToolkit_Login_Screen' ) ) {
 					'default'   => 'default',
 					'accordion' => array(
 						'begin' => true,
-						'title' => __( 'Form Canvas', 'ub' ),
+						'title' => __( 'Formularfläche', 'ub' ),
 					),
 					'group'     => array(
 						'begin' => true,
@@ -2141,7 +2141,7 @@ if ( ! class_exists( 'PSToolkit_Login_Screen' ) ) {
 					'after_field'  => '</div>',
 					'group'        => array(
 						'begin'   => true,
-						'label'   => __( 'Padding', 'ub' ),
+						'label'   => __( 'Innenabstand', 'ub' ),
 						'classes' => 'sui-border-frame',
 					),
 					'units'        => array(
@@ -2185,7 +2185,7 @@ if ( ! class_exists( 'PSToolkit_Login_Screen' ) ) {
 					'after_field'  => '</div>',
 					'group'        => array(
 						'begin'   => true,
-						'label'   => __( 'Margin', 'ub' ),
+						'label'   => __( 'Außenabstand', 'ub' ),
 						'classes' => 'sui-border-frame',
 					),
 					'units'        => array(
@@ -2545,7 +2545,7 @@ if ( ! class_exists( 'PSToolkit_Login_Screen' ) ) {
 					'label'   => __( '"Registrieren | Passwort verloren?" Links', 'ub' ),
 					'default' => '#555d66',
 					'panes'   => array(
-						'title'      => __( 'Focus', 'ub' ),
+						'title'      => __( 'Fokus', 'ub' ),
 						'begin_pane' => true,
 					),
 				),
@@ -3016,7 +3016,7 @@ if ( ! class_exists( 'PSToolkit_Login_Screen' ) ) {
 					'after_field'  => '</div>',
 					'group'        => array(
 						'begin'   => true,
-						'label'   => __( 'Padding', 'ub' ),
+						'label'   => __( 'Innenabstand', 'ub' ),
 						'classes' => 'sui-border-frame',
 					),
 					'units'        => array(

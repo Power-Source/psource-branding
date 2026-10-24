@@ -188,7 +188,7 @@ if ( ! class_exists( 'PSToolkit_Email_Template' ) ) {
 				),
 				'general' => array(
 					'{SIDEBAR_TITLE}'    => __( 'Seitenleistentitel', 'ub' ),
-					'{BLOG_URL}'         => $this->is_network ? __( 'Blog URL', 'ub' ) : __( 'Seiten URL', 'ub' ),
+					'{BLOG_URL}'         => $this->is_network ? __( 'Blog-URL', 'ub' ) : __( 'Seiten URL', 'ub' ),
 					'{BLOG_NAME}'        => $this->is_network ? __( 'Blog Name', 'ub' ) : __( 'Seiten Name', 'ub' ),
 					'{BLOG_DESCRIPTION}' => $this->is_network ? __( 'Blog Beschreibung', 'ub' ) : __( 'Seitenbeschreibung', 'ub' ),
 					'{DATE}'             => __( 'Aktuelles Datum', 'ub' ),
@@ -200,7 +200,7 @@ if ( ! class_exists( 'PSToolkit_Email_Template' ) ) {
 			 */
 			$options       = array(
 				'theme'   => array(
-					'title'       => __( 'Template', 'ub' ),
+					'title'       => __( 'Vorlage', 'ub' ),
 					'description' => __( 'Wähle eine unserer vorgefertigten E-Mail-Vorlagen und passe sie Deinen Anforderungen entsprechend an.', 'ub' ),
 					'fields'      => array(
 						'template' => array(
@@ -242,7 +242,7 @@ if ( ! class_exists( 'PSToolkit_Email_Template' ) ) {
 				),
 				'content' => array(
 					'no-sui-columns' => true,
-					'title'          => __( 'HTML Editor', 'ub' ),
+					'title'          => __( 'HTML-Editor', 'ub' ),
 					'description'    => __( 'Bearbeite die ausgewählte E-Mail-Vorlage oder schreibe eine neue. Du kannst die oben im Editor angegebenen Variablen verwenden, um dynamische Daten wie E-Mail-Nachrichten einzufügen.', 'ub' ),
 					'fields'         => array(
 						'email' => array(

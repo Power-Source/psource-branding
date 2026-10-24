@@ -3,10 +3,10 @@ msgstr ""
 "Project-Id-Version: PSOURCE Toolkit\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-02-07 14:03+0000\n"
-"PO-Revision-Date: 2023-02-08 23:04+0000\n"
+"PO-Revision-Date: 2026-10-24 20:33+0200\n"
 "Last-Translator: DerN3rd\n"
 "Language-Team: English (United States)\n"
-"Language: en-US\n"
+"Language: en_US\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,11 +17,11 @@ msgstr ""
 
 #: inc/modules/utilities/tracking-codes-list-table.php:135
 msgid " (Kopieren)"
-msgstr "(Copy)"
+msgstr " (Copy)"
 
 #: inc/modules/utilities/text-replacement.php:367
 msgid " z.B. ub"
-msgstr "e.g. ub"
+msgstr " e.g. ub"
 
 #: inc/modules/login-screen/login-screen.php:1639
 #: inc/modules/login-screen/login-screen.php:2455
@@ -206,12 +206,7 @@ msgstr "[no title]"
 
 #: inc/modules/utilities/tracking-codes-list-table.php:64
 msgid "[nicht eingestellt]"
-msgstr "[not discontinued]"
-
-#: inc/class-simple-options.php:362
-#: inc/modules/widgets/dashboard-feeds-table.php:46
-msgid "[no title]"
-msgstr "[no title]"
+msgstr "[not set]"
 
 #: inc/modules/admin/bar.php:691 inc/modules/admin/bar.php:1692
 #: inc/modules/emails/template.php:1064
@@ -240,7 +235,7 @@ msgstr "Sign out URL"
 
 #: inc/modules/login-screen/login-screen.php:712
 msgid "Abmeldung"
-msgstr "logout"
+msgstr "Logout"
 
 #: inc/class-simple-options.php:1775
 msgid "Abschnitt ist bereits im Standardzustand!"
@@ -252,7 +247,7 @@ msgstr "Section has been reset to default settings."
 
 #: views/admin/common/dialogs/reset.php:9
 msgid "Abschnitt zurücksetzen"
-msgstr "reset section"
+msgstr "Reset section"
 
 #: inc/class-simple-options.php:1857
 msgid "Abschnittsdaten wurden erfolgreich kopiert."
@@ -264,7 +259,7 @@ msgstr "Section data has been reset."
 
 #: inc/modules/emails/headers.php:85 inc/modules/emails/smtp.php:386
 msgid "Absender"
-msgstr "recipient"
+msgstr "Sender"
 
 #: inc/modules/emails/headers.php:81 inc/modules/emails/smtp.php:381
 msgid "Absender-E-Mail-Adresse"
@@ -277,10 +272,6 @@ msgstr "Descending"
 #: views/admin/common/footer.php:17
 msgid "Academy"
 msgstr "Academy"
-
-#: inc/modules/admin/custom-css.php:52
-msgid "Admin CSS"
-msgstr "Admin CSS"
 
 #: inc/modules/emails/template.php:170
 msgid "Admin E-Mail"
@@ -535,7 +526,7 @@ msgstr "Current"
 
 #: views/admin/modules/color-schemes/dialogs/edit.php:408
 msgid "Aktuell Hover"
-msgstr "Currently hover"
+msgstr "Current item hover"
 
 #: inc/modules/admin/bar.php:830
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:29
@@ -588,7 +579,7 @@ msgstr "Select all"
 
 #: views/admin/modules/color-schemes/dialogs/edit.php:25
 msgid "Allgemein"
-msgstr "Generally"
+msgstr "General"
 
 #: inc/modules/emails/template.php:229
 msgid "Allgemeine Variablen"
@@ -609,7 +600,7 @@ msgstr "Use as selected image"
 
 #: views/admin/modules/color-schemes/dialogs/edit.php:337
 msgid "Alternative Zeile"
-msgstr "alternate line"
+msgstr "Alternate row"
 
 #: inc/modules/front-end/site-status-page.php:397
 #: inc/modules/front-end/site-status-page.php:424
@@ -631,7 +622,7 @@ msgstr "Animation"
 
 #: etc/config.php:479
 msgid "Anmeldebildschirm"
-msgstr "login screen"
+msgstr "Login screen"
 
 #: etc/config.php:481
 msgid "Anmeldebildschirm anpassen"
@@ -640,7 +631,7 @@ msgstr "Customize login screen"
 #: views/admin/modules/signup-code/row-blog.php:4
 #: views/admin/modules/signup-code/row-user.php:4
 msgid "Anmeldecode"
-msgstr "login code"
+msgstr "Registration code"
 
 #: views/admin/modules/signup-code/items.php:14
 msgid "Anmeldecode hinzufügen"
@@ -648,15 +639,15 @@ msgstr "Add login code"
 
 #: views/admin/modules/signup-code/items.php:1
 msgid "Anmeldecodes"
-msgstr "login codes"
+msgstr "Registration codes"
 
 #: inc/modules/widgets/meta-widget.php:56
 msgid "Anmelden/Abmelden, Admin, Feed und Power-By-Links"
-msgstr "Subscribe/Logout, Admin, Feed and Power-By-Links"
+msgstr "Log in/out, admin, feed, and powered-by links"
 
 #: inc/modules/login-screen/login-screen.php:690
 msgid "Anmeldung"
-msgstr "Registration"
+msgstr "Login"
 
 #: inc/modules/admin/menu.php:500
 msgid "Anpassen"
@@ -664,7 +655,7 @@ msgstr "Adjust"
 
 #: inc/modules/emails/headers.php:90
 msgid "Antwort an"
-msgstr "answer to"
+msgstr "Reply to"
 
 #: inc/modules/emails/headers.php:94
 msgid "Antwort an E-Mail-Adresse"
@@ -672,7 +663,7 @@ msgstr "Reply to email address"
 
 #: inc/modules/emails/headers.php:98
 msgid "Antworte auf den Namen"
-msgstr "Answer the name"
+msgstr "Reply-to name"
 
 #: inc/class-pstoolkit-list-table.php:169
 #: inc/modules/admin/help-content.php:452
@@ -685,7 +676,7 @@ msgstr "Apply"
 
 #: inc/modules/utilities/maintenance.php:260
 msgid "Anwenden auf"
-msgstr "Apply on"
+msgstr "Apply to"
 
 #: inc/modules/widgets/dashboard-feeds.php:315
 msgid "Anzahl"
@@ -697,7 +688,7 @@ msgstr "Number of posts"
 
 #: inc/modules/front-end/author-box.php:1033
 msgid "Anzahl der Einträge"
-msgstr "number of entries"
+msgstr "Number of entries"
 
 #: inc/modules/widgets/dashboard-feeds.php:310
 msgid "Anzeige"
@@ -705,12 +696,12 @@ msgstr "Display"
 
 #: inc/modules/admin/tips.php:425
 msgid "Anzeige bis"
-msgstr "display until"
+msgstr "Display until"
 
 #: inc/modules/utilities/maintenance.php:309
 #: inc/modules/utilities/maintenance.php:743
 msgid "Anzeige Nachricht"
-msgstr "display message"
+msgstr "Display message"
 
 #: views/admin/modules/color-schemes/dialogs/edit.php:313
 #: views/admin/modules/color-schemes/dialogs/edit.php:351
@@ -849,7 +840,7 @@ msgstr "Selected widget does not exist!"
 
 #: inc/modules/login-screen/login-screen.php:2024
 msgid "Ausrichtung"
-msgstr "alignment"
+msgstr "Alignment"
 
 #: inc/modules/utilities/text-replacement.php:400
 msgid "Ausschließen"
@@ -943,7 +934,7 @@ msgstr "Welcome Screen"
 
 #: inc/modules/widgets/dashboard-widgets.php:235
 msgid "Begrüßungsnachricht"
-msgstr "welcome message"
+msgstr "Welcome message"
 
 #: inc/modules/admin/help-content.php:211
 msgid "Behalte die Standardhilfeelemente bei"
@@ -975,7 +966,7 @@ msgstr "Post type"
 
 #: etc/dashicons.php:152
 msgid "Beiträge Bildschirm"
-msgstr "posts screen"
+msgstr "Posts screen"
 
 #: inc/modules/utilities/tracking-codes.php:468
 msgid "Beliebige Anhangsseite"
@@ -995,7 +986,7 @@ msgstr "Any author archive"
 
 #: etc/dashicons.php:268
 msgid "Benachrichtigungen"
-msgstr "notifications"
+msgstr "Notifications"
 
 #: inc/modules/front-end/db-error-page.php:567
 msgid "Benachrichtigungs-E-Mail senden"
@@ -1019,17 +1010,17 @@ msgstr ""
 
 #: views/admin/modules/tracking-codes/dialogs/edit.php:97
 msgid "Benutzer"
-msgstr "user"
+msgstr "User"
 
 #: inc/modules/login-screen/signup-code.php:383
 msgid "Benutzer erstellen-Code"
-msgstr "create user code"
+msgstr "User registration code"
 
 #: inc/modules/utilities/permissions.php:207
 #: inc/modules/utilities/permissions.php:221
 #: views/admin/modules/permissions/dialogs/add-user.php:14
 msgid "Benutzer hinzufügen"
-msgstr "add user"
+msgstr "Add user"
 
 #: views/admin/modules/permissions/dialogs/add-user.php:29
 #: views/admin/modules/permissions/dialogs/add-user.php:32
@@ -1055,7 +1046,7 @@ msgstr "User registration"
 
 #: views/admin/modules/permissions/dialogs/add-user.php:29
 msgid "Benutzer suchen"
-msgstr "search users"
+msgstr "Search users"
 
 #: inc/modules/admin/bar.php:826
 msgid "Benutzer umleiten zu"
@@ -1063,7 +1054,7 @@ msgstr "Redirect user to"
 
 #: inc/modules/emails/registration.php:210
 msgid "Benutzeranmeldung"
-msgstr "user login"
+msgstr "User login"
 
 #: inc/modules/utilities/permissions.php:283
 #: inc/modules/utilities/permissions.php:313
@@ -1134,7 +1125,7 @@ msgstr "Add custom menu item"
 
 #: inc/modules/emails/smtp.php:453
 msgid "Benutzername"
-msgstr "User name"
+msgstr "Username"
 
 #: inc/modules/login-screen/login-screen.php:1470
 msgid "Benutzername oder E-mail Adresse"
@@ -1144,11 +1135,11 @@ msgstr "Username or e-mail address"
 #: inc/modules/utilities/permissions.php:113
 #: views/admin/modules/admin-bar/tmpl/panes/visibility.php:3
 msgid "Benutzerregeln"
-msgstr "user rules"
+msgstr "User roles"
 
 #: etc/config.php:504
 msgid "Benutzerregistrierung"
-msgstr "user registration"
+msgstr "User registration"
 
 #: etc/config.php:98 views/admin/modules/permissions/header.php:9
 msgid "Berechtigungen"
@@ -1164,7 +1155,7 @@ msgstr "Description of the post type"
 
 #: inc/modules/front-end/document.php:358
 msgid "Beschriftungs-Tag"
-msgstr "caption tag"
+msgstr "Caption tag"
 
 #: inc/modules/utilities/comments-control.php:204
 msgid "Bestimmte Beitragstypen"
@@ -1183,7 +1174,7 @@ msgstr "Visited"
 #: inc/modules/emails/registration.php:226
 #: inc/modules/emails/registration.php:260
 msgid "Betreff"
-msgstr "Regarding"
+msgstr "Subject"
 
 #: inc/class-simple-options.php:1990
 msgid "Bild hochladen"
@@ -1191,11 +1182,11 @@ msgstr "Upload Image"
 
 #: inc/modules/login-screen/login-screen.php:1946
 msgid "Bildanpassung"
-msgstr "image adjustment"
+msgstr "Image adjustment"
 
 #: etc/dashicons.php:98
 msgid "Bildbearbeitung"
-msgstr "image editing"
+msgstr "Image editing"
 
 #: inc/modules/utilities/images.php:296
 msgid "Bilddateigrößenbeschränkung"
@@ -1215,7 +1206,7 @@ msgstr "Image order fixed in Gallery tab (CP default)"
 
 #: inc/modules/front-end/author-box.php:1175
 msgid "Bio"
-msgstr "organic"
+msgstr "Bio"
 
 #: inc/modules/front-end/author-box.php:876
 msgid "Biografie des Autors"
@@ -1227,7 +1218,7 @@ msgstr "Until"
 
 #: inc/modules/utilities/maintenance.php:776
 msgid "Bis zum"
-msgstr "until"
+msgstr "Until"
 
 #: inc/modules/admin/tips.php:486
 msgid "Bis zum:"
@@ -1299,11 +1290,11 @@ msgstr "Please select some modules first or skip this step."
 
 #: views/admin/modules/color-schemes/dialogs/edit.php:474
 msgid "Blase"
-msgstr "bladder"
+msgstr "Bubble"
 
 #: views/admin/modules/color-schemes/dialogs/edit.php:486
 msgid "Blasenhintergrund"
-msgstr "bubble background"
+msgstr "Bubble background"
 
 #: inc/modules/utilities/maintenance.php:498
 msgid "Bleib dran!"
@@ -1325,7 +1316,7 @@ msgstr "Hide new help boxes in the \"Network Administration\" section"
 
 #: inc/modules/emails/template.php:682
 msgid "Blog / Seite Name"
-msgstr "blog/page name"
+msgstr "Blog / site name"
 
 #: inc/modules/emails/template.php:681
 msgid "Blog / Seite URL"
@@ -1334,7 +1325,7 @@ msgstr "Blog / Page URL"
 #: etc/config.php:736 inc/modules/emails/template.php:176
 #: inc/modules/emails/template.php:684
 msgid "Blog Beschreibung"
-msgstr "blog description"
+msgstr "Blog description"
 
 #: inc/modules/login-screen/signup-code.php:169
 #: inc/modules/login-screen/signup-code.php:579
@@ -1343,11 +1334,7 @@ msgstr "Create blog code"
 
 #: inc/modules/emails/template.php:175
 msgid "Blog Name"
-msgstr "blog name"
-
-#: inc/modules/emails/template.php:174
-msgid "Blog URL"
-msgstr "Blog URL"
+msgstr "Blog name"
 
 #: etc/config.php:737
 msgid "Blog-Beschreibung zur Blog-Erstellung"
@@ -1359,11 +1346,11 @@ msgstr "Blog creation code is invalid."
 
 #: inc/modules/login-screen/signup-code.php:151
 msgid "Blog-Registrierung"
-msgstr "blog registration"
+msgstr "Blog registration"
 
 #: inc/modules/utilities/tracking-codes.php:476
 msgid "Blog-Seite"
-msgstr "blog page"
+msgstr "Blog page"
 
 #: inc/modules/admin/custom-css.php:66
 msgid "Body"
@@ -1375,12 +1362,12 @@ msgstr "Box"
 
 #: inc/modules/front-end/author-box.php:1566
 msgid "Box-Inhalt"
-msgstr "box content"
+msgstr "Box content"
 
 #: inc/modules/login-screen/login-screen.php:2084
 #: inc/modules/login-screen/login-screen.php:2930
 msgid "Breite"
-msgstr "Broad"
+msgstr "Width"
 
 #: inc/modules/admin/bar.php:1712
 msgid "Builder GET-Parameter"
@@ -1421,7 +1408,7 @@ msgstr "Copy settings"
 #: views/admin/modules/data/dialogs/confirm-delete-subsites.php:17
 msgctxt "button"
 msgid "LÖSCHEN"
-msgstr "EXTINGUISH"
+msgstr "DELETE"
 
 #: views/admin/dashboard/welcome.php:16
 msgctxt "button"
@@ -1433,16 +1420,6 @@ msgstr "Activate modules"
 msgctxt "button"
 msgid "RESET"
 msgstr "RESET"
-
-#: views/admin/dashboard/welcome.php:26
-msgctxt "button"
-msgid "Skip"
-msgstr "Skip"
-
-#: views/admin/dashboard/welcome.php:21
-msgctxt "button"
-msgid "Skip for now"
-msgstr "Skip for now"
 
 #: inc/modules/utilities/tracking-codes.php:584
 msgctxt "button"
@@ -1466,7 +1443,7 @@ msgstr "Cascading Style Sheets"
 
 #: inc/modules/admin/color-schemes.php:262
 msgid "ClassicPress Standard"
-msgstr "Classic Press Default"
+msgstr "ClassicPress default"
 
 #. Name of the plugin
 msgid "PSOURCE Toolkit"
@@ -1475,18 +1452,6 @@ msgstr "PSOURCE Toolkit"
 #: inc/modules/admin/bar.php:447
 msgid "ClassicPress-Menü"
 msgstr "ClassicPress menu"
-
-#: etc/dashicons.php:217
-msgid "ClassicPress.org Specific: Jobs, Profiles, WordCamps"
-msgstr "ClassicPress.org Specific: Jobs, Profiles, WordCamps"
-
-#: inc/modules/utilities/maintenance.php:226
-msgid "COMING SOON"
-msgstr "COMING SOON"
-
-#: inc/modules/widgets/meta-widget.php:82
-msgid "Comments <abbr title=\"Really Simple Syndication\">RSS</abbr>"
-msgstr "Comments <abbr title=\"Really Simple Syndication\">RSS</abbr>"
 
 #: views/admin/common/footer.php:16
 msgid "Community"
@@ -1497,10 +1462,6 @@ msgstr "Community"
 #: inc/modules/login-screen/login-screen.php:2769
 msgid "Container"
 msgstr "Container"
-
-#: inc/modules/front-end/cookie-notice.php:306
-msgid "Cookie Version"
-msgstr "Cookie Version"
 
 #: inc/modules/front-end/cookie-notice.php:248
 msgid "Cookie-Button-Rahmen"
@@ -1517,7 +1478,7 @@ msgstr "Core UI"
 #: inc/modules/utilities/maintenance.php:790
 #: inc/modules/utilities/maintenance.php:849
 msgid "Countdown-Timer"
-msgstr "Countdown-Timer"
+msgstr "Countdown timer"
 
 #: inc/modules/login-screen/login-screen.php:1948
 msgid "Cover"
@@ -1578,10 +1539,8 @@ msgid "Das Dashboard-Widget wurde gelöscht."
 msgstr "The dashboard widget has been deleted."
 
 #: inc/modules/widgets/meta-widget.php:31
-msgid ""
-"Das Meta-Widget wird mit Deinem Webseiten-Link anstelle des Standard-Links "
-"„ClassicPress.org“ umbenannt."
-msgstr "The dashboard widget has been deleted."
+msgid "Das Meta-Widget wird mit Deinem Webseiten-Link anstelle des Standard-Links „ClassicPress.org“ umbenannt."
+msgstr "The Meta widget will use your website link instead of the default “ClassicPress.org” link."
 
 #: inc/functions.php:317
 #, php-format
@@ -1600,18 +1559,6 @@ msgstr ""
 #: views/admin/dashboard/subsite.php:3
 msgid "Dashboard"
 msgstr "Dashboard"
-
-#: etc/config.php:703
-msgid "Dashboard Feeds"
-msgstr "Dashboard Feeds"
-
-#: inc/modules/admin/menu.php:511
-msgid "Dashboard Link"
-msgstr "Dashboard Link"
-
-#: etc/config.php:677
-msgid "Dashboard Widgets"
-msgstr "Dashboard Widgets"
 
 #: inc/modules/widgets/dashboard-widgets.php:220
 msgid "Dashboard Willkommen"
@@ -1637,10 +1584,6 @@ msgstr "Delete dashboard feeds"
 msgid "Dashicon"
 msgstr "Dashicon"
 
-#: etc/config.php:79
-msgid "Data"
-msgstr "Data"
-
 #: inc/modules/front-end/db-error-page.php:468
 #, php-format
 msgid "Datei %s ist nicht beschreibbar, wir können sie nicht ändern."
@@ -1653,7 +1596,7 @@ msgstr "Upload file"
 #: inc/class-simple-options.php:1991 views/admin/common/options/file.php:6
 #: views/admin/modules/admin_menu/dialogs/custom-admin-menu-media-template.php:21
 msgid "Datei löschen"
-msgstr "delete file"
+msgstr "Delete file"
 
 #: inc/modules/utilities/import.php:109
 msgctxt "Dateiname auf dem Importfehlerbildschirm."
@@ -1666,7 +1609,7 @@ msgstr "Data"
 
 #: inc/modules/utilities/data.php:114
 msgid "Daten löschen"
-msgstr "delete data"
+msgstr "Delete data"
 
 #: inc/modules/utilities/data.php:423
 #, php-format
@@ -1679,14 +1622,14 @@ msgstr "Successfully deleted data from all sub-websites."
 
 #: inc/modules/front-end/db-error-page.php:332
 msgid "Datenbankfehler"
-msgstr "database error"
+msgstr "Database error"
 
 #: inc/modules/login-screen/login-screen.php:2477
 #: inc/modules/login-screen/login-screen.php:2502
 #: inc/modules/login-screen/login-screen.php:2527
 #: inc/modules/login-screen/login-screen.php:2552
 msgid "Datenschutzerklärung"
-msgstr "Data protection"
+msgstr "Privacy Policy"
 
 #: inc/modules/widgets/dashboard-feeds.php:343
 msgid "Datum"
@@ -1770,7 +1713,7 @@ msgstr "Include debug information"
 
 #: inc/modules/login-screen/login-screen.php:1987
 msgid "Deckkraft"
-msgstr "opacity"
+msgstr "Opacity"
 
 #: inc/modules/admin/menu.php:335
 msgid "Deine Einstellungen wurden aktualisiert!"
@@ -1778,11 +1721,7 @@ msgstr "Your settings have been updated!"
 
 #: inc/modules/utilities/data.php:80
 msgid "Deinstallation"
-msgstr "uninstall"
-
-#: inc/class-pstoolkit-list-table.php:160
-msgid "Delete"
-msgstr "Delete"
+msgstr "Uninstall"
 
 #: inc/class-pstoolkit-admin.php:410
 msgid "Der eingegebene Wert liegt unter der Feldgrenze!"
@@ -1845,7 +1784,7 @@ msgstr "December"
 
 #: inc/modules/emails/email-logs.php:170
 msgid "Di"
-msgstr "Di"
+msgstr "Tu"
 
 #: views/admin/common/copy.php:54
 msgctxt "Dialog \"Copy Settings\" button"
@@ -1862,16 +1801,7 @@ msgstr "Copy"
 #: inc/modules/login-screen/login-screen.php:1875
 #: inc/modules/login-screen/login-screen.php:1926
 msgid "Dicke"
-msgstr "thickness"
-
-#: inc/modules/front-end/cookie-notice.php:175
-#, php-format
-msgid ""
-"Die aktuell ausgewählte Seite mit den Datenschutzrichtlinien ist nicht "
-"vorhanden. Bitte %1$erstelle oder eine neue Seite auswählen%2$s."
-msgstr ""
-"The currently selected privacy policy page does not exist. Please %1$create "
-"or select a new page%2$s."
+msgstr "Thickness"
 
 #: inc/modules/widgets/dashboard-feeds.php:316
 msgid "Die Anzahl der Feed-Elemente, die Du anzeigen möchtest."
@@ -2144,15 +2074,11 @@ msgstr ""
 
 #: inc/modules/emails/email-logs.php:172
 msgid "Do"
-msgstr "Do"
-
-#: views/admin/common/footer.php:15 views/admin/common/footer.php:29
-msgid "Docs"
-msgstr "Docs"
+msgstr "Th"
 
 #: etc/config.php:787
 msgid "Dokument"
-msgstr "document"
+msgstr "Document"
 
 #: views/admin/common/header.php:8
 msgid "Dokumentation anzeigen"
@@ -2324,7 +2250,7 @@ msgstr "You must enter the code to create a blog."
 #: views/admin/modules/admin_menu/dialogs/custom-admin-menu-item.php:53
 #: views/admin/modules/admin_menu/dialogs/custom-admin-menu-item.php:57
 msgid "Duplikat"
-msgstr "duplicate"
+msgstr "Duplicate"
 
 #: inc/modules/emails/template.php:166 inc/modules/emails/template.php:677
 msgid "E-Mail Betreff"
@@ -2366,7 +2292,7 @@ msgstr "Email content (required)"
 
 #: inc/modules/emails/email-logs-cpt.php:268
 msgid "E-Mail-Protokoll"
-msgstr "email log"
+msgstr "Email log"
 
 #: inc/modules/emails/email-logs.php:507
 msgid "E-Mail-Protokoll wurde gelöscht."
@@ -2382,11 +2308,7 @@ msgstr "Email template"
 
 #: etc/config.php:33
 msgid "E-Mails"
-msgstr "E-Mails"
-
-#: views/admin/modules/admin-bar/tmpl/panes/general.php:44
-msgid "E.g. http://example.com"
-msgstr "E.g. http://example.com"
+msgstr "Emails"
 
 #: inc/modules/login-screen/login-screen.php:1777
 msgid "Ecken mit Kantenradius"
@@ -2397,7 +2319,7 @@ msgstr "Corners with edge radius"
 #: inc/modules/front-end/cookie-notice.php:239
 #: inc/modules/login-screen/login-screen.php:1767
 msgid "Eckenradius"
-msgstr "corner radius"
+msgstr "Corner radius"
 
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:36
 msgid "Eigene URL"
@@ -2408,7 +2330,7 @@ msgstr "Own URL"
 #: views/admin/modules/admin_menu/dialogs/custom-admin-menu-item.php:76
 #: views/admin/modules/admin_menu/dialogs/custom-admin-menu-item.php:80
 msgid "Einblenden"
-msgstr "unhide"
+msgstr "Show"
 
 #: views/admin/modules/admin_menu/dialogs/custom-admin-menu-item-container.php:63
 #: views/admin/modules/admin_menu/dialogs/custom-admin-menu-item-container.php:67
@@ -2443,26 +2365,26 @@ msgstr "Monochrome"
 
 #: inc/modules/front-end/document.php:406
 msgid "Eingabe"
-msgstr "input"
+msgstr "Input"
 
 #: inc/modules/login-screen/login-screen.php:2307
 #: inc/modules/login-screen/login-screen.php:2347
 #: inc/modules/login-screen/login-screen.php:2387
 msgid "Eingabe Farbe"
-msgstr "input color"
+msgstr "Input color"
 
 #: inc/modules/login-screen/login-screen.php:2248
 #: inc/modules/login-screen/login-screen.php:2321
 #: inc/modules/login-screen/login-screen.php:2361
 #: inc/modules/login-screen/login-screen.php:2401
 msgid "Eingabe Hintergrund"
-msgstr "input background"
+msgstr "Input background"
 
 #: inc/modules/login-screen/login-screen.php:2316
 #: inc/modules/login-screen/login-screen.php:2356
 #: inc/modules/login-screen/login-screen.php:2396
 msgid "Eingabe Rahmen"
-msgstr "input frame"
+msgstr "Input border"
 
 #: inc/modules/login-screen/login-screen.php:1469
 msgid "Eingabebezeichnung für den Benutzernamen"
@@ -2470,23 +2392,23 @@ msgstr "Input label for the username"
 
 #: inc/modules/login-screen/login-screen.php:2221
 msgid "Eingabeetikett"
-msgstr "Input label for the username"
+msgstr "Input label"
 
 #: inc/modules/login-screen/login-screen.php:2238
 msgid "Eingabefarbe"
-msgstr "input color"
+msgstr "Input color"
 
 #: inc/modules/login-screen/login-screen.php:2243
 msgid "Eingaberahmen"
-msgstr "input frame"
+msgstr "Input border"
 
 #: inc/modules/login-screen/login-screen.php:1487
 msgid "Einloggen"
-msgstr "log in"
+msgstr "Log in"
 
 #: inc/modules/utilities/text-replacement.php:399
 msgid "Einschließen"
-msgstr "Lock in"
+msgstr "Include"
 
 #: etc/config.php:45 inc/modules/admin/help-content.php:198
 #: inc/modules/content/footer.php:144 inc/modules/content/footer.php:241
@@ -2495,7 +2417,7 @@ msgstr "Lock in"
 #: views/admin/modules/admin_menu/dialogs/custom-admin-menu-dialog.php:31
 #: views/admin/modules/admin_menu/dialogs/custom-admin-menu-item.php:136
 msgid "Einstellungen"
-msgstr "Ideas"
+msgstr "Settings"
 
 #: views/admin/common/copy.php:19
 msgid "Einstellungen kopieren von"
@@ -2503,16 +2425,16 @@ msgstr "Copy settings from"
 
 #: views/admin/modules/email-logs/dialogs/settings.php:13
 msgid "Einstellungen speichern"
-msgstr "save settings"
+msgstr "Save settings"
 
 #: inc/modules/utilities/data.php:129
 #: views/admin/modules/data/dialogs/confirm-reset.php:9
 msgid "Einstellungen zurücksetzen"
-msgstr "reset settings"
+msgstr "Reset settings"
 
 #: inc/modules/front-end/author-box.php:1252
 msgid "Eintrag"
-msgstr "entry"
+msgstr "Entry"
 
 #: inc/modules/front-end/author-box.php:569
 msgid "Eintrag hat keinen Titel"
@@ -2520,7 +2442,7 @@ msgstr "Entry has no title"
 
 #: inc/modules/front-end/document.php:138
 msgid "Eintragsinhalt"
-msgstr "entry content"
+msgstr "Entry content"
 
 #: inc/modules/front-end/author-box.php:1049
 msgid "Eintragstitel (optional)"
@@ -2528,7 +2450,7 @@ msgstr "Entry title (optional)"
 
 #: inc/modules/front-end/author-box.php:1010
 msgid "Eintragstyp"
-msgstr "entry type"
+msgstr "Entry type"
 
 #: inc/modules/utilities/tracking-codes.php:473
 msgid "Einzelne Beiträge"
@@ -2536,25 +2458,25 @@ msgstr "Individual Posts"
 
 #: inc/modules/utilities/tracking-codes.php:472
 msgid "Einzelne Seite"
-msgstr "single page"
+msgstr "Single page"
 
 #: views/admin/modules/admin-bar/row.php:21
 #: views/admin/modules/signup-code/row-blog.php:16
 #: views/admin/modules/signup-code/row-user.php:9
 msgid "Element entfernen"
-msgstr "remove item"
+msgstr "Remove item"
 
 #: views/admin/modules/color-schemes/dialogs/edit.php:677
 #: views/admin/modules/color-schemes/dialogs/edit.php:715
 msgid "Element Hintergrund"
-msgstr "element background"
+msgstr "Item background"
 
 #: inc/modules/admin/bar.php:1057 inc/modules/admin/bar.php:1084
 #: views/admin/modules/admin_menu/dialogs/custom-admin-menu-item-container.php:79
 #: views/admin/modules/admin-bar/tmpl/panes/submenu.php:11
 #: views/admin/modules/admin-bar/tmpl/panes/submenu.php:23
 msgid "Element hinzufügen"
-msgstr "add item"
+msgstr "Add item"
 
 #: inc/modules/admin/help-content.php:487
 msgid "Element wurde aktualisiert."
@@ -2567,12 +2489,12 @@ msgstr "Item has been deleted."
 
 #: inc/modules/front-end/document.php:342
 msgid "Element-Tag"
-msgstr "element tag"
+msgstr "Item tag"
 
 #: views/admin/modules/color-schemes/dialogs/edit.php:689
 #: views/admin/modules/color-schemes/dialogs/edit.php:727
 msgid "Elementfarbe"
-msgstr "item color"
+msgstr "Item color"
 
 #: inc/modules/admin/tips.php:134
 msgid "Elementliste filtern"
@@ -2591,15 +2513,11 @@ msgstr "Parent tip:"
 #: inc/modules/emails/registration.php:236
 #: inc/modules/emails/registration.php:270
 msgid "Email Inhalt"
-msgstr "email content"
-
-#: etc/config.php:769 etc/config.php:770
-msgid "Email Logs"
-msgstr "Email Logs"
+msgstr "Email content"
 
 #: inc/modules/emails/headers.php:77
 msgid "Email von"
-msgstr "email from"
+msgstr "From email"
 
 #: inc/modules/emails/email-logs.php:672
 #: views/admin/modules/email-logs/pagination-section.php:115
@@ -2640,15 +2558,11 @@ msgstr ""
 
 #: inc/modules/utilities/data.php:99
 msgid "Entfernen"
-msgstr "Removed"
+msgstr "Remove"
 
 #: inc/modules/login-screen/login-screen.php:1950
 msgid "Enthalten"
 msgstr "Contain"
-
-#: inc/modules/widgets/meta-widget.php:81
-msgid "Entries <abbr title=\"Really Simple Syndication\">RSS</abbr>"
-msgstr "Entries <abbr title=\"Really Simple Syndication\">RSS</abbr>"
 
 #: inc/modules/utilities/maintenance.php:495
 msgid ""
@@ -2836,7 +2750,7 @@ msgstr "Export"
 #: inc/modules/admin/bar.php:957
 #: views/admin/modules/admin-bar/tmpl/panes/submenu.php:83
 msgid "Extern"
-msgstr "Extern"
+msgstr "External"
 
 #: inc/modules/front-end/cookie-notice.php:230
 msgid "Fade"
@@ -2844,7 +2758,7 @@ msgstr "Fade"
 
 #: inc/modules/utilities/text-replacement.php:386
 msgid "Fallübereinstimmung"
-msgstr "case match"
+msgstr "Case sensitivity"
 
 #: inc/class-simple-options.php:1715
 msgid "Falsche Handlung!"
@@ -2885,7 +2799,7 @@ msgstr "Don't enforce color scheme"
 
 #: etc/config.php:192
 msgid "Farbschemata"
-msgstr "color schemes"
+msgstr "Color schemes"
 
 #: inc/class-pstoolkit-admin.php:388
 msgid "Farbwert"
@@ -2931,7 +2845,7 @@ msgstr "Missing required parameters."
 
 #: inc/modules/front-end/site-status-page.php:378
 msgid "Fehler"
-msgstr "Mistake"
+msgstr "Error"
 
 #: inc/modules/login-screen/login-screen.php:978
 #, php-format
@@ -2957,7 +2871,7 @@ msgstr "Error message"
 #: inc/modules/login-screen/login-screen.php:1581
 #: inc/modules/login-screen/login-screen.php:1994
 msgid "Fehlermeldungen"
-msgstr "error messages"
+msgstr "Error messages"
 
 #: inc/modules/emails/smtp.php:76
 msgid "Feld \"An\" darf nicht leer sein!"
@@ -2970,11 +2884,11 @@ msgstr "Description field"
 
 #: inc/modules/login-screen/signup-code.php:164
 msgid "Feldbezeichnung"
-msgstr "field label"
+msgstr "Field label"
 
 #: inc/modules/front-end/document.php:233
 msgid "Feldtitel"
-msgstr "field title"
+msgstr "Field title"
 
 #: views/admin/modules/email-logs/pagination-section.php:65
 msgid "Filter Ergebnisse"
@@ -2998,25 +2912,13 @@ msgstr "Flat"
 msgid "FlipClock"
 msgstr "FlipClock"
 
-#: inc/modules/login-screen/login-screen.php:2516
-msgid "Focus"
-msgstr "Focus"
-
 #: inc/modules/front-end/cookie-notice.php:649
 #: inc/modules/front-end/cookie-notice.php:756
 #: inc/modules/login-screen/login-screen.php:2350
 #: views/admin/modules/color-schemes/dialogs/edit.php:409
 #: views/admin/modules/color-schemes/dialogs/edit.php:622
 msgid "Fokus"
-msgstr "focus"
-
-#: inc/modules/admin/custom-css.php:67
-msgid "Footer"
-msgstr "Footer"
-
-#: inc/modules/login-screen/login-screen.php:2076
-msgid "Form Canvas"
-msgstr "Form Canvas"
+msgstr "Focus"
 
 #: inc/modules/front-end/document.php:198
 msgid "Format"
@@ -3032,19 +2934,19 @@ msgstr "Form"
 
 #: inc/modules/login-screen/login-screen.php:2941
 msgid "Formular Container"
-msgstr "form container"
+msgstr "Form container"
 
 #: inc/modules/login-screen/login-screen.php:2598
 msgid "Formular Leinwand"
-msgstr "form containers"
+msgstr "Form canvas"
 
 #: inc/modules/login-screen/login-screen.php:2771
 msgid "Formular Wrapper"
-msgstr "form wrapper"
+msgstr "Form wrapper"
 
 #: inc/modules/login-screen/login-screen.php:2293
 msgid "Formularbox Hintergrund"
-msgstr "form box background"
+msgstr "Form box background"
 
 #: inc/modules/login-screen/login-screen.php:2284
 msgid "Formularbox Schatten"
@@ -3052,15 +2954,15 @@ msgstr "Form box shadow"
 
 #: views/admin/modules/color-schemes/dialogs/edit.php:149
 msgid "Formulare"
-msgstr "forms"
+msgstr "Forms"
 
 #: inc/modules/login-screen/login-screen.php:2268
 msgid "Formularhintergrund"
-msgstr "form background"
+msgstr "Form background"
 
 #: inc/modules/login-screen/login-screen.php:2276
 msgid "Formularrahmen"
-msgstr "form frame"
+msgstr "Form border"
 
 #: inc/modules/emails/template.php:1073
 #: inc/modules/login-screen/login-screen.php:2652
@@ -3075,10 +2977,6 @@ msgstr "Progress bar￼"
 #: inc/modules/emails/email-logs.php:173
 msgid "Fr"
 msgstr "Fr"
-
-#: views/admin/common/footer.php:26
-msgid "Free Plugins"
-msgstr "Free Plugins"
 
 #: inc/modules/admin/bar.php:490
 msgid "Front-End"
@@ -3098,7 +2996,7 @@ msgstr "Does it work as desired?"
 
 #: etc/config.php:563
 msgid "Fußzeileninhalt"
-msgstr "footer content"
+msgstr "Footer content"
 
 #: inc/modules/content/footer.php:288
 msgid ""
@@ -3112,17 +3010,12 @@ msgid ""
 msgstr "Add any content to the footer of your network's main page."
 
 #: etc/config.php:564
-msgid ""
-"Füge beliebige Inhalte in die Fußzeile jedes Blogs oder jeder Webseite in "
-"Deinem Netzwerk ein. Du kannst beispielsweise Einbettungen, "
-"Nutzungsbedingungen usw. hinzufügen."
-msgstr "Add any content to the footer of your network's main page."
+msgid "Füge beliebige Inhalte in die Fußzeile jedes Blogs oder jeder Webseite in Deinem Netzwerk ein. Du kannst beispielsweise Einbettungen, Nutzungsbedingungen usw. hinzufügen."
+msgstr "Add any content to the footer of every blog or website in your network. For example, you can add embeds, terms of service, and more."
 
 #: etc/config.php:264
-msgid ""
-"Füge benutzerdefiniertes CSS hinzu, das dem Header jeder "
-"Administrationsseite für jede Webseite hinzugefügt wird."
-msgstr "Add any content to the footer of your network's main page."
+msgid "Füge benutzerdefiniertes CSS hinzu, das dem Header jeder Administrationsseite für jede Webseite hinzugefügt wird."
+msgstr "Add custom CSS to the header of every administration page on every website."
 
 #: etc/config.php:264
 msgid ""
@@ -3131,16 +3024,12 @@ msgid ""
 msgstr "Add custom CSS added to the header of each admin page."
 
 #: inc/modules/admin/menu.php:617
-msgid ""
-"Füge Deine eigene CSS-Klasse hinzu. Trenne mehrere Klassen durch ein "
-"Leerzeichen."
-msgstr "Add custom CSS added to the header of each admin page."
+msgid "Füge Deine eigene CSS-Klasse hinzu. Trenne mehrere Klassen durch ein Leerzeichen."
+msgstr "Add your own CSS class. Separate multiple classes with a space."
 
 #: inc/modules/widgets/dashboard-widgets.php:244
-msgid ""
-"Füge dem ClassicPress-Dashboard Text-Widgets mit Deinen benutzerdefinierten "
-"Inhalten hinzu."
-msgstr "Add custom CSS added to the header of each admin page."
+msgid "Füge dem ClassicPress-Dashboard Text-Widgets mit Deinen benutzerdefinierten Inhalten hinzu."
+msgstr "Add text widgets with your custom content to the ClassicPress dashboard."
 
 #: inc/modules/content/header.php:279
 msgid ""
@@ -3156,10 +3045,8 @@ msgid ""
 msgstr "Add the desired content to the header of your network's main website."
 
 #: inc/modules/admin/bar.php:566
-msgid ""
-"Füge der Admin-Leiste benutzerdefinierte CSS-Stile hinzu. Kein anderer Teil "
-"von ClassicPress ist betroffen."
-msgstr "Add the desired content to the header of your network's main website."
+msgid "Füge der Admin-Leiste benutzerdefinierte CSS-Stile hinzu. Kein anderer Teil von ClassicPress ist betroffen."
+msgstr "Add custom CSS styles to the admin bar. No other part of ClassicPress is affected."
 
 #: etc/config.php:305
 msgid ""
@@ -3180,14 +3067,8 @@ msgstr ""
 
 #: inc/modules/admin/bar.php:592
 #, php-format
-msgid ""
-"Füge einen Parameter pro Zeile hinzu. Wenn Du Probleme beim Auffinden der "
-"GET-Parameter für Deinen Page Builder hast, findest Du Parameter für "
-"beliebte Ersteller %1$shier%2$s."
-msgstr ""
-"Add one parameter per line. If you're having trouble finding the GET "
-"parameters for your page builder, you can find parameters for popular "
-"creators %1$here%2$s."
+msgid "Füge einen Parameter pro Zeile hinzu. Wenn Du Probleme beim Auffinden der GET-Parameter für Deinen Page Builder hast, findest Du Parameter für beliebte Ersteller %1$shier%2$s."
+msgstr "Add one parameter per line. If you have trouble finding GET parameters for your page builder, you can find parameters for popular builders %1$shere%2$s."
 
 #: inc/modules/widgets/dashboard-widgets.php:238
 msgid "Füge hier Deine benutzerdefinierte Begrüßungsnachricht hinzu..."
@@ -3220,7 +3101,7 @@ msgstr "Add the admin message here..."
 
 #: inc/modules/admin/bar.php:591
 msgid "Füge hier GET-Parameter hinzu"
-msgstr "Add the admin message here..."
+msgstr "Add GET parameters here"
 
 #: inc/modules/admin/menu.php:540
 msgid ""
@@ -3231,12 +3112,8 @@ msgstr ""
 "the users."
 
 #: inc/modules/admin/help-content.php:189
-msgid ""
-"Füge im Inhaltsbereich der Hilfe eine Seitenleiste hinzu. Du kannst dieses "
-"Feld leer lassen, wenn Du keine Hilfeseitenleiste möchtest."
-msgstr ""
-"Add a custom post type \"Tips\" in the ClassicPress menu and add tips for "
-"the users."
+msgid "Füge im Inhaltsbereich der Hilfe eine Seitenleiste hinzu. Du kannst dieses Feld leer lassen, wenn Du keine Hilfeseitenleiste möchtest."
+msgstr "Add a sidebar to the help content area. Leave this field blank if you do not want a help sidebar."
 
 #: inc/modules/content/footer.php:177
 msgid ""
@@ -3263,21 +3140,16 @@ msgid "Füge unterschiedliche Inhalte ein"
 msgstr "Add different content"
 
 #: etc/config.php:593
-msgid ""
-"Fügt am Ende Deiner Beiträge ein ansprechendes Autorenfeld hinzu, in dem der "
-"Autorenname, der Autorengravatar sowie die Autorenbeschreibung und die "
-"sozialen Profile angezeigt werden."
-msgstr "Add different content"
+msgid "Fügt am Ende Deiner Beiträge ein ansprechendes Autorenfeld hinzu, in dem der Autorenname, der Autorengravatar sowie die Autorenbeschreibung und die sozialen Profile angezeigt werden."
+msgstr "Add an author box at the end of your posts showing the author's name, Gravatar, biography, and social profiles."
 
 #: inc/modules/admin/help-content.php:213
-msgid ""
-"Führe die neuen Hilfeelemente mit den Standardelementen zusammen, anstatt "
-"sie zu löschen."
-msgstr "Add different content"
+msgid "Führe die neuen Hilfeelemente mit den Standardelementen zusammen, anstatt sie zu löschen."
+msgstr "Merge the new help items with the default items instead of deleting them."
 
 #: inc/modules/login-screen/login-screen.php:1949
 msgid "Füllen"
-msgstr "Add different content"
+msgstr "Fill"
 
 #: inc/modules/admin/bar.php:58
 msgid "Gast"
@@ -3310,11 +3182,11 @@ msgstr ""
 #: inc/modules/front-end/site-status-page.php:435
 #: inc/modules/front-end/site-status-page.php:535
 msgid "Gelöscht"
-msgstr "Turned off"
+msgstr "Deleted"
 
 #: inc/modules/login-screen/login-screen.php:2099
 msgid "Gerätehöhe"
-msgstr "device height"
+msgstr "Device height"
 
 #: inc/modules/front-end/document.php:199
 #, php-format
@@ -3323,15 +3195,15 @@ msgstr "Protected: %s"
 
 #: inc/modules/emails/email-logs.php:673
 msgid "Gesendet am"
-msgstr "sent on"
+msgstr "Sent on"
 
 #: views/admin/common/modules/header.php:32
 msgid "Gespeichert"
-msgstr "saved"
+msgstr "Saved"
 
 #: inc/modules/emails/email-logs.php:139
 msgid "Gestern"
-msgstr "saved"
+msgstr "Yesterday"
 
 #: inc/modules/admin/bar.php:590
 msgid "GET-Parameter"
@@ -3350,10 +3222,8 @@ msgid "Gib Benutzernamen ein"
 msgstr "Enter username"
 
 #: views/admin/modules/permissions/dialogs/add-user.php:23
-msgid ""
-"Gib das Benutzer-Login oder die E-Mail-Adresse in das Feld ein, das "
-"hinzugefügt werden soll. Du kannst beliebig viele Benutzer hinzufügen."
-msgstr "Enter username"
+msgid "Gib das Benutzer-Login oder die E-Mail-Adresse in das Feld ein, das hinzugefügt werden soll. Du kannst beliebig viele Benutzer hinzufügen."
+msgstr "Enter the login or email address of the user to add. You can add as many users as you like."
 
 #: views/admin/modules/signup-password/password-fields.php:14
 msgid "Gib Dein neues Passwort erneut ein."
@@ -3434,7 +3304,7 @@ msgstr "Enter a username in the search field."
 #: inc/modules/front-end/author-box.php:403
 #, php-format
 msgid "Gib hier %s URL ein..."
-msgstr "Enter a username in the search field."
+msgstr "Enter the %s URL here..."
 
 #: inc/modules/admin/bar.php:570 inc/modules/admin/custom-css.php:55
 msgid "Gib hier benutzerdefiniertes CSS ein..."
@@ -3450,7 +3320,7 @@ msgstr "Enter your IP whitelist here..."
 
 #: views/admin/common/options/social-media-row.php:16
 msgid "Gib hier Deine Profil-URL ein"
-msgstr "Enter your IP whitelist here..."
+msgstr "Enter your profile URL here"
 
 #: inc/modules/utilities/maintenance.php:752
 msgid "Gib hier Deinen Inhalt ein…"
@@ -3482,15 +3352,15 @@ msgstr "Enter the content of the help article here..."
 
 #: views/admin/modules/admin-help-content/dialogs/edit.php:17
 msgid "Gib hier den Titel des Hilfeelements ein..."
-msgstr "Enter the content of the help article here..."
+msgstr "Enter the help item title here..."
 
 #: views/admin/modules/dashboard-widgets/dialogs/edit.php:24
 msgid "Gib hier den Titel des Text-Widgets ein..."
-msgstr "Enter the content of the help article here..."
+msgstr "Enter the text widget title here..."
 
 #: inc/modules/emails/smtp.php:462
 msgid "Gib hier Ihr SMTP-Passwort ein"
-msgstr "Enter the content of the help article here..."
+msgstr "Enter your SMTP password here"
 
 #: inc/modules/content/footer.php:293 inc/modules/content/header.php:284
 msgid "Gleich wie Hauptwebseite"
@@ -3502,22 +3372,22 @@ msgstr "Same tab"
 
 #: views/admin/modules/admin-bar/tmpl/panes/submenu.php:67
 msgid "gleiche Registerkarte"
-msgstr "Same as main website"
+msgstr "Same tab"
 
 #: inc/modules/admin/menu.php:709
 #: views/admin/modules/admin-bar/dialogs/submenu.php:26
 msgid "gleicher Registerkarte"
-msgstr "same tab"
+msgstr "Same tab"
 
 #: inc/modules/front-end/document.php:314
 msgid "Groß"
-msgstr "same tab"
+msgstr "Large"
 
 #: inc/modules/utilities/text-replacement.php:390
 #: views/admin/modules/signup-code/row-blog.php:10
 #: views/admin/modules/signup-code/row-user.php:25
 msgid "Groß- und Kleinschreibung beachten"
-msgstr "Note upper and lower case letters"
+msgstr "Case-sensitive"
 
 #: inc/modules/utilities/text-replacement.php:389
 msgid "Groß- und Kleinschreibung nicht berücksichtigen"
@@ -3618,7 +3488,7 @@ msgstr "Has tag:"
 
 #: inc/modules/admin/custom-admin-menu/pstoolkit-admin-menu-builder.php:435
 msgid "Hauptmenü"
-msgstr "main menu"
+msgstr "Main menu"
 
 #: inc/modules/admin/custom-admin-menu/pstoolkit-admin-menu-builder.php:140
 msgid "Hauptmenü reduzieren"
@@ -3627,23 +3497,19 @@ msgstr "Reduce main menu"
 #: inc/modules/utilities/images.php:231
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:25
 msgid "Hauptseite"
-msgstr "main page"
+msgstr "Main site"
 
 #: inc/modules/content/footer.php:278 inc/modules/content/header.php:269
 msgid "Hauptwebseite"
-msgstr "main webpage"
+msgstr "Main website"
 
 #: etc/config.php:545
 msgid "Header-Inhalt"
-msgstr "header content"
+msgstr "Header content"
 
 #: inc/modules/emails/email-logs.php:138
 msgid "Heute"
 msgstr "Today"
-
-#: inc/modules/login-screen/login-screen.php:1525
-msgid "Hide"
-msgstr "Hide"
 
 #: views/admin/dashboard/modules/frequently-used.php:30
 msgid "Hier findest Du Deine Top 5 häufig verwendeten Module."
@@ -3831,10 +3697,6 @@ msgstr "Host"
 msgid "HTML"
 msgstr "Host"
 
-#: inc/modules/emails/template.php:217
-msgid "HTML Editor"
-msgstr "HTML Editor"
-
 #: inc/modules/utilities/text-replacement.php:343
 msgid ""
 "https://codex.classicpress.org/I18n_for_ClassicPress_Developers#Text_Domains"
@@ -3992,19 +3854,11 @@ msgstr "content type"
 
 #: inc/modules/front-end/author-box.php:304
 msgid "Inline-Inhalt"
-msgstr "inline content"
+msgstr "Inline content"
 
 #: inc/modules/utilities/maintenance.php:995
 msgid "Insgesamt"
 msgstr "In total"
-
-#: inc/modules/utilities/comments-control.php:227
-msgid "IP Blacklist"
-msgstr "IP Blacklist"
-
-#: inc/modules/utilities/comments-control.php:251
-msgid "IP Whitelist"
-msgstr "IP Whitelist"
 
 #: inc/modules/utilities/comments-control.php:254
 msgid ""
@@ -4021,7 +3875,7 @@ msgstr "Yes"
 
 #: inc/modules/admin/bar.php:699
 msgid "Ja, zurücksetzen!"
-msgstr "Yes reset!"
+msgstr "Yes, reset!"
 
 #: inc/modules/login-screen/signup-code.php:142
 #: inc/modules/login-screen/signup-code.php:201
@@ -4049,12 +3903,12 @@ msgstr "No feed found, try another site or enter the details manually."
 
 #: inc/modules/front-end/document.php:330
 msgid "Kein Link"
-msgstr "No feed found, try another site or enter the details manually."
+msgstr "No link"
 
 #: inc/modules/emails/smtp.php:422 inc/modules/front-end/cookie-notice.php:229
 #: inc/modules/login-screen/login-screen.php:1951
 msgid "Keine"
-msgstr "No"
+msgstr "None"
 
 #: views/admin/modules/permissions/dialogs/add-user.php:40
 msgid "keine Ergebnisse gefunden"
@@ -4062,16 +3916,16 @@ msgstr "No Results Found"
 
 #: inc/modules/admin/menu.php:697
 msgid "Keinen"
-msgstr "none"
+msgstr "None"
 
 #: inc/modules/utilities/permissions.php:162
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:23
 msgid "Keiner"
-msgstr "none"
+msgstr "None"
 
 #: inc/modules/admin/menu.php:678
 msgid "Keines"
-msgstr "none"
+msgstr "None"
 
 #: inc/modules/admin/bar.php:558
 msgid ""
@@ -4111,7 +3965,7 @@ msgstr "Comments are closed."
 
 #: etc/config.php:398
 msgid "Kommentarsteuerung"
-msgstr "comment control"
+msgstr "Comment control"
 
 #: views/admin/modules/import/errors/footer.php:3
 msgid "Konfiguration ist nicht möglich!"
@@ -4137,7 +3991,7 @@ msgstr "Configure"
 
 #: inc/modules/emails/smtp.php:489
 msgid "Konflikt-Plugins"
-msgstr "conflict plugins"
+msgstr "Conflicting plugins"
 
 #: inc/modules/front-end/author-box.php:1411
 #: inc/modules/front-end/author-box.php:1490
@@ -4213,10 +4067,6 @@ msgstr "Leave the fields blank to generate a random password."
 msgid "Lasse dieses Feld leer, wenn Du keinen Titel anzeigen möchtest."
 msgstr "Leave this field blank if you don't want to display a title."
 
-#: views/admin/dashboard/modules/import-export.php:21
-msgid "Last Used"
-msgstr "Last Used"
-
 #: inc/modules/admin/tips.php:487
 msgid "Leer lassen für unbegrenzte Anzeigedauer."
 msgstr "Leave blank for unlimited viewing time."
@@ -4228,7 +4078,7 @@ msgstr "empty color"
 #: inc/class-pstoolkit-admin.php:383 inc/modules/front-end/document.php:211
 #: views/admin/modules/admin-bar/dashicons.php:51
 msgid "Leeren"
-msgstr "To empty"
+msgstr "Clear"
 
 #: inc/modules/login-screen/login-screen.php:1577
 msgid "Leerer Benutzername"
@@ -4274,7 +4124,7 @@ msgstr "Read more from the same author:"
 #: inc/modules/front-end/author-box.php:1025
 #: inc/modules/front-end/author-box.php:1247
 msgid "Letzte Einträge"
-msgstr "Letzte Einträge"
+msgstr "Recent posts"
 
 #: inc/modules/emails/email-logs.php:141
 msgid "Letzten 30 Tage"
@@ -4282,19 +4132,11 @@ msgstr "Last 30 days"
 
 #: inc/modules/emails/email-logs.php:140
 msgid "Letzten 7 Tage"
-msgstr "Last 30 days"
+msgstr "Last 7 days"
 
 #: inc/modules/emails/email-logs.php:143
 msgid "Letzter Monat"
 msgstr "Last month"
-
-#: views/admin/dashboard/welcome.php:12
-msgid ""
-"Let’s get you started by activating the modules you want to use. You can "
-"always activate/deactivate modules later."
-msgstr ""
-"Let’s get you started by activating the modules you want to use. You can "
-"always activate/deactivate modules later."
 
 #: inc/modules/utilities/site-generator.php:71
 #: views/admin/modules/color-schemes/dialogs/edit.php:414
@@ -4327,24 +4169,16 @@ msgstr "Remove link for users without a website"
 #: views/admin/modules/color-schemes/dialogs/edit.php:512
 #: views/admin/modules/color-schemes/dialogs/edit.php:550
 msgid "Link Hintergrund"
-msgstr "link background"
-
-#: inc/modules/admin/menu.php:522
-msgid "Link Manager"
-msgstr "Link Manager"
+msgstr "Link background"
 
 #: inc/modules/admin/menu.php:526
 msgid "Link Manager aktivieren"
 msgstr "Enable Link Manager"
 
-#: inc/modules/front-end/author-box.php:827
-msgid "Link Name"
-msgstr "Link Name"
-
 #: inc/modules/admin/menu.php:695
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:20
 msgid "Link zu"
-msgstr "link to"
+msgstr "Link to"
 
 #: inc/modules/front-end/document.php:329
 msgid "Link zur Bilddatei"
@@ -4359,7 +4193,7 @@ msgstr "Link to Privacy Policy"
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:47
 #: views/admin/modules/admin-bar/tmpl/panes/submenu.php:61
 msgid "Link öffnen in"
-msgstr "link name"
+msgstr "Open link in"
 
 #: inc/modules/front-end/cookie-notice.php:700
 #: inc/modules/login-screen/login-screen.php:1820
@@ -4380,11 +4214,11 @@ msgstr "Links below the form"
 
 #: inc/modules/front-end/author-box.php:1567
 msgid "Liste"
-msgstr "Links below the form"
+msgstr "List"
 
 #: inc/modules/admin/tips.php:132
 msgid "Liste der Tipps"
-msgstr "list of tips"
+msgstr "List of tips"
 
 #: inc/modules/emails/template.php:688
 msgid "Liste der Variablen, die in der Vorlage verwendet werden können"
@@ -4392,7 +4226,7 @@ msgstr "List of variables that can be used in the template"
 
 #: inc/modules/widgets/dashboard-widgets.php:263
 msgid "Liste zurücksetzen"
-msgstr "reset list"
+msgstr "Reset list"
 
 #: inc/modules/utilities/maintenance.php:225
 msgid "LIVE"
@@ -4416,7 +4250,7 @@ msgstr "Delete Dashboard Feed"
 #: views/admin/modules/admin_menu/dialogs/custom-admin-menu-item.php:31
 #: views/admin/modules/admin_menu/dialogs/custom-admin-menu-item.php:35
 msgid "Löschen"
-msgstr "Extinguish"
+msgstr "Delete"
 
 #: views/admin/modules/color-schemes/dialogs/edit.php:79
 msgid "Löschen / Papierkorb / Spam -Link"
@@ -4430,14 +4264,9 @@ msgstr "Delete / Recycle Bin / Spam Link"
 msgid "Mai"
 msgstr "May"
 
-#: inc/modules/login-screen/login-screen.php:1838
-#: inc/modules/login-screen/login-screen.php:2156
-msgid "Margin"
-msgstr "Margin"
-
 #: inc/class-pstoolkit-list-table.php:158
 msgid "Massenaktion"
-msgstr "mass action"
+msgstr "Bulk action"
 
 #: inc/class-pstoolkit-list-table.php:156
 #: inc/modules/widgets/dashboard-feeds-table.php:358
@@ -4447,35 +4276,31 @@ msgstr "Select bulk action"
 #: inc/modules/widgets/dashboard-feeds-table.php:360
 #: views/admin/modules/email-logs/pagination-section.php:24
 msgid "Massenaktionen"
-msgstr "mass actions"
+msgstr "Bulk actions"
 
 #: views/admin/modules/email-logs/pagination-section.php:25
 msgid "Massenlöschung"
-msgstr "mass actions"
+msgstr "Bulk deletion"
 
 #: etc/dashicons.php:71
 msgid "Medien"
-msgstr "media"
+msgstr "Media"
 
 #: views/admin/modules/color-schemes/dialogs/edit.php:759
 msgid "Medien-Uploader"
-msgstr "media uploader"
+msgstr "Media uploader"
 
 #: inc/modules/admin/bar.php:449
 msgid "Meine Webseiten"
 msgstr "My websites"
 
-#: views/admin/common/footer.php:27
-msgid "Membership"
-msgstr "Membership"
-
 #: inc/modules/admin/custom-css.php:68
 msgid "Menü"
-msgstr "menu"
+msgstr "Menu"
 
 #: inc/modules/admin/custom-admin-menu/pstoolkit-admin-menu-builder.php:143
 msgid "Menü reduzieren"
-msgstr "reduce menu"
+msgstr "Collapse menu"
 
 #: inc/modules/admin/custom-css.php:69
 msgid "Menü Wrap"
@@ -4491,7 +4316,7 @@ msgstr "Show menu item icon on mobile."
 
 #: inc/modules/admin/bar.php:504
 msgid "Menüelemente"
-msgstr "menu items"
+msgstr "Menu items"
 
 #: views/admin/modules/admin_menu/dialogs/custom-admin-menu-dialog.php:29
 msgid "Menüelemente konfigurieren"
@@ -4499,11 +4324,11 @@ msgstr "Configure menu items"
 
 #: inc/modules/admin/bar.php:577
 msgid "Menüpunkt"
-msgstr "menu item"
+msgstr "Menu item"
 
 #: inc/modules/admin/bar.php:509
 msgid "Menüpunkte"
-msgstr "menu items"
+msgstr "Menu items"
 
 #: inc/modules/admin/bar.php:557
 msgid "Menüpunkte neu anordnen"
@@ -4515,20 +4340,16 @@ msgstr "Rearrange menus"
 
 #: inc/modules/admin/bar.php:804
 msgid "Menütitel"
-msgstr "menu title"
+msgstr "Menu title"
 
 #: inc/modules/widgets/meta-widget.php:58
 #: inc/modules/widgets/meta-widget.php:63
 msgid "Meta"
 msgstr "Meta"
 
-#: etc/config.php:721
-msgid "Meta Widget"
-msgstr "Meta Widget"
-
 #: inc/modules/emails/email-logs.php:171
 msgid "Mi"
-msgstr "Mi"
+msgstr "We"
 
 #: views/front-end/modules/maintenance/timer/raw/head.php:16
 msgctxt "minute letter of timer"
@@ -4537,7 +4358,7 @@ msgstr "m"
 
 #: views/front-end/modules/maintenance/timer/final-countdown/body.php:31
 msgid "Minuten"
-msgstr "minutes"
+msgstr "Minutes"
 
 #: inc/modules/login-screen/signup-code.php:143
 #: inc/modules/login-screen/signup-code.php:202
@@ -4621,13 +4442,9 @@ msgstr "Middle"
 msgid "Mo"
 msgstr "Mo"
 
-#: inc/modules/front-end/site-status-page.php:392
-msgid "Modes"
-msgstr "Modes"
-
 #: views/admin/dashboard/modules/table-header.php:3
 msgid "Modul"
-msgstr "module"
+msgstr "Module"
 
 #: inc/class-pstoolkit-loader.php:176
 #, php-format
@@ -4651,39 +4468,31 @@ msgstr "Module %s has been successfully disabled."
 #: views/admin/dashboard/modules/import-export-row.php:23
 #: views/admin/dashboard/modules/one-row.php:34
 msgid "Modul bearbeiten"
-msgstr "edit module"
+msgstr "Edit module"
 
 #: views/admin/common/copy.php:21
 msgid "Modul wählen"
-msgstr "select module"
+msgstr "Select module"
 
 #: views/admin/common/dialogs/reset-module.php:9
 msgid "Modul zurücksetzen"
-msgstr "reset module"
+msgstr "Reset module"
 
 #: views/admin/dashboard/modules/import-export.php:20
 msgid "Module"
-msgstr "modules"
+msgstr "Modules"
 
 #: inc/class-pstoolkit-admin.php:2550
 msgid "Module aktivieren"
 msgstr "Activate modules"
 
-#: inc/class-pstoolkit-base.php:150 inc/class-pstoolkit-base.php:174
-msgid "Module does not exists."
-msgstr "Module does not exists."
-
 #: views/admin/dashboard/widget-summary.php:16
 msgid "Module insgesamt"
-msgstr "total modules"
+msgstr "Total modules"
 
 #: views/admin/modules/import/header.php:1
 msgid "Module konfigurieren"
-msgstr "configure modules"
-
-#: etc/config.php:609
-msgid "MultiSite Registration Emails"
-msgstr "MultiSite Registration Emails"
+msgstr "Configure modules"
 
 #: inc/modules/admin/menu.php:604
 msgid "Muss einzigartig sein."
@@ -4743,7 +4552,7 @@ msgstr "Are you sure you want to factory reset PSToolkit settings?"
 
 #: views/admin/modules/dashboard-widgets/dialogs/visibility-reset.php:20
 msgid "Möchtest Du die Liste der registrierten Widgets wirklich zurücksetzen?"
-msgstr "Are you sure you want to factory reset PSToolkit settings?"
+msgstr "Are you sure you want to reset the list of registered widgets?"
 
 #: inc/modules/emails/email-logs.php:488
 msgid "Möchtest Du diese Protokolle wirklich dauerhaft löschen?"
@@ -4751,7 +4560,7 @@ msgstr "Are you sure you want to permanently delete these logs?"
 
 #: inc/modules/utilities/text-replacement.php:531
 msgid "Möchtest Du diese Textersetzungsregel wirklich dauerhaft löschen?"
-msgstr "Are you sure you want to permanently delete these logs?"
+msgstr "Are you sure you want to permanently delete this text replacement rule?"
 
 #: inc/modules/admin/bar.php:1656
 msgid ""
@@ -4783,12 +4592,11 @@ msgstr "Are you sure you want to permanently delete this text widget?"
 
 #: inc/modules/admin/menu.php:329
 msgid "Möchtest Du wirklich alle Änderungen verwerfen?"
-msgstr "Are you sure you want to permanently delete this text widget?"
+msgstr "Are you sure you want to discard all changes?"
 
 #: inc/modules/utilities/text-replacement.php:534
-msgid ""
-"Möchtest Du wirklich ausgewählte Textersetzungsregeln dauerhaft löschen?"
-msgstr "Are you sure you want to permanently delete this text widget?"
+msgid "Möchtest Du wirklich ausgewählte Textersetzungsregeln dauerhaft löschen?"
+msgstr "Are you sure you want to permanently delete the selected text replacement rules?"
 
 #: views/admin/modules/data/dialogs/confirm-delete-subsites.php:12
 msgid ""
@@ -4803,11 +4611,11 @@ msgstr "After &lt;Body&gt;"
 
 #: inc/modules/utilities/tracking-codes-list-table.php:37
 msgid "Nach &lt;BODY&gt; Tag."
-msgstr "After &lt;BODY&gt; Day."
+msgstr "After the &lt;BODY&gt; tag."
 
 #: inc/modules/login-screen/login-screen.php:679
 msgid "Nach Anmeldung URL"
-msgstr "After registration URL"
+msgstr "URL after login"
 
 #: inc/modules/front-end/document.php:173
 msgid "Nach dem Eintrag Inhalt"
@@ -4820,7 +4628,7 @@ msgstr "After the entry content"
 #: inc/modules/login-screen/login-screen.php:2840
 #: inc/modules/login-screen/login-screen.php:2878
 msgid "Nachricht"
-msgstr "News"
+msgstr "Message"
 
 #: inc/modules/emails/smtp.php:77
 msgid "Nachricht senden, bitte warten..."
@@ -4850,7 +4658,7 @@ msgstr "Author's name"
 #: inc/class-pstoolkit-admin.php:108 inc/class-pstoolkit-admin.php:1681
 #: inc/class-simple-options.php:1760 inc/class-simple-options.php:1821
 msgid "Nee! Sicherheitsüberprüfung fehlgeschlagen!"
-msgstr "nope! Security check failed!"
+msgstr "Nope! Security check failed!"
 
 #: inc/modules/emails/registration.php:184
 #: inc/modules/emails/registration.php:218
@@ -4869,7 +4677,7 @@ msgstr "Network Dashboard"
 
 #: inc/modules/admin/bar.php:450
 msgid "Neu hinzufügen"
-msgstr "add new"
+msgstr "Add new"
 
 #: inc/modules/emails/registration.php:262
 #, php-format
@@ -4902,14 +4710,14 @@ msgstr "Add new tip"
 
 #: inc/modules/emails/registration.php:176
 msgid "Neuer Blog"
-msgstr "new blog"
+msgstr "New blog"
 
 #: inc/modules/admin/bar.php:853 inc/modules/admin/bar.php:944
 #: inc/modules/admin/menu.php:710
 #: views/admin/modules/admin-bar/dialogs/submenu.php:25
 #: views/admin/modules/admin-bar/tmpl/panes/submenu.php:65
 msgid "neuer Registerkarte"
-msgstr "new tab"
+msgstr "New tab"
 
 #: inc/modules/admin/tips.php:118
 msgid "Neuer Tipp"
@@ -4918,10 +4726,6 @@ msgstr "New tip"
 #: inc/modules/front-end/cookie-notice.php:268
 msgid "Neuladen"
 msgstr "Reload"
-
-#: views/admin/dashboard/modules/import-export-row.php:8
-msgid "Never"
-msgstr "Never"
 
 #: inc/modules/emails/registration.php:154
 #, php-format
@@ -4937,7 +4741,7 @@ msgstr "[%1$s] Activate %2$s"
 
 #: inc/modules/login-screen/login-screen.php:1493
 msgid "Nicht erinnern"
-msgstr "Not remember"
+msgstr "Do not remember"
 
 #: inc/modules/admin/tips.php:124
 msgid "Nicht gefunden"
@@ -4966,10 +4770,6 @@ msgstr "Nothing was changed, nothing activated or deactivated."
 msgid "Nirgends"
 msgstr "Nowhere"
 
-#: inc/class-simple-options.php:242
-msgid "No title"
-msgstr "No title"
-
 #: inc/modules/widgets/dashboard-feeds-table.php:339
 msgid "Noch kein Feed hinzugefügt!"
 msgstr "No feed added yet!"
@@ -4985,10 +4785,6 @@ msgstr "No text replacement added yet!"
 #: inc/modules/utilities/tracking-codes-list-table.php:306
 msgid "Noch kein Tracking-Code eingefügt!"
 msgstr "No tracking code added yet!"
-
-#: inc/class-pstoolkit-admin.php:869
-msgid "none"
-msgstr "none"
 
 #: inc/modules/emails/email-logs.php:187
 msgid "November"
@@ -5008,7 +4804,7 @@ msgstr "Not logged in users only"
 
 #: inc/modules/utilities/permissions.php:109
 msgid "Nutzerberechtigung"
-msgstr "user permission"
+msgstr "User permission"
 
 #: inc/modules/front-end/author-box.php:251
 #: inc/modules/front-end/cookie-notice.php:219
@@ -5024,10 +4820,6 @@ msgstr "Above"
 msgid "Oktober"
 msgstr "October"
 
-#: inc/modules/admin/bar.php:851
-msgid "Open link in"
-msgstr "Open link in"
-
 #: inc/modules/admin/help-content.php:181
 msgid "Ordne die Hilfeartikel durch Ziehen und Ablegen neu an."
 msgstr "Rearrange help articles by dragging and dropping."
@@ -5042,19 +4834,9 @@ msgstr "Rearrange submenu items as needed by dragging and dropping."
 msgid "Ort einfügen"
 msgstr "Insert location"
 
-#: inc/modules/login-screen/login-screen.php:1793
-#: inc/modules/login-screen/login-screen.php:2112
-#: inc/modules/login-screen/login-screen.php:2956
-msgid "Padding"
-msgstr "padding"
-
 #: views/admin/modules/color-schemes/dialogs/edit.php:375
 msgid "Paginierung / Schaltfläche / Symbol"
 msgstr "Pagination / Button / Icon"
-
-#: inc/modules/widgets/dashboard-widgets.php:228
-msgid "Parse Shortcodes"
-msgstr "Parse Shortcodes"
 
 #: inc/modules/admin/menu.php:496
 msgid ""
@@ -5232,9 +5014,8 @@ msgid "Passe die Standardfarbkombinationen nach Deinen Wünschen an."
 msgstr "Customize the default color combinations to your liking."
 
 #: etc/config.php:23
-msgid ""
-"Passe die verschiedenen Teile Deines ClassicPress-Verwaltungsbereichs an."
-msgstr "Customize the default color combinations to your liking."
+msgid "Passe die verschiedenen Teile Deines ClassicPress-Verwaltungsbereichs an."
+msgstr "Customize the different parts of your ClassicPress administration area."
 
 #: etc/config.php:29
 msgid ""
@@ -5289,7 +5070,7 @@ msgstr ""
 #: inc/modules/login-screen/login-screen.php:1482
 #: views/admin/modules/signup-password/password-fields.php:2
 msgid "Passwort"
-msgstr "password"
+msgstr "Password"
 
 #: views/admin/modules/signup-password/password-fields.php:12
 msgid "Passwort bestätigen"
@@ -5297,11 +5078,11 @@ msgstr "Confirm Password"
 
 #: inc/modules/login-screen/login-screen.php:1598
 msgid "Passwort leeren"
-msgstr "clear password"
+msgstr "Clear password"
 
 #: inc/class-simple-options.php:1411
 msgid "Passwort verbergen"
-msgstr "hide password"
+msgstr "Hide password"
 
 #: inc/modules/login-screen/login-screen.php:1567
 #: inc/modules/login-screen/login-screen.php:1572
@@ -5329,10 +5110,6 @@ msgstr "Password protected"
 msgid "Passwörter stimmen nicht überein."
 msgstr "Passwords do not match."
 
-#: views/admin/modules/smtp/plugins-list.php:4
-msgid "Plugin Name"
-msgstr "Plugin Name"
-
 #: views/admin/common/footer.php:12
 #: views/admin/modules/color-schemes/dialogs/edit.php:847
 msgid "Plugins"
@@ -5349,11 +5126,11 @@ msgstr "Position"
 
 #: views/admin/modules/tracking-codes/dialogs/edit.php:41
 msgid "Position einfügen"
-msgstr "insert position"
+msgstr "Insert position"
 
 #: inc/modules/front-end/cookie-notice.php:216
 msgid "Positionierung"
-msgstr "positioning"
+msgstr "Positioning"
 
 #: inc/modules/emails/email-logs-cpt.php:264
 msgctxt "Post Type General Name"
@@ -5363,7 +5140,7 @@ msgstr "Email Logs"
 #: inc/modules/emails/email-logs-cpt.php:265
 msgctxt "Post Type Singular Name"
 msgid "E-Mail-Protokoll"
-msgstr "email log"
+msgstr "Email log"
 
 #: inc/modules/admin/menu.php:330
 msgctxt "Postfix für doppelte Elemente - benutzerdefiniertes Administratormenü"
@@ -5385,18 +5162,13 @@ msgstr "Primary button text"
 msgid "Primäre Schaltfläche Textschatten"
 msgstr "Primary button text shadow"
 
-#: inc/modules/front-end/cookie-notice.php:89 views/admin/common/footer.php:19
-#: views/admin/common/footer.php:32
-msgid "Privacy Policy"
-msgstr "Privacy Policy"
-
 #: etc/dashicons.php:234
 msgid "Produkte"
 msgstr "Products"
 
 #: inc/modules/admin/menu.php:1442
 msgid "Profil"
-msgstr "profile"
+msgstr "Profile"
 
 #: inc/modules/front-end/author-box.php:324
 msgid ""
@@ -5409,7 +5181,7 @@ msgstr "Delete log"
 
 #: inc/class-pstoolkit-logging.php:135
 msgid "Protokolle"
-msgstr "logs"
+msgstr "Logs"
 
 #: inc/modules/emails/email-logs.php:276
 msgid "Protokolle exportieren"
@@ -5421,11 +5193,11 @@ msgstr "Delete logs"
 
 #: views/admin/modules/email-logs/dialogs/settings.php:21
 msgid "Protokolleinstellungen"
-msgstr "log settings"
+msgstr "Log settings"
 
 #: inc/modules/emails/email-logs.php:298
 msgid "Protokolllimit"
-msgstr "log limit"
+msgstr "Log limit"
 
 #: inc/class-pstoolkit-base.php:77 inc/class-pstoolkit-public.php:54
 #: inc/modules/utilities/import.php:137
@@ -5481,7 +5253,7 @@ msgstr "px"
 #: inc/modules/front-end/cookie-notice.php:655
 #: inc/modules/login-screen/login-screen.php:1882
 msgid "Rahmen"
-msgstr "Frame"
+msgstr "Border"
 
 #: inc/modules/widgets/meta-widget.php:30
 msgid "Rebranding"
@@ -5494,24 +5266,15 @@ msgstr "Rebranding"
 #: inc/modules/login-screen/login-screen.php:2166
 #: inc/modules/login-screen/login-screen.php:2967
 msgid "Rechts"
-msgstr "To the right"
+msgstr "Right"
 
 #: inc/modules/utilities/text-replacement.php:257
 msgid "Regel hinzufügen"
-msgstr "add rule"
+msgstr "Add rule"
 
 #: inc/modules/utilities/text-replacement.php:533
 msgid "Regeln zum Ersetzen von Text löschen"
 msgstr "Clear text replacement rules"
-
-#: etc/config.php:608
-msgid "Registration Email"
-msgstr "Registration Email"
-
-#: views/admin/modules/permissions/row.php:17
-#: views/admin/modules/permissions/row.php:22
-msgid "Remove access"
-msgstr "Remove access"
 
 #: views/admin/common/footer.php:13 views/admin/common/footer.php:28
 msgid "Roadmap"
@@ -5532,7 +5295,7 @@ msgstr "Sa"
 #: inc/modules/front-end/document.php:240
 #: inc/modules/login-screen/login-screen.php:1907
 msgid "Schaltfläche"
-msgstr "button"
+msgstr "Button"
 
 #: inc/modules/front-end/cookie-notice.php:576
 msgid "Schaltfläche \"Cookies akzeptieren\""
@@ -5541,41 +5304,41 @@ msgstr "\"Accept cookies\" button"
 #: inc/modules/front-end/document.php:241
 msgctxt "Schaltfläche auf dem Passwortschutzformular."
 msgid "Eingabe"
-msgstr "input"
+msgstr "Input"
 
 #: inc/modules/login-screen/login-screen.php:2253
 #: inc/modules/login-screen/login-screen.php:2326
 #: inc/modules/login-screen/login-screen.php:2366
 #: inc/modules/login-screen/login-screen.php:2406
 msgid "Schaltflächenbeschriftung"
-msgstr "button label"
+msgstr "Button label"
 
 #: inc/modules/login-screen/login-screen.php:2263
 #: inc/modules/login-screen/login-screen.php:2336
 #: inc/modules/login-screen/login-screen.php:2376
 #: inc/modules/login-screen/login-screen.php:2416
 msgid "Schaltflächenhintergrund"
-msgstr "button background"
+msgstr "Button background"
 
 #: inc/modules/login-screen/login-screen.php:2258
 #: inc/modules/login-screen/login-screen.php:2331
 #: inc/modules/login-screen/login-screen.php:2371
 #: inc/modules/login-screen/login-screen.php:2411
 msgid "Schaltflächenrahmen"
-msgstr "button frame"
+msgstr "Button border"
 
 #: inc/modules/login-screen/login-screen.php:1899
 msgid "Schatten"
-msgstr "The shade"
+msgstr "Shadow"
 
 #: inc/modules/login-screen/login-screen.php:1711
 #: inc/modules/login-screen/login-screen.php:1902
 msgid "Schattenbox"
-msgstr "shadow box"
+msgstr "Box shadow"
 
 #: inc/modules/login-screen/login-screen.php:1918
 msgid "Schattenhafter Text"
-msgstr "Shadowy text"
+msgstr "Text shadow"
 
 #: views/admin/modules/color-schemes/dialogs/edit.php:16
 msgid "Schemaname darf nicht leer sein!"
@@ -5583,7 +5346,7 @@ msgstr "Schema name cannot be empty!"
 
 #: views/admin/modules/email-logs/pagination-section.php:132
 msgid "Schlagwort"
-msgstr "keyword"
+msgstr "Tag"
 
 #: views/admin/common/copy.php:12 views/admin/dashboard/welcome.php:7
 #: views/admin/common/dialogs/reset-module.php:7
@@ -5606,10 +5369,6 @@ msgstr "Close this modal"
 #: views/admin/modules/email-template/dialogs/preview.php:14
 msgid "Schließen"
 msgstr "Close"
-
-#: views/admin/common/dashicon-picker.php:11
-msgid "Search icon"
-msgstr "Search icon"
 
 #: views/front-end/modules/maintenance/timer/raw/head.php:19
 msgctxt "second letter of timer"
@@ -5638,11 +5397,11 @@ msgstr "Page"
 
 #: views/admin/modules/tracking-codes/dialogs/edit.php:172
 msgid "Seiten"
-msgstr "pages"
+msgstr "Pages"
 
 #: etc/config.php:336
 msgid "Seiten Generator"
-msgstr "page generator"
+msgstr "Site generator"
 
 #: inc/modules/utilities/site-generator.php:63
 msgid "Seiten Generator Info"
@@ -5650,7 +5409,7 @@ msgstr "Page generator info"
 
 #: inc/modules/emails/template.php:175
 msgid "Seiten Name"
-msgstr "page name"
+msgstr "Site name"
 
 #: inc/modules/emails/template.php:174
 #: inc/modules/widgets/dashboard-feeds-table.php:40
@@ -5675,23 +5434,19 @@ msgstr "Page Description"
 
 #: inc/modules/emails/template.php:173
 msgid "Seitenleistentitel"
-msgstr "sidebar title"
+msgstr "Sidebar title"
 
 #: views/front-end/modules/maintenance/timer/final-countdown/body.php:42
 msgid "Sekunden"
-msgstr "seconds"
+msgstr "Seconds"
 
 #: inc/modules/admin/bar.php:854
 msgid "selbe Registerkarte"
-msgstr "same tab"
+msgstr "Same tab"
 
 #: inc/modules/admin/bar.php:945
 msgid "selben Registerkarte"
-msgstr "same tab"
-
-#: views/admin/common/no-module.php:14
-msgid "Selected module does not exists or is not available."
-msgstr "Selected module does not exist or is not available."
+msgstr "Same tab"
 
 #: inc/modules/emails/smtp.php:222
 #, php-format
@@ -5771,17 +5526,9 @@ msgstr "Shortcodes"
 msgid "Shortcodes analysieren"
 msgstr "Analyze shortcodes"
 
-#: inc/modules/login-screen/login-screen.php:1526
-msgid "Show"
-msgstr "Show"
-
-#: inc/class-simple-options.php:1407
-msgid "Show Password"
-msgstr "Show Password"
-
 #: views/admin/modules/admin-bar/dialogs/edit.php:19
 msgid "Sichbarkeit"
-msgstr "visibility"
+msgstr "Visibility"
 
 #: inc/modules/admin/bar.php:529 inc/modules/admin/bar.php:876
 #: inc/modules/front-end/author-box.php:314
@@ -5792,7 +5539,7 @@ msgstr "visibility"
 #: inc/modules/widgets/dashboard-widgets.php:734
 #: views/admin/modules/dashboard-widgets/dialogs/edit.php:18
 msgid "Sichtbarkeit"
-msgstr "visibility"
+msgstr "Visibility"
 
 #: inc/modules/front-end/cookie-notice.php:278
 msgid "Sichtbarkeit für angemeldete Benutzer"
@@ -5805,10 +5552,6 @@ msgstr "Slide-in"
 #: etc/config.php:753
 msgid "SMTP"
 msgstr "SMTP"
-
-#: inc/modules/emails/smtp.php:410
-msgid "SMTP Server"
-msgstr "SMTP Server"
 
 #: inc/modules/emails/smtp.php:449
 msgid "SMTP-Authentifizierung"
@@ -5824,7 +5567,7 @@ msgstr "SMTP protocol"
 
 #: inc/modules/emails/email-logs.php:168
 msgid "So"
-msgstr "So"
+msgstr "Su"
 
 #: etc/dashicons.php:199
 msgid "Social"
@@ -5840,7 +5583,7 @@ msgstr "Social Media Settings"
 
 #: views/admin/modules/author-box/profile.php:1
 msgid "Social Media-Profile"
-msgstr "Social Media-Profile"
+msgstr "Social media profiles"
 
 #: etc/dashicons.php:287
 msgid "Sonstiges"
@@ -5849,7 +5592,7 @@ msgstr "Miscellaneous"
 #: inc/modules/front-end/document.php:266
 #: views/admin/modules/email-logs/pagination-section.php:148
 msgid "Sortieren nach"
-msgstr "sort by"
+msgstr "Sort by"
 
 #: views/admin/modules/email-logs/pagination-section.php:223
 msgid "Sortieren nach:"
@@ -5858,7 +5601,7 @@ msgstr "Sort by:"
 #: inc/modules/front-end/document.php:284
 #: views/admin/modules/email-logs/pagination-section.php:161
 msgid "Sortierreihenfolge"
-msgstr "sort order"
+msgstr "Sort order"
 
 #: etc/dashicons.php:172 inc/modules/front-end/document.php:279
 msgid "Sortierung"
@@ -5867,7 +5610,7 @@ msgstr "Sorting"
 #: inc/modules/front-end/author-box.php:1290
 #: inc/modules/front-end/author-box.php:1432
 msgid "Soziale Konten"
-msgstr "social accounts"
+msgstr "Social accounts"
 
 #: inc/modules/front-end/author-box.php:1569
 #: inc/modules/front-end/db-error-page.php:694
@@ -5881,11 +5624,11 @@ msgstr "Add social account"
 
 #: inc/modules/front-end/document.php:298
 msgid "Spalten"
-msgstr "columns"
+msgstr "Columns"
 
 #: inc/modules/admin/tips.php:214
 msgid "Speichern..."
-msgstr "Save on computer..."
+msgstr "Saving..."
 
 #: inc/modules/login-screen/login-screen.php:1439
 msgid "Sprache"
@@ -5906,7 +5649,7 @@ msgstr "SSL"
 #: inc/modules/login-screen/login-screen.php:2229
 #: inc/modules/login-screen/login-screen.php:2463
 msgid "Standard"
-msgstr "default"
+msgstr "Default"
 
 #: inc/class-simple-options.php:1476
 #, php-format
@@ -5921,7 +5664,7 @@ msgstr "Default is: <code><strong>%s</strong></code>"
 #: inc/modules/emails/templates/Simplicity-dark/index.php:10
 #: inc/modules/emails/templates/Simplicity-light/index.php:8
 msgid "Standard-E-Mail-Titel"
-msgstr "Default is: <code><strong>%s</strong></code>"
+msgstr "Default email subject"
 
 #: inc/modules/admin/color-schemes.php:287
 msgid "Standardfarbschema"
@@ -5930,7 +5673,7 @@ msgstr "Default color scheme"
 #: views/admin/modules/color-schemes/dialogs/edit.php:67
 #: views/admin/modules/color-schemes/dialogs/edit.php:105
 msgid "Standardlink"
-msgstr "default link"
+msgstr "Default link"
 
 #: inc/modules/utilities/permissions.php:134
 msgid ""
@@ -5959,7 +5702,7 @@ msgstr "Reset default order"
 
 #: inc/modules/login-screen/login-screen.php:1490
 msgid "Standardwert"
-msgstr "default value"
+msgstr "Default value"
 
 #: views/admin/modules/tracking-codes/dialogs/edit.php:5
 msgid "Standort"
@@ -5968,7 +5711,7 @@ msgstr "Location"
 #: inc/modules/utilities/tracking-codes-list-table.php:75
 #: views/admin/modules/tracking-codes/dialogs/edit.php:75
 msgid "Standortfilter"
-msgstr "location filter"
+msgstr "Location filter"
 
 #: inc/modules/admin/bar.php:829 inc/modules/admin/menu.php:698
 #: inc/modules/utilities/tracking-codes.php:475
@@ -6041,7 +5784,7 @@ msgstr "Sticky post"
 #: inc/modules/login-screen/login-screen.php:1888
 #: inc/modules/login-screen/login-screen.php:1935
 msgid "Stil"
-msgstr "style"
+msgstr "Style"
 
 #: inc/modules/widgets/dashboard-widgets.php:229
 msgid "Stoppe Parsen"
@@ -6095,27 +5838,23 @@ msgstr "Search subsite"
 #: views/admin/modules/permissions/dialogs/add-user.php:39
 #: views/admin/modules/permissions/dialogs/add-user.php:41
 msgid "Suchen..."
-msgstr "search..."
+msgstr "Search..."
 
 #: inc/modules/utilities/tracking-codes.php:477
 msgid "Suchergebnisse"
-msgstr "search results"
+msgstr "Search results"
 
 #: inc/modules/admin/menu.php:450 inc/modules/utilities/tracking-codes.php:655
 msgid "Super Admin"
-msgstr "great admin"
+msgstr "Super Admin"
 
 #: views/admin/common/footer.php:14
 msgid "Support"
 msgstr "Support"
 
-#: inc/modules/admin/menu.php:675
-msgid "SVG code"
-msgstr "SVG code"
-
 #: inc/modules/admin/menu.php:629
 msgid "SVG-Code"
-msgstr "SVG-Code"
+msgstr "SVG code"
 
 #: inc/modules/admin/bar.php:815 inc/modules/admin/menu.php:672
 #: views/admin/modules/color-schemes/dialogs/edit.php:438
@@ -6124,7 +5863,7 @@ msgstr "SVG-Code"
 #: views/admin/modules/color-schemes/dialogs/edit.php:651
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:13
 msgid "Symbol"
-msgstr "Symbol"
+msgstr "Icon"
 
 #: inc/modules/front-end/document.php:352
 msgid "Symbol Tag"
@@ -6140,19 +5879,7 @@ msgstr "Tables display"
 
 #: views/front-end/modules/maintenance/timer/final-countdown/body.php:9
 msgid "Tage"
-msgstr "days"
-
-#: etc/dashicons.php:251
-msgid "Taxonomies"
-msgstr "Taxonomies"
-
-#: inc/modules/emails/template.php:186
-msgid "Template"
-msgstr "Template"
-
-#: views/admin/common/footer.php:18 views/admin/common/footer.php:31
-msgid "Terms of Service"
-msgstr "Terms of Service"
+msgstr "Days"
 
 #: inc/modules/emails/template.php:951
 #, php-format
@@ -6176,13 +5903,9 @@ msgstr "Test email cannot be sent"
 msgid "Test-E-Mail senden"
 msgstr "Send test email"
 
-#: views/admin/common/dialogs/test-email.php:12
-msgid "Test-Email"
-msgstr "Test-Email"
-
 #: inc/modules/emails/template.php:815
 msgid "Test-Objekt"
-msgstr "test object"
+msgstr "Test object"
 
 #: inc/modules/emails/template.php:944
 msgid "Teste den Betreff der HTML-E-Mail"
@@ -6217,7 +5940,7 @@ msgstr "Privacy Policy"
 
 #: inc/modules/utilities/text-replacement.php:351
 msgid "Text finden"
-msgstr "find text"
+msgstr "Find text"
 
 #: inc/modules/widgets/dashboard-widgets.php:410
 #: inc/modules/widgets/dashboard-widgets.php:424
@@ -6235,7 +5958,7 @@ msgstr "Edit text widget"
 
 #: inc/modules/widgets/dashboard-widgets.php:243
 msgid "Text-Widgets"
-msgstr "Text-Widgets"
+msgstr "Text widgets"
 
 #: inc/modules/utilities/text-replacement.php:366
 msgid "Textdomäne (optional)"
@@ -6243,7 +5966,7 @@ msgstr "Text domain (optional)"
 
 #: etc/config.php:358
 msgid "Textersetzung"
-msgstr "text replacement"
+msgstr "Text replacement"
 
 #: inc/modules/utilities/text-replacement.php:319
 msgid "Textersetzungsregel hinzufügen"
@@ -6255,7 +5978,7 @@ msgstr "Delete text replacement rule"
 
 #: inc/modules/login-screen/login-screen.php:1915
 msgid "Textschatten"
-msgstr "text shadow"
+msgstr "Text shadow"
 
 #: views/admin/common/footer.php:11 views/admin/common/footer.php:30
 msgid "The Hub"
@@ -6269,11 +5992,6 @@ msgstr "Theme details button background"
 msgid "Themes"
 msgstr "Themes"
 
-#. phpcs:ignore ClassicPress.Security.EscapeOutput.OutputNotEscaped
-#: views/admin/modules/permissions/susbsites.php:4
-msgid "There is no any module to allow override settings."
-msgstr "There is no any module to allow override settings."
-
 #: inc/modules/front-end/document.php:309
 msgid "Thumbnail Größe"
 msgstr "Thumbnail size"
@@ -6285,7 +6003,7 @@ msgstr "TinyMCE"
 #: inc/modules/admin/tips.php:108
 msgctxt "Tip General Name"
 msgid "Tipps"
-msgstr "tips"
+msgstr "Tips"
 
 #: inc/modules/admin/tips.php:109
 msgctxt "Tip Singular Name"
@@ -6298,15 +6016,15 @@ msgstr "Tip"
 
 #: inc/modules/admin/tips.php:121
 msgid "Tipp anzeigen"
-msgstr "show tip"
+msgstr "Show tip"
 
 #: inc/modules/admin/tips.php:112
 msgid "Tipp Archiv"
-msgstr "tip archive"
+msgstr "Tip archive"
 
 #: inc/modules/admin/tips.php:119
 msgid "Tipp bearbeiten"
-msgstr "edit tip"
+msgstr "Edit tip"
 
 #: inc/modules/admin/tips.php:145
 msgid "Tipp Beschreibung"
@@ -6314,7 +6032,7 @@ msgstr "Tip description"
 
 #: inc/modules/admin/tips.php:113
 msgid "Tippattribute"
-msgstr "typing attributes"
+msgstr "Tip attributes"
 
 #: views/admin/modules/admin-bar/dashicons.php:34
 msgid "Tippe um zu suchen"
@@ -6323,12 +6041,12 @@ msgstr "Tap to search"
 #: inc/modules/admin/tips.php:110 inc/modules/admin/tips.php:115
 #: views/admin/modules/admin-panel-tips/profile-option.php:1
 msgid "Tipps"
-msgstr "tips"
+msgstr "Tips"
 
 #: inc/modules/admin/tips.php:122
 #: views/admin/modules/admin-panel-tips/profile-option.php:4
 msgid "Tipps anzeigen"
-msgstr "show tips"
+msgstr "Show tips"
 
 #: views/admin/modules/admin-panel-tips/profile-option.php:5
 msgid "Tipps anzeigen im Admin-Bereich"
@@ -6354,17 +6072,17 @@ msgstr "Tips list navigation"
 #: views/admin/modules/dashboard-widgets/dialogs/edit.php:23
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:5
 msgid "Titel"
-msgstr "title"
+msgstr "Title"
 
 #: inc/modules/front-end/site-status-page.php:503
 #: inc/modules/front-end/site-status-page.php:532
 #: inc/modules/utilities/maintenance.php:740
 msgid "Titel (optional)"
-msgstr "title (optional)"
+msgstr "Title (optional)"
 
 #: inc/modules/front-end/document.php:270
 msgid "Titel des Bildes"
-msgstr "title of the picture"
+msgstr "Image title"
 
 #: inc/modules/admin/menu.php:591
 msgid "Titel des Menüelements"
@@ -6380,11 +6098,11 @@ msgstr "Title:"
 
 #: inc/modules/utilities/tracking-codes.php:474
 msgid "Titelseite"
-msgstr "front page"
+msgstr "Front page"
 
 #: inc/modules/front-end/db-error-page.php:605
 msgid "Titeltextausrichtung"
-msgstr "title text alignment"
+msgstr "Title text alignment"
 
 #: inc/modules/emails/smtp.php:424
 msgid "TLS"
@@ -6393,10 +6111,6 @@ msgstr "TLS"
 #: inc/modules/admin/bar.php:485
 msgid "Toolbar Sichtbarkeit"
 msgstr "Toolbar visibility"
-
-#: views/admin/modules/tracking-codes/dialogs/edit.php:35
-msgid "Tracking Code"
-msgstr "Tracking Code"
 
 #: inc/modules/utilities/tracking-codes-list-table.php:128
 #, php-format
@@ -6435,7 +6149,7 @@ msgstr "Delete tracking code"
 
 #: etc/config.php:424
 msgid "Tracking-Codes"
-msgstr "Tracking-Codes"
+msgstr "Tracking codes"
 
 #: inc/modules/utilities/tracking-codes.php:898
 msgid "Tracking-Codes löschen"
@@ -6511,7 +6225,7 @@ msgstr "Scope"
 
 #: inc/modules/login-screen/login-screen.php:674
 msgid "Umleitung"
-msgstr "detour"
+msgstr "Redirect"
 
 #: inc/modules/emails/smtp.php:567
 #: inc/modules/utilities/tracking-codes-list-table.php:41
@@ -6521,19 +6235,11 @@ msgstr "Unknown"
 
 #: inc/modules/login-screen/login-screen.php:1592
 msgid "Ungültiger Benutzername"
-msgstr "invalid user name"
+msgstr "Invalid username"
 
 #: inc/modules/login-screen/login-screen.php:1603
 msgid "Ungültiges Passwort"
-msgstr "invalid password"
-
-#: inc/class-pstoolkit-base.php:107
-msgid "Unknown"
-msgstr "Unknown"
-
-#: views/admin/common/no-module.php:10
-msgid "Unknown module"
-msgstr "Unknown modules"
+msgstr "Invalid password"
 
 #: inc/modules/emails/smtp.php:438
 msgid "Unsichere SSL-Zertifikate"
@@ -6557,12 +6263,12 @@ msgstr "Under Avatar"
 #: views/admin/modules/admin-bar/dialogs/edit.php:18
 #: views/admin/modules/admin_menu/dialogs/custom-admin-menu-item.php:137
 msgid "Untermenü"
-msgstr "submenu"
+msgstr "Submenu"
 
 #: views/admin/modules/color-schemes/dialogs/edit.php:450
 #: views/admin/modules/color-schemes/dialogs/edit.php:524
 msgid "Untermenü Link"
-msgstr "submenu link"
+msgstr "Submenu link"
 
 #: views/admin/modules/color-schemes/dialogs/edit.php:462
 msgid "Untermenü Link Hintergrund"
@@ -6582,7 +6288,7 @@ msgstr "Submenu icon and links"
 #: inc/modules/content/footer.php:287 inc/modules/content/header.php:278
 #: inc/modules/utilities/data.php:110 inc/modules/utilities/images.php:271
 msgid "Unterwebseiten"
-msgstr "subsites"
+msgstr "Subsites"
 
 #: inc/modules/utilities/data.php:116
 #: views/admin/modules/data/dialogs/confirm-delete-subsites.php:9
@@ -6595,10 +6301,6 @@ msgstr "update tip"
 
 #: inc/modules/admin/bar.php:452
 msgid "Updates"
-msgstr "Updates"
-
-#: views/admin/modules/admin_menu/dialogs/custom-admin-menu-media-template.php:15
-msgid "Upload image"
 msgstr "Updates"
 
 #: inc/modules/utilities/images.php:300
@@ -6626,13 +6328,9 @@ msgstr "URL"
 msgid "URL ist relativ zu %s"
 msgstr "URL is relative to %s"
 
-#: inc/modules/admin/menu.php:676
-msgid "URL Link"
-msgstr "URL Link"
-
 #: inc/modules/emails/template.php:688
 msgid "Variablenliste"
-msgstr "variable list"
+msgstr "Variable list"
 
 #: inc/modules/admin/bar.php:585
 msgid "Verbessere die Kompatibilität mit Page Buildern"
@@ -6645,7 +6343,7 @@ msgstr "Available color scheme"
 #: inc/modules/front-end/cookie-notice.php:263
 #: inc/modules/front-end/db-error-page.php:555
 msgid "Verhalten"
-msgstr "Behave"
+msgstr "Behavior"
 
 #: inc/modules/utilities/text-replacement.php:396
 msgid "Verlinkt Text"
@@ -6653,7 +6351,7 @@ msgstr "Link text"
 
 #: inc/modules/emails/smtp.php:420
 msgid "Verschlüsselung"
-msgstr "encryption"
+msgstr "Encryption"
 
 #: inc/modules/utilities/site-generator.php:74
 msgid "Version"
@@ -6726,7 +6424,7 @@ msgstr "Full"
 
 #: inc/modules/widgets/dashboard-feeds.php:326
 msgid "Voller Inhalt"
-msgstr "full content"
+msgstr "Full content"
 
 #: inc/modules/emails/email-logs.php:671 inc/modules/emails/template.php:169
 msgid "Von E-Mail"
@@ -6750,7 +6448,7 @@ msgstr "From Header"
 
 #: inc/modules/emails/email-logs.php:670 inc/modules/emails/template.php:168
 msgid "Von Name"
-msgstr "By name"
+msgstr "From name"
 
 #: inc/modules/emails/smtp.php:398
 msgid "Von Namensersetzung"
@@ -6767,7 +6465,7 @@ msgstr "Before &lt;/Body&gt;"
 
 #: inc/modules/utilities/tracking-codes-list-table.php:39
 msgid "Vor &lt;/BODY&gt; Tag."
-msgstr "Before &lt;/BODY&gt; Day."
+msgstr "Before the &lt;/BODY&gt; tag."
 
 #: inc/modules/front-end/document.php:149
 msgid "Vor dem Eintrag Inhalt"
@@ -6776,12 +6474,12 @@ msgstr "Before the entry content"
 #: inc/modules/login-screen/login-screen.php:611
 #: inc/modules/utilities/maintenance.php:869
 msgid "Vorlage"
-msgstr "Presentation"
+msgstr "Template"
 
 #: views/admin/common/options/template-picker.php:8
 #: views/admin/common/options/template-picker.php:20
 msgid "Vorlage ändern"
-msgstr "change template"
+msgstr "Change template"
 
 #: inc/modules/emails/template.php:199 inc/modules/emails/template.php:209
 #: inc/modules/front-end/db-error-page.php:497
@@ -6789,7 +6487,7 @@ msgstr "change template"
 #: inc/modules/front-end/site-status-page.php:418
 #: views/admin/modules/email-template/dialogs/preview.php:9
 msgid "Vorschau"
-msgstr "preview"
+msgstr "Preview"
 
 #: inc/modules/front-end/db-error-page.php:586
 #: inc/modules/front-end/site-status-page.php:484
@@ -6802,7 +6500,7 @@ msgstr "Thumbnail (CP Default)"
 
 #: inc/modules/front-end/document.php:325
 msgid "Vorschaubild Link"
-msgstr "thumbnail link"
+msgstr "Thumbnail link"
 
 #: inc/modules/utilities/maintenance.php:227
 msgid "WARTUNG"
@@ -6818,7 +6516,7 @@ msgstr ""
 
 #: inc/modules/front-end/author-box.php:672
 msgid "Webseite"
-msgstr "website"
+msgstr "Website"
 
 #: inc/modules/login-screen/login-screen.php:1415
 msgid "Webseite Standard"
@@ -6830,7 +6528,7 @@ msgstr "Website menu"
 
 #: views/admin/modules/admin-bar/tmpl/panes/submenu.php:81
 msgid "Webseite-Seite"
-msgstr "website page"
+msgstr "Website page"
 
 #: inc/modules/emails/smtp.php:227
 #, php-format
@@ -6851,7 +6549,7 @@ msgstr "Website mode"
 
 #: inc/modules/admin/bar.php:956
 msgid "Webseiten-Seite"
-msgstr "website page"
+msgstr "Website page"
 
 #: inc/modules/front-end/signup-blog-description.php:78
 msgid "Webseiten-Slogan"
@@ -6863,11 +6561,7 @@ msgstr "Website Status Pages"
 
 #: inc/modules/utilities/maintenance.php:218
 msgid "Webseitenstatus"
-msgstr "website status"
-
-#: views/admin/dashboard/welcome.php:9
-msgid "Welcome to PSToolkit"
-msgstr "Welcome to PSToolkit"
+msgstr "Website status"
 
 #: inc/modules/utilities/text-replacement.php:361
 msgid "Wenn Du den Text ausblenden möchtest, lasse diese Eingabe leer."
@@ -6925,7 +6619,7 @@ msgstr "Widget has no configuration."
 
 #: inc/modules/widgets/dashboard-widgets.php:726
 msgid "Widget-Inhalt"
-msgstr "widget content"
+msgstr "Widget content"
 
 #: inc/modules/widgets/dashboard-widgets.php:209
 msgid "Widget-Sichtbarkeit"
@@ -7655,7 +7349,7 @@ msgstr "Open item"
 
 #: inc/modules/front-end/db-error-page.php:691
 msgid "Überall"
-msgstr "Overall"
+msgstr "Everywhere"
 
 #: inc/modules/admin/tips.php:454
 msgid "Überall (außer Branding)"
@@ -7680,9 +7374,713 @@ msgstr ""
 
 #: inc/modules/utilities/images.php:285
 msgid "Überschreiben"
-msgstr "overwrite"
+msgstr "Override"
 
 #: inc/class-pstoolkit-admin.php:620 inc/class-pstoolkit-admin.php:621
 #: views/admin/dashboard.php:9
 msgid "Übersicht"
 msgstr "Overview"
+
+#: etc/dashicons.php:217
+msgid "ClassicPress.org-spezifisch: Jobs, Profile, WordCamps"
+msgstr "ClassicPress.org Specific: Jobs, Profiles, WordCamps"
+
+#: etc/dashicons.php:251
+msgid "Taxonomien"
+msgstr "Taxonomies"
+
+#: etc/config.php:608
+msgid "Registrierungs-E-Mail"
+msgstr "Registration Email"
+
+#: etc/config.php:609
+msgid "Multisite-Registrierungs-E-Mails"
+msgstr "MultiSite Registration Emails"
+
+#: etc/config.php:677
+msgid "Dashboard-Widgets"
+msgstr "Dashboard Widgets"
+
+#: etc/config.php:703
+msgid "Dashboard-Feeds"
+msgstr "Dashboard Feeds"
+
+#: etc/config.php:721
+msgid "Meta-Widget"
+msgstr "Meta Widget"
+
+#: etc/config.php:769 etc/config.php:770
+msgid "E-Mail-Protokolle"
+msgstr "Email Logs"
+
+#: inc/modules/login-screen/login-screen.php:1825
+#: inc/modules/login-screen/login-screen.php:2144
+#: inc/modules/login-screen/login-screen.php:3019
+msgid "Innenabstand"
+msgstr "padding"
+
+#: inc/modules/login-screen/login-screen.php:1870
+#: inc/modules/login-screen/login-screen.php:2188
+#: inc/class-pstoolkit-helper.php:2018
+msgid "Außenabstand"
+msgstr "Margin"
+
+#: inc/modules/login-screen/login-screen.php:2108
+msgid "Formularfläche"
+msgstr "Form Canvas"
+
+#: inc/modules/emails/template.php:191
+msgid "Blog-URL"
+msgstr "Blog URL"
+
+#: inc/modules/emails/template.php:234
+msgid "Eigene Vorlagen"
+msgstr "Custom templates"
+
+#: inc/modules/emails/template.php:235
+msgid "Speichere den aktuellen Inhalt des HTML-Editors unter einem eigenen Namen und lade ihn später wieder."
+msgstr "Save the current HTML editor content under a custom name and load it again later."
+
+#: inc/modules/emails/template.php:245
+msgid "HTML-Editor"
+msgstr "HTML Editor"
+
+#: inc/modules/emails/template.php:307
+msgid "Gespeicherte Vorlage auswählen"
+msgstr "Select a saved template"
+
+#: inc/modules/emails/template.php:308
+msgid "Gespeicherte Vorlage wählen"
+msgstr "Choose a saved template"
+
+#: inc/modules/emails/template.php:313
+msgid "Name der Vorlage"
+msgstr "Template name"
+
+#: inc/modules/emails/template.php:315
+msgid "Laden"
+msgstr "Load"
+
+#: inc/modules/emails/template.php:316
+msgid "Vorlage speichern"
+msgstr "Save template"
+
+#: inc/modules/emails/template.php:947 inc/modules/emails/template.php:1247
+#: inc/class-pstoolkit-admin.php:303 inc/class-pstoolkit-helper.php:3605
+msgid "Du bist nicht berechtigt, diese Aktion auszuführen."
+msgstr "You are not allowed to perform this action."
+
+#: inc/modules/emails/template.php:1256 inc/modules/emails/template.php:1269
+msgid "Die ausgewählte Vorlage wurde nicht gefunden."
+msgstr "The selected template was not found."
+
+#: inc/modules/emails/template.php:1276
+msgid "Bitte gib einen Namen und HTML-Inhalt für die Vorlage ein."
+msgstr "Please enter a name and HTML content for the template."
+
+#: inc/modules/emails/template.php:1290
+msgid "Unbekannte Vorlagenaktion."
+msgstr "Unknown template action."
+
+#: inc/modules/emails/smtp.php:410
+msgid "SMTP-Server"
+msgstr "SMTP Server"
+
+#: inc/modules/utilities/comments-control.php:227
+msgid "IP-Sperrliste"
+msgstr "IP Blacklist"
+
+#: inc/modules/utilities/comments-control.php:251
+msgid "IP-Freigabeliste"
+msgstr "IP Whitelist"
+
+#: inc/modules/utilities/maintenance.php:226
+msgid "DEMNÄCHST"
+msgstr "COMING SOON"
+
+#: inc/modules/widgets/meta-widget.php:81
+msgid "Einträge <abbr title=\"Really Simple Syndication\">RSS</abbr>"
+msgstr "Entries <abbr title=\"Really Simple Syndication\">RSS</abbr>"
+
+#: inc/modules/widgets/meta-widget.php:82
+msgid "Kommentare <abbr title=\"Really Simple Syndication\">RSS</abbr>"
+msgstr "Comments <abbr title=\"Really Simple Syndication\">RSS</abbr>"
+
+#: inc/modules/admin/custom-css.php:52
+msgid "Admin-CSS"
+msgstr "Admin CSS"
+
+#: inc/modules/admin/custom-css.php:67
+msgid "Fußzeile"
+msgstr "Footer"
+
+#: inc/modules/admin/menu.php:516
+msgid "Dashboard-Link"
+msgstr "Dashboard Link"
+
+#: inc/modules/admin/menu.php:527
+msgid "Link-Manager"
+msgstr "Link Manager"
+
+#: inc/modules/admin/menu.php:681
+msgid "URL-Link"
+msgstr "URL Link"
+
+#: inc/modules/front-end/author-box.php:827
+msgid "Linkname"
+msgstr "Link Name"
+
+#: inc/modules/front-end/site-status-page.php:393
+msgid "Modi"
+msgstr "Modes"
+
+#: inc/modules/front-end/cookie-notice.php:175
+#, php-format
+msgid "Die aktuell ausgewählte Datenschutzseite ist nicht vorhanden. Bitte %1$serstelle eine neue Seite oder wähle eine andere aus%2$s."
+msgstr "The selected privacy policy page does not exist. Please %1$screate a new page or select another one%2$s."
+
+#: inc/modules/front-end/cookie-notice.php:306
+msgid "Cookie-Version"
+msgstr "Cookie Version"
+
+#: inc/class-pstoolkit-base.php:153 inc/class-pstoolkit-base.php:177
+msgid "Modul existiert nicht."
+msgstr "Module does not exist."
+
+#: inc/class-pstoolkit-helper.php:744
+msgid "Amazon"
+msgstr "Amazon"
+
+#: inc/class-pstoolkit-helper.php:745
+msgid "Blogger"
+msgstr "Blogger"
+
+#: inc/class-pstoolkit-helper.php:746
+msgid "CodePen"
+msgstr "CodePen"
+
+#: inc/class-pstoolkit-helper.php:747
+msgid "Dribbble"
+msgstr "Dribbble"
+
+#: inc/class-pstoolkit-helper.php:748
+msgid "Dropbox"
+msgstr "Dropbox"
+
+#: inc/class-pstoolkit-helper.php:749
+msgid "Eventbrite"
+msgstr "Eventbrite"
+
+#: inc/class-pstoolkit-helper.php:750
+msgid "Facebook"
+msgstr "Facebook"
+
+#: inc/class-pstoolkit-helper.php:751
+msgid "Flickr"
+msgstr "Flickr"
+
+#: inc/class-pstoolkit-helper.php:752
+msgid "Foursquare"
+msgstr "Foursquare"
+
+#: inc/class-pstoolkit-helper.php:753
+msgid "Ghost"
+msgstr "Ghost"
+
+#: inc/class-pstoolkit-helper.php:754
+msgid "GitHub"
+msgstr "GitHub"
+
+#: inc/class-pstoolkit-helper.php:755
+msgid "Instagram"
+msgstr "Instagram"
+
+#: inc/class-pstoolkit-helper.php:756
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: inc/class-pstoolkit-helper.php:757
+msgid "Mail"
+msgstr "Mail"
+
+#: inc/class-pstoolkit-helper.php:758
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: inc/class-pstoolkit-helper.php:759
+msgid "Pocket"
+msgstr "Pocket"
+
+#: inc/class-pstoolkit-helper.php:760
+msgid "Polldaddy"
+msgstr "Polldaddy"
+
+#: inc/class-pstoolkit-helper.php:761
+msgid "Reddit"
+msgstr "Reddit"
+
+#: inc/class-pstoolkit-helper.php:762
+msgid "Skype"
+msgstr "Skype"
+
+#: inc/class-pstoolkit-helper.php:763
+msgid "Spotify"
+msgstr "Spotify"
+
+#: inc/class-pstoolkit-helper.php:764
+msgid "Squarespace"
+msgstr "Squarespace"
+
+#: inc/class-pstoolkit-helper.php:765
+msgid "StumbleUpon"
+msgstr "StumbleUpon"
+
+#: inc/class-pstoolkit-helper.php:766
+msgid "Telegram"
+msgstr "Telegram"
+
+#: inc/class-pstoolkit-helper.php:767
+msgid "Tumblr"
+msgstr "Tumblr"
+
+#: inc/class-pstoolkit-helper.php:768
+msgid "Twitter"
+msgstr "Twitter"
+
+#: inc/class-pstoolkit-helper.php:769
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#: inc/class-pstoolkit-helper.php:770
+msgid "WhatsApp"
+msgstr "WhatsApp"
+
+#: inc/class-pstoolkit-helper.php:771
+msgid "ClassicPress"
+msgstr "ClassicPress"
+
+#: inc/class-pstoolkit-helper.php:772
+msgid "Xanga"
+msgstr "Xanga"
+
+#: inc/class-pstoolkit-helper.php:773
+msgid "YouTube"
+msgstr "YouTube"
+
+#: inc/class-pstoolkit-helper.php:816
+msgid "Gepunktet"
+msgstr "Dotted"
+
+#: inc/class-pstoolkit-helper.php:817
+msgid "Gestrichelt"
+msgstr "Dashed"
+
+#: inc/class-pstoolkit-helper.php:818 inc/class-pstoolkit-helper.php:2173
+msgid "Fest"
+msgstr "Solid"
+
+#: inc/class-pstoolkit-helper.php:819
+msgid "Doppelt"
+msgstr "Double"
+
+#: inc/class-pstoolkit-helper.php:820
+msgid "3D gerillt"
+msgstr "Groove"
+
+#: inc/class-pstoolkit-helper.php:821
+msgid "3D geriffelt"
+msgstr "Ridge"
+
+#: inc/class-pstoolkit-helper.php:822
+msgid "3D-Einschub"
+msgstr "Inset"
+
+#: inc/class-pstoolkit-helper.php:823
+msgid "3D-Anfang"
+msgstr "Outset"
+
+#: inc/class-pstoolkit-helper.php:1548 inc/class-pstoolkit-helper.php:3010
+msgid "Hintergrundfarbe"
+msgstr "Background color"
+
+#: inc/class-pstoolkit-helper.php:1553
+msgid "Hintergrundbilder anzeigen"
+msgstr "Show background images"
+
+#: inc/class-pstoolkit-helper.php:1554
+msgid "Möchtest Hintergrundbilder verwenden?"
+msgstr "Would you like to use background images?"
+
+#: inc/class-pstoolkit-helper.php:1565 inc/class-pstoolkit-helper.php:2099
+msgid "Modus für mehrere Bilder"
+msgstr "Multiple image mode"
+
+#: inc/class-pstoolkit-helper.php:1567 inc/class-pstoolkit-helper.php:2101
+msgid "Diashow"
+msgstr "Slideshow"
+
+#: inc/class-pstoolkit-helper.php:1576
+msgid "Hier kannst Du ein Hintergrundbild hochladen. Das Bild wird an die Seite angepasst und automatisch geändert, wenn sich die Fenstergröße ändert. Du erzielst die besten Ergebnisse, wenn Du Bilder mit einer Mindestbreite von 1024 Pixel verwendest."
+msgstr "Upload a background image here. The image will fit the page and resize automatically when the window size changes. For best results, use images at least 1024 pixels wide."
+
+#: inc/class-pstoolkit-helper.php:1581
+msgid "Dauer der Diashow"
+msgstr "Slideshow duration"
+
+#: inc/class-pstoolkit-helper.php:1582
+msgid "Dauer in Minuten, wir empfehlen dringend, nicht weniger als 5 Minuten zu verwenden."
+msgstr "Duration in minutes. We strongly recommend at least 5 minutes."
+
+#: inc/class-pstoolkit-helper.php:1670
+msgid "Die bevorzugte Breite des Logos beträgt 320 Pixel, um die besten Ergebnisse zu erzielen."
+msgstr "For best results, use a logo width of 320 pixels."
+
+#: inc/class-pstoolkit-helper.php:1679
+msgid "Logo &amp; Hintergrund"
+msgstr "Logo &amp; background"
+
+#: inc/class-pstoolkit-helper.php:1686
+msgid "Benutzer werden zu diesem Link weitergeleitet, wenn sie auf das Logo klicken."
+msgstr "Users will be redirected to this link when they click the logo."
+
+#: inc/class-pstoolkit-helper.php:1696
+msgid "Alternativtext"
+msgstr "Alt text"
+
+#: inc/class-pstoolkit-helper.php:1704
+msgid "Sichtbarkeit des Logos"
+msgstr "Logo visibility"
+
+#: inc/class-pstoolkit-helper.php:1719
+msgid "Für beste Ergebnisse sollte das Bild eine Mindestbreite von 1024 Pixel haben. Du kannst mehrere Bilder hochladen und im Designbereich eine Diashow erstellen."
+msgstr "For best results, use an image at least 1024 pixels wide. You can upload multiple images and create a slideshow in the design section."
+
+#: inc/class-pstoolkit-helper.php:1756
+msgid "Beschreibung (optional)"
+msgstr "Description (optional)"
+
+#: inc/class-pstoolkit-helper.php:1985
+msgid "Es sollte kleiner sein als das Formular Canvas (320px)."
+msgstr "It should be smaller than the form canvas (320px)."
+
+#: inc/class-pstoolkit-helper.php:2004
+msgid "Zentriert"
+msgstr "Centered"
+
+#: inc/class-pstoolkit-helper.php:2085
+msgid "Dauer"
+msgstr "Duration"
+
+#: inc/class-pstoolkit-helper.php:2088
+msgid "Wir empfehlen dringend eine Dauer von mindestens 5 Sekunden."
+msgstr "We strongly recommend a duration of at least 5 seconds."
+
+#: inc/class-pstoolkit-helper.php:2114 inc/class-pstoolkit-helper.php:2124
+#: inc/class-pstoolkit-helper.php:2209 inc/class-pstoolkit-helper.php:2225
+msgid "%"
+msgstr "%"
+
+#: inc/class-pstoolkit-helper.php:2155
+msgid "Hintergrund Schnitt"
+msgstr "Background crop"
+
+#: inc/class-pstoolkit-helper.php:2157
+msgid "Diese Einstellung funktioniert nur mit Bildern, die der ClassicPress-Medienbibliothek hinzugefügt wurden."
+msgstr "This setting only works with images added to the ClassicPress media library."
+
+#: inc/class-pstoolkit-helper.php:2161
+msgid "Auto"
+msgstr "Auto"
+
+#: inc/class-pstoolkit-helper.php:2162
+msgid "Schnitt nicht ändern."
+msgstr "Do not change the crop."
+
+#: inc/class-pstoolkit-helper.php:2166
+msgid "Schnitt proportional, Höhe ändern."
+msgstr "Crop proportionally, changing the height."
+
+#: inc/class-pstoolkit-helper.php:2170
+msgid "Schnitt proportional, Breite ändern."
+msgstr "Crop proportionally, changing the width."
+
+#: inc/class-pstoolkit-helper.php:2174
+msgid "Auf feste Größe zuschneiden"
+msgstr "Crop to a fixed size"
+
+#: inc/class-pstoolkit-helper.php:2182
+msgid "Hintergrundbefestigung"
+msgstr "Background attachment"
+
+#: inc/class-pstoolkit-helper.php:2184
+msgid "Diese CSS-Eigenschaft legt fest, ob eine Hintergrundbildposition im Ansichtsfenster festgelegt ist oder mit dem enthaltenen Block gescrollt wird."
+msgstr "This CSS property determines whether the background image is fixed within the viewport or scrolls with its containing block."
+
+#: inc/class-pstoolkit-helper.php:2188
+msgid "Nicht eingestellt"
+msgstr "Not set"
+
+#: inc/class-pstoolkit-helper.php:2189
+msgid "Ändert sich nicht."
+msgstr "Does not change."
+
+#: inc/class-pstoolkit-helper.php:2192
+msgid "Fixiert"
+msgstr "Fixed"
+
+#: inc/class-pstoolkit-helper.php:2193
+msgid "Der Hintergrund ist relativ zum Ansichtsfenster festgelegt. Selbst wenn ein Element über einen Bildlaufmechanismus verfügt, bewegt sich der Hintergrund nicht mit dem Element."
+msgstr "The background is fixed relative to the viewport. Even if an element scrolls, the background does not move with it."
+
+#: inc/class-pstoolkit-helper.php:2196
+msgid "Scrollen"
+msgstr "Scroll"
+
+#: inc/class-pstoolkit-helper.php:2197
+msgid "Der Hintergrund ist relativ zum Element selbst festgelegt und scrollt nicht mit seinem Inhalt."
+msgstr "The background is fixed relative to the element itself and does not scroll with its content."
+
+#: inc/class-pstoolkit-helper.php:2205 inc/class-pstoolkit-helper.php:2221
+msgid "Belasse \"0\" für \"auto\"-Wert."
+msgstr "Leave \"0\" for the \"auto\" value."
+
+#: inc/class-pstoolkit-helper.php:2236
+msgid "Hintergrundgröße"
+msgstr "Background size"
+
+#: inc/class-pstoolkit-helper.php:2240
+msgid "Ändere die Größe des Hintergrundbilds, um den gesamten Container zu bedecken, auch wenn das Bild gedehnt oder an einer der Kanten etwas abgeschnitten werden muss."
+msgstr "Resize the background image to cover the entire container, even if it must be stretched or cropped at an edge."
+
+#: inc/class-pstoolkit-helper.php:2244
+msgid "Ändere die Größe des Hintergrundbilds, um sicherzustellen, dass das Bild vollständig sichtbar ist."
+msgstr "Resize the background image so that the entire image is visible."
+
+#: inc/class-pstoolkit-helper.php:2248
+msgid "Das Hintergrundbild wird in seiner Originalgröße angezeigt."
+msgstr "The background image is displayed at its original size."
+
+#: inc/class-pstoolkit-helper.php:2251
+msgid "Länge"
+msgstr "Length"
+
+#: inc/class-pstoolkit-helper.php:2252
+msgid "Legt die Breite und Höhe des Hintergrundbilds fest."
+msgstr "Sets the width and height of the background image."
+
+#: inc/class-pstoolkit-helper.php:2260
+msgid "Horizontale Hintergrundposition"
+msgstr "Horizontal background position"
+
+#: inc/class-pstoolkit-helper.php:2286
+msgid "Vertikale Hintergrundposition"
+msgstr "Vertical background position"
+
+#: inc/class-pstoolkit-helper.php:2355
+msgid "Für beste Ergebnisse sollte es vorzugsweise weniger als 1024 sein."
+msgstr "For best results, it should preferably be less than 1024."
+
+#: inc/class-pstoolkit-helper.php:2364 inc/class-pstoolkit-helper.php:2656
+msgid "Inhaltsverpackung"
+msgstr "Content wrapper"
+
+#: inc/class-pstoolkit-helper.php:2405 inc/class-pstoolkit-helper.php:2697
+msgid "Zeige"
+msgstr "Show"
+
+#: inc/class-pstoolkit-helper.php:2419
+msgid "Die folgenden Optionen sind nicht betroffen."
+msgstr "The following options are not affected."
+
+#: inc/class-pstoolkit-helper.php:2425 inc/class-pstoolkit-helper.php:3113
+msgid "Öffne Link"
+msgstr "Open link"
+
+#: inc/class-pstoolkit-helper.php:2427
+msgid "Neuer Tab"
+msgstr "New tab"
+
+#: inc/class-pstoolkit-helper.php:2428
+msgid "Im gleichen"
+msgstr "In the same tab"
+
+#: inc/class-pstoolkit-helper.php:2434
+msgid "Icon-Stil"
+msgstr "Icon style"
+
+#: inc/class-pstoolkit-helper.php:2489
+msgid "Logo & Hintergrund"
+msgstr "Logo & background"
+
+#: inc/class-pstoolkit-helper.php:2698
+msgid "Möchtest Du Social Media zeigen?"
+msgstr "Would you like to show social media?"
+
+#: inc/class-pstoolkit-helper.php:2710
+msgid "Möchtest Du farbige Symbole anzeigen?"
+msgstr "Would you like to show colored icons?"
+
+#: inc/class-pstoolkit-helper.php:2721
+msgid "Öffne Links"
+msgstr "Open links"
+
+#: inc/class-pstoolkit-helper.php:2722
+msgid "Möchtest Du einen Link in einem neuen oder demselben Fenster/Tab öffnen?"
+msgstr "Would you like to open links in a new or the same window/tab?"
+
+#: inc/class-pstoolkit-helper.php:2724
+msgid "Neu"
+msgstr "New"
+
+#: inc/class-pstoolkit-helper.php:2725
+msgid "Selben"
+msgstr "Same"
+
+#: inc/class-pstoolkit-helper.php:2900
+msgid "-- Kopie von --"
+msgstr "-- Copy of --"
+
+#: inc/class-pstoolkit-helper.php:2912
+msgid "Kopieren"
+msgstr "Copy"
+
+#: inc/class-pstoolkit-helper.php:2970
+msgid "Titel anzeigen"
+msgstr "Show title"
+
+#: inc/class-pstoolkit-helper.php:2971
+msgid "Möchtest Du den Titel zeigen?"
+msgstr "Would you like to show the title?"
+
+#: inc/class-pstoolkit-helper.php:2973 inc/class-pstoolkit-helper.php:2990
+msgid "Aus"
+msgstr "Off"
+
+#: inc/class-pstoolkit-helper.php:2974 inc/class-pstoolkit-helper.php:2991
+msgid "An"
+msgstr "On"
+
+#: inc/class-pstoolkit-helper.php:2987
+msgid "Inhalt zeigen"
+msgstr "Show content"
+
+#: inc/class-pstoolkit-helper.php:2988
+msgid "Möchtest Du Inhalte anzeigen?"
+msgstr "Would you like to show content?"
+
+#: inc/class-pstoolkit-helper.php:3015
+msgid "Hintergrundtransparenz"
+msgstr "Background transparency"
+
+#: inc/class-pstoolkit-helper.php:3693
+msgid "Möchtest Du das ausgewählte Element wirklich löschen?"
+msgstr "Are you sure you want to delete the selected item?"
+
+#: inc/class-pstoolkit-helper.php:4448
+msgid "Verwende für erweiterte Anpassungsoptionen benutzerdefiniertes CSS."
+msgstr "Use custom CSS for advanced customization options."
+
+#: inc/class-pstoolkit-helper.php:4509
+msgid "Vorlagendatei existiert nicht!"
+msgstr "Template file does not exist!"
+
+#: inc/class-pstoolkit-helper.php:4513
+#, php-format
+msgid "Vorlagendatei %s existiert nicht!"
+msgstr "Template file %s does not exist!"
+
+#: inc/class-pstoolkit-helper.php:4648
+#, php-format
+msgid "Die Benutzerregistrierung wurde deaktiviert. Klicke <a href=\"%s\">hier</a>, um die Benutzerregistrierung für Deine Website zu aktivieren."
+msgstr "User registration has been disabled. Click <a href=\"%s\">here</a> to enable user registration for your website."
+
+#: inc/class-pstoolkit-helper.php:4680
+msgid "Netzwerkadministrator"
+msgstr "Network administrator"
+
+#: inc/class-simple-options.php:242
+msgid "Kein Titel"
+msgstr "No title"
+
+#: inc/class-simple-options.php:1422
+msgid "Passwort anzeigen"
+msgstr "Show Password"
+
+#: views/admin/modules/smtp/plugins-list.php:4
+msgid "Plugin-Name"
+msgstr "Plugin Name"
+
+#: views/admin/modules/permissions/row.php:17
+#: views/admin/modules/permissions/row.php:22
+msgid "Zugriff entfernen"
+msgstr "Remove access"
+
+#: views/admin/modules/permissions/susbsites.php:4
+msgid "Es gibt keine Module, deren Einstellungen überschrieben werden dürfen."
+msgstr "There are no modules whose settings can be overridden."
+
+#: views/admin/modules/tracking-codes/dialogs/edit.php:35
+msgid "Tracking-Code"
+msgstr "Tracking Code"
+
+#: views/admin/common/header.php:8
+msgid "Beim Plugin mitwirken auf GitHub"
+msgstr "Contribute to the plugin on GitHub"
+
+#: views/admin/common/footer.php:15 views/admin/common/footer.php:29
+msgid "Dokumentation"
+msgstr "Docs"
+
+#: views/admin/common/footer.php:18 views/admin/common/footer.php:31
+msgid "Nutzungsbedingungen"
+msgstr "Terms of Service"
+
+#: views/admin/common/footer.php:26
+msgid "Kostenlose Plugins"
+msgstr "Free Plugins"
+
+#: views/admin/common/footer.php:27
+msgid "Mitgliedschaft"
+msgstr "Membership"
+
+#: views/admin/common/dialogs/test-email.php:12
+msgid "Test-E-Mail"
+msgstr "Test-Email"
+
+#: views/admin/common/no-module.php:10
+msgid "Unbekanntes Modul"
+msgstr "Unknown modules"
+
+#: views/admin/common/no-module.php:14
+msgid "Das ausgewählte Modul existiert nicht oder ist nicht verfügbar."
+msgstr "The selected module does not exist or is not available."
+
+#: views/admin/common/dashicon-picker.php:11
+msgid "Symbol suchen"
+msgstr "Search icon"
+
+#: views/admin/dashboard/modules/import-export.php:21
+msgid "Zuletzt verwendet"
+msgstr "Last Used"
+
+#: views/admin/dashboard/modules/import-export-row.php:8
+msgid "Nie"
+msgstr "Never"
+
+#: views/admin/dashboard/welcome.php:9
+msgid "Willkommen bei PSToolkit"
+msgstr "Welcome to PSToolkit"
+
+#: views/admin/dashboard/welcome.php:12
+msgid "Aktiviere zunächst die Module, die Du verwenden möchtest. Du kannst Module jederzeit später aktivieren oder deaktivieren."
+msgstr "Let’s get you started by activating the modules you want to use. You can always activate/deactivate modules later."
+
+#: views/admin/dashboard/welcome.php:21
+msgctxt "button"
+msgid "Vorerst überspringen"
+msgstr "Skip for now"
+
+#: views/admin/dashboard/welcome.php:26
+msgctxt "button"
+msgid "Überspringen"
+msgstr "Skip"

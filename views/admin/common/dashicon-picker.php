@@ -8,7 +8,7 @@ $list = empty( $list ) ? array() : $list;
 
 			<div class="sui-form-field">
 				<input type="text"
-					   placeholder="<?php esc_attr_e( 'Search icon', 'ub' ); ?>"
+					   placeholder="<?php esc_attr_e( 'Symbol suchen', 'ub' ); ?>"
 					   class="sui-form-control">
 			</div>
 		</div>

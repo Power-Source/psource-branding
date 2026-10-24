@@ -961,7 +961,7 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 
 		private function handle_main_page_global() {
 			$stats              = $this->stats->get_stats();
-			$recently_activated = $recently_deactivated = __( 'none', 'ub' );
+			$recently_activated = $recently_deactivated = __( 'Keine', 'ub' );
 			if ( isset( $stats['activites'] ) ) {
 				if (
 					isset( $stats['activites']['activate'] )

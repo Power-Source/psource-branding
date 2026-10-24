@@ -513,7 +513,7 @@ if ( ! class_exists( 'PSToolkit_Admin_Menu' ) ) {
 				),
 				'dashboard-link'    => array(
 					'network-only' => true,
-					'title'        => __( 'Dashboard Link', 'ub' ),
+					'title'        => __( 'Dashboard-Link', 'ub' ),
 					'description'  => __( 'Entferne den Link "Dashboard" aus dem Admin-Bereich für Benutzer ohne Webseite (in WP Multisite).', 'ub' ),
 					'fields'       => array(
 						'status' => array(
@@ -524,7 +524,7 @@ if ( ! class_exists( 'PSToolkit_Admin_Menu' ) ) {
 					),
 				),
 				'link-manager'      => array(
-					'title'       => __( 'Link Manager', 'ub' ),
+					'title'       => __( 'Link-Manager', 'ub' ),
 					'description' => __( 'Aktiviert den Link Manager, der in ClassicPress bis Version 3.5 vorhanden war.', 'ub' ),
 					'fields'      => array(
 						'status' => array(
@@ -677,8 +677,8 @@ if ( ! class_exists( 'PSToolkit_Admin_Menu' ) ) {
 					'label'       => __( 'Symbol', 'ub' ),
 					'options'     => array(
 						'dashicon' => __( 'Dashicon', 'ub' ),
-						'svg'      => __( 'SVG code', 'ub' ),
-						'url'      => __( 'URL Link', 'ub' ),
+						'svg'      => __( 'SVG-Code', 'ub' ),
+						'url'      => __( 'URL-Link', 'ub' ),
 						'upload'   => __( 'Hochladen', 'ub' ),
 						'none'     => __( 'Keines', 'ub' ),
 					),

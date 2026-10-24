@@ -214,7 +214,7 @@ $_pstoolkit_dashicons_list = array(
 	),
 
 	'icons'                      => array(
-		'title' => __( 'ClassicPress.org Specific: Jobs, Profiles, WordCamps', 'ub' ),
+		'title' => __( 'ClassicPress.org-spezifisch: Jobs, Profile, WordCamps', 'ub' ),
 		'icons' => array(
 			'f308' => 'hammer',
 			'f309' => 'art',
@@ -248,7 +248,7 @@ $_pstoolkit_dashicons_list = array(
 	),
 
 	'taxonomies'                 => array(
-		'title' => __( 'Taxonomies', 'ub' ),
+		'title' => __( 'Taxonomien', 'ub' ),
 		'icons' => array(
 			'f323' => 'tag',
 			'f318' => 'category',

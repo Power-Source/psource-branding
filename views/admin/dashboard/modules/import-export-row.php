@@ -5,7 +5,7 @@
 	if ( isset( $stats['last_write_human'] ) ) {
 		echo $stats['last_write_human'];
 	} else {
-		_e( 'Never', 'ub' );
+		_e( 'Nie', 'ub' );
 	}
 	?>
 	</td>

@@ -751,7 +751,7 @@ if ( ! class_exists( 'PSToolkit_Helper' ) ) {
 				'flickr'      => array( 'label' => __( 'Flickr', 'ub' ) ),
 				'foursquare'  => array( 'label' => __( 'Foursquare', 'ub' ) ),
 				'ghost'       => array( 'label' => __( 'Ghost', 'ub' ) ),
-				'github'      => array( 'label' => __( 'Github', 'ub' ) ),
+				'github'      => array( 'label' => __( 'GitHub', 'ub' ) ),
 				'instagram'   => array( 'label' => __( 'Instagram', 'ub' ) ),
 				'linkedin'    => array( 'label' => __( 'LinkedIn', 'ub' ) ),
 				'mail'        => array( 'label' => __( 'Mail', 'ub' ) ),
@@ -762,15 +762,15 @@ if ( ! class_exists( 'PSToolkit_Helper' ) ) {
 				'skype'       => array( 'label' => __( 'Skype', 'ub' ) ),
 				'spotify'     => array( 'label' => __( 'Spotify', 'ub' ) ),
 				'squarespace' => array( 'label' => __( 'Squarespace', 'ub' ) ),
-				'stumbleupon' => array( 'label' => __( 'Stumbleupon', 'ub' ) ),
+				'stumbleupon' => array( 'label' => __( 'StumbleUpon', 'ub' ) ),
 				'telegram'    => array( 'label' => __( 'Telegram', 'ub' ) ),
 				'tumblr'      => array( 'label' => __( 'Tumblr', 'ub' ) ),
 				'twitter'     => array( 'label' => __( 'Twitter', 'ub' ) ),
 				'vimeo'       => array( 'label' => __( 'Vimeo', 'ub' ) ),
-				'whatsapp'    => array( 'label' => __( 'Whatsapp', 'ub' ) ),
+				'whatsapp'    => array( 'label' => __( 'WhatsApp', 'ub' ) ),
 				'classicpress'   => array( 'label' => __( 'ClassicPress', 'ub' ) ),
 				'xanga'       => array( 'label' => __( 'Xanga', 'ub' ) ),
-				'youtube'     => array( 'label' => __( 'Youtube', 'ub' ) ),
+				'youtube'     => array( 'label' => __( 'YouTube', 'ub' ) ),
 			);
 			/**
 			 * Sort in case when translation made a mess
@@ -1693,7 +1693,7 @@ if ( ! class_exists( 'PSToolkit_Helper' ) ) {
 				),
 				'logo_alt'           => array(
 					'type'         => 'text',
-					'label'        => __( 'Alt Text', 'ub' ),
+					'label'        => __( 'Alternativtext', 'ub' ),
 					'default'      => esc_html( isset( $defaults['alt'] ) ? $defaults['alt'] : '' ),
 					'master'       => $this->get_name( 'logo' ),
 					'master-value' => 'on',
@@ -2015,7 +2015,7 @@ if ( ! class_exists( 'PSToolkit_Helper' ) ) {
 					'after_field'  => '</div>',
 					'group'        => array(
 						'begin'   => true,
-						'label'   => __( 'Margin', 'ub' ),
+						'label'   => __( 'Außenabstand', 'ub' ),
 						'classes' => 'sui-border-frame',
 					),
 					'units'        => array(

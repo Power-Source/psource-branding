@@ -14,12 +14,12 @@
 	<?php if ( get_current_user_id() === $id ) { ?>
 		<span class="sui-tag"><?php esc_html_e( 'Du', 'ub' ); ?></span>
 	<?php } else { ?>
-		<div class="sui-button-icon pstoolkit-button-hover-red sui-tooltip sui-tooltip-top pstoolkit-permissions-delete" data-tooltip="<?php esc_html_e( 'Remove access', 'ub' ); ?>">
+		<div class="sui-button-icon pstoolkit-button-hover-red sui-tooltip sui-tooltip-top pstoolkit-permissions-delete" data-tooltip="<?php esc_html_e( 'Zugriff entfernen', 'ub' ); ?>">
 				<span class="sui-loading-text">
 					<i class="sui-icon-trash" aria-hidden="true"></i>
 				</span>
 				<i class="sui-icon-loader sui-loading" aria-hidden="true"></i>
-			<span class="sui-screen-reader-text"><?php esc_html_e( 'Remove access', 'ub' ); ?></span>
+			<span class="sui-screen-reader-text"><?php esc_html_e( 'Zugriff entfernen', 'ub' ); ?></span>
 		</div>
 	<?php } ?>
 </div>

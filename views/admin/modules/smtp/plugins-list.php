@@ -1,7 +1,7 @@
 <table class="sui-table sui-table-flushed" data-action="<?php echo esc_attr( $action ); ?>">
 	<thead>
 		<tr>
-			<th class="sui-table--name"><?php esc_html_e( 'Plugin Name', 'ub' ); ?></th>
+			<th class="sui-table--name"><?php esc_html_e( 'Plugin-Name', 'ub' ); ?></th>
 			<th class="sui-table--status"><?php esc_html_e( 'Deaktivieren', 'ub' ); ?></th>
 			<th class="sui-table--status"><?php esc_html_e( 'Deaktivieren &amp; Konfiguration importieren', 'ub' ); ?></th>
 		</tr>

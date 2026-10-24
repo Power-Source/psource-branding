@@ -49,7 +49,7 @@ if ( ! class_exists( 'PSToolkit_Admin_Css' ) ) {
 		protected function set_options() {
 			$options       = array(
 				'admin' => array(
-					'title'       => __( 'Admin CSS', 'ub' ),
+					'title'       => __( 'Admin-CSS', 'ub' ),
 					'description' => __( 'Verwende für eine erweiterte Anpassung von Administrationsseiten das CSS. Dies wird dem Header jeder Administrationsseite hinzugefügt.', 'ub' ),
 					'hide-th'     => true,
 					'placeholder' => esc_attr__( 'Gib hier benutzerdefiniertes CSS ein...', 'ub' ),
@@ -64,7 +64,7 @@ if ( ! class_exists( 'PSToolkit_Admin_Css' ) ) {
 										'#wpadminbar'    => __( 'Bar', 'ub' ),
 										'#wpcontent'     => __( 'Inhalt', 'ub' ),
 										'#wpbody'        => __( 'Body', 'ub' ),
-										'#wpfooter'      => __( 'Footer', 'ub' ),
+										'#wpfooter'      => __( 'Fußzeile', 'ub' ),
 										'#adminmenu'     => __( 'Menü', 'ub' ),
 										'#adminmenuwrap' => __( 'Menü Wrap', 'ub' ),
 									),

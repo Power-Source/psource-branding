@@ -86,7 +86,7 @@ if ( ! class_exists( 'PSToolkit_Cookie_Notice' ) ) {
 			if ( isset( $value['privacy_policy'] ) ) {
 				$v                                      = $value['privacy_policy'];
 				$data['content']['privacy_policy_show'] = isset( $v['show'] ) ? $v['show'] : 'on';
-				$data['content']['privacy_policy_text'] = isset( $v['text'] ) ? $v['text'] : __( 'Privacy Policy', 'ub' );
+				$data['content']['privacy_policy_text'] = isset( $v['text'] ) ? $v['text'] : __( 'Datenschutzerklärung', 'ub' );
 				$data['content']['privacy_policy_link_in_new_tab'] = isset( $v['link_in_new_tab'] ) ? $v['link_in_new_tab'] : 'off';
 			}
 			// Box.
@@ -172,7 +172,7 @@ if ( ! class_exists( 'PSToolkit_Cookie_Notice' ) ) {
 						),
 						'privacy_policy_info'            => array(
 							'type'         => 'description',
-							'value'        => PSToolkit_Helper::sui_notice( sprintf( __( 'Die aktuell ausgewählte Seite mit den Datenschutzrichtlinien ist nicht vorhanden. Bitte %1$erstelle oder eine neue Seite auswählen%2$s.', 'ub' ), '<a href="' . admin_url( 'options-privacy.php' ) . '">', '</a>' ) ),
+							'value'        => PSToolkit_Helper::sui_notice( sprintf( __( 'Die aktuell ausgewählte Datenschutzseite ist nicht vorhanden. Bitte %1$serstelle eine neue Seite oder wähle eine andere aus%2$s.', 'ub' ), '<a href="' . admin_url( 'options-privacy.php' ) . '">', '</a>' ) ),
 							'master'       => $this->get_name( 'privacy-policy' ),
 							'master-value' => 'on',
 							'display'      => 'sui-tab-content',
@@ -303,7 +303,7 @@ if ( ! class_exists( 'PSToolkit_Cookie_Notice' ) ) {
 						),
 						'cookie_version' => array(
 							'type'        => 'number',
-							'label'       => __( 'Cookie Version', 'ub' ),
+							'label'       => __( 'Cookie-Version', 'ub' ),
 							'min'         => 1,
 							'description' => __( 'Wähle eine Versionsnummer für das Cookie. Aktualisiere dies, um das vorherige Cookie ungültig zu machen und alle Benutzer zu zwingen, die Benachrichtigung erneut anzuzeigen.', 'ub' ),
 							'default'     => 1,

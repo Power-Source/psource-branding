@@ -32,7 +32,7 @@
 				<input id="pstoolkit-general-title-<?php echo esc_attr( $id ); ?>" type="text" name="pstoolkit[title]" value="<?php echo esc_attr( $title ); ?>" aria-describedby="input-description" class="sui-form-control" placeholder="<?php esc_attr_e( 'z.B. GA-Ansichten verfolgen', 'ub' ); ?>" />
 			</div>
 			<div class="sui-form-field pstoolkit-general-code" data-id="<?php echo esc_attr( $id ); ?>">
-				<label for="pstoolkit-general-code-<?php echo esc_attr( $id ); ?>" class="sui-label"><?php esc_attr_e( 'Tracking Code', 'ub' ); ?></label>
+				<label for="pstoolkit-general-code-<?php echo esc_attr( $id ); ?>" class="sui-label"><?php esc_attr_e( 'Tracking-Code', 'ub' ); ?></label>
 				<textarea id="pstoolkit-general-code-<?php echo esc_attr( $id ); ?>" name="pstoolkit[code]" class="sui-ace-editor ub_html_editor" rows="10" placeholder="<?php esc_attr_e( 'Füge hier Deinen Tracking-Code ein...', 'ub' ); ?>"><?php echo $code; ?></textarea>
 			</div>
 		</div>

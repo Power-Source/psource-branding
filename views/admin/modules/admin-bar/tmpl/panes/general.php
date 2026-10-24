@@ -41,7 +41,7 @@
 <div class="sui-border-frame pstoolkit-admin-bar-url-options<# if ( 'none' === data.url ) { #> hidden<# } #>">
 	<div class="sui-form-field pstoolkit-general-custom<# if ( 'custom' !== data.url ) {#> hidden<# } #>">
 		<label for="pstoolkit-general-custom-{{data.id}}" class="sui-label"><?php esc_html_e( 'URL', 'ub' ); ?></label>
-		<input id="pstoolkit-general-custom-{{data.id}}" type="text" name="pstoolkit[custom]" value="{{data.custom}}" data-default="" data-required="no" placeholder="<?php esc_attr_e( 'E.g. http://example.com', 'ub' ); ?>" aria-describedby="input-description" class="sui-form-control">
+		<input id="pstoolkit-general-custom-{{data.id}}" type="text" name="pstoolkit[custom]" value="{{data.custom}}" data-default="" data-required="no" placeholder="<?php esc_attr_e( 'z.B. http://example.com', 'ub' ); ?>" aria-describedby="input-description" class="sui-form-control">
 	</div>
 	<div class="sui-form-field pstoolkit-general-target">
 		<label for="pstoolkit-general-target-{{data.id}}" class="sui-label"><?php esc_html_e( 'Link öffnen in', 'ub' ); ?></label>
