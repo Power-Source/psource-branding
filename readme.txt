@@ -27,6 +27,10 @@ Mehr als 30 Module im CP Toolkit enthalten!
 
 == Changelog ==
 
+= Unreleased =
+* Security: Exponentielles Regex-Backtracking im gebuendelten ACE-Tokenizer bei langen Backslash-Folgen in Zeichenklassen behoben.
+* Tests: ACE-Tokenizer-Regressionstests mit npm test ausfuehrbar (Node.js 18+).
+
 = 1.0.5 =
 * Fix: E-Mail-Template-Rendering beschleunigt (falsche Inline-Style-Parameterreihenfolge korrigiert).
 * Fix: Unnoetige, teure Verarbeitung im Vorschau-Pfad entfernt.

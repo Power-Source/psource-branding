@@ -3257,7 +3257,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
       return n;
     }, this.removeCapturingGroups = function (e) {
-      var t = e.replace(/\[(?:\\.|[^\]])*?\]|\\.|\(\?[:=!]|(\()/g, function (e, t) {
+      var t = e.replace(/\[(?:\\.|[^\]\\])*?\]|\\.|\(\?[:=!]|(\()/g, function (e, t) {
         return t ? "(?:" : e;
       });
       return t;
