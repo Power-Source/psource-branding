@@ -2,6 +2,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const test = require('node:test');
+const vm = require('node:vm');
 const { JSDOM } = require('jsdom');
 const jquery = require('jquery');
 
@@ -21,7 +22,7 @@ function setup(t, options) {
     dom.window.eval('(function($) {\n' + source.slice(start, end) + '\n})(jQuery);');
     const select = $('select');
     for (const [index, option] of options.entries()) {
-        const element = $('<option></option>').val(String(index)).text(option.label);
+        const element = $('<option></option>').val(option.value === undefined ? String(index) : option.value).text(option.label);
         for (const [name, value] of Object.entries(option.data || {})) {
             element.attr('data-' + name, value);
         }
@@ -89,4 +90,48 @@ test('content decorations keep intentional markup while labels stay text', t => 
     assert.equal(item.find('strong').text(), 'Decoration');
     assert.equal(wrap.find('li').eq(1).text(), '<b>Plain label</b>');
     assert.equal(wrap.find('img, b').length, 0);
+});
+
+test('navigation only accepts HTTP(S) URLs and leading fragment identifiers', () => {
+    const handlerStart = source.indexOf('        function handleValue()');
+    const handlerEnd = source.indexOf('} // Toggle the dropdown', handlerStart);
+    assert.ok(handlerStart !== -1 && handlerEnd > handlerStart);
+    const handler = source.slice(handlerStart, handlerEnd + 1);
+    const cases = [
+        ['http://example.test/path', true],
+        ['https://example.test/path#section', true],
+        ['#section', true],
+        ['#', true],
+        ['javascript:alert(1)#', false],
+        ['java\nscript:alert(1)#section', false],
+        ['data:text/html,<h1>test</h1>#section', false],
+        ['//example.test/#section', false],
+        ['/path#section', false],
+        ['plain#value', false],
+        ['plain', false],
+        ['', false]
+    ];
+
+    for (const [value, allowed] of cases) {
+        const location = { href: 'unchanged' };
+        vm.runInNewContext(handler + '\nhandleValue();', {
+            jq: [{ value }],
+            window: { location }
+        });
+        assert.equal(location.href, allowed ? value : 'unchanged', value);
+    }
+});
+
+test('selecting a fragment option navigates without changing selection behavior', t => {
+    const { select, wrap } = setup(t, [
+        { label: 'First' },
+        { label: 'Section', value: '#section' }
+    ]);
+    let changes = 0;
+    select.on('change', () => changes++);
+    wrap.find('li').eq(1).trigger('click');
+    assert.equal(select[0].ownerDocument.defaultView.location.hash, '#section');
+    assert.equal(select.val(), '#section');
+    assert.equal(wrap.find('.list-value').text(), 'Section');
+    assert.equal(changes, 1);
 });

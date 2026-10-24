@@ -34,6 +34,7 @@ Hinweis: npm run sync:shared-ui und npm run build ersetzen assets/js/shared-ui.j
 == Changelog ==
 
 = Unreleased =
+* Security: Select-Weiterleitungen erlauben nur HTTP(S)-URLs und fuehrende Fragmentkennungen; ein enthaltenes # gibt keine anderen URL-Schemata mehr frei.
 * Security: Multistrings-Tags und Eingabefelder werden ohne HTML-Verkettung aus Nutzereingaben aufgebaut; Laden, Hinzufuegen und Textarea-Aenderungen abgesichert.
 * Security: Icon-Namen in der Social-Logos-Vorschau werden als Text statt HTML ausgegeben.
 * Security: Select-Labels werden als Text statt HTML eingefuegt; Farbwerte und Icon-Klassen werden ueber DOM-Setter gesetzt.
@@ -78,4 +79,3 @@ Hinweis: npm run sync:shared-ui und npm run build ersetzen assets/js/shared-ui.j
 = 1.0.0 =
 
 * Release
-

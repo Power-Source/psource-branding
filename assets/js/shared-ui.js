@@ -2984,7 +2984,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         function handleValue() {
             var val = jq[0].value; // If option is link, navigate to it.
 
-            if (val.match('^https?:\/\/|#')) {
+            if (/^(?:https?:\/\/|#)/.test(val)) {
                 window.location.href = val;
             }
         } // Toggle the dropdown state between open/closed.
