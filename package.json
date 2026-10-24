@@ -23,6 +23,9 @@
     "url": "https://github.com/Power-Source/psource-branding/issues"
   },
   "homepage": "https://github.com/Power-Source/psource-branding#readme",
+  "dependencies": {
+    "dompurify": "^3.4.0"
+  },
   "devDependencies": {
     "gulp": "^5.0.0",
     "gulp-concat": "^2.6.1",

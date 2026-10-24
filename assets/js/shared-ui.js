@@ -2246,7 +2246,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
      * The ID of the element serving as the alert container.
      *
      * @param noticeMessage
-     * The content to be printed when the alert shows up. It accepts HTML.
+     * The content to be printed when the alert shows up. HTML is sanitized with DOMPurify.
      *
      * @param noticeOptions
      * An object with different paramethers to modify the alert appearance.
@@ -2270,6 +2270,9 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
         if (null === typeof noticeMessage || 'undefined' === typeof noticeMessage || '' === noticeMessage) {
             throw new Error('Notice requires a message to print.');
+        }
+        if (!window.DOMPurify || !window.DOMPurify.isSupported) {
+            throw new Error('Notices require DOMPurify with DOM support.');
         }
 
         var utils = utils || {};
@@ -2358,30 +2361,35 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             if (true === dismiss.show) {
                 html = document.createElement('div');
                 html.className = 'sui-notice-actions';
-                var innerHTML = '';
+                var container = html;
 
                 if ('' !== dismiss.tooltip) {
                     if (nodeWrapper.hasClass('sui-floating-notices')) {
-                        innerHTML += '<div class="sui-tooltip sui-tooltip-bottom" data-tooltip="' + dismiss.tooltip + '">';
+                        container = document.createElement('div');
+                        container.className = 'sui-tooltip sui-tooltip-bottom';
                     } else {
-                        innerHTML += '<div class="sui-tooltip" data-tooltip="' + dismiss.tooltip + '">';
+                        container = document.createElement('div');
+                        container.className = 'sui-tooltip';
                     }
+                    container.setAttribute('data-tooltip', dismiss.tooltip);
+                    html.appendChild(container);
                 }
 
-                innerHTML += '<button class="sui-button-icon">';
-                innerHTML += '<i class="sui-icon-check" aria-hidden="true"></i>';
+                var button = document.createElement('button');
+                button.className = 'sui-button-icon';
+                var icon = document.createElement('i');
+                icon.className = 'sui-icon-check';
+                icon.setAttribute('aria-hidden', 'true');
+                button.appendChild(icon);
 
                 if ('' !== dismiss.label) {
-                    innerHTML += '<span class="sui-screen-reader-text">' + dismiss.label + '</span>';
+                    var label = document.createElement('span');
+                    label.className = 'sui-screen-reader-text';
+                    label.textContent = dismiss.label;
+                    button.appendChild(label);
                 }
 
-                innerHTML += '</button>';
-
-                if ('' !== dismiss.tooltip) {
-                    innerHTML += '</div>';
-                }
-
-                html.innerHTML = innerHTML;
+                container.appendChild(button);
             }
 
             return html;
@@ -2415,7 +2423,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         utils.buildMessage = function() {
             var html = document.createElement('div');
             html.className = 'sui-notice-message';
-            html.innerHTML = noticeMessage;
+            html.appendChild(window.DOMPurify.sanitize(noticeMessage, {
+                USE_PROFILES: { html: true },
+                RETURN_DOM_FRAGMENT: true
+            }));
             html.prepend(utils.buildIcon());
             return html;
         };
@@ -2985,7 +2996,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             var val = jq[0].value; // If option is link, navigate to it.
 
             if (/^(?:https?:\/\/|#)/.test(val)) {
-                window.location.href = val;
+                var target = new URL(val, document.baseURI);
+                if (target.protocol === 'http:' || target.protocol === 'https:') {
+                    window.location.href = target.href;
+                }
             }
         } // Toggle the dropdown state between open/closed.
 

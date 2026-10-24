@@ -28,12 +28,16 @@ Mehr als 30 Module im CP Toolkit enthalten!
 == Entwicklung ==
 
 Regressionstests: npm install und npm test (Node.js 18+).
+DOMPurify wird lokal aus external/dompurify/purify.min.js vor Shared UI geladen. Bei Updates die Dateien purify.min.js, purify.min.js.map und LICENSE aus node_modules/dompurify aktualisieren.
 Hinweis: npm run sync:shared-ui und npm run build ersetzen assets/js/shared-ui.js aus der Shared-UI-Quelle. Die Select- und Multistrings-Sicherheitsfixes muessen dort ebenfalls vorhanden sein; nach einem Sync Tests ausfuehren und das minifizierte Bundle aktualisieren.
 
 
 == Changelog ==
 
 = Unreleased =
+* Security: Notice-HTML wird mit lokal eingebundenem DOMPurify bereinigt; Labels und Tooltips werden als Text bzw. Attribute gesetzt.
+* Security: Select-Ziele werden zusaetzlich mit dem URL-Parser normalisiert und auf HTTP(S)-Protokolle geprueft.
+* Security: Admin-Bar-Untermenue-Titel werden als Text ausgegeben; das Drag-Icon bleibt erhalten.
 * Security: Select-Weiterleitungen erlauben nur HTTP(S)-URLs und fuehrende Fragmentkennungen; ein enthaltenes # gibt keine anderen URL-Schemata mehr frei.
 * Security: Multistrings-Tags und Eingabefelder werden ohne HTML-Verkettung aus Nutzereingaben aufgebaut; Laden, Hinzufuegen und Textarea-Aenderungen abgesichert.
 * Security: Icon-Namen in der Social-Logos-Vorschau werden als Text statt HTML ausgegeben.

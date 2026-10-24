@@ -13,7 +13,8 @@ assert.ok(start !== -1 && end > start);
 
 function setup(t, options) {
     const dom = new JSDOM('<select id="test-select" aria-labelledby="label"></select>', {
-        runScripts: 'outside-only'
+        runScripts: 'outside-only',
+        url: 'https://plugin.test/admin'
     });
     t.after(() => dom.window.close());
     const $ = jquery(dom.window);
@@ -113,12 +114,15 @@ test('navigation only accepts HTTP(S) URLs and leading fragment identifiers', ()
     ];
 
     for (const [value, allowed] of cases) {
-        const location = { href: 'unchanged' };
+        const base = 'https://plugin.test/admin';
+        const location = { href: base };
         vm.runInNewContext(handler + '\nhandleValue();', {
             jq: [{ value }],
-            window: { location }
+            window: { location },
+            document: { baseURI: base },
+            URL
         });
-        assert.equal(location.href, allowed ? value : 'unchanged', value);
+        assert.equal(location.href, allowed ? new URL(value, base).href : base, value);
     }
 });
 

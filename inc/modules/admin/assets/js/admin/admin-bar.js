@@ -397,9 +397,9 @@ jQuery(window.document).ready(function($) {
  */
 function bind_pstoolkit_submenu_title(parent) {
     jQuery('.pstoolkit-admin-bar-submenu-title input[type=text]', parent).on('change paste cut keydown keyup keypress', function(event) {
-        jQuery('.sui-accordion-item-title', jQuery(this).closest('.sui-accordion-item')).html(
-            '<i class="sui-icon-drag" aria-hidden="true"></i>' + jQuery(this).val()
-        );
+        jQuery('.sui-accordion-item-title', jQuery(this).closest('.sui-accordion-item'))
+            .text(jQuery(this).val())
+            .prepend('<i class="sui-icon-drag" aria-hidden="true"></i>');
     });
 }
 

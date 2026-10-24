@@ -405,9 +405,16 @@ if ( ! class_exists( 'PSToolkit_Admin' ) ) {
 			 */
 			$sui_version_bust = $this->build ? $this->build . '-' . time() : time();
 			wp_register_script(
+				'pstoolkit-dompurify',
+				pstoolkit_url( 'external/dompurify/purify.min.js' ),
+				array(),
+				$this->build,
+				true
+			);
+			wp_register_script(
 				'pstoolkit-sui-scripts',
 				pstoolkit_url( 'assets/js/shared-ui.js' ),
-				array( 'jquery', 'pstoolkit-sui-ace', 'pstoolkit-sui-a11y-dialog', 'pstoolkit-sui-select2', 'pstoolkit-sui-clipboard' ),
+				array( 'jquery', 'pstoolkit-dompurify', 'pstoolkit-sui-ace', 'pstoolkit-sui-a11y-dialog', 'pstoolkit-sui-select2', 'pstoolkit-sui-clipboard' ),
 				$sui_version_bust,
 				true
 			);
