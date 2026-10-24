@@ -1854,51 +1854,38 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         }
 
         function buildInput(textarea, uniqid) {
-            var html = '',
-                placeholder = '',
-                ariaLabel = '',
-                ariaDescription = '';
+            var input = $('<input type="text" autocomplete="off" aria-autocomplete="none" />').attr('id', uniqid);
 
             if ('undefined' !== typeof textarea.attr('placeholder') && '' !== textarea.attr('placeholder')) {
-                placeholder = ' placeholder="' + textarea.attr('placeholder') + '"';
+                input.attr('placeholder', textarea.attr('placeholder'));
             }
 
             if ('undefinded' !== typeof textarea.attr('data-field-label') && '' !== textarea.attr('data-field-label')) {
-                ariaLabel = ' aria-labelledby="' + uniqid + '-label"';
+                input.attr('aria-labelledby', uniqid + '-label');
                 textarea.attr('aria-labelledby', uniqid + '-label');
             } else {
                 if (textarea.closest('.sui-form-field').find('.sui-label').length) {
-                    ariaLabel = ' aria-labelledby="' + uniqid + '-label"';
+                    input.attr('aria-labelledby', uniqid + '-label');
                 }
 
                 textarea.attr('aria-labelledby', uniqid + '-label');
             }
 
             if ('undefinded' !== typeof textarea.attr('data-field-label') && '' !== textarea.attr('data-field-label')) {
-                ariaDescription = ' aria-describedby="' + uniqid + '-description"';
+                input.attr('aria-describedby', uniqid + '-description');
             } else {
                 if (textarea.closest('.sui-form-field').find('.sui-label').length) {
-                    ariaDescription = ' aria-ariaDescription="' + uniqid + '-description"';
+                    input.attr('aria-ariaDescription', uniqid + '-description');
                 }
             }
 
-            html += '<li class="sui-multistrings-input">';
-            html += '<input type="text" autocomplete="off"' + placeholder + ' id="' + uniqid + '"' + ariaLabel + ariaDescription + ' aria-autocomplete="none" />';
-            html += '</li>';
-            return html;
+            return $('<li class="sui-multistrings-input"></li>').append(input);
         }
 
         function buildItem(itemName) {
-            var html = '';
-            html += '<li title="' + itemName + '">';
-            html += '<i class="sui-icon-page sui-sm" aria-hidden="true"></i>';
-            html += itemName;
-            html += '<button class="sui-button-close">';
-            html += '<i class="sui-icon-close" aria-hidden="true"></i>';
-            html += '<span class="sui-screen-reader-text">Delete</span>';
-            html += '</button>';
-            html += '</li>';
-            return html;
+            return $('<li></li>').attr('title', itemName).text(itemName)
+                .prepend('<i class="sui-icon-page sui-sm" aria-hidden="true"></i>')
+                .append('<button class="sui-button-close"><i class="sui-icon-close" aria-hidden="true"></i><span class="sui-screen-reader-text">Delete</span></button>');
         }
 
         function bindRemoveTag($mainWrapper) {
@@ -1907,8 +1894,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         }
 
         function insertStringOnLoad(textarea, uniqid, disallowedCharsArray) {
-            var html = '',
-                $mainWrapper = textarea.closest('.sui-multistrings-wrap'),
+            var $mainWrapper = textarea.closest('.sui-multistrings-wrap'),
                 $entriesList = $mainWrapper.find('.sui-multistrings-list'),
                 forbiddenRemoved = cleanTextarea(textarea.val(), disallowedCharsArray, true); // Split lines for inserting the tags and cleaning the new textarea value.
 
@@ -1922,7 +1908,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
                     continue;
                 }
 
-                html += buildItem(stringLine);
+                $entriesList.append(buildItem(stringLine));
                 cleanStringsArray.push(stringLine);
             } // Clean-up textarea value with the cleanStringsArray joined by newlines.
 
@@ -1930,8 +1916,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             var newTextareaValue = cleanStringsArray.join('\n');
             textarea.val(newTextareaValue); // Build input to insert strings.
 
-            html += buildInput(textarea, uniqid);
-            $entriesList.append(html);
+            $entriesList.append(buildInput(textarea, uniqid));
             bindRemoveTag($mainWrapper);
         }
 
@@ -2023,8 +2008,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
                         $textarea.val(newTextareaValue); // Print new value on the list.
 
-                        var html = buildItem(newTrim);
-                        $(html).insertBefore($mainWrapper.find('.sui-multistrings-input')); // Clear input value.
+                        buildItem(newTrim).insertBefore($mainWrapper.find('.sui-multistrings-input')); // Clear input value.
 
                         input.val(''); // Bid the event to remove the tags.
 
@@ -2124,8 +2108,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
                             if (value.length) {
                                 // Print new value on the list.
-                                var html = buildItem(value);
-                                $(html).insertBefore($mainWrapper.find('.sui-multistrings-input'));
+                                buildItem(value).insertBefore($mainWrapper.find('.sui-multistrings-input'));
                             }
                         } // Bind the event to remove the tags.
 

@@ -28,12 +28,14 @@ Mehr als 30 Module im CP Toolkit enthalten!
 == Entwicklung ==
 
 Regressionstests: npm install und npm test (Node.js 18+).
-Hinweis: npm run sync:shared-ui und npm run build ersetzen assets/js/shared-ui.js aus der Shared-UI-Quelle. Der Select-Sicherheitsfix muss dort ebenfalls vorhanden sein; nach einem Sync Tests ausfuehren und das minifizierte Bundle aktualisieren.
+Hinweis: npm run sync:shared-ui und npm run build ersetzen assets/js/shared-ui.js aus der Shared-UI-Quelle. Die Select- und Multistrings-Sicherheitsfixes muessen dort ebenfalls vorhanden sein; nach einem Sync Tests ausfuehren und das minifizierte Bundle aktualisieren.
 
 
 == Changelog ==
 
 = Unreleased =
+* Security: Multistrings-Tags und Eingabefelder werden ohne HTML-Verkettung aus Nutzereingaben aufgebaut; Laden, Hinzufuegen und Textarea-Aenderungen abgesichert.
+* Security: Icon-Namen in der Social-Logos-Vorschau werden als Text statt HTML ausgegeben.
 * Security: Select-Labels werden als Text statt HTML eingefuegt; Farbwerte und Icon-Klassen werden ueber DOM-Setter gesetzt.
 * Tests: DOM-Regressionstests fuer Shared-UI-Selects ergaenzt (npm install und npm test; Node.js 18+).
 * Security: Exponentielles Regex-Backtracking im gebuendelten ACE-Tokenizer bei langen Backslash-Folgen in Zeichenklassen behoben.
