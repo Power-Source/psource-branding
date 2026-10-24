@@ -2956,11 +2956,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
                     if (opt.data('content')) {
                         item.addClass('sui-element-flex');
-                        item.html('<span>' + opt.text() + '</span><span>' + opt.data('content') + '</span>');
+                        item.append($('<span></span>').text(opt.text()), $('<span></span>').html(opt.data('content')));
                     } else if (opt.data('icon')) {
-                        item.html('<i class="sui-icon-' + opt.data('icon') + '" aria-hidden="true"></i> ' + opt.text());
+                        item.text(' ' + opt.text()).prepend($('<i aria-hidden="true"></i>').attr('class', 'sui-icon-' + opt.data('icon')));
                     } else if (opt.data('color')) {
-                        item.html('<span style="background-color: ' + opt.data('color') + '" data-color="' + opt.data('color') + '" aria-hidden="true"></span>' + opt.text());
+                        item.text(opt.text()).prepend($('<span aria-hidden="true"></span>').css('background-color', opt.data('color')).attr('data-color', opt.data('color')));
                     } else {
                         item.text(opt.text());
                     }
@@ -3045,7 +3045,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             isInit = 'undefined' === typeof isInit ? false : isInit;
 
             if (undefined !== optColor && '' !== optColor) {
-                value.html('<span style="background-color: ' + optColor + '" data-color="' + optColor + '"></span>' + opt.text());
+                value.text(opt.text()).prepend($('<span></span>').css('background-color', optColor).attr('data-color', optColor));
             } else {
                 value.text(opt.text());
             }
