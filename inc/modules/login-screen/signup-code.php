@@ -102,7 +102,7 @@ if ( ! class_exists( 'PSToolkit_Signup_Codes' ) ) {
 		protected function set_options() {
 			$options = array(
 				'user' => array(
-					'title'       => __( 'Benutzer Registration', 'ub' ),
+					'title'       => __( 'Benutzerregistrierung', 'ub' ),
 					'description' => __( 'Wähle aus ob sich jemand auf Deiner Webseite registrieren kann oder ob Du die Registrierung nur mit einem Anmeldecode einschränken möchtest.', 'ub' ),
 					'fields'      => array(
 						'items'    => array(

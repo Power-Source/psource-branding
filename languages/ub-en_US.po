@@ -277,10 +277,6 @@ msgstr "Academy"
 msgid "Admin E-Mail"
 msgstr "Admin email"
 
-#: inc/modules/admin/footer.php:96
-msgid "Admin Footer Text"
-msgstr "Admin footer text"
-
 #: inc/class-pstoolkit-admin.php:198
 msgctxt "admin title"
 msgid "CP Toolkit"
@@ -1040,10 +1036,6 @@ msgstr ""
 "Users must provide one of the codes to successfully sign in, and they are "
 "given the user role associated with the sign-in code they use."
 
-#: inc/modules/login-screen/signup-code.php:105
-msgid "Benutzer Registration"
-msgstr "User registration"
-
 #: views/admin/modules/permissions/dialogs/add-user.php:29
 msgid "Benutzer suchen"
 msgstr "Search users"
@@ -1415,12 +1407,6 @@ msgctxt "button"
 msgid "Module aktivieren"
 msgstr "Activate modules"
 
-#: views/admin/modules/dashboard-widgets/dialogs/visibility-reset.php:25
-#: views/admin/modules/data/dialogs/confirm-reset.php:22
-msgctxt "button"
-msgid "RESET"
-msgstr "RESET"
-
 #: inc/modules/utilities/tracking-codes.php:584
 msgctxt "button"
 msgid "Tracking-Code hinzufügen"
@@ -1479,10 +1465,6 @@ msgstr "Core UI"
 #: inc/modules/utilities/maintenance.php:849
 msgid "Countdown-Timer"
 msgstr "Countdown timer"
-
-#: inc/modules/login-screen/login-screen.php:1948
-msgid "Cover"
-msgstr "Cover"
 
 #: inc/class-pstoolkit-admin.php:605 inc/modules/admin/color-schemes.php:526
 msgid "CP Toolkit"
@@ -1833,12 +1815,8 @@ msgstr ""
 
 #: views/admin/modules/import/errors/invalid-file.php:6
 #, php-format
-msgid ""
-"Die Datei %s, die Du importieren möchtest, gehört nicht zu PSToolkit! Bitte "
-"überprüfe Deine Datei oder lade eine andere Datei hoch."
-msgstr ""
-"he file %s you want to import does not belong to PSToolkit! Please check "
-"your file or upload another file."
+msgid "Die Datei %s, die Du importieren möchtest, gehört nicht zu PSToolkit! Bitte überprüfe Deine Datei oder lade eine andere Datei hoch."
+msgstr "The file %s you want to import does not belong to PSToolkit! Please check your file or upload another file."
 
 #: views/admin/modules/import/errors/version.php:6
 #, php-format
@@ -2089,12 +2067,8 @@ msgid "Douglas Adams"
 msgstr "Douglas Adams"
 
 #: inc/modules/utilities/images.php:595
-msgid ""
-"Du hast keine Unterwebseite hinzugefügt, um das Favicon zu überschreiben. "
-"Durchsuche die Unterwebseiten und klicke auf Hinzufügen."
-msgstr ""
-"you didn't add a subsite to override the favicon. Browse the sub-websites "
-"and click Add."
+msgid "Du hast keine Unterwebseite hinzugefügt, um das Favicon zu überschreiben. Durchsuche die Unterwebseiten und klicke auf Hinzufügen."
+msgstr "You have not added a subsite to override the favicon. Browse the subsites and click Add."
 
 #: views/admin/modules/email-logs/no-log-history.php:18
 msgid ""
@@ -2160,12 +2134,8 @@ msgstr ""
 "Disable this option if you only want to use the author field widget."
 
 #: inc/modules/utilities/images.php:228
-msgid ""
-"Du kannst das in <strong>Darstellung &gt; Anpassen</strong> definierte "
-"Favicon Deiner Webseite überschreiben."
-msgstr ""
-"You can do this in <strong>View &gt; Customize</strong> override the defined "
-"favicon of your website."
+msgid "Du kannst das in <strong>Darstellung &gt; Anpassen</strong> definierte Favicon Deiner Webseite überschreiben."
+msgstr "You can override your website's favicon defined in <strong>Appearance &gt; Customize</strong>."
 
 #: inc/modules/content/footer.php:121 inc/modules/content/footer.php:229
 #: inc/modules/content/header.php:109 inc/modules/content/header.php:221
@@ -2509,12 +2479,6 @@ msgstr "Undo item changes"
 msgid "Elterntipp:"
 msgstr "Parent tip:"
 
-#: inc/modules/emails/registration.php:202
-#: inc/modules/emails/registration.php:236
-#: inc/modules/emails/registration.php:270
-msgid "Email Inhalt"
-msgstr "Email content"
-
 #: inc/modules/emails/headers.php:77
 msgid "Email von"
 msgstr "From email"
@@ -2752,10 +2716,6 @@ msgstr "Export"
 msgid "Extern"
 msgstr "External"
 
-#: inc/modules/front-end/cookie-notice.php:230
-msgid "Fade"
-msgstr "Fade"
-
 #: inc/modules/utilities/text-replacement.php:386
 msgid "Fallübereinstimmung"
 msgstr "Case sensitivity"
@@ -2803,7 +2763,7 @@ msgstr "Color schemes"
 
 #: inc/class-pstoolkit-admin.php:388
 msgid "Farbwert"
-msgstr "color value"
+msgstr "Color value"
 
 #: inc/modules/utilities/images.php:227 inc/modules/utilities/images.php:231
 #: inc/modules/utilities/images.php:471
@@ -3128,12 +3088,8 @@ msgid ""
 msgstr "Add any content you want to the header of any page on your website."
 
 #: etc/config.php:546
-msgid ""
-"Füge jeden gewünschten Inhalt in die Kopfzeile jeder Seite Deines Multisite-"
-"Netzwerks ein. Du kannst beispielsweise einige "
-"Nachrichten/Benachrichtigungen für Deine Besucher über den regulären "
-"Webseiten-Header setzen."
-msgstr "Add any content you want to the header of any page on your website."
+msgid "Füge jeden gewünschten Inhalt in die Kopfzeile jeder Seite Deines Multisite-Netzwerks ein. Du kannst beispielsweise einige Nachrichten/Benachrichtigungen für Deine Besucher über den regulären Webseiten-Header setzen."
+msgstr "Add any content to the header of every page in your multisite network. For example, display messages or notices for visitors above the regular website header."
 
 #: inc/modules/content/footer.php:294 inc/modules/content/header.php:285
 msgid "Füge unterschiedliche Inhalte ein"
@@ -3416,10 +3372,14 @@ msgstr ""
 "\n"
 "Your new account is set up.\n"
 "\n"
-"You can sign up with the following information:\n"
+"You can log in with the following information:\n"
 "Username: USERNAME\n"
 "Password: PASSWORD\n"
-"LOGIN LINK"
+"LOGINLINK\n"
+"\n"
+"Thanks!\n"
+"\n"
+"--The team @ SITE_NAME"
 
 #: inc/modules/emails/registration.php:157
 msgid ""
@@ -3473,10 +3433,10 @@ msgstr ""
 "\n"
 "Your new account is set up.\n"
 "\n"
-"You can sign up with the following information:\n"
+"You can log in with the following information:\n"
 "Username: USERNAME\n"
 "\n"
-"LOGIN LINK\n"
+"LOGINLINK\n"
 "\n"
 "Thanks!\n"
 "\n"
@@ -3552,7 +3512,7 @@ msgstr "Help sidebar"
 
 #: inc/modules/admin/help-content.php:174
 msgid "Hilfe-Elemente"
-msgstr "help items"
+msgstr "Help items"
 
 #: views/admin/modules/dashboard-widgets/row.php:7
 msgid "Hilfeartikel entfernen"
@@ -3579,7 +3539,7 @@ msgstr "Add help item"
 
 #: etc/config.php:280
 msgid "Hilfeinhalt"
-msgstr "help content"
+msgstr "Help content"
 
 #: inc/class-pstoolkit-admin.php:2355 inc/modules/content/footer.php:112
 #: inc/modules/content/footer.php:220 inc/modules/content/header.php:100
@@ -3594,7 +3554,7 @@ msgstr "help content"
 #: views/admin/modules/color-schemes/dialogs/edit.php:34
 #: views/admin/modules/color-schemes/dialogs/edit.php:627
 msgid "Hintergrund"
-msgstr "background"
+msgstr "Background"
 
 #: views/admin/modules/color-schemes/dialogs/edit.php:818
 msgid "Hintergrund für aktive Themenaktionen"
@@ -3602,7 +3562,7 @@ msgstr "Background for active theme actions"
 
 #: inc/modules/login-screen/login-screen.php:1533
 msgid "Hintergrundbild"
-msgstr "background image"
+msgstr "Background image"
 
 #: inc/modules/utilities/data.php:138
 msgid ""
@@ -3648,7 +3608,7 @@ msgstr "Uploaded to this article"
 
 #: inc/modules/admin/menu.php:677
 msgid "Hochladen"
-msgstr "upload"
+msgstr "Upload"
 
 #: inc/modules/front-end/db-error-page.php:460
 #: inc/modules/front-end/site-status-page.php:364
@@ -3772,7 +3732,7 @@ msgstr "Import/Export"
 
 #: views/admin/modules/import/errors/version.php:2
 msgid "Importfehler"
-msgstr "import error"
+msgstr "Import error"
 
 #: etc/config.php:47
 msgid ""
@@ -3786,9 +3746,7 @@ msgstr ""
 #: etc/config.php:662 inc/modules/utilities/import.php:433
 #: inc/modules/utilities/import.php:448
 msgid "Importieren"
-msgstr ""
-"Import existing configurations to set up PSToolkit in a few seconds, or "
-"export the configurations of this installation for other websites."
+msgstr "Import"
 
 #: inc/modules/admin/tips.php:130
 msgid "In Artikel einfügen"
@@ -3846,11 +3804,11 @@ msgstr "Contents"
 #: inc/modules/front-end/site-status-page.php:541
 #: inc/modules/utilities/maintenance.php:748
 msgid "Inhalt (optional)"
-msgstr "content (optional)"
+msgstr "Content (optional)"
 
 #: views/admin/modules/tracking-codes/dialogs/edit.php:149
 msgid "Inhaltstyp"
-msgstr "content type"
+msgstr "Content type"
 
 #: inc/modules/front-end/author-box.php:304
 msgid "Inline-Inhalt"
@@ -4037,12 +3995,6 @@ msgstr ""
 "Upload an icon to override the default menu item icon. The recommended size "
 "is %s."
 
-#: inc/modules/utilities/images.php:284
-msgid "Lass es"
-msgstr ""
-"Upload an icon to override the default menu item icon. The recommended size "
-"is %s."
-
 #: inc/modules/content/header.php:82 inc/modules/content/header.php:194
 msgid ""
 "Lasse Deinen Inhalt die Höhe definieren oder lege eine feste "
@@ -4073,7 +4025,7 @@ msgstr "Leave blank for unlimited viewing time."
 
 #: inc/class-pstoolkit-admin.php:384
 msgid "Leere Farbe"
-msgstr "empty color"
+msgstr "Clear color"
 
 #: inc/class-pstoolkit-admin.php:383 inc/modules/front-end/document.php:211
 #: views/admin/modules/admin-bar/dashicons.php:51
@@ -4113,9 +4065,7 @@ msgstr ""
 
 #: inc/modules/admin/menu.php:256
 msgid "Leider darfst Du nicht auf diese Seite zugreifen."
-msgstr ""
-"Set your own name for every email sent from your website. Be careful as this "
-"will overwrite the name provided by other plugins like contact form."
+msgstr "Sorry, you are not allowed to access this page."
 
 #: inc/modules/front-end/author-box.php:1054
 msgid "Lese mehr vom selben Autor:"
@@ -5545,10 +5495,6 @@ msgstr "Visibility"
 msgid "Sichtbarkeit für angemeldete Benutzer"
 msgstr "Visibility for logged in users"
 
-#: inc/modules/front-end/cookie-notice.php:231
-msgid "Slide-in"
-msgstr "Slide-in"
-
 #: etc/config.php:753
 msgid "SMTP"
 msgstr "SMTP"
@@ -6297,7 +6243,7 @@ msgstr "Delete subsites"
 
 #: inc/modules/admin/tips.php:120
 msgid "Update-Tipp"
-msgstr "update tip"
+msgstr "Update tip"
 
 #: inc/modules/admin/bar.php:452
 msgid "Updates"
@@ -6429,14 +6375,6 @@ msgstr "Full content"
 #: inc/modules/emails/email-logs.php:671 inc/modules/emails/template.php:169
 msgid "Von E-Mail"
 msgstr "From email"
-
-#: views/admin/modules/email-logs/pagination-section.php:102
-msgid "Von Email"
-msgstr "From email"
-
-#: views/admin/modules/email-logs/pagination-section.php:205
-msgid "Von Email:"
-msgstr "From email:"
 
 #: etc/config.php:434
 msgid "Von Header"
@@ -7417,7 +7355,7 @@ msgstr "Email Logs"
 #: inc/modules/login-screen/login-screen.php:2144
 #: inc/modules/login-screen/login-screen.php:3019
 msgid "Innenabstand"
-msgstr "padding"
+msgstr "Padding"
 
 #: inc/modules/login-screen/login-screen.php:1870
 #: inc/modules/login-screen/login-screen.php:2188
@@ -8084,3 +8022,40 @@ msgstr "Skip for now"
 msgctxt "button"
 msgid "Überspringen"
 msgstr "Skip"
+
+#: inc/modules/login-screen/login-screen.php:1980
+#: inc/class-pstoolkit-helper.php:2239
+msgid "Abdecken"
+msgstr "Cover"
+
+#: inc/modules/emails/registration.php:202
+#: inc/modules/emails/registration.php:236
+#: inc/modules/emails/registration.php:270
+msgid "E-Mail-Inhalt"
+msgstr "Email content"
+
+#: inc/modules/utilities/images.php:284
+msgid "Beibehalten"
+msgstr "Keep"
+
+#: inc/modules/admin/footer.php:96
+msgid "Admin-Fußzeilentext"
+msgstr "Admin footer text"
+
+#: inc/modules/front-end/cookie-notice.php:230
+msgid "Überblenden"
+msgstr "Fade"
+
+#: inc/modules/front-end/cookie-notice.php:231
+msgid "Einschieben"
+msgstr "Slide-in"
+
+#: views/admin/modules/email-logs/pagination-section.php:205
+msgid "Von E-Mail:"
+msgstr "From email:"
+
+#: views/admin/modules/dashboard-widgets/dialogs/visibility-reset.php:25
+#: views/admin/modules/data/dialogs/confirm-reset.php:22
+msgctxt "button"
+msgid "ZURÜCKSETZEN"
+msgstr "RESET"

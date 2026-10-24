@@ -99,7 +99,7 @@
 					<div class="sui-col-md-4">
 
 						<div class="sui-form-field">
-							<label class="sui-label"><?php esc_html_e( 'Von Email', 'ub' ); ?></label>
+							<label class="sui-label"><?php esc_html_e( 'Von E-Mail', 'ub' ); ?></label>
 							<input type="email"
 								name="from_email"
 								placeholder="<?php esc_html_e( 'z.B. example@gmail.com', 'ub' ); ?>"
@@ -202,7 +202,7 @@
 
 					<?php if ( $from_email ) { ?>
 						<span class="sui-active-filter">
-							<?php esc_html_e( 'Von Email:', 'ub' ); ?> <?php echo esc_html( $from_email ); ?>
+							<?php esc_html_e( 'Von E-Mail:', 'ub' ); ?> <?php echo esc_html( $from_email ); ?>
 						<span class="sui-active-filter-remove" data-filter="from_email" role="button"><span class="sui-screen-reader-text"><?php esc_html_e( 'Entferne diesen Filter', 'ub' ); ?></span></span></span>
 					<?php } ?>
 

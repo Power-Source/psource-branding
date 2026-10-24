@@ -2236,7 +2236,7 @@ if ( ! class_exists( 'PSToolkit_Helper' ) ) {
 					'label'       => __( 'Hintergrundgröße', 'ub' ),
 					'options'     => array(
 						'cover'   => array(
-							'label'   => __( 'Cover', 'ub' ),
+							'label'   => __( 'Abdecken', 'ub' ),
 							'tooltip' => __( 'Ändere die Größe des Hintergrundbilds, um den gesamten Container zu bedecken, auch wenn das Bild gedehnt oder an einer der Kanten etwas abgeschnitten werden muss.', 'ub' ),
 						),
 						'contain' => array(

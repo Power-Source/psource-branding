@@ -199,7 +199,7 @@ Wir wünschen Dir viel Spaß mit Deiner neuen Webseite. Vielen Dank!
 						),
 						'message' => array(
 							'type'    => 'textarea',
-							'label'   => __( 'Email Inhalt', 'ub' ),
+							'label'   => __( 'E-Mail-Inhalt', 'ub' ),
 							'master'  => 'wpmu_signup_blog_notification',
 							'default' => $new_blog_message,
 						),
@@ -233,7 +233,7 @@ Wir wünschen Dir viel Spaß mit Deiner neuen Webseite. Vielen Dank!
 						),
 						'message' => array(
 							'type'    => 'textarea',
-							'label'   => __( 'Email Inhalt', 'ub' ),
+							'label'   => __( 'E-Mail-Inhalt', 'ub' ),
 							'master'  => 'wpmu_signup_user_notification',
 							'default' => $new_sign_up_message,
 						),
@@ -267,7 +267,7 @@ Wir wünschen Dir viel Spaß mit Deiner neuen Webseite. Vielen Dank!
 						),
 						'message' => array(
 							'type'    => 'textarea',
-							'label'   => __( 'Email Inhalt', 'ub' ),
+							'label'   => __( 'E-Mail-Inhalt', 'ub' ),
 							'master'  => 'wpmu_welcome_notification',
 							'default' => $welcome_email,
 						),

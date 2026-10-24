@@ -19,7 +19,7 @@
 						class="sui-button sui-button-ghost sui-button-red sui-button-icon pstoolkit-data-reset-confirm"
 						data-nonce="<?php echo esc_attr( $nonce ); ?>"
 						data-id="<?php echo esc_attr( $blog_id ); ?>"
-					><i class="sui-icon-undo" aria-hidden="true"></i><?php echo esc_html_x( 'RESET', 'button', 'ub' ); ?></button>
+					><i class="sui-icon-undo" aria-hidden="true"></i><?php echo esc_html_x( 'ZURÜCKSETZEN', 'button', 'ub' ); ?></button>
 				</div>
 			</div>
 		</div>

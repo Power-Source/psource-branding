@@ -227,8 +227,8 @@ if ( ! class_exists( 'PSToolkit_Cookie_Notice' ) ) {
 							'label' => __( 'Animation', 'ub' ),
 							'options' => array(
 								'none' => __( 'Keine', 'ub' ),
-								'fade' => __( 'Fade', 'ub' ),
-								'slide' => __( 'Slide-in', 'ub' ),
+								'fade' => __( 'Überblenden', 'ub' ),
+								'slide' => __( 'Einschieben', 'ub' ),
 							),
 							'description' => __( 'Wähle aus wie Du die Cookie-Benachrichtigung animieren möchtest.', 'ub' ),
 							'default' => 'none',

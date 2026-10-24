@@ -1977,7 +1977,7 @@ if ( ! class_exists( 'PSToolkit_Login_Screen' ) ) {
 					'type'      => 'sui-tab',
 					'label'     => __( 'Bildanpassung', 'ub' ),
 					'options'   => array(
-						'cover'   => __( 'Cover', 'ub' ),
+						'cover'   => __( 'Abdecken', 'ub' ),
 						'fill'    => __( 'Füllen', 'ub' ),
 						'contain' => __( 'Enthalten', 'ub' ),
 						'none'    => __( 'Keine', 'ub' ),

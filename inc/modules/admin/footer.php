@@ -93,7 +93,7 @@ if ( ! class_exists( 'PSToolkit_Admin_Footer' ) ) {
 			}
 			$options       = array(
 				'footer' => array(
-					'title'       => __( 'Admin Footer Text', 'ub' ),
+					'title'       => __( 'Admin-Fußzeilentext', 'ub' ),
 					'description' => __( 'Zeige in der Fußzeile jeder Administrationsseite einen benutzerdefinierten Text an.', 'ub' ), 
 					'fields'      => array(
 						'content' => array(

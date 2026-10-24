@@ -22,7 +22,7 @@
 			<div class="sui-box-footer sui-content-center sui-flatten">
 				<div class="sui-form-field sui-actions-center">
 					<button type="button" class="sui-modal-close sui-button sui-button-ghost" data-modal-close><?php echo esc_html_x( 'Abbrechen', 'button', 'ub' ); ?></button>
-					<button type="button" class="sui-button sui-button-ghost sui-button-red sui-button-icon pstoolkit-data-reset-confirm" data-nonce="<?php echo esc_attr( $nonce ); ?>"><i class="sui-icon-undo" aria-hidden="true"></i><?php echo esc_html_x( 'RESET', 'button', 'ub' ); ?></button>
+					<button type="button" class="sui-button sui-button-ghost sui-button-red sui-button-icon pstoolkit-data-reset-confirm" data-nonce="<?php echo esc_attr( $nonce ); ?>"><i class="sui-icon-undo" aria-hidden="true"></i><?php echo esc_html_x( 'ZURÜCKSETZEN', 'button', 'ub' ); ?></button>
 				</div>
 			</div>
 		</div>

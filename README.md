@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./Logo.png" alt="PSOURCE Toolkit" width="160">
+<img src="./screenshot.png" alt="PSOURCE Toolkit" width="160">
 
 # PSOURCE Toolkit
 

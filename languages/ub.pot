@@ -293,10 +293,6 @@ msgstr ""
 msgid "Admin E-Mail"
 msgstr ""
 
-#: inc/modules/admin/footer.php:96
-msgid "Admin Footer Text"
-msgstr ""
-
 #: inc/class-pstoolkit-admin.php:198
 msgctxt "admin title"
 msgid "CP Toolkit"
@@ -1014,10 +1010,6 @@ msgid ""
 "zugeordnet ist."
 msgstr ""
 
-#: inc/modules/login-screen/signup-code.php:105
-msgid "Benutzer Registration"
-msgstr ""
-
 #: views/admin/modules/permissions/dialogs/add-user.php:29
 msgid "Benutzer suchen"
 msgstr ""
@@ -1379,12 +1371,6 @@ msgctxt "button"
 msgid "LÖSCHEN"
 msgstr ""
 
-#: views/admin/modules/dashboard-widgets/dialogs/visibility-reset.php:25
-#: views/admin/modules/data/dialogs/confirm-reset.php:22
-msgctxt "button"
-msgid "RESET"
-msgstr ""
-
 #: inc/modules/utilities/tracking-codes.php:584
 msgctxt "button"
 msgid "Tracking-Code hinzufügen"
@@ -1442,10 +1428,6 @@ msgstr ""
 #: inc/modules/utilities/maintenance.php:790
 #: inc/modules/utilities/maintenance.php:849
 msgid "Countdown-Timer"
-msgstr ""
-
-#: inc/modules/login-screen/login-screen.php:1948
-msgid "Cover"
 msgstr ""
 
 #: inc/class-pstoolkit-admin.php:605 inc/modules/admin/color-schemes.php:526
@@ -2394,12 +2376,6 @@ msgstr ""
 msgid "Elterntipp:"
 msgstr ""
 
-#: inc/modules/emails/registration.php:202
-#: inc/modules/emails/registration.php:236
-#: inc/modules/emails/registration.php:270
-msgid "Email Inhalt"
-msgstr ""
-
 #: inc/modules/emails/headers.php:77
 msgid "Email von"
 msgstr ""
@@ -2608,10 +2584,6 @@ msgstr ""
 #: inc/modules/admin/bar.php:957
 #: views/admin/modules/admin-bar/tmpl/panes/submenu.php:83
 msgid "Extern"
-msgstr ""
-
-#: inc/modules/front-end/cookie-notice.php:230
-msgid "Fade"
 msgstr ""
 
 #: inc/modules/utilities/text-replacement.php:386
@@ -3832,10 +3804,6 @@ msgstr ""
 msgid ""
 "Lade ein Symbol hoch, um das Standardmenüelementsymbol zu überschreiben. Die "
 "empfohlene Größe ist %s."
-msgstr ""
-
-#: inc/modules/utilities/images.php:284
-msgid "Lass es"
 msgstr ""
 
 #: inc/modules/content/header.php:82 inc/modules/content/header.php:194
@@ -5258,10 +5226,6 @@ msgstr ""
 msgid "Sichtbarkeit für angemeldete Benutzer"
 msgstr ""
 
-#: inc/modules/front-end/cookie-notice.php:231
-msgid "Slide-in"
-msgstr ""
-
 #: etc/config.php:753
 msgid "SMTP"
 msgstr ""
@@ -6110,14 +6074,6 @@ msgstr ""
 
 #: inc/modules/emails/email-logs.php:671 inc/modules/emails/template.php:169
 msgid "Von E-Mail"
-msgstr ""
-
-#: views/admin/modules/email-logs/pagination-section.php:102
-msgid "Von Email"
-msgstr ""
-
-#: views/admin/modules/email-logs/pagination-section.php:205
-msgid "Von Email:"
 msgstr ""
 
 #: etc/config.php:434
@@ -7678,4 +7634,41 @@ msgstr ""
 #: views/admin/dashboard/welcome.php:26
 msgctxt "button"
 msgid "Überspringen"
+msgstr ""
+
+#: inc/modules/login-screen/login-screen.php:1980
+#: inc/class-pstoolkit-helper.php:2239
+msgid "Abdecken"
+msgstr ""
+
+#: inc/modules/emails/registration.php:202
+#: inc/modules/emails/registration.php:236
+#: inc/modules/emails/registration.php:270
+msgid "E-Mail-Inhalt"
+msgstr ""
+
+#: inc/modules/utilities/images.php:284
+msgid "Beibehalten"
+msgstr ""
+
+#: inc/modules/admin/footer.php:96
+msgid "Admin-Fußzeilentext"
+msgstr ""
+
+#: inc/modules/front-end/cookie-notice.php:230
+msgid "Überblenden"
+msgstr ""
+
+#: inc/modules/front-end/cookie-notice.php:231
+msgid "Einschieben"
+msgstr ""
+
+#: views/admin/modules/email-logs/pagination-section.php:205
+msgid "Von E-Mail:"
+msgstr ""
+
+#: views/admin/modules/dashboard-widgets/dialogs/visibility-reset.php:25
+#: views/admin/modules/data/dialogs/confirm-reset.php:22
+msgctxt "button"
+msgid "ZURÜCKSETZEN"
 msgstr ""
